@@ -1,6 +1,7 @@
 ---
 title： 使用hexo 教程
 ---
+
 ### 安装git
 我选用了Homebrew来安装mac下的软件，你可以先安装
 Homebrew
