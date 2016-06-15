@@ -1,5 +1,5 @@
 ---
-title： 使用hexo 教程
+title: hexo 初步教程
 ---
 
 ### 安装git
