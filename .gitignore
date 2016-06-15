@@ -1,0 +1,5 @@
+# 忽略所有名为 .DS_Store 的文件
+.DS_Store
+
+# 忽略所有扩展名为 .o 的文件
+*.deploy_git
