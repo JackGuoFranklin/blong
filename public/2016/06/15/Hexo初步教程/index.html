@@ -17,7 +17,7 @@
 安装Homebrew1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
 成功之后安装git1brew install git
 安装node.js去nodes.js">
-<meta property="og:updated_time" content="2016-06-15T10:16:21.000Z">
+<meta property="og:updated_time" content="2016-06-15T10:22:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 初步教程">
 <meta name="twitter:description" content="安装git我选用了Homebrew来安装mac下的软件，你可以先安装Homebrew
@@ -137,8 +137,9 @@
 <p>###部署Hexo到GitHub上</p>
 <p>安装一个插件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后打开博客目录的_config.yml文件，设置deploy的type为git，repository(repo)<br>为：<a href="https://github.com/你的id/你的id.github.io.git（需要在type和repo后面加上一个空格再填写）。" target="_blank" rel="external">https://github.com/你的id/你的id.github.io.git（需要在type和repo后面加上一个空格再填写）。</a></p>
-<p>然后输入</p>
+<p>然后打开博客目录的_config.yml文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/joway/hexo-blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>注意”:”号后面有空格。必须空一格。<br>然后输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deploy//可简写为 hexo d</span><br></pre></td></tr></table></figure>
 <p>在浏览器中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://你的id.github.io/</span><br></pre></td></tr></table></figure>
@@ -147,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/15/Hexo初步教程/" data-id="cipgq36x00000ib4iv2dxxptn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/15/Hexo初步教程/" data-id="cipgqc05l0000l04iszvjgacd" class="article-share-link">Share</a>
       
       
     </footer>

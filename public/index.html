@@ -129,8 +129,9 @@
 <p>###部署Hexo到GitHub上</p>
 <p>安装一个插件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后打开博客目录的_config.yml文件，设置deploy的type为git，repository(repo)<br>为：<a href="https://github.com/你的id/你的id.github.io.git（需要在type和repo后面加上一个空格再填写）。" target="_blank" rel="external">https://github.com/你的id/你的id.github.io.git（需要在type和repo后面加上一个空格再填写）。</a></p>
-<p>然后输入</p>
+<p>然后打开博客目录的_config.yml文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/joway/hexo-blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>注意”:”号后面有空格。必须空一格。<br>然后输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deploy//可简写为 hexo d</span><br></pre></td></tr></table></figure>
 <p>在浏览器中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://你的id.github.io/</span><br></pre></td></tr></table></figure>
@@ -139,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/15/Hexo初步教程/" data-id="cipgq36x00000ib4iv2dxxptn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/15/Hexo初步教程/" data-id="cipgqc05l0000l04iszvjgacd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/15/nihao/" data-id="cipgq36xe0002ib4ic0fg6lpi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/15/nihao/" data-id="cipgqc05x0002l04iprd1f8bu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/15/hello-world/" data-id="cipgq36x90001ib4iusnet4gf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/15/hello-world/" data-id="cipgqc05t0001l04ierdmhnp3" class="article-share-link">Share</a>
       
       
     </footer>

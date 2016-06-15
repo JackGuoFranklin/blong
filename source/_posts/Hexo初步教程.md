@@ -124,9 +124,15 @@ npm install hexo-deployer-git --save
 
 ```
 
-然后打开博客目录的_config.yml文件，设置deploy的type为git，repository(repo)
-为：https://github.com/你的id/你的id.github.io.git（需要在type和repo后面加上一个空格再填写）。
+然后打开博客目录的_config.yml文件
 
+```
+deploy:
+  type: git
+  repository: https://github.com/joway/hexo-blog.git
+  branch: master
+```
+注意":"号后面有空格。必须空一格。
 然后输入
 
 ```
