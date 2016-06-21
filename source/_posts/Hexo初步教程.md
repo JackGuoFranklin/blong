@@ -1,17 +1,19 @@
 ---
 title: hexo 初步教程
+tags: 
+- hexo
+categories: hexo
 ---
-
 ### 安装git
 我选用了Homebrew来安装mac下的软件，你可以先安装
 Homebrew
-##### 安装Homebrew
+### 安装Homebrew
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-##### 成功之后安装git
+### 成功之后安装git
 
 ```
 brew install git
@@ -115,7 +117,7 @@ hexo server//可以简写为 hexo s
 就可以在浏览器中输入localhost:4000查看本地博客了。如果不能查看请输入
 127.0.0.1:4000查看。在不行了。就是没有成功从hexo init重新来一次就可以了。要注意的是，所有的hexo指令都必须在你所建立的目录下执行。
 
-###部署Hexo到GitHub上
+### 部署Hexo到GitHub上
 
 安装一个插件
 

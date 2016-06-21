@@ -1,1 +1,1 @@
-# http://jackguofranklin.github.io/
+# JackGuoFranklin.blong
