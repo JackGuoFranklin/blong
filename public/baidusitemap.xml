@@ -4,16 +4,29 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/06/21/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/</loc>
+    <loc>http://yoursite.com/2016/06/21/index/</loc>
+    <lastmod>2016-06-21T01:27:43.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2016-06-21T01:27:43.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/06/21/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/</loc>
     <lastmod>2016-06-21T01:11:04.000Z</lastmod>
     <data>
         <display>
-        <title>Hexo Next 配置主观</title>
+        <title>hexo更换主题Next</title>
         <pubTime>2016-06-21T01:11:04.000Z</pubTime>
         
         <tag>hexo</tag>
-         
-        <tag>next</tag>
          
          
            
@@ -46,20 +59,30 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/06/21/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/</loc>
+    <loc>http://yoursite.com/2016/06/21/mac%20server/</loc>
     <lastmod>2016-06-21T01:11:04.000Z</lastmod>
     <data>
         <display>
-        <title>hexo更换主题Next</title>
+        <title>mac localhost server</title>
         <pubTime>2016-06-21T01:11:04.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
-          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/06/21/hello-world/</loc>
+    <lastmod>2016-06-21T01:11:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-06-21T01:11:04.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -88,30 +111,22 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/06/21/hello-world/</loc>
+    <loc>http://yoursite.com/2016/06/21/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2016-06-21T01:11:04.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
+        <title>Hexo Next 配置主观</title>
         <pubTime>2016-06-21T01:11:04.000Z</pubTime>
         
+        <tag>hexo</tag>
+         
+        <tag>next</tag>
+         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/06/21/mac%20server/</loc>
-    <lastmod>2016-06-21T01:11:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac localhost server</title>
-        <pubTime>2016-06-21T01:11:04.000Z</pubTime>
-        
-         
-           
+             
+              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
+          
         </display>
     </data>
     </url>
