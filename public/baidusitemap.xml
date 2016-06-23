@@ -4,6 +4,43 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/06/23/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/</loc>
+    <lastmod>2016-06-23T08:54:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>android studio启动慢</title>
+        <pubTime>2016-06-23T08:51:19.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>android studio</tag>
+         
+         
+           
+             
+              <breadCrumb title="android" url="http://yoursite.com/categories/android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/06/21/hello-world/</loc>
+    <lastmod>2016-06-21T01:11:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-06-21T01:11:04.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/06/21/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2016-06-21T01:11:04.000Z</lastmod>
     <data>
@@ -14,6 +51,26 @@
         <tag>hexo</tag>
          
         <tag>next</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/06/21/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/</loc>
+    <lastmod>2016-06-21T01:11:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo更换主题Next</title>
+        <pubTime>2016-06-21T01:11:04.000Z</pubTime>
+        
+        <tag>hexo</tag>
          
          
            
@@ -68,21 +125,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/06/21/hello-world/</loc>
-    <lastmod>2016-06-21T01:11:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-06-21T01:11:04.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/06/21/mac%20server/</loc>
     <lastmod>2016-06-21T01:11:04.000Z</lastmod>
     <data>
@@ -92,26 +134,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/06/21/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/</loc>
-    <lastmod>2016-06-21T01:11:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo更换主题Next</title>
-        <pubTime>2016-06-21T01:11:04.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
-          
         </display>
     </data>
     </url>
