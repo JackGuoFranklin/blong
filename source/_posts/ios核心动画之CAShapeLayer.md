@@ -1,5 +1,9 @@
 ---
-title: ios 核心动画之CAShapeLayer
+title: ios核心动画之CAShapeLayer
+tags: 
+- ios
+- animation
+categories: ios
 ---
 ### 专用图层
 ##### CAShapeLayer

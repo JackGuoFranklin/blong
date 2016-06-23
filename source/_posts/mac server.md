@@ -1,5 +1,7 @@
 ---
 title: mac localhost server
+tags: mac
+categories: mac
 ---
 
 
