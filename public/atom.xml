@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-23T08:54:54.000Z</updated>
+  <updated>2016-06-24T17:32:57.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swiftSnapKit</title>
+    <link href="http://yoursite.com/2016/06/24/SnapKit/"/>
+    <id>http://yoursite.com/2016/06/24/SnapKit/</id>
+    <published>2016-06-24T08:53:26.000Z</published>
+    <updated>2016-06-24T17:32:57.000Z</updated>
+    
+    <content type="html">&lt;p&gt;swift自动布局库SnapKit使用详解1&lt;br&gt;SnapKit 前身是Masonry（一个oc版本的布局库）&lt;/p&gt;
+&lt;p&gt;1安装&lt;/p&gt;
+&lt;p&gt;SnapKit github地址 &lt;a href=&quot;https://github.com/SnapKit/SnapKit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/SnapKit/SnapKit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以通过Cocoapods 安装&lt;br&gt;在Podfile中加入&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source &amp;apos;https://github.com/CocoaPods/Specs.git&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;platform :ios, &amp;apos;8.0&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;use_frameworks!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pod &amp;apos;SnapKit&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后在终端项目目录下输入&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pod install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;swift自动布局库SnapKit使用详解1&lt;br&gt;SnapKit 前身是Masonry（一个oc版本的布局库）&lt;/p&gt;
+&lt;p&gt;1安装&lt;/p&gt;
+&lt;p&gt;SnapKit github地址 &lt;a href=&quot;https://github.com/SnapKit/SnapKit&quot; 
+    
+    </summary>
+    
+      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
+    
+    
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+    
+      <category term="SnapKit" scheme="http://yoursite.com/tags/SnapKit/"/>
+    
+  </entry>
   
   <entry>
     <title>android studio启动慢</title>
@@ -112,83 +145,99 @@
   </entry>
   
   <entry>
-    <title>Hexo Next 配置主观</title>
-    <link href="http://yoursite.com/2016/06/21/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/"/>
-    <id>http://yoursite.com/2016/06/21/HexoNext配置主题/</id>
+    <title>hexo更换主题Next</title>
+    <link href="http://yoursite.com/2016/06/21/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/"/>
+    <id>http://yoursite.com/2016/06/21/Hexo更换主题Next/</id>
     <published>2016-06-21T01:11:04.000Z</published>
     <updated>2016-06-21T01:11:04.000Z</updated>
     
-    <content type="html">&lt;h3 id=&quot;语言设置&quot;&gt;&lt;a href=&quot;#语言设置&quot; class=&quot;headerlink&quot; title=&quot;语言设置&quot;&gt;&lt;/a&gt;语言设置&lt;/h3&gt;&lt;p&gt;在主目录下_config.yml 中配置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;language: zh-Hans&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;语言&lt;/th&gt;
-&lt;th&gt;代码&lt;/th&gt;
-&lt;th&gt;设定值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;English&lt;/td&gt;
-&lt;td&gt;en&lt;/td&gt;
-&lt;td&gt;language: en&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;简体中文&lt;/td&gt;
-&lt;td&gt;zh-Hans&lt;/td&gt;
-&lt;td&gt;language: zh-Hans&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&quot;菜单设置&quot;&gt;&lt;a href=&quot;#菜单设置&quot; class=&quot;headerlink&quot; title=&quot;菜单设置&quot;&gt;&lt;/a&gt;菜单设置&lt;/h3&gt;&lt;p&gt;菜单配置在 主题配置文件的 menu&lt;/p&gt;
-&lt;p&gt;菜单示例配置：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #about: /about&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #categories: /categories&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  tags: /tags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #commonweal: /404.html&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;侧栏设置&quot;&gt;&lt;a href=&quot;#侧栏设置&quot; class=&quot;headerlink&quot; title=&quot;侧栏设置&quot;&gt;&lt;/a&gt;侧栏设置&lt;/h3&gt;&lt;p&gt;配置选项&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;post - 默认行为，在文章页面（拥有目录列表）时显示&lt;/li&gt;
-&lt;li&gt;always - 在所有页面中都显示&lt;/li&gt;
-&lt;li&gt;hide - 在所有页面中都隐藏（可以手动展开）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;侧栏示例配置：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sidebar: post&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;头像设置&quot;&gt;&lt;a href=&quot;#头像设置&quot; class=&quot;headerlink&quot; title=&quot;头像设置&quot;&gt;&lt;/a&gt;头像设置&lt;/h3&gt;&lt;p&gt;新增字段 avatar&lt;/p&gt;
-&lt;p&gt;1 完整的互联网 URL    &lt;a href=&quot;https://avatars1.githubusercontent.com/u/32269?v=3&amp;amp;s=460&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://avatars1.githubusercontent.com/u/32269?v=3&amp;amp;s=460&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2 站点内的地址    /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/ （可能需要新建uploads目录）&lt;/p&gt;
-&lt;p&gt;3 /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下&lt;/p&gt;
-&lt;h3 id=&quot;作者名称&quot;&gt;&lt;a href=&quot;#作者名称&quot; class=&quot;headerlink&quot; title=&quot;作者名称&quot;&gt;&lt;/a&gt;作者名称&lt;/h3&gt;&lt;p&gt;设置 author 为你的昵称&lt;/p&gt;
-&lt;h3 id=&quot;站点描述设置&quot;&gt;&lt;a href=&quot;#站点描述设置&quot; class=&quot;headerlink&quot; title=&quot;站点描述设置&quot;&gt;&lt;/a&gt;站点描述设置&lt;/h3&gt;&lt;p&gt;设置 description 字段为你的站点描述。&lt;/p&gt;
-&lt;h3 id=&quot;添加「标签」页面&quot;&gt;&lt;a href=&quot;#添加「标签」页面&quot; class=&quot;headerlink&quot; title=&quot;添加「标签」页面&quot;&gt;&lt;/a&gt;添加「标签」页面&lt;/h3&gt;&lt;p&gt;1 定位到 Hexo 站点目录下&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new page tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2编辑刚新建的页面，将页面的类型设置为 tags &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 标签&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type: &amp;quot;tags&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;3  添加 tags 到 menu 中&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  tags: /tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;添加「分类」页面&quot;&gt;&lt;a href=&quot;#添加「分类」页面&quot; class=&quot;headerlink&quot; title=&quot;添加「分类」页面&quot;&gt;&lt;/a&gt;添加「分类」页面&lt;/h3&gt;&lt;p&gt;1 定位到 Hexo 站点目录下&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new page categories&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2编辑刚新建的页面，将页面的类型设置为 categories &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 标签&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type: &amp;quot;categories&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;3  添加 categories 到 menu 中&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  categories: /categories&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;设置代码高亮主题&quot;&gt;&lt;a href=&quot;#设置代码高亮主题&quot; class=&quot;headerlink&quot; title=&quot;设置代码高亮主题&quot;&gt;&lt;/a&gt;设置代码高亮主题&lt;/h3&gt;&lt;p&gt;NexT 默认使用的是 白色的 normal 主题,可选的值有 normal，night， night blue， night bright， night eighties.&lt;/p&gt;
-&lt;p&gt;更改 highlight_theme 字段，将其值设定成你所喜爱的高亮主题，例如：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Code Highlight theme&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Available value: normal | night | night eighties | night blue | night bright&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# https://github.com/chriskempson/tomorrow-theme&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;highlight_theme: normal&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;侧边栏社交链接&quot;&gt;&lt;a href=&quot;#侧边栏社交链接&quot; class=&quot;headerlink&quot; title=&quot;侧边栏社交链接&quot;&gt;&lt;/a&gt;侧边栏社交链接&lt;/h3&gt;&lt;p&gt;1&lt;br&gt;接放置在 social 字段下，一行一个链接。其键值格式是 显示文本: 链接地址。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Social links&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: https://github.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Twitter: https://twitter.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  微博: http://weibo.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  豆瓣: http://douban.com/people/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  知乎: http://www.zhihu.com/people/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # 等等&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2 设定链接的图标，对应的字段是 social_icons。其键值格式是 匹配键: Font Awesome 图标名称， 匹配键 与上一步所配置的链接的 显示文本 相同（大小写严格匹配），图标名称 是 Font Awesome 图标的名字（不必带 fa- 前缀）。 enable 选项用于控制是否显示图标，你可以设置成 false 来去掉图标。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Social Icons&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social_icons:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # Icon Mappings&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: github&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Twitter: twitter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  微博: weibo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;设置-RSS&quot;&gt;&lt;a href=&quot;#设置-RSS&quot; class=&quot;headerlink&quot; title=&quot;设置 RSS&quot;&gt;&lt;/a&gt;设置 RSS&lt;/h3&gt;&lt;p&gt;NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;false：禁用 RSS，不在页面上显示 RSS 连接。&lt;/li&gt;
-&lt;li&gt;留空：使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。&lt;/li&gt;
-&lt;li&gt;具体的链接地址：适用于已经烧制过 Feed 的情形。&lt;/li&gt;
-&lt;/ul&gt;
+    <content type="html">&lt;p&gt; 1 下载主题&lt;/p&gt;
+&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 2 启用主题&lt;/p&gt;
+&lt;p&gt; 修改当hexo目录下的_config.yml 的theme 选项&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Plugins: https://hexo.io/plugins/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 3 验证是否启用&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s --debug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;访问&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://localhost:4000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;确保站点正确运行。&lt;/p&gt;
+&lt;p&gt;4 其他配置。&lt;/p&gt;
+&lt;p&gt;   主题设定&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/theme-settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|主题设定&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;   第三方服务&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|第三方服务&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;语言设置&quot;&gt;&lt;a href=&quot;#语言设置&quot; class=&quot;headerlink&quot; title=&quot;语言设置&quot;&gt;&lt;/a&gt;语言设置&lt;/h3&gt;&lt;p&gt;在主目录下_config.yml 中配置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
+      &lt;p&gt; 1 下载主题&lt;/p&gt;
+&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo评论系统与站点计数</title>
+    <link href="http://yoursite.com/2016/06/21/Hexo%E8%AF%84%E8%AE%BA%E4%B8%8E%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://yoursite.com/2016/06/21/Hexo评论与站点统计系统/</id>
+    <published>2016-06-21T01:11:04.000Z</published>
+    <updated>2016-06-21T01:11:04.000Z</updated>
+    
+    <content type="html">&lt;p&gt;评论系统与站点计数&lt;/p&gt;
+&lt;p&gt;添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。&lt;/p&gt;
+&lt;h3 id=&quot;使用多说&quot;&gt;&lt;a href=&quot;#使用多说&quot; class=&quot;headerlink&quot; title=&quot;使用多说&quot;&gt;&lt;/a&gt;使用多说&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;注册多说&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;登录后在首页选择 “我要安装”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建站点，填写站点相关信息。注意，多说域名 这一栏填写的即是你的 duoshuo_shortname。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编辑站点的 _config.yml 注意，不是主题的_config.yml文件 ，添加 duoshuo_shortname 字段，设置如下&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_shortname: your-duoshuo-shortname&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;（注）duoshuo short name: 你的多说二级域名去掉 .duoshuo.com 部分&lt;/p&gt;
+&lt;h3 id=&quot;使用-Disqus&quot;&gt;&lt;a href=&quot;#使用-Disqus&quot; class=&quot;headerlink&quot; title=&quot;使用 Disqus&quot;&gt;&lt;/a&gt;使用 Disqus&lt;/h3&gt;&lt;p&gt;编辑站点的 _config.yml ，添加 disqus_shortname 字段，设置如下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;disqus_shortname: your-disqus-shortname&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;多说评论显示-UA&quot;&gt;&lt;a href=&quot;#多说评论显示-UA&quot; class=&quot;headerlink&quot; title=&quot;多说评论显示 UA&quot;&gt;&lt;/a&gt;多说评论显示 UA&lt;/h3&gt;&lt;p&gt;需要配置 duoshuo_info 这个字段&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_info:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ua_enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  admin_enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  user_id: 1234567&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  admin_nickname: 主编大人&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;配置 user_id 和 admin_nickname 字段。 请访问 多说，登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字。&lt;/p&gt;
+&lt;h3 id=&quot;显示站点总访问量&quot;&gt;&lt;a href=&quot;#显示站点总访问量&quot; class=&quot;headerlink&quot; title=&quot;显示站点总访问量&quot;&gt;&lt;/a&gt;显示站点总访问量&lt;/h3&gt;&lt;p&gt;找到站点的themes/next/layout/_partials目录下的footer.swig文件&lt;br&gt;将以下脚本和标签插入到文件中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本站总访问量 &amp;lt;span id=&amp;quot;busuanzi_value_site_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt; &amp;amp;nbsp&amp;amp;nbsp&amp;amp;nbsp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;您是第&amp;lt;span id=&amp;quot;busuanzi_value_site_uv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;个来到的小伙伴&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;插入到这里&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;powered-by&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;#123;&amp;#123; __(&amp;apos;footer.powered&amp;apos;, &amp;apos;&amp;lt;a class=&amp;quot;theme-link&amp;quot; href=&amp;quot;http://hexo.io&amp;quot;&amp;gt;Hexo&amp;lt;/a&amp;gt;&amp;apos;) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;theme-info&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;#123;&amp;#123; __(&amp;apos;footer.theme&amp;apos;) &amp;#125;&amp;#125; -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 &amp;lt;a class=&amp;quot;theme-link&amp;quot; href=&amp;quot;https://github.com/iissnan/hexo-theme-next&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   NexT&amp;#123;% if theme.scheme %&amp;#125;.&amp;#123;&amp;#123; theme.scheme &amp;#125;&amp;#125;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 插入到这里&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block footer %&amp;#125;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;显示单页面访问量&quot;&gt;&lt;a href=&quot;#显示单页面访问量&quot; class=&quot;headerlink&quot; title=&quot;显示单页面访问量&quot;&gt;&lt;/a&gt;显示单页面访问量&lt;/h3&gt;&lt;p&gt;修改themes/next/layout/_macro目录下的post.swig文件&lt;/p&gt;
+&lt;p&gt;位于文件开头,在第三个参数的位置，增加is_pv字段&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% macro render(post, is_index, is_pv, post_extra_class) %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;插入以下代码，用于区分文章页面跟首页&lt;/p&gt;
+&lt;p&gt;这里不用像”显示站点总访问量”中那样安装脚本，否则会出现重复计数的问题。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if is_pv %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span&amp;gt;&amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span id=&amp;quot;busuanzi_value_page_pv&amp;quot; &amp;gt;&amp;lt;/span&amp;gt;次阅读&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/span&amp;gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;插入这个位置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if post.comments %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;post-comments-count&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;a href=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;#comments&amp;quot; itemprop=&amp;quot;discussionUrl&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;lt;span class=&amp;quot;post-comments-count ds-thread-count&amp;quot; data-thread-key=&amp;quot;&amp;#123;&amp;#123; post.path &amp;#125;&amp;#125;&amp;quot; itemprop=&amp;quot;commentsCount&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% elseif theme.disqus_shortname %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;post-comments-count&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;a href=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;#comments&amp;quot; itemprop=&amp;quot;discussionUrl&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;span class=&amp;quot;post-comments-count disqus-comment-count&amp;quot; data-disqus-identifier=&amp;quot;&amp;#123;&amp;#123; post.path &amp;#125;&amp;#125;&amp;quot; itemprop=&amp;quot;commentsCount&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% endif %&amp;#125;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% endif %&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	#插入到这里&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/header&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改themes/next/layout目录下的post.swig文件&lt;/p&gt;
+&lt;p&gt;这个文件是文章的模板&lt;/p&gt;
+&lt;p&gt;找到以下代码，给render方法传入刚才第一步中设置的参数。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block content %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div id=&amp;quot;posts&amp;quot; class=&amp;quot;posts-expand&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	#render方法第二个参数is_index为是否为首页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	#第三个参数is_pv为我们刚才设置的是否显示计数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&amp;#123; post_template.render(page, false, true) &amp;#125;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;div class=&amp;quot;post-spread&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% if theme.jiathis %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% include &amp;apos;_partials/share/jiathis.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% include &amp;apos;_partials/share/duoshuo_share.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改themes/next/layout目录下的index.swig文件&lt;/p&gt;
+&lt;p&gt;这个文件是首页的模板&lt;/p&gt;
+&lt;p&gt;找到以下代码，给render方法传入刚才第一步中设置的参数。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block content %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;section id=&amp;quot;posts&amp;quot; class=&amp;quot;posts-expand&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;% for post in page.posts %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       #render方法第二个参数is_index为是否为首页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       #第三个参数is_pv为我们刚才设置的是否显示计数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;&amp;#123; post_template.render(post, true, false) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;% endfor %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/section&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;% include &amp;apos;_partials/pagination.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;至此，我们的站点计数功能就做好了&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;评论系统与站点计数&lt;/p&gt;
+&lt;p&gt;添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。&lt;/p&gt;
+&lt;h3 id=&quot;使用多说&quot;&gt;&lt;a href=&quot;#使用多说&quot; class=&quot;headerlink&quot; title=&quot;使用多说&quot;&gt;&lt;
     
     </summary>
     
@@ -239,44 +288,6 @@
       <category term="ios" scheme="http://yoursite.com/tags/ios/"/>
     
       <category term="animation" scheme="http://yoursite.com/tags/animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo更换主题Next</title>
-    <link href="http://yoursite.com/2016/06/21/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/"/>
-    <id>http://yoursite.com/2016/06/21/Hexo更换主题Next/</id>
-    <published>2016-06-21T01:11:04.000Z</published>
-    <updated>2016-06-21T01:11:04.000Z</updated>
-    
-    <content type="html">&lt;p&gt; 1 下载主题&lt;/p&gt;
-&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 2 启用主题&lt;/p&gt;
-&lt;p&gt; 修改当hexo目录下的_config.yml 的theme 选项&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Plugins: https://hexo.io/plugins/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 3 验证是否启用&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s --debug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;访问&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://localhost:4000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;确保站点正确运行。&lt;/p&gt;
-&lt;p&gt;4 其他配置。&lt;/p&gt;
-&lt;p&gt;   主题设定&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/theme-settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|主题设定&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;   第三方服务&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|第三方服务&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt; 1 下载主题&lt;/p&gt;
-&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
@@ -365,74 +376,6 @@
   </entry>
   
   <entry>
-    <title>hexo评论系统与站点计数</title>
-    <link href="http://yoursite.com/2016/06/21/Hexo%E8%AF%84%E8%AE%BA%E4%B8%8E%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://yoursite.com/2016/06/21/Hexo评论与站点统计系统/</id>
-    <published>2016-06-21T01:11:04.000Z</published>
-    <updated>2016-06-21T01:11:04.000Z</updated>
-    
-    <content type="html">&lt;p&gt;评论系统与站点计数&lt;/p&gt;
-&lt;p&gt;添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。&lt;/p&gt;
-&lt;h3 id=&quot;使用多说&quot;&gt;&lt;a href=&quot;#使用多说&quot; class=&quot;headerlink&quot; title=&quot;使用多说&quot;&gt;&lt;/a&gt;使用多说&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;注册多说&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;登录后在首页选择 “我要安装”。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;创建站点，填写站点相关信息。注意，多说域名 这一栏填写的即是你的 duoshuo_shortname。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;编辑站点的 _config.yml 注意，不是主题的_config.yml文件 ，添加 duoshuo_shortname 字段，设置如下&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_shortname: your-duoshuo-shortname&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;（注）duoshuo short name: 你的多说二级域名去掉 .duoshuo.com 部分&lt;/p&gt;
-&lt;h3 id=&quot;使用-Disqus&quot;&gt;&lt;a href=&quot;#使用-Disqus&quot; class=&quot;headerlink&quot; title=&quot;使用 Disqus&quot;&gt;&lt;/a&gt;使用 Disqus&lt;/h3&gt;&lt;p&gt;编辑站点的 _config.yml ，添加 disqus_shortname 字段，设置如下&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;disqus_shortname: your-disqus-shortname&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;多说评论显示-UA&quot;&gt;&lt;a href=&quot;#多说评论显示-UA&quot; class=&quot;headerlink&quot; title=&quot;多说评论显示 UA&quot;&gt;&lt;/a&gt;多说评论显示 UA&lt;/h3&gt;&lt;p&gt;需要配置 duoshuo_info 这个字段&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_info:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ua_enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  admin_enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  user_id: 1234567&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  admin_nickname: 主编大人&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;配置 user_id 和 admin_nickname 字段。 请访问 多说，登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字。&lt;/p&gt;
-&lt;h3 id=&quot;显示站点总访问量&quot;&gt;&lt;a href=&quot;#显示站点总访问量&quot; class=&quot;headerlink&quot; title=&quot;显示站点总访问量&quot;&gt;&lt;/a&gt;显示站点总访问量&lt;/h3&gt;&lt;p&gt;找到站点的themes/next/layout/_partials目录下的footer.swig文件&lt;br&gt;将以下脚本和标签插入到文件中&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本站总访问量 &amp;lt;span id=&amp;quot;busuanzi_value_site_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt; &amp;amp;nbsp&amp;amp;nbsp&amp;amp;nbsp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;您是第&amp;lt;span id=&amp;quot;busuanzi_value_site_uv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;个来到的小伙伴&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;插入到这里&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;powered-by&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;#123;&amp;#123; __(&amp;apos;footer.powered&amp;apos;, &amp;apos;&amp;lt;a class=&amp;quot;theme-link&amp;quot; href=&amp;quot;http://hexo.io&amp;quot;&amp;gt;Hexo&amp;lt;/a&amp;gt;&amp;apos;) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;theme-info&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;#123;&amp;#123; __(&amp;apos;footer.theme&amp;apos;) &amp;#125;&amp;#125; -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 &amp;lt;a class=&amp;quot;theme-link&amp;quot; href=&amp;quot;https://github.com/iissnan/hexo-theme-next&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   NexT&amp;#123;% if theme.scheme %&amp;#125;.&amp;#123;&amp;#123; theme.scheme &amp;#125;&amp;#125;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 插入到这里&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block footer %&amp;#125;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;显示单页面访问量&quot;&gt;&lt;a href=&quot;#显示单页面访问量&quot; class=&quot;headerlink&quot; title=&quot;显示单页面访问量&quot;&gt;&lt;/a&gt;显示单页面访问量&lt;/h3&gt;&lt;p&gt;修改themes/next/layout/_macro目录下的post.swig文件&lt;/p&gt;
-&lt;p&gt;位于文件开头,在第三个参数的位置，增加is_pv字段&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% macro render(post, is_index, is_pv, post_extra_class) %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;插入以下代码，用于区分文章页面跟首页&lt;/p&gt;
-&lt;p&gt;这里不用像”显示站点总访问量”中那样安装脚本，否则会出现重复计数的问题。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if is_pv %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span&amp;gt;&amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span id=&amp;quot;busuanzi_value_page_pv&amp;quot; &amp;gt;&amp;lt;/span&amp;gt;次阅读&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/span&amp;gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;插入这个位置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if post.comments %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;post-comments-count&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;a href=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;#comments&amp;quot; itemprop=&amp;quot;discussionUrl&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;lt;span class=&amp;quot;post-comments-count ds-thread-count&amp;quot; data-thread-key=&amp;quot;&amp;#123;&amp;#123; post.path &amp;#125;&amp;#125;&amp;quot; itemprop=&amp;quot;commentsCount&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% elseif theme.disqus_shortname %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;post-comments-count&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;a href=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;#comments&amp;quot; itemprop=&amp;quot;discussionUrl&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;span class=&amp;quot;post-comments-count disqus-comment-count&amp;quot; data-disqus-identifier=&amp;quot;&amp;#123;&amp;#123; post.path &amp;#125;&amp;#125;&amp;quot; itemprop=&amp;quot;commentsCount&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% endif %&amp;#125;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% endif %&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	#插入到这里&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/header&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;修改themes/next/layout目录下的post.swig文件&lt;/p&gt;
-&lt;p&gt;这个文件是文章的模板&lt;/p&gt;
-&lt;p&gt;找到以下代码，给render方法传入刚才第一步中设置的参数。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block content %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div id=&amp;quot;posts&amp;quot; class=&amp;quot;posts-expand&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	#render方法第二个参数is_index为是否为首页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	#第三个参数is_pv为我们刚才设置的是否显示计数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&amp;#123; post_template.render(page, false, true) &amp;#125;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;div class=&amp;quot;post-spread&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% if theme.jiathis %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% include &amp;apos;_partials/share/jiathis.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% include &amp;apos;_partials/share/duoshuo_share.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;修改themes/next/layout目录下的index.swig文件&lt;/p&gt;
-&lt;p&gt;这个文件是首页的模板&lt;/p&gt;
-&lt;p&gt;找到以下代码，给render方法传入刚才第一步中设置的参数。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block content %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;section id=&amp;quot;posts&amp;quot; class=&amp;quot;posts-expand&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;% for post in page.posts %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       #render方法第二个参数is_index为是否为首页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       #第三个参数is_pv为我们刚才设置的是否显示计数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;&amp;#123; post_template.render(post, true, false) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;% endfor %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/section&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;% include &amp;apos;_partials/pagination.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;至此，我们的站点计数功能就做好了&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;评论系统与站点计数&lt;/p&gt;
-&lt;p&gt;添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。&lt;/p&gt;
-&lt;h3 id=&quot;使用多说&quot;&gt;&lt;a href=&quot;#使用多说&quot; class=&quot;headerlink&quot; title=&quot;使用多说&quot;&gt;&lt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="next" scheme="http://yoursite.com/tags/next/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2016/06/21/hello-world/"/>
     <id>http://yoursite.com/2016/06/21/hello-world/</id>
@@ -456,6 +399,96 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Next 配置主观</title>
+    <link href="http://yoursite.com/2016/06/21/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/"/>
+    <id>http://yoursite.com/2016/06/21/HexoNext配置主题/</id>
+    <published>2016-06-21T01:11:04.000Z</published>
+    <updated>2016-06-21T01:11:04.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;语言设置&quot;&gt;&lt;a href=&quot;#语言设置&quot; class=&quot;headerlink&quot; title=&quot;语言设置&quot;&gt;&lt;/a&gt;语言设置&lt;/h3&gt;&lt;p&gt;在主目录下_config.yml 中配置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;language: zh-Hans&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;语言&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;设定值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;English&lt;/td&gt;
+&lt;td&gt;en&lt;/td&gt;
+&lt;td&gt;language: en&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;简体中文&lt;/td&gt;
+&lt;td&gt;zh-Hans&lt;/td&gt;
+&lt;td&gt;language: zh-Hans&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;菜单设置&quot;&gt;&lt;a href=&quot;#菜单设置&quot; class=&quot;headerlink&quot; title=&quot;菜单设置&quot;&gt;&lt;/a&gt;菜单设置&lt;/h3&gt;&lt;p&gt;菜单配置在 主题配置文件的 menu&lt;/p&gt;
+&lt;p&gt;菜单示例配置：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #about: /about&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #categories: /categories&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  tags: /tags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #commonweal: /404.html&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;侧栏设置&quot;&gt;&lt;a href=&quot;#侧栏设置&quot; class=&quot;headerlink&quot; title=&quot;侧栏设置&quot;&gt;&lt;/a&gt;侧栏设置&lt;/h3&gt;&lt;p&gt;配置选项&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;post - 默认行为，在文章页面（拥有目录列表）时显示&lt;/li&gt;
+&lt;li&gt;always - 在所有页面中都显示&lt;/li&gt;
+&lt;li&gt;hide - 在所有页面中都隐藏（可以手动展开）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;侧栏示例配置：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sidebar: post&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;头像设置&quot;&gt;&lt;a href=&quot;#头像设置&quot; class=&quot;headerlink&quot; title=&quot;头像设置&quot;&gt;&lt;/a&gt;头像设置&lt;/h3&gt;&lt;p&gt;新增字段 avatar&lt;/p&gt;
+&lt;p&gt;1 完整的互联网 URL    &lt;a href=&quot;https://avatars1.githubusercontent.com/u/32269?v=3&amp;amp;s=460&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://avatars1.githubusercontent.com/u/32269?v=3&amp;amp;s=460&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2 站点内的地址    /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/ （可能需要新建uploads目录）&lt;/p&gt;
+&lt;p&gt;3 /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下&lt;/p&gt;
+&lt;h3 id=&quot;作者名称&quot;&gt;&lt;a href=&quot;#作者名称&quot; class=&quot;headerlink&quot; title=&quot;作者名称&quot;&gt;&lt;/a&gt;作者名称&lt;/h3&gt;&lt;p&gt;设置 author 为你的昵称&lt;/p&gt;
+&lt;h3 id=&quot;站点描述设置&quot;&gt;&lt;a href=&quot;#站点描述设置&quot; class=&quot;headerlink&quot; title=&quot;站点描述设置&quot;&gt;&lt;/a&gt;站点描述设置&lt;/h3&gt;&lt;p&gt;设置 description 字段为你的站点描述。&lt;/p&gt;
+&lt;h3 id=&quot;添加「标签」页面&quot;&gt;&lt;a href=&quot;#添加「标签」页面&quot; class=&quot;headerlink&quot; title=&quot;添加「标签」页面&quot;&gt;&lt;/a&gt;添加「标签」页面&lt;/h3&gt;&lt;p&gt;1 定位到 Hexo 站点目录下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new page tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2编辑刚新建的页面，将页面的类型设置为 tags &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 标签&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type: &amp;quot;tags&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;3  添加 tags 到 menu 中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  tags: /tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;添加「分类」页面&quot;&gt;&lt;a href=&quot;#添加「分类」页面&quot; class=&quot;headerlink&quot; title=&quot;添加「分类」页面&quot;&gt;&lt;/a&gt;添加「分类」页面&lt;/h3&gt;&lt;p&gt;1 定位到 Hexo 站点目录下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new page categories&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2编辑刚新建的页面，将页面的类型设置为 categories &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 标签&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type: &amp;quot;categories&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;3  添加 categories 到 menu 中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  categories: /categories&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;设置代码高亮主题&quot;&gt;&lt;a href=&quot;#设置代码高亮主题&quot; class=&quot;headerlink&quot; title=&quot;设置代码高亮主题&quot;&gt;&lt;/a&gt;设置代码高亮主题&lt;/h3&gt;&lt;p&gt;NexT 默认使用的是 白色的 normal 主题,可选的值有 normal，night， night blue， night bright， night eighties.&lt;/p&gt;
+&lt;p&gt;更改 highlight_theme 字段，将其值设定成你所喜爱的高亮主题，例如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Code Highlight theme&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Available value: normal | night | night eighties | night blue | night bright&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# https://github.com/chriskempson/tomorrow-theme&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;highlight_theme: normal&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;侧边栏社交链接&quot;&gt;&lt;a href=&quot;#侧边栏社交链接&quot; class=&quot;headerlink&quot; title=&quot;侧边栏社交链接&quot;&gt;&lt;/a&gt;侧边栏社交链接&lt;/h3&gt;&lt;p&gt;1&lt;br&gt;接放置在 social 字段下，一行一个链接。其键值格式是 显示文本: 链接地址。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Social links&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: https://github.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Twitter: https://twitter.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  微博: http://weibo.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  豆瓣: http://douban.com/people/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  知乎: http://www.zhihu.com/people/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # 等等&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2 设定链接的图标，对应的字段是 social_icons。其键值格式是 匹配键: Font Awesome 图标名称， 匹配键 与上一步所配置的链接的 显示文本 相同（大小写严格匹配），图标名称 是 Font Awesome 图标的名字（不必带 fa- 前缀）。 enable 选项用于控制是否显示图标，你可以设置成 false 来去掉图标。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Social Icons&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social_icons:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # Icon Mappings&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: github&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Twitter: twitter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  微博: weibo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;设置-RSS&quot;&gt;&lt;a href=&quot;#设置-RSS&quot; class=&quot;headerlink&quot; title=&quot;设置 RSS&quot;&gt;&lt;/a&gt;设置 RSS&lt;/h3&gt;&lt;p&gt;NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;false：禁用 RSS，不在页面上显示 RSS 连接。&lt;/li&gt;
+&lt;li&gt;留空：使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。&lt;/li&gt;
+&lt;li&gt;具体的链接地址：适用于已经烧制过 Feed 的情形。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;语言设置&quot;&gt;&lt;a href=&quot;#语言设置&quot; class=&quot;headerlink&quot; title=&quot;语言设置&quot;&gt;&lt;/a&gt;语言设置&lt;/h3&gt;&lt;p&gt;在主目录下_config.yml 中配置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="next" scheme="http://yoursite.com/tags/next/"/>
     
   </entry>
   
