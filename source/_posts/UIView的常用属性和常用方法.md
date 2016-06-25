@@ -1,8 +1,8 @@
 ---
 title: UIView的常用属性和常用方法总结
 tags: 
-- swfit
-categories: swfit
+- swift
+categories: swift
 ---
 
 
