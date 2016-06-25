@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ios,animation," />
+  <meta name="keywords" content="swift,SnapKit," />
 
 
 
@@ -84,28 +84,31 @@
 
 
 
-<meta name="description" content="专用图层CAShapeLayerCAShapeLayer优点：
-
-渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。
-高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。
-不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Cor">
+<meta name="description" content="1 保存约束
+1234//保存约束的引用var topConstraint:Constraint? self.topConstraint = make.top.equalTo(self.view).offset(40).constraint
+2 删除约束
+12//移除约束self.topConstraint?.uninstall()
+3 通过约束的引用来更新约束 updateOffset() 
+1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ios核心动画之CAShapeLayer">
-<meta property="og:url" content="http://yoursite.com/2016/06/21/ios核心动画之CAShapeLayer/index.html">
+<meta property="og:title" content="swift-SnapKit自动布局使用2">
+<meta property="og:url" content="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用2/index.html">
 <meta property="og:site_name" content="JackGuoFranklin">
-<meta property="og:description" content="专用图层CAShapeLayerCAShapeLayer优点：
-
-渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。
-高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。
-不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Cor">
-<meta property="og:updated_time" content="2016-06-23T16:15:14.000Z">
+<meta property="og:description" content="1 保存约束
+1234//保存约束的引用var topConstraint:Constraint? self.topConstraint = make.top.equalTo(self.view).offset(40).constraint
+2 删除约束
+12//移除约束self.topConstraint?.uninstall()
+3 通过约束的引用来更新约束 updateOffset() 
+1">
+<meta property="og:updated_time" content="2016-06-25T02:20:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ios核心动画之CAShapeLayer">
-<meta name="twitter:description" content="专用图层CAShapeLayerCAShapeLayer优点：
-
-渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。
-高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。
-不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Cor">
+<meta name="twitter:title" content="swift-SnapKit自动布局使用2">
+<meta name="twitter:description" content="1 保存约束
+1234//保存约束的引用var topConstraint:Constraint? self.topConstraint = make.top.equalTo(self.view).offset(40).constraint
+2 删除约束
+12//移除约束self.topConstraint?.uninstall()
+3 通过约束的引用来更新约束 updateOffset() 
+1">
 
 
 
@@ -126,9 +129,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/21/ios核心动画之CAShapeLayer/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用2/"/>
 
-  <title> ios核心动画之CAShapeLayer | JackGuoFranklin </title>
+  <title> swift-SnapKit自动布局使用2 | JackGuoFranklin </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +261,7 @@
             
             
               
-                ios核心动画之CAShapeLayer
+                swift-SnapKit自动布局使用2
               
             
           </h1>
@@ -270,8 +273,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-21T09:11:04+08:00" content="2016-06-21">
-              2016-06-21
+            <time itemprop="dateCreated" datetime="2016-06-25T10:13:33+08:00" content="2016-06-25">
+              2016-06-25
             </time>
           </span>
 
@@ -284,8 +287,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ios/" itemprop="url" rel="index">
-                    <span itemprop="name">ios</span>
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
                   </a>
                 </span>
 
@@ -300,8 +303,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/21/ios核心动画之CAShapeLayer/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/ios核心动画之CAShapeLayer/" itemprop="commentsCount"></span>
+                <a href="/2016/06/25/swift-SnapKit自动布局使用2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/25/swift-SnapKit自动布局使用2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,23 +342,17 @@
       
 
       
-        <h3 id="专用图层"><a href="#专用图层" class="headerlink" title="专用图层"></a>专用图层</h3><h5 id="CAShapeLayer"><a href="#CAShapeLayer" class="headerlink" title="CAShapeLayer"></a>CAShapeLayer</h5><p>CAShapeLayer优点：</p>
-<ol>
-<li>渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。</li>
-<li>高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。</li>
-<li>不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Core Graphics的普通CALayer一样被剪裁掉（如我们在第二章所见）。</li>
-<li>不会出现像素化。当你给CAShapeLayer做3D变换时，它不像一个有寄宿图的普通图层一样变得像素化。</li>
-</ol>
-<p>创建一个CGPath 一般使用 UIBezierPath 绘制路线。</p>
-<p>CAShapeLayer 属性</p>
-<ul>
-<li>lineWith（线宽，用点表示单位）</li>
-<li>lineCap（线条结尾的样子）</li>
-<li>lineJoin（线条之间的结合点的样子）</li>
-<li>strokeColor(线条颜色)</li>
-<li>fillColor（填充颜色）</li>
-<li>path（路线）</li>
-</ul>
+        <p>1 保存约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//保存约束的引用</span><br><span class="line">var topConstraint:Constraint?</span><br><span class="line"> </span><br><span class="line">self.topConstraint = make.top.equalTo(self.view).offset(40).constraint</span><br></pre></td></tr></table></figure>
+<p>2 删除约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//移除约束</span><br><span class="line">self.topConstraint?.uninstall()</span><br></pre></td></tr></table></figure>
+<p>3 通过约束的引用来更新约束 updateOffset() </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//更新修改约束</span><br><span class="line">self.topConstraint?.updateOffset(60)</span><br></pre></td></tr></table></figure>
+<p>4 使用snp_updateConstraints更新约束</p>
+<p>我们还可以用 snp_updateConstraints 方法来代替 snp_makeConstraints 进行约束的更新，这个更新操作通常放在 UIViewController 的 updateViewConstraints() 方法中，或者 UIView 的 updateConstraints() 方法中执行，这样视图约束需要更新的时候会自动调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//视图约束更新</span><br><span class="line">    override func updateViewConstraints() &#123;</span><br><span class="line">        self.box.snp_updateConstraints&#123; (make) -&gt; Void in</span><br><span class="line">            //视图宽度与屏幕等宽</span><br><span class="line">            make.width.equalTo(self.view)</span><br><span class="line">        &#125;</span><br><span class="line">   </span><br><span class="line">        super.updateViewConstraints()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>5 使用snp_remakeConstraints重做约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">snp_remakeConstraints 与 snp_makeConstraints 用法类似，不同的是 snp_remakeConstraints 首先会先清除掉之前所有被SnapKit设置的约束。</span><br><span class="line"></span><br><span class="line">   //重做约束</span><br><span class="line">        box.snp_remakeConstraints &#123; (make) -&gt; Void in</span><br><span class="line">            make.width.height.equalTo(100)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -377,9 +374,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ios/" rel="tag">#ios</a>
+            <a href="/tags/swift/" rel="tag">#swift</a>
           
-            <a href="/tags/animation/" rel="tag">#animation</a>
+            <a href="/tags/SnapKit/" rel="tag">#SnapKit</a>
           
         </div>
       
@@ -388,17 +385,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/21/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/06/25/swift-SnapKit自动布局使用3/" rel="next" title="swift-SnapKit自动布局使用3">
+                <i class="fa fa-chevron-left"></i> swift-SnapKit自动布局使用3
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/23/androidstudio启动慢/" rel="prev" title="android studio启动慢">
-                android studio启动慢 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -413,10 +406,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/21/ios核心动画之CAShapeLayer/"
-     data-title="ios核心动画之CAShapeLayer"
+        <div class="ds-share flat" data-thread-key="2016/06/25/swift-SnapKit自动布局使用2/"
+     data-title="swift-SnapKit自动布局使用2"
      data-content=""
-     data-url="http://yoursite.com/2016/06/21/ios核心动画之CAShapeLayer/">
+     data-url="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用2/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -443,8 +436,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/21/ios核心动画之CAShapeLayer/"
-           data-title="ios核心动画之CAShapeLayer" data-url="http://yoursite.com/2016/06/21/ios核心动画之CAShapeLayer/">
+      <div class="ds-thread" data-thread-key="2016/06/25/swift-SnapKit自动布局使用2/"
+           data-title="swift-SnapKit自动布局使用2" data-url="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用2/">
       </div>
     
   </div>
@@ -555,7 +548,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#专用图层"><span class="nav-number">1.</span> <span class="nav-text">专用图层</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CAShapeLayer"><span class="nav-number">1.0.1.</span> <span class="nav-text">CAShapeLayer</span></a></li></ol></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
