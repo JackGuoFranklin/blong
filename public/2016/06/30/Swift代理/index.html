@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="swift,SnapKit," />
+  <meta name="keywords" content="swift,delegate," />
 
 
 
@@ -84,31 +84,16 @@
 
 
 
-<meta name="description" content="1，约束优先级
-我们使用SnapKit的时候，还可以定义约束的优先级。
-这样当约束出现冲突的时候,优先级高的约束覆盖优先级低的约束。
-具体优先级可以放在约束链的结束处。
-可以设置如下几种优先级
-1234priorityLow()：设置低优先级，优先级为250priorityMedium()：设置中优先级，优先级为500（这个也就是默认的优先级）priorityHigh()：设置高优先级，优先级为7">
+<meta name="description" content="实现代理传值1234567891011121314151617181920212223242526272829303132333435363738394041import UIKitclass ViewController: UIViewController,ChangeValueDelegate&amp;#123;        var btn = UIButton()    override func">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swift-SnapKit自动布局使用3">
-<meta property="og:url" content="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用3/index.html">
+<meta property="og:title" content="Swift代理delegate">
+<meta property="og:url" content="http://yoursite.com/2016/06/30/Swift代理/index.html">
 <meta property="og:site_name" content="JackGuoFranklin">
-<meta property="og:description" content="1，约束优先级
-我们使用SnapKit的时候，还可以定义约束的优先级。
-这样当约束出现冲突的时候,优先级高的约束覆盖优先级低的约束。
-具体优先级可以放在约束链的结束处。
-可以设置如下几种优先级
-1234priorityLow()：设置低优先级，优先级为250priorityMedium()：设置中优先级，优先级为500（这个也就是默认的优先级）priorityHigh()：设置高优先级，优先级为7">
-<meta property="og:updated_time" content="2016-06-25T02:33:17.000Z">
+<meta property="og:description" content="实现代理传值1234567891011121314151617181920212223242526272829303132333435363738394041import UIKitclass ViewController: UIViewController,ChangeValueDelegate&amp;#123;        var btn = UIButton()    override func">
+<meta property="og:updated_time" content="2016-06-30T04:42:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swift-SnapKit自动布局使用3">
-<meta name="twitter:description" content="1，约束优先级
-我们使用SnapKit的时候，还可以定义约束的优先级。
-这样当约束出现冲突的时候,优先级高的约束覆盖优先级低的约束。
-具体优先级可以放在约束链的结束处。
-可以设置如下几种优先级
-1234priorityLow()：设置低优先级，优先级为250priorityMedium()：设置中优先级，优先级为500（这个也就是默认的优先级）priorityHigh()：设置高优先级，优先级为7">
+<meta name="twitter:title" content="Swift代理delegate">
+<meta name="twitter:description" content="实现代理传值1234567891011121314151617181920212223242526272829303132333435363738394041import UIKitclass ViewController: UIViewController,ChangeValueDelegate&amp;#123;        var btn = UIButton()    override func">
 
 
 
@@ -129,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用3/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/30/Swift代理/"/>
 
-  <title> swift-SnapKit自动布局使用3 | JackGuoFranklin </title>
+  <title> Swift代理delegate | JackGuoFranklin </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +246,7 @@
             
             
               
-                swift-SnapKit自动布局使用3
+                Swift代理delegate
               
             
           </h1>
@@ -273,8 +258,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-25T10:13:33+08:00" content="2016-06-25">
-              2016-06-25
+            <time itemprop="dateCreated" datetime="2016-06-30T12:42:35+08:00" content="2016-06-30">
+              2016-06-30
             </time>
           </span>
 
@@ -303,8 +288,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/25/swift-SnapKit自动布局使用3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/25/swift-SnapKit自动布局使用3/" itemprop="commentsCount"></span>
+                <a href="/2016/06/30/Swift代理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/30/Swift代理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -342,18 +327,11 @@
       
 
       
-        <p>1，约束优先级</p>
-<p>我们使用SnapKit的时候，还可以定义约束的优先级。</p>
-<p>这样当约束出现冲突的时候,优先级高的约束覆盖优先级低的约束。</p>
-<p>具体优先级可以放在约束链的结束处。</p>
-<p>可以设置如下几种优先级</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">priorityLow()：设置低优先级，优先级为250</span><br><span class="line">priorityMedium()：设置中优先级，优先级为500（这个也就是默认的优先级）</span><br><span class="line">priorityHigh()：设置高优先级，优先级为750</span><br><span class="line">priority()：可以设置任意的优先级，接受的参数是0-1000的数字。比如：priority(600)</span><br></pre></td></tr></table></figure>
-<p>举例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//初始宽、高为100（优先级低）</span><br><span class="line">          make.width.height.equalTo(100 * self.scacle).priorityLow();</span><br><span class="line">          //最大尺寸不能超过屏幕</span><br><span class="line">          make.width.height.lessThanOrEqualTo(self.view.snp_width)</span><br><span class="line">          make.width.height.lessThanOrEqualTo(self.view.snp_height)</span><br></pre></td></tr></table></figure>
-<p>2，带有动画效果</p>
-<p>配合 UIView.animateWithDuration，我们可以在约束改变的时候有动画效果。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> //动画</span><br><span class="line"> UIView.animateWithDuration(0.3) &#123;</span><br><span class="line">       self.view.layoutIfNeeded()</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
+        <p>实现代理传值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"></span><br><span class="line">class ViewController: UIViewController,ChangeValueDelegate&#123;</span><br><span class="line">    </span><br><span class="line">    var btn = UIButton()</span><br><span class="line"></span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(&quot;Change&quot;, forState:.Normal)</span><br><span class="line">        btn.backgroundColor = UIColor.blueColor()</span><br><span class="line">        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)</span><br><span class="line">        btn.addTarget(self, action: #selector(change), forControlEvents: .TouchUpInside)</span><br><span class="line">        self.view.addSubview(btn)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //    delegate 代理方法</span><br><span class="line">    func changeValue(value: String) &#123;</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(value, forState: .Normal)</span><br><span class="line">        print(&quot;value:\(value)&quot;)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    //  传值</span><br><span class="line">    func change()&#123;</span><br><span class="line">        </span><br><span class="line">        let vc = ChangeValueViewController()</span><br><span class="line">        vc.delegate = self</span><br><span class="line">        self.navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>协议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">protocol ChangeValueDelegate &#123;</span><br><span class="line">    </span><br><span class="line">    func changeValue(value:String)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用代理传值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class ChangeValueViewController: UIViewController &#123;</span><br><span class="line">    </span><br><span class="line">    var delegate:ChangeValueDelegate?</span><br><span class="line">    </span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        // Do any additional setup after loading the view.</span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        self.delegate?.changeValue(&quot;ok&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -376,7 +354,7 @@
           
             <a href="/tags/swift/" rel="tag">#swift</a>
           
-            <a href="/tags/SnapKit/" rel="tag">#SnapKit</a>
+            <a href="/tags/delegate/" rel="tag">#delegate</a>
           
         </div>
       
@@ -385,16 +363,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/24/swift-SnapKit自动布局使用1/" rel="next" title="swift-SnapKit自动布局使用1">
-                <i class="fa fa-chevron-left"></i> swift-SnapKit自动布局使用1
+              <a href="/2016/06/28/使用CIFilter生成二维码/" rel="next" title="Swift使用CIFilter生成二维码图片（QRCode）">
+                <i class="fa fa-chevron-left"></i> Swift使用CIFilter生成二维码图片（QRCode）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/25/swift-SnapKit自动布局使用2/" rel="prev" title="swift-SnapKit自动布局使用2">
-                swift-SnapKit自动布局使用2 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/30/ios使用AVFoundation实现条形码扫描/" rel="prev" title="Swift使用AVFoundation实现条形码扫描">
+                Swift使用AVFoundation实现条形码扫描 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -410,10 +388,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/25/swift-SnapKit自动布局使用3/"
-     data-title="swift-SnapKit自动布局使用3"
+        <div class="ds-share flat" data-thread-key="2016/06/30/Swift代理/"
+     data-title="Swift代理delegate"
      data-content=""
-     data-url="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用3/">
+     data-url="http://yoursite.com/2016/06/30/Swift代理/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -440,8 +418,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/25/swift-SnapKit自动布局使用3/"
-           data-title="swift-SnapKit自动布局使用3" data-url="http://yoursite.com/2016/06/25/swift-SnapKit自动布局使用3/">
+      <div class="ds-thread" data-thread-key="2016/06/30/Swift代理/"
+           data-title="Swift代理delegate" data-url="http://yoursite.com/2016/06/30/Swift代理/">
       </div>
     
   </div>

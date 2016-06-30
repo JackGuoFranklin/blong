@@ -262,7 +262,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-30T12:42:35+08:00" content="2016-06-30">
+            <time itemprop="dateCreated" datetime="2016-06-30T12:45:25+08:00" content="2016-06-30">
               2016-06-30
             </time>
           </span>
@@ -329,7 +329,7 @@
       
         
           
-            <p>Swift<em>ios</em>开发之UINavigationController的常用属性</p>
+            <p>Swift开发之UINavigationController的常用属性</p>
 <p>1.导航栏是否隐藏</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.navigationController?.navigationBar.hidden = false</span><br></pre></td></tr></table></figure>
 <p>2.导航栏的最底部颜色设置</p>
@@ -410,7 +410,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-30T12:42:35+08:00" content="2016-06-30">
+            <time itemprop="dateCreated" datetime="2016-06-30T12:45:25+08:00" content="2016-06-30">
               2016-06-30
             </time>
           </span>
@@ -486,6 +486,140 @@
 <p>解决办法是：通过代码拉近镜头焦距，放大内容区域让机器更好的识别。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line">import AVFoundation</span><br><span class="line"> </span><br><span class="line">class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate,</span><br><span class="line">UIAlertViewDelegate&#123;</span><br><span class="line">     </span><br><span class="line">    var scanRectView:UIView!</span><br><span class="line">    var device:AVCaptureDevice!</span><br><span class="line">    var input:AVCaptureDeviceInput!</span><br><span class="line">    var output:AVCaptureMetadataOutput!</span><br><span class="line">    var session:AVCaptureSession!</span><br><span class="line">    var preview:AVCaptureVideoPreviewLayer!</span><br><span class="line">     </span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line">         </span><br><span class="line">        fromCamera()</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    //通过摄像头扫描</span><br><span class="line">    func fromCamera() &#123;</span><br><span class="line">        do&#123;</span><br><span class="line">            self.device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</span><br><span class="line">             </span><br><span class="line">            self.input = try AVCaptureDeviceInput(device: device)</span><br><span class="line">             </span><br><span class="line">            self.output = AVCaptureMetadataOutput()</span><br><span class="line">            output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</span><br><span class="line">             </span><br><span class="line">            self.session = AVCaptureSession()</span><br><span class="line">            if UIScreen.mainScreen().bounds.size.height&lt;500 &#123;</span><br><span class="line">                self.session.sessionPreset = AVCaptureSessionPreset640x480</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                self.session.sessionPreset = AVCaptureSessionPresetHigh</span><br><span class="line">            &#125;</span><br><span class="line">             </span><br><span class="line">            self.session.addInput(self.input)</span><br><span class="line">            self.session.addOutput(self.output)</span><br><span class="line">             </span><br><span class="line">            self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,</span><br><span class="line">                AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,</span><br><span class="line">                AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]</span><br><span class="line">             </span><br><span class="line">            //计算中间可探测区域</span><br><span class="line">            let windowSize:CGSize = UIScreen.mainScreen().bounds.size;</span><br><span class="line">            let scanSize:CGSize = CGSizeMake(windowSize.width*3/4,</span><br><span class="line">                windowSize.width*3/4);</span><br><span class="line">            var scanRect:CGRect = CGRectMake((windowSize.width-scanSize.width)/2,</span><br><span class="line">                (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);</span><br><span class="line">            //计算rectOfInterest 注意x,y交换位置</span><br><span class="line">            scanRect = CGRectMake(scanRect.origin.y/windowSize.height,</span><br><span class="line">                scanRect.origin.x/windowSize.width,</span><br><span class="line">                scanRect.size.height/windowSize.height,</span><br><span class="line">                scanRect.size.width/windowSize.width);</span><br><span class="line">            //设置可探测区域</span><br><span class="line">            self.output.rectOfInterest = scanRect</span><br><span class="line">             </span><br><span class="line">            self.preview = AVCaptureVideoPreviewLayer(session:self.session)</span><br><span class="line">            self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill</span><br><span class="line">            self.preview.frame = UIScreen.mainScreen().bounds</span><br><span class="line">            self.view.layer.insertSublayer(self.preview, atIndex:0)</span><br><span class="line">             </span><br><span class="line">            //添加中间的探测区域绿框</span><br><span class="line">            self.scanRectView = UIView();</span><br><span class="line">            self.view.addSubview(self.scanRectView)</span><br><span class="line">            self.scanRectView.frame = CGRectMake(0, 0, scanSize.width, scanSize.height);</span><br><span class="line">            self.scanRectView.center = CGPointMake(</span><br><span class="line">                CGRectGetMidX(UIScreen.mainScreen().bounds),</span><br><span class="line">                CGRectGetMidY(UIScreen.mainScreen().bounds));</span><br><span class="line">            self.scanRectView.layer.borderColor = UIColor.greenColor().CGColor</span><br><span class="line">            self.scanRectView.layer.borderWidth = 1;</span><br><span class="line">             </span><br><span class="line">            //开始捕获</span><br><span class="line">            self.session.startRunning()</span><br><span class="line">             </span><br><span class="line">            //放大</span><br><span class="line">            do &#123;</span><br><span class="line">                try self.device!.lockForConfiguration()</span><br><span class="line">            &#125; catch _ &#123;</span><br><span class="line">                NSLog(&quot;Error: lockForConfiguration.&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            self.device!.videoZoomFactor = 1.5</span><br><span class="line">            self.device!.unlockForConfiguration()</span><br><span class="line">             //放大</span><br><span class="line">             </span><br><span class="line">             </span><br><span class="line">        &#125;catch _ as NSError&#123;</span><br><span class="line">            //打印错误消息</span><br><span class="line">            let errorAlert = UIAlertView(title: &quot;提醒&quot;,</span><br><span class="line">                message: &quot;请在iPhone的\&quot;设置-隐私-相机\&quot;选项中,允许本程序访问您的相机&quot;,</span><br><span class="line">                delegate: self,</span><br><span class="line">                cancelButtonTitle: &quot;确定&quot;)</span><br><span class="line">            errorAlert.show()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    //摄像头捕获</span><br><span class="line">    func captureOutput(captureOutput: AVCaptureOutput!,</span><br><span class="line">        didOutputMetadataObjects metadataObjects: [AnyObject]!,</span><br><span class="line">        fromConnection connection: AVCaptureConnection!) &#123;</span><br><span class="line">             </span><br><span class="line">            var stringValue:String?</span><br><span class="line">            if metadataObjects.count &gt; 0 &#123;</span><br><span class="line">                let metadataObject = metadataObjects[0]</span><br><span class="line">                    as! AVMetadataMachineReadableCodeObject</span><br><span class="line">                stringValue = metadataObject.stringValue</span><br><span class="line">                 </span><br><span class="line">                if stringValue != nil&#123;</span><br><span class="line">                    self.session.stopRunning()</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            self.session.stopRunning()</span><br><span class="line">            //输出结果</span><br><span class="line">            let alertView = UIAlertView(title: &quot;一维码&quot;, message: stringValue,</span><br><span class="line">                delegate: self, cancelButtonTitle: &quot;确定&quot;)</span><br><span class="line">            alertView.show()</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    //消息框确认后消失</span><br><span class="line">    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) &#123;</span><br><span class="line">        //继续扫描</span><br><span class="line">        self.session.startRunning()</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/30/Swift代理/" itemprop="url">
+                  Swift代理delegate
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-30T12:42:35+08:00" content="2016-06-30">
+              2016-06-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/30/Swift代理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/30/Swift代理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>实现代理传值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"></span><br><span class="line">class ViewController: UIViewController,ChangeValueDelegate&#123;</span><br><span class="line">    </span><br><span class="line">    var btn = UIButton()</span><br><span class="line"></span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(&quot;Change&quot;, forState:.Normal)</span><br><span class="line">        btn.backgroundColor = UIColor.blueColor()</span><br><span class="line">        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)</span><br><span class="line">        btn.addTarget(self, action: #selector(change), forControlEvents: .TouchUpInside)</span><br><span class="line">        self.view.addSubview(btn)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //    delegate 代理方法</span><br><span class="line">    func changeValue(value: String) &#123;</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(value, forState: .Normal)</span><br><span class="line">        print(&quot;value:\(value)&quot;)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    //  传值</span><br><span class="line">    func change()&#123;</span><br><span class="line">        </span><br><span class="line">        let vc = ChangeValueViewController()</span><br><span class="line">        vc.delegate = self</span><br><span class="line">        self.navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>协议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">protocol ChangeValueDelegate &#123;</span><br><span class="line">    </span><br><span class="line">    func changeValue(value:String)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用代理传值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class ChangeValueViewController: UIViewController &#123;</span><br><span class="line">    </span><br><span class="line">    var delegate:ChangeValueDelegate?</span><br><span class="line">    </span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        // Do any additional setup after loading the view.</span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        self.delegate?.changeValue(&quot;ok&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1490,180 +1624,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/24/swift-SnapKit自动布局使用1/" itemprop="url">
-                  swift-SnapKit自动布局使用1
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-24T16:53:26+08:00" content="2016-06-24">
-              2016-06-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/swift/" itemprop="url" rel="index">
-                    <span itemprop="name">swift</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/24/swift-SnapKit自动布局使用1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/24/swift-SnapKit自动布局使用1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>swift自动布局库SnapKit使用详解1<br>SnapKit 前身是Masonry（一个oc版本的布局库）</p>
-<p>1 安装</p>
-<p>SnapKit github地址 <a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="external">https://github.com/SnapKit/SnapKit</a></p>
-<p>可以通过Cocoapods 安装<br>在Podfile中加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://github.com/CocoaPods/Specs.git&apos;</span><br><span class="line">platform :ios, &apos;8.0&apos;</span><br><span class="line">use_frameworks!</span><br><span class="line">pod &apos;SnapKit&apos;</span><br></pre></td></tr></table></figure>
-<p>然后在终端项目目录下输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
-<p>2 SnapKit的使用方法<br>snp_makeConstraints 来添加view的约束</p>
-<ul>
-<li>边距，宽，高，左上右下，基准线。</li>
-<li>修正位移（inset，offset）</li>
-<li>倍率修正（multipliedBy）</li>
-</ul>
-<p>注意： 使用 snp_makeConstraints 方法的元素必须事先添加到父元素的中，例如：self.view.addSubview(view)</p>
-<ul>
-<li>.equalTo: 等于</li>
-<li>.lessThanOrEqualTo: 小于等于</li>
-<li>.greaterThanOrEqualTo: 大于等于</li>
-</ul>
-<p>3 约束条件参数支持如下三种类型：</p>
-<p>（1）视图属性（ViewAttribute）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//使当前视图对象的中心x坐标小于等于视图view2的左边的x坐标</span><br><span class="line">make.centerX.lessThanOrEqualTo(view2.snp_left)</span><br></pre></td></tr></table></figure>
-<p>（2）视图关系（UIView/NSView） </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">比如想让view.left 大于等于 label.left：</span><br><span class="line"></span><br><span class="line">make.left.greaterThanOrEqualTo(label)</span><br><span class="line">这个其实等价于：</span><br><span class="line"></span><br><span class="line">make.left.greaterThanOrEqualTo(label.snp_left)</span><br></pre></td></tr></table></figure>
-<p>（3）严格检测（Strick Checks）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">比如将宽度和高度属性设置为常量值：</span><br><span class="line">make.height.equalTo(20)</span><br><span class="line">make.width.equalTo(20)</span><br><span class="line">make.top.equalTo(42)</span><br></pre></td></tr></table></figure>
-<p>4 给视图的各种属性设置约束</p>
-<p>（1）width、height属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">自动布局允许宽度、高度设置为常量值。</span><br><span class="line"></span><br><span class="line">make.height.equalTo(20)</span><br><span class="line">make.width.equalTo(self.buttonSize.width)</span><br><span class="line">//当前视图与label的顶部齐平</span><br><span class="line">make.top.equalTo(label.snp_top)</span><br></pre></td></tr></table></figure>
-<p>（2） left、right、top、centerX、centerY等其他属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这些属性直接设置常量值，表示他们相对于父容器的相对约束条件。</span><br><span class="line"></span><br><span class="line">当然也可以使用与其他视图的关系来添加约束。</span><br></pre></td></tr></table></figure>
-<p>（3）edges(边缘）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//让当前视图 的 上下左右(top,left,bottom,right) 等于 view2</span><br><span class="line">make.edges.equalTo(view2)</span><br></pre></td></tr></table></figure>
-<p>（4）size(尺寸）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//当前视图宽高 &gt;= titleLabel</span><br><span class="line">make.size.greaterThanOrEqualTo(titleLabel)</span><br></pre></td></tr></table></figure>
-<p>（5）center(中心）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//当前视图与 button1中心相同 （centerX 和 centerY）</span><br><span class="line">make.center.equalTo(button1)</span><br></pre></td></tr></table></figure>
-<p>5 位移修正与倍率修正</p>
-<p>（1）内位移修正：inset</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">视图view，它距离父视图上、左、下、右边距分别是10、15、20、25</span><br><span class="line"></span><br><span class="line">make.edges.equalTo(boxOutter).inset(UIEdgeInsetsMake(10, 15, 20, 25))</span><br><span class="line">上面边距的偏移设置实际上相当于如下形式：</span><br><span class="line"></span><br><span class="line">make.top.equalTo(boxOutter).offset(10)</span><br><span class="line">make.left.equalTo(boxOutter).offset(15)</span><br><span class="line">make.bottom.equalTo(boxOutter).offset(-20)</span><br><span class="line">make.right.equalTo(boxOutter).offset(-25)</span><br></pre></td></tr></table></figure>
-<p>（2）外位移修正：offset </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">视图比视图宽度加50，高度减50。</span><br><span class="line">make.size.equalTo(boxOutter).offset(CGSizeMake(50, -50))</span><br></pre></td></tr></table></figure>
-<p>（3）倍率修正：multipliedBy </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">视图的尺寸设置成视图一半大小。</span><br><span class="line">make.size.equalTo(boxOutter).multipliedBy(0.5)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1709,7 +1669,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1726,7 +1686,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

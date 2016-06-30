@@ -7,7 +7,7 @@ tags:
 categories: swift
 ---
 
-Swift_ios_开发之UINavigationController的常用属性
+Swift开发之UINavigationController的常用属性
 
 1.导航栏是否隐藏
 
