@@ -838,6 +838,178 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/21/Hexo评论与站点统计系统/" itemprop="url">
+                  hexo评论系统与站点计数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-21T09:11:04+08:00" content="2016-06-21">
+              2016-06-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/21/Hexo评论与站点统计系统/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/Hexo评论与站点统计系统/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>评论系统与站点计数</p>
+<p>添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。</p>
+<h3 id="使用多说"><a href="#使用多说" class="headerlink" title="使用多说"></a>使用多说</h3><ol>
+<li><p>注册多说</p>
+<ol>
+<li><p>登录后在首页选择 “我要安装”。</p>
+</li>
+<li><p>创建站点，填写站点相关信息。注意，多说域名 这一栏填写的即是你的 duoshuo_shortname。</p>
+</li>
+</ol>
+</li>
+<li><p>编辑站点的 _config.yml 注意，不是主题的_config.yml文件 ，添加 duoshuo_shortname 字段，设置如下</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_shortname: your-duoshuo-shortname</span><br></pre></td></tr></table></figure>
+<p>（注）duoshuo short name: 你的多说二级域名去掉 .duoshuo.com 部分</p>
+<h3 id="使用-Disqus"><a href="#使用-Disqus" class="headerlink" title="使用 Disqus"></a>使用 Disqus</h3><p>编辑站点的 _config.yml ，添加 disqus_shortname 字段，设置如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">disqus_shortname: your-disqus-shortname</span><br></pre></td></tr></table></figure>
+<h3 id="多说评论显示-UA"><a href="#多说评论显示-UA" class="headerlink" title="多说评论显示 UA"></a>多说评论显示 UA</h3><p>需要配置 duoshuo_info 这个字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_info:</span><br><span class="line">  ua_enable: true</span><br><span class="line">  admin_enable: true</span><br><span class="line">  user_id: 1234567</span><br><span class="line">  admin_nickname: 主编大人</span><br></pre></td></tr></table></figure>
+<p>配置 user_id 和 admin_nickname 字段。 请访问 多说，登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字。</p>
+<h3 id="显示站点总访问量"><a href="#显示站点总访问量" class="headerlink" title="显示站点总访问量"></a>显示站点总访问量</h3><p>找到站点的themes/next/layout/_partials目录下的footer.swig文件<br>将以下脚本和标签插入到文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">本站总访问量 &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; &amp;nbsp&amp;nbsp&amp;nbsp</span><br><span class="line">您是第&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;个来到的小伙伴</span><br></pre></td></tr></table></figure>
+<p>插入到这里</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;powered-by&quot;&gt;</span><br><span class="line"> 	&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;http://hexo.io&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;theme-info&quot;&gt;</span><br><span class="line"> 	&#123;&#123; __(&apos;footer.theme&apos;) &#125;&#125; -</span><br><span class="line">	 &lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;</span><br><span class="line">   NexT&#123;% if theme.scheme %&#125;.&#123;&#123; theme.scheme &#125;&#125;&#123;% endif %&#125;</span><br><span class="line"> 	&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"># 插入到这里</span><br><span class="line">&#123;% block footer %&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="显示单页面访问量"><a href="#显示单页面访问量" class="headerlink" title="显示单页面访问量"></a>显示单页面访问量</h3><p>修改themes/next/layout/_macro目录下的post.swig文件</p>
+<p>位于文件开头,在第三个参数的位置，增加is_pv字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro render(post, is_index, is_pv, post_extra_class) %&#125;</span><br></pre></td></tr></table></figure>
+<p>插入以下代码，用于区分文章页面跟首页</p>
+<p>这里不用像”显示站点总访问量”中那样安装脚本，否则会出现重复计数的问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if is_pv %&#125;</span><br><span class="line">&lt;span&gt;&amp;nbsp; | &amp;nbsp;</span><br><span class="line">&lt;span id=&quot;busuanzi_value_page_pv&quot; &gt;&lt;/span&gt;次阅读</span><br><span class="line">&lt;/span&gt;    </span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>插入这个位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.comments %&#125;</span><br><span class="line">          &#123;% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %&#125;</span><br><span class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</span><br><span class="line">              &amp;nbsp; | &amp;nbsp;</span><br><span class="line">              &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;post-comments-count ds-thread-count&quot; data-thread-key=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</span><br><span class="line">              &lt;/a&gt;</span><br><span class="line">            &lt;/span&gt;</span><br><span class="line">          &#123;% elseif theme.disqus_shortname %&#125;</span><br><span class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</span><br><span class="line">            &amp;nbsp; | &amp;nbsp;</span><br><span class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</span><br><span class="line">              &lt;span class=&quot;post-comments-count disqus-comment-count&quot; data-disqus-identifier=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">          &lt;/span&gt;</span><br><span class="line">          &#123;% endif %&#125;      </span><br><span class="line">        &#123;% endif %&#125; </span><br><span class="line">	#插入到这里</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/header&gt;</span><br></pre></td></tr></table></figure>
+<p>修改themes/next/layout目录下的post.swig文件</p>
+<p>这个文件是文章的模板</p>
+<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block content %&#125;</span><br><span class="line">  &lt;div id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</span><br><span class="line">  	#render方法第二个参数is_index为是否为首页</span><br><span class="line">  	#第三个参数is_pv为我们刚才设置的是否显示计数</span><br><span class="line">    &#123;&#123; post_template.render(page, false, true) &#125;&#125; </span><br><span class="line">    &lt;div class=&quot;post-spread&quot;&gt;</span><br><span class="line">      &#123;% if theme.jiathis %&#125;</span><br><span class="line">        &#123;% include &apos;_partials/share/jiathis.swig&apos; %&#125;</span><br><span class="line">      &#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&#125;</span><br><span class="line">        &#123;% include &apos;_partials/share/duoshuo_share.swig&apos; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>修改themes/next/layout目录下的index.swig文件</p>
+<p>这个文件是首页的模板</p>
+<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block content %&#125;</span><br><span class="line">  &lt;section id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</span><br><span class="line">    &#123;% for post in page.posts %&#125;</span><br><span class="line">       #render方法第二个参数is_index为是否为首页</span><br><span class="line">       #第三个参数is_pv为我们刚才设置的是否显示计数</span><br><span class="line">      &#123;&#123; post_template.render(post, true, false) &#125;&#125;</span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line">  &#123;% include &apos;_partials/pagination.swig&apos; %&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>至此，我们的站点计数功能就做好了</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/21/Hexo更换主题Next/" itemprop="url">
                   hexo更换主题Next
                 </a>
@@ -982,8 +1154,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/06/21/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2016/06/21/ios核心动画之CAShapeLayer/" itemprop="url">
+                  ios核心动画之CAShapeLayer
                 </a>
               
             
@@ -1002,13 +1174,32 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ios/" itemprop="url" rel="index">
+                    <span itemprop="name">ios</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/21/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/06/21/ios核心动画之CAShapeLayer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/ios核心动画之CAShapeLayer/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1044,15 +1235,218 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h3 id="专用图层"><a href="#专用图层" class="headerlink" title="专用图层"></a>专用图层</h3><h5 id="CAShapeLayer"><a href="#CAShapeLayer" class="headerlink" title="CAShapeLayer"></a>CAShapeLayer</h5><p>CAShapeLayer优点：</p>
+<ol>
+<li>渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。</li>
+<li>高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。</li>
+<li>不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Core Graphics的普通CALayer一样被剪裁掉（如我们在第二章所见）。</li>
+<li>不会出现像素化。当你给CAShapeLayer做3D变换时，它不像一个有寄宿图的普通图层一样变得像素化。</li>
+</ol>
+<p>创建一个CGPath 一般使用 UIBezierPath 绘制路线。</p>
+<p>CAShapeLayer 属性</p>
+<ul>
+<li>lineWith（线宽，用点表示单位）</li>
+<li>lineCap（线条结尾的样子）</li>
+<li>lineJoin（线条之间的结合点的样子）</li>
+<li>strokeColor(线条颜色)</li>
+<li>fillColor（填充颜色）</li>
+<li>path（路线）</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/21/HexoNext配置主题/" itemprop="url">
+                  Hexo Next 配置主观
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-21T09:11:04+08:00" content="2016-06-21">
+              2016-06-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/21/HexoNext配置主题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/HexoNext配置主题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>在主目录下_config.yml 中配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>代码</th>
+<th>设定值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>en</td>
+<td>language: en</td>
+</tr>
+<tr>
+<td>简体中文</td>
+<td>zh-Hans</td>
+<td>language: zh-Hans</td>
+</tr>
+</tbody>
+</table>
+<h3 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h3><p>菜单配置在 主题配置文件的 menu</p>
+<p>菜单示例配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  #about: /about</span><br><span class="line">  #categories: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /404.html</span><br></pre></td></tr></table></figure>
+<h3 id="侧栏设置"><a href="#侧栏设置" class="headerlink" title="侧栏设置"></a>侧栏设置</h3><p>配置选项</p>
+<ul>
+<li>post - 默认行为，在文章页面（拥有目录列表）时显示</li>
+<li>always - 在所有页面中都显示</li>
+<li>hide - 在所有页面中都隐藏（可以手动展开）</li>
+</ul>
+<p>侧栏示例配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sidebar: post</span><br></pre></td></tr></table></figure>
+<h3 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h3><p>新增字段 avatar</p>
+<p>1 完整的互联网 URL    <a href="https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460" target="_blank" rel="external">https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</a></p>
+<p>2 站点内的地址    /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/ （可能需要新建uploads目录）</p>
+<p>3 /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下</p>
+<h3 id="作者名称"><a href="#作者名称" class="headerlink" title="作者名称"></a>作者名称</h3><p>设置 author 为你的昵称</p>
+<h3 id="站点描述设置"><a href="#站点描述设置" class="headerlink" title="站点描述设置"></a>站点描述设置</h3><p>设置 description 字段为你的站点描述。</p>
+<h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><p>1 定位到 Hexo 站点目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>2编辑刚新建的页面，将页面的类型设置为 tags </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+<p>3  添加 tags 到 menu 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br></pre></td></tr></table></figure>
+<h3 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h3><p>1 定位到 Hexo 站点目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>2编辑刚新建的页面，将页面的类型设置为 categories </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+<p>3  添加 categories 到 menu 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  categories: /categories</span><br></pre></td></tr></table></figure>
+<h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><p>NexT 默认使用的是 白色的 normal 主题,可选的值有 normal，night， night blue， night bright， night eighties.</p>
+<p>更改 highlight_theme 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Code Highlight theme</span><br><span class="line"># Available value: normal | night | night eighties | night blue | night bright</span><br><span class="line"># https://github.com/chriskempson/tomorrow-theme</span><br><span class="line">highlight_theme: normal</span><br></pre></td></tr></table></figure>
+<h3 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h3><p>1<br>接放置在 social 字段下，一行一个链接。其键值格式是 显示文本: 链接地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/your-user-name</span><br><span class="line">  Twitter: https://twitter.com/your-user-name</span><br><span class="line">  微博: http://weibo.com/your-user-name</span><br><span class="line">  豆瓣: http://douban.com/people/your-user-name</span><br><span class="line">  知乎: http://www.zhihu.com/people/your-user-name</span><br><span class="line">  # 等等</span><br></pre></td></tr></table></figure>
+<p>2 设定链接的图标，对应的字段是 social_icons。其键值格式是 匹配键: Font Awesome 图标名称， 匹配键 与上一步所配置的链接的 显示文本 相同（大小写严格匹配），图标名称 是 Font Awesome 图标的名字（不必带 fa- 前缀）。 enable 选项用于控制是否显示图标，你可以设置成 false 来去掉图标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Social Icons</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
+<h3 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h3><p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
+<ul>
+<li>false：禁用 RSS，不在页面上显示 RSS 连接。</li>
+<li>留空：使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。</li>
+<li>具体的链接地址：适用于已经烧制过 Feed 的情形。</li>
+</ul>
 
           
         
@@ -1257,153 +1651,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/06/21/ios核心动画之CAShapeLayer/" itemprop="url">
-                  ios核心动画之CAShapeLayer
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-21T09:11:04+08:00" content="2016-06-21">
-              2016-06-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ios/" itemprop="url" rel="index">
-                    <span itemprop="name">ios</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/21/ios核心动画之CAShapeLayer/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/ios核心动画之CAShapeLayer/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="专用图层"><a href="#专用图层" class="headerlink" title="专用图层"></a>专用图层</h3><h5 id="CAShapeLayer"><a href="#CAShapeLayer" class="headerlink" title="CAShapeLayer"></a>CAShapeLayer</h5><p>CAShapeLayer优点：</p>
-<ol>
-<li>渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。</li>
-<li>高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。</li>
-<li>不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Core Graphics的普通CALayer一样被剪裁掉（如我们在第二章所见）。</li>
-<li>不会出现像素化。当你给CAShapeLayer做3D变换时，它不像一个有寄宿图的普通图层一样变得像素化。</li>
-</ol>
-<p>创建一个CGPath 一般使用 UIBezierPath 绘制路线。</p>
-<p>CAShapeLayer 属性</p>
-<ul>
-<li>lineWith（线宽，用点表示单位）</li>
-<li>lineCap（线条结尾的样子）</li>
-<li>lineJoin（线条之间的结合点的样子）</li>
-<li>strokeColor(线条颜色)</li>
-<li>fillColor（填充颜色）</li>
-<li>path（路线）</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/06/21/Hexo初步教程/" itemprop="url">
                   hexo 初步教程
                 </a>
@@ -1530,201 +1777,6 @@
 <p>在浏览器中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://你的id.github.io/</span><br></pre></td></tr></table></figure>
 <p>就可以访问自己的博客了。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/21/HexoNext配置主题/" itemprop="url">
-                  Hexo Next 配置主观
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-21T09:11:04+08:00" content="2016-06-21">
-              2016-06-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/21/HexoNext配置主题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/HexoNext配置主题/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>在主目录下_config.yml 中配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>语言</th>
-<th>代码</th>
-<th>设定值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>English</td>
-<td>en</td>
-<td>language: en</td>
-</tr>
-<tr>
-<td>简体中文</td>
-<td>zh-Hans</td>
-<td>language: zh-Hans</td>
-</tr>
-</tbody>
-</table>
-<h3 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h3><p>菜单配置在 主题配置文件的 menu</p>
-<p>菜单示例配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  #about: /about</span><br><span class="line">  #categories: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /404.html</span><br></pre></td></tr></table></figure>
-<h3 id="侧栏设置"><a href="#侧栏设置" class="headerlink" title="侧栏设置"></a>侧栏设置</h3><p>配置选项</p>
-<ul>
-<li>post - 默认行为，在文章页面（拥有目录列表）时显示</li>
-<li>always - 在所有页面中都显示</li>
-<li>hide - 在所有页面中都隐藏（可以手动展开）</li>
-</ul>
-<p>侧栏示例配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sidebar: post</span><br></pre></td></tr></table></figure>
-<h3 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h3><p>新增字段 avatar</p>
-<p>1 完整的互联网 URL    <a href="https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460" target="_blank" rel="external">https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</a></p>
-<p>2 站点内的地址    /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/ （可能需要新建uploads目录）</p>
-<p>3 /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下</p>
-<h3 id="作者名称"><a href="#作者名称" class="headerlink" title="作者名称"></a>作者名称</h3><p>设置 author 为你的昵称</p>
-<h3 id="站点描述设置"><a href="#站点描述设置" class="headerlink" title="站点描述设置"></a>站点描述设置</h3><p>设置 description 字段为你的站点描述。</p>
-<h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><p>1 定位到 Hexo 站点目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
-<p>2编辑刚新建的页面，将页面的类型设置为 tags </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-<p>3  添加 tags 到 menu 中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br></pre></td></tr></table></figure>
-<h3 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h3><p>1 定位到 Hexo 站点目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-<p>2编辑刚新建的页面，将页面的类型设置为 categories </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-<p>3  添加 categories 到 menu 中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  categories: /categories</span><br></pre></td></tr></table></figure>
-<h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><p>NexT 默认使用的是 白色的 normal 主题,可选的值有 normal，night， night blue， night bright， night eighties.</p>
-<p>更改 highlight_theme 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Code Highlight theme</span><br><span class="line"># Available value: normal | night | night eighties | night blue | night bright</span><br><span class="line"># https://github.com/chriskempson/tomorrow-theme</span><br><span class="line">highlight_theme: normal</span><br></pre></td></tr></table></figure>
-<h3 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h3><p>1<br>接放置在 social 字段下，一行一个链接。其键值格式是 显示文本: 链接地址。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/your-user-name</span><br><span class="line">  Twitter: https://twitter.com/your-user-name</span><br><span class="line">  微博: http://weibo.com/your-user-name</span><br><span class="line">  豆瓣: http://douban.com/people/your-user-name</span><br><span class="line">  知乎: http://www.zhihu.com/people/your-user-name</span><br><span class="line">  # 等等</span><br></pre></td></tr></table></figure>
-<p>2 设定链接的图标，对应的字段是 social_icons。其键值格式是 匹配键: Font Awesome 图标名称， 匹配键 与上一步所配置的链接的 显示文本 相同（大小写严格匹配），图标名称 是 Font Awesome 图标的名字（不必带 fa- 前缀）。 enable 选项用于控制是否显示图标，你可以设置成 false 来去掉图标。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Social Icons</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
-<h3 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h3><p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
-<ul>
-<li>false：禁用 RSS，不在页面上显示 RSS 连接。</li>
-<li>留空：使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。</li>
-<li>具体的链接地址：适用于已经烧制过 Feed 的情形。</li>
-</ul>
 
           
         
