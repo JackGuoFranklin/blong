@@ -140,7 +140,7 @@ UIAlertViewDelegate{
             }
             self.session.stopRunning()
             //输出结果
-            let alertView = UIAlertView(title: "二维码", message: stringValue,
+            let alertView = UIAlertView(title: "一维码", message: stringValue,
                 delegate: self, cancelButtonTitle: "确定")
             alertView.show()
     }
