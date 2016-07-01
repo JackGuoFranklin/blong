@@ -1,7 +1,8 @@
 ---
-title: github插件
+title: github插件1
 tags: 
 - github
+- chrome
 categories: github
 ---
 
