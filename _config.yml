@@ -71,6 +71,5 @@ deploy:
   type: git
   repo: 
     github: https://github.com/JackGuoFranklin/JackGuoFranklin.github.io.git
-    codeing: https://git.coding.net/jackFranklin/JackFranklin.git
     oschina: https://git.oschina.net/xiaohuobing/JackFranklin.git
   branch: master
