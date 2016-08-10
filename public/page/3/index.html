@@ -389,8 +389,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/01/hexo/Hexo评论与站点统计系统/" itemprop="url">
-                  hexo评论系统与站点计数
+                <a class="post-title-link" href="/2016/07/01/mac/mac server/" itemprop="url">
+                  mac localhost server
                 </a>
               
             
@@ -417,8 +417,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/mac/" itemprop="url" rel="index">
+                    <span itemprop="name">mac</span>
                   </a>
                 </span>
 
@@ -433,8 +433,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/01/hexo/Hexo评论与站点统计系统/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/hexo/Hexo评论与站点统计系统/" itemprop="commentsCount"></span>
+                <a href="/2016/07/01/mac/mac server/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/mac/mac server/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -470,181 +470,19 @@
       
         
           
-            <p>评论系统与站点计数</p>
-<p>添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。</p>
-<h3 id="使用多说"><a href="#使用多说" class="headerlink" title="使用多说"></a>使用多说</h3><ol>
-<li><p>注册多说</p>
-<ol>
-<li><p>登录后在首页选择 “我要安装”。</p>
-</li>
-<li><p>创建站点，填写站点相关信息。注意，多说域名 这一栏填写的即是你的 duoshuo_shortname。</p>
-</li>
-</ol>
-</li>
-<li><p>编辑站点的 _config.yml 注意，不是主题的_config.yml文件 ，添加 duoshuo_shortname 字段，设置如下</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_shortname: your-duoshuo-shortname</span><br></pre></td></tr></table></figure>
-<p>（注）duoshuo short name: 你的多说二级域名去掉 .duoshuo.com 部分</p>
-<h3 id="使用-Disqus"><a href="#使用-Disqus" class="headerlink" title="使用 Disqus"></a>使用 Disqus</h3><p>编辑站点的 _config.yml ，添加 disqus_shortname 字段，设置如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">disqus_shortname: your-disqus-shortname</span><br></pre></td></tr></table></figure>
-<h3 id="多说评论显示-UA"><a href="#多说评论显示-UA" class="headerlink" title="多说评论显示 UA"></a>多说评论显示 UA</h3><p>需要配置 duoshuo_info 这个字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_info:</span><br><span class="line">  ua_enable: true</span><br><span class="line">  admin_enable: true</span><br><span class="line">  user_id: 1234567</span><br><span class="line">  admin_nickname: 主编大人</span><br></pre></td></tr></table></figure>
-<p>配置 user_id 和 admin_nickname 字段。 请访问 多说，登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字。</p>
-<h3 id="显示站点总访问量"><a href="#显示站点总访问量" class="headerlink" title="显示站点总访问量"></a>显示站点总访问量</h3><p>找到站点的themes/next/layout/_partials目录下的footer.swig文件<br>将以下脚本和标签插入到文件中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">本站总访问量 &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; &amp;nbsp&amp;nbsp&amp;nbsp</span><br><span class="line">您是第&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;个来到的小伙伴</span><br></pre></td></tr></table></figure>
-<p>插入到这里</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;powered-by&quot;&gt;</span><br><span class="line"> 	&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;http://hexo.io&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;theme-info&quot;&gt;</span><br><span class="line"> 	&#123;&#123; __(&apos;footer.theme&apos;) &#125;&#125; -</span><br><span class="line">	 &lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;</span><br><span class="line">   NexT&#123;% if theme.scheme %&#125;.&#123;&#123; theme.scheme &#125;&#125;&#123;% endif %&#125;</span><br><span class="line"> 	&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"># 插入到这里</span><br><span class="line">&#123;% block footer %&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="显示单页面访问量"><a href="#显示单页面访问量" class="headerlink" title="显示单页面访问量"></a>显示单页面访问量</h3><p>修改themes/next/layout/_macro目录下的post.swig文件</p>
-<p>位于文件开头,在第三个参数的位置，增加is_pv字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro render(post, is_index, is_pv, post_extra_class) %&#125;</span><br></pre></td></tr></table></figure>
-<p>插入以下代码，用于区分文章页面跟首页</p>
-<p>这里不用像”显示站点总访问量”中那样安装脚本，否则会出现重复计数的问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if is_pv %&#125;</span><br><span class="line">&lt;span&gt;&amp;nbsp; | &amp;nbsp;</span><br><span class="line">&lt;span id=&quot;busuanzi_value_page_pv&quot; &gt;&lt;/span&gt;次阅读</span><br><span class="line">&lt;/span&gt;    </span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>插入这个位置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.comments %&#125;</span><br><span class="line">          &#123;% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %&#125;</span><br><span class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</span><br><span class="line">              &amp;nbsp; | &amp;nbsp;</span><br><span class="line">              &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;post-comments-count ds-thread-count&quot; data-thread-key=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</span><br><span class="line">              &lt;/a&gt;</span><br><span class="line">            &lt;/span&gt;</span><br><span class="line">          &#123;% elseif theme.disqus_shortname %&#125;</span><br><span class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</span><br><span class="line">            &amp;nbsp; | &amp;nbsp;</span><br><span class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</span><br><span class="line">              &lt;span class=&quot;post-comments-count disqus-comment-count&quot; data-disqus-identifier=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">          &lt;/span&gt;</span><br><span class="line">          &#123;% endif %&#125;      </span><br><span class="line">        &#123;% endif %&#125; </span><br><span class="line">	#插入到这里</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/header&gt;</span><br></pre></td></tr></table></figure>
-<p>修改themes/next/layout目录下的post.swig文件</p>
-<p>这个文件是文章的模板</p>
-<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block content %&#125;</span><br><span class="line">  &lt;div id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</span><br><span class="line">  	#render方法第二个参数is_index为是否为首页</span><br><span class="line">  	#第三个参数is_pv为我们刚才设置的是否显示计数</span><br><span class="line">    &#123;&#123; post_template.render(page, false, true) &#125;&#125; </span><br><span class="line">    &lt;div class=&quot;post-spread&quot;&gt;</span><br><span class="line">      &#123;% if theme.jiathis %&#125;</span><br><span class="line">        &#123;% include &apos;_partials/share/jiathis.swig&apos; %&#125;</span><br><span class="line">      &#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&#125;</span><br><span class="line">        &#123;% include &apos;_partials/share/duoshuo_share.swig&apos; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>修改themes/next/layout目录下的index.swig文件</p>
-<p>这个文件是首页的模板</p>
-<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block content %&#125;</span><br><span class="line">  &lt;section id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</span><br><span class="line">    &#123;% for post in page.posts %&#125;</span><br><span class="line">       #render方法第二个参数is_index为是否为首页</span><br><span class="line">       #第三个参数is_pv为我们刚才设置的是否显示计数</span><br><span class="line">      &#123;&#123; post_template.render(post, true, false) &#125;&#125;</span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line">  &#123;% include &apos;_partials/pagination.swig&apos; %&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>至此，我们的站点计数功能就做好了</p>
+            <p>1<br>建立方式很简单，直接在终端中运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir ~/Sites</span><br></pre></td></tr></table></figure>
+<p>2建立“站点”文件夹之后，检查 /etc/ 文件夹下面是不是有“haibor.conf”这个文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/users/</span><br></pre></td></tr></table></figure>
+<p>如果没有，那么你需要创建一个，取名为“你的名字.conf”，可以使用 vi 或者 nano 这两种编辑器之一来创建。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
+<p>创建之后将下面的这几行内容写到上面的 conf 文件中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory &quot;/Users/你的名字/Sites/&quot;&gt;</span><br><span class="line">    Options Indexes MultiViews</span><br><span class="line">    AllowOverride All</span><br><span class="line">    Order allow,deny</span><br><span class="line">    Allow from all</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+<p>3<br>文件保存之后，给它赋予相应的权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 755 /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
+<p>4接下来重启 Apache，以使该配置文件生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/01/swift/使用CIFilter生成二维码/" itemprop="url">
-                  Swift使用CIFilter生成二维码图片（QRCode）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T15:50:06+08:00" content="2016-07-01">
-              2016-07-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/swift/" itemprop="url" rel="index">
-                    <span itemprop="name">swift</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/01/swift/使用CIFilter生成二维码/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/swift/使用CIFilter生成二维码/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Swift - 使用CIFilter生成二维码图片（QRCode）</p>
-<p>CIFilter提供了各种各样的滤镜，其中CIQRCodeGenerator可以用来生成二维码。下面通过一个样例演示如何将字符串（链接也是字符串）生成二维码图片，同时支持在二维码中间放置个性化图标。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"> </span><br><span class="line">class ViewController: UIViewController &#123;</span><br><span class="line"> </span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line">         </span><br><span class="line">        //不带图片的二维码图片</span><br><span class="line">        let imageViewIcon1 = UIImageView(frame: CGRectMake(20, 20, 150, 150))</span><br><span class="line">        imageViewIcon1.image = createQRForString(&quot;http://www.hangge.com&quot;,</span><br><span class="line">            qrImageName: &quot;&quot;)</span><br><span class="line">        self.view.addSubview(imageViewIcon1)</span><br><span class="line">         </span><br><span class="line">        //带图片的二维码图片</span><br><span class="line">        let imageViewIcon2 = UIImageView(frame: CGRectMake(200, 20, 150, 150))</span><br><span class="line">        imageViewIcon2.image = createQRForString(&quot;http://www.hangge.com&quot;,</span><br><span class="line">            qrImageName: &quot;logo&quot;)</span><br><span class="line">        self.view.addSubview(imageViewIcon2)</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    //创建二维码图片</span><br><span class="line">    func createQRForString(qrString: String?, qrImageName: String?) -&gt; UIImage?&#123;</span><br><span class="line">        if let sureQRString = qrString &#123;</span><br><span class="line">            let stringData = sureQRString.dataUsingEncoding(NSUTF8StringEncoding,</span><br><span class="line">                allowLossyConversion: false)</span><br><span class="line">            // 创建一个二维码的滤镜</span><br><span class="line">            let qrFilter = CIFilter(name: &quot;CIQRCodeGenerator&quot;)!</span><br><span class="line">            qrFilter.setValue(stringData, forKey: &quot;inputMessage&quot;)</span><br><span class="line">            qrFilter.setValue(&quot;H&quot;, forKey: &quot;inputCorrectionLevel&quot;)</span><br><span class="line">            let qrCIImage = qrFilter.outputImage</span><br><span class="line">            // 创建一个颜色滤镜,黑白色</span><br><span class="line">            let colorFilter = CIFilter(name: &quot;CIFalseColor&quot;)!</span><br><span class="line">            colorFilter.setDefaults()</span><br><span class="line">            colorFilter.setValue(qrCIImage, forKey: &quot;inputImage&quot;)</span><br><span class="line">            colorFilter.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: &quot;inputColor0&quot;)</span><br><span class="line">            colorFilter.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: &quot;inputColor1&quot;)</span><br><span class="line">            // 返回二维码image</span><br><span class="line">            let codeImage = UIImage(CIImage: colorFilter.outputImage!</span><br><span class="line">                .imageByApplyingTransform(CGAffineTransformMakeScale(5, 5)))</span><br><span class="line">            // 通常,二维码都是定制的,中间都会放想要表达意思的图片</span><br><span class="line">            if let iconImage = UIImage(named: qrImageName!) &#123;</span><br><span class="line">                let rect = CGRectMake(0, 0, codeImage.size.width, codeImage.size.height)</span><br><span class="line">                UIGraphicsBeginImageContext(rect.size)</span><br><span class="line">                 </span><br><span class="line">                codeImage.drawInRect(rect)</span><br><span class="line">                let avatarSize = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25)</span><br><span class="line">                let x = (rect.width - avatarSize.width) * 0.5</span><br><span class="line">                let y = (rect.height - avatarSize.height) * 0.5</span><br><span class="line">                iconImage.drawInRect(CGRectMake(x, y, avatarSize.width, avatarSize.height))</span><br><span class="line">                let resultImage = UIGraphicsGetImageFromCurrentImageContext()</span><br><span class="line">                 </span><br><span class="line">                UIGraphicsEndImageContext()</span><br><span class="line">                return resultImage</span><br><span class="line">            &#125;</span><br><span class="line">            return codeImage</span><br><span class="line">        &#125;</span><br><span class="line">        return nil</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -797,6 +635,138 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//不传递触摸对象（即点击的按钮）</span><br><span class="line">button.addTarget(self,action:#selector(tapped),forControlEvents:.TouchUpInside)</span><br><span class="line">func tapped()&#123;</span><br><span class="line">    print(&quot;tapped&quot;)</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">//传递触摸对象（即点击的按钮），需要在定义action参数时，方法名称后面带上冒号</span><br><span class="line">button.addTarget(self,action:#selector(tapped(_:)),forControlEvents:.TouchUpInside)</span><br><span class="line">func tapped(button:UIButton)&#123;</span><br><span class="line">    print(button.titleForState(.Normal))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>常用的触摸事件类型：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">TouchDown：单点触摸按下事件，点触屏幕</span><br><span class="line">TouchDownRepeat：多点触摸按下事件，点触计数大于1，按下第2、3或第4根手指的时候</span><br><span class="line">TouchDragInside：触摸在控件内拖动时</span><br><span class="line">TouchDragOutside：触摸在控件外拖动时</span><br><span class="line">TouchDragEnter：触摸从控件之外拖动到内部时</span><br><span class="line">TouchDragExit：触摸从控件内部拖动到外部时</span><br><span class="line">TouchUpInside：在控件之内触摸并抬起事件</span><br><span class="line">TouchUpOutside：在控件之外触摸抬起事件</span><br><span class="line">TouchCancel：触摸取消事件，即一次触摸因为放上太多手指而被取消，或者电话打断</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/01/swift/使用CIFilter生成二维码/" itemprop="url">
+                  Swift使用CIFilter生成二维码图片（QRCode）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-01T15:50:06+08:00" content="2016-07-01">
+              2016-07-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/01/swift/使用CIFilter生成二维码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/swift/使用CIFilter生成二维码/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Swift - 使用CIFilter生成二维码图片（QRCode）</p>
+<p>CIFilter提供了各种各样的滤镜，其中CIQRCodeGenerator可以用来生成二维码。下面通过一个样例演示如何将字符串（链接也是字符串）生成二维码图片，同时支持在二维码中间放置个性化图标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"> </span><br><span class="line">class ViewController: UIViewController &#123;</span><br><span class="line"> </span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line">         </span><br><span class="line">        //不带图片的二维码图片</span><br><span class="line">        let imageViewIcon1 = UIImageView(frame: CGRectMake(20, 20, 150, 150))</span><br><span class="line">        imageViewIcon1.image = createQRForString(&quot;http://www.hangge.com&quot;,</span><br><span class="line">            qrImageName: &quot;&quot;)</span><br><span class="line">        self.view.addSubview(imageViewIcon1)</span><br><span class="line">         </span><br><span class="line">        //带图片的二维码图片</span><br><span class="line">        let imageViewIcon2 = UIImageView(frame: CGRectMake(200, 20, 150, 150))</span><br><span class="line">        imageViewIcon2.image = createQRForString(&quot;http://www.hangge.com&quot;,</span><br><span class="line">            qrImageName: &quot;logo&quot;)</span><br><span class="line">        self.view.addSubview(imageViewIcon2)</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    //创建二维码图片</span><br><span class="line">    func createQRForString(qrString: String?, qrImageName: String?) -&gt; UIImage?&#123;</span><br><span class="line">        if let sureQRString = qrString &#123;</span><br><span class="line">            let stringData = sureQRString.dataUsingEncoding(NSUTF8StringEncoding,</span><br><span class="line">                allowLossyConversion: false)</span><br><span class="line">            // 创建一个二维码的滤镜</span><br><span class="line">            let qrFilter = CIFilter(name: &quot;CIQRCodeGenerator&quot;)!</span><br><span class="line">            qrFilter.setValue(stringData, forKey: &quot;inputMessage&quot;)</span><br><span class="line">            qrFilter.setValue(&quot;H&quot;, forKey: &quot;inputCorrectionLevel&quot;)</span><br><span class="line">            let qrCIImage = qrFilter.outputImage</span><br><span class="line">            // 创建一个颜色滤镜,黑白色</span><br><span class="line">            let colorFilter = CIFilter(name: &quot;CIFalseColor&quot;)!</span><br><span class="line">            colorFilter.setDefaults()</span><br><span class="line">            colorFilter.setValue(qrCIImage, forKey: &quot;inputImage&quot;)</span><br><span class="line">            colorFilter.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: &quot;inputColor0&quot;)</span><br><span class="line">            colorFilter.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: &quot;inputColor1&quot;)</span><br><span class="line">            // 返回二维码image</span><br><span class="line">            let codeImage = UIImage(CIImage: colorFilter.outputImage!</span><br><span class="line">                .imageByApplyingTransform(CGAffineTransformMakeScale(5, 5)))</span><br><span class="line">            // 通常,二维码都是定制的,中间都会放想要表达意思的图片</span><br><span class="line">            if let iconImage = UIImage(named: qrImageName!) &#123;</span><br><span class="line">                let rect = CGRectMake(0, 0, codeImage.size.width, codeImage.size.height)</span><br><span class="line">                UIGraphicsBeginImageContext(rect.size)</span><br><span class="line">                 </span><br><span class="line">                codeImage.drawInRect(rect)</span><br><span class="line">                let avatarSize = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25)</span><br><span class="line">                let x = (rect.width - avatarSize.width) * 0.5</span><br><span class="line">                let y = (rect.height - avatarSize.height) * 0.5</span><br><span class="line">                iconImage.drawInRect(CGRectMake(x, y, avatarSize.width, avatarSize.height))</span><br><span class="line">                let resultImage = UIGraphicsGetImageFromCurrentImageContext()</span><br><span class="line">                 </span><br><span class="line">                UIGraphicsEndImageContext()</span><br><span class="line">                return resultImage</span><br><span class="line">            &#125;</span><br><span class="line">            return codeImage</span><br><span class="line">        &#125;</span><br><span class="line">        return nil</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
