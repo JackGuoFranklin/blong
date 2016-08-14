@@ -248,6 +248,141 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/14/mysql/mysql更改密码/" itemprop="url">
+                  mysql 更改密码
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-14T21:57:14+08:00" content="2016-08-14">
+              2016-08-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/14/mysql/mysql更改密码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/14/mysql/mysql更改密码/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>mysql 更改密码<br>此时我们在命令行输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>命令会提示没有commod not found，我们还需要将mysql加入系统环境变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(1).进入/usr/local/mysql/bin,查看此目录下是否有mysql，见pic6。</span><br><span class="line">(2).执行vim ~/.bash_profile</span><br><span class="line">    在该文件中添加mysql/bin的目录，见pic7：</span><br><span class="line">    PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">添加完成后，按esc，然后输入wq保存。</span><br><span class="line">最后在命令行输入source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>现在你就可以通过mysql -u root -p登录mysql了，会让你输入密码，就是提示的默认密码<br>登录成功后，你可以通过下面的命令修改密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newpass&apos;)</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/05/swift/ios-icon/" itemprop="url">
                   ios-icon
                 </a>
@@ -332,144 +467,6 @@
             <p>根据一个1024的icon，生成所有规格的icon，同时创建好Contents.json文件，支持命令行。<br>主要原因是因为我每次用Phtosohop做完icon都要保存N种规格，烦死了，网上没有发现合适的工具，所以自己写了一个，不过我觉得肯定有这种工具，只不过我没有找到，好吧，算我重复造轮子了。<br>重点是针对Xcode5，旧版本也能用，但没有这么自动化，有用的拿去。</p>
 <p><a href="https://github.com/conis/ios-icon" target="_blank" rel="external">ios-icon</a></p>
 <p>GitHub: <a href="https://github.com/conis/ios-icon" target="_blank" rel="external">https://github.com/conis/ios-icon</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/19/chrome/Chrome使用技巧/" itemprop="url">
-                  cherome使用技巧
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T23:42:08+08:00" content="2016-07-19">
-              2016-07-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/chrome/" itemprop="url" rel="index">
-                    <span itemprop="name">chrome</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/19/chrome/Chrome使用技巧/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/19/chrome/Chrome使用技巧/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="cherome-使用技巧"><a href="#cherome-使用技巧" class="headerlink" title="cherome 使用技巧"></a>cherome 使用技巧</h3><p>Infinity(必备)：善心悦目的背景，而且可以自定图标。（鼠标滚轮可以翻页）</p>
-<p>AdBlock（必备）：到现在帮我屏蔽了上万条广告</p>
-<p>视频广告终结者：在不办任何会员的情况下，基本上所有视频都没广告了，</p>
-<p>Google翻译：一键翻译</p>
-<p>Tab Sync</p>
-<p>有时5点钟流逝的太早。也许你正沦陷于一个很重要的工作项目，或者你正娱乐到一半，但现在是时候出发了。一种解决方案是保存所有打开的标签为书签，打开书签同步，回家后一个一个的打开。或者你可以安装Tab Sync。顾名思义，这个工具同步你所有已打开的标签页。只要按一下按钮，你就可以安心出发。</p>
-<p>Tab Menu</p>
-<p>这对于经常同时打开超过10个标签的人来说极其方便，并且你打开的标签越多，你就更多的使用这个扩展。轻松的在一个下拉菜单中完成诸如选择、关闭、重新排列、查找等更多功能。</p>
 
           
         
@@ -676,6 +673,144 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/19/chrome/Chrome使用技巧/" itemprop="url">
+                  cherome使用技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-19T23:42:08+08:00" content="2016-07-19">
+              2016-07-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/chrome/" itemprop="url" rel="index">
+                    <span itemprop="name">chrome</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/19/chrome/Chrome使用技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/19/chrome/Chrome使用技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="cherome-使用技巧"><a href="#cherome-使用技巧" class="headerlink" title="cherome 使用技巧"></a>cherome 使用技巧</h3><p>Infinity(必备)：善心悦目的背景，而且可以自定图标。（鼠标滚轮可以翻页）</p>
+<p>AdBlock（必备）：到现在帮我屏蔽了上万条广告</p>
+<p>视频广告终结者：在不办任何会员的情况下，基本上所有视频都没广告了，</p>
+<p>Google翻译：一键翻译</p>
+<p>Tab Sync</p>
+<p>有时5点钟流逝的太早。也许你正沦陷于一个很重要的工作项目，或者你正娱乐到一半，但现在是时候出发了。一种解决方案是保存所有打开的标签为书签，打开书签同步，回家后一个一个的打开。或者你可以安装Tab Sync。顾名思义，这个工具同步你所有已打开的标签页。只要按一下按钮，你就可以安心出发。</p>
+<p>Tab Menu</p>
+<p>这对于经常同时打开超过10个标签的人来说极其方便，并且你打开的标签越多，你就更多的使用这个扩展。轻松的在一个下拉菜单中完成诸如选择、关闭、重新排列、查找等更多功能。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/01/github/创建Git仓库osChina/" itemprop="url">
                   创建Git仓库（git@oschina&sourceTree）
                 </a>
@@ -816,8 +951,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/01/github/github插件2/" itemprop="url">
-                  github插件2
+                <a class="post-title-link" href="/2016/07/01/github/github插件1/" itemprop="url">
+                  github插件1
                 </a>
               
             
@@ -860,8 +995,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/01/github/github插件2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/github/github插件2/" itemprop="commentsCount"></span>
+                <a href="/2016/07/01/github/github插件1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/github/github插件1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -897,12 +1032,166 @@
       
         
           
-            <p>1 SourceGraph</p>
-<p>Sourcegraph Chrome 扩展允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。</p>
-<p><img src="/image/imagegithub4.jpg" alt="image4"></p>
-<p>2 Zenhub</p>
-<p>ZenHub 是一个 Github 的本地项目管理工具，可以无缝的集成。</p>
-<p><img src="/image/imagegithub5.jpg" alt="image5"></p>
+            <p>github 插件</p>
+<p>1 Octotree：你的 GitHub 文档库</p>
+<p>　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的 GitHub 仓库，简单直观的同时，也方便你进行文件之间的跳转操作。<br>　　<br><img src="/image/imagegithub1.jpg" alt="image1"></p>
+<p>2 GitHub Awesome Complete：属于 GitHub 的 「Alfred」</p>
+<p>　在 GitHub 搜索仓库或者项目的时候，你会怎么做？相信大部分人的步骤都是一样的：</p>
+<p>　　在搜索框输入关键字后按回车键</p>
+<p>　　在搜索结果中找到相应结果，点击进入相应页面</p>
+<p>　　有没有更简单快捷的操作方法？答案是 GitHub Awesome Complete 这款 Chrome 插件。这款插件能够让你在 GitHub 中输入关键字之后通过弹窗动态显示相应的搜索结果，你所需要做的，只是点击即可。</p>
+<p><img src="/image/imagegithub2.gif" alt="image2"></p>
+<p>3 　除了以上两款 GitHub 相关的插件，这里我还要介绍一下 Octo Mate 这款能够提升你的 GitHub 体验的小工具。对于这款插件，主要功能有以下四点：</p>
+<p>　　一键下载文件：GitHub 可以让你很方便的以 .zip 格式下载所有文件，但如果只需要下载一个文件，非常麻烦。使用 Octo Mate 后只需要点击文件图标即可下载。</p>
+<p>　　一键打开项目的 Github Pages</p>
+<p>　　显示仓库大小</p>
+<p>　　显示未读消息数</p>
+<p>　　相信这样一款插件一定能让你在使用 GitHub 的时候更加高效。</p>
+<p><img src="/image/imagegithub3.jpg" alt="image3"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/01/hexo/Hexo更换主题Next/" itemprop="url">
+                  hexo更换主题Next
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-01T15:50:08+08:00" content="2016-07-01">
+              2016-07-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/01/hexo/Hexo更换主题Next/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/hexo/Hexo更换主题Next/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> 1 下载主题</p>
+<p>  从终端进入你的hexo目录然后在终端输入如下命令下载主题</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p> 2 启用主题</p>
+<p> 修改当hexo目录下的_config.yml 的theme 选项</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<p> 3 验证是否启用</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
+<p>访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000</span><br></pre></td></tr></table></figure>
+<p>确保站点正确运行。</p>
+<p>4 其他配置。</p>
+<p>   主题设定<br>   <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">next|主题设定</a></p>
+<p>   第三方服务<br>   <a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">next|第三方服务</a></p>
 
           
         
@@ -1147,8 +1436,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/01/github/github插件1/" itemprop="url">
-                  github插件1
+                <a class="post-title-link" href="/2016/07/01/github/github插件2/" itemprop="url">
+                  github插件2
                 </a>
               
             
@@ -1191,8 +1480,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/01/github/github插件1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/github/github插件1/" itemprop="commentsCount"></span>
+                <a href="/2016/07/01/github/github插件2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/github/github插件2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1228,341 +1517,12 @@
       
         
           
-            <p>github 插件</p>
-<p>1 Octotree：你的 GitHub 文档库</p>
-<p>　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的 GitHub 仓库，简单直观的同时，也方便你进行文件之间的跳转操作。<br>　　<br><img src="/image/imagegithub1.jpg" alt="image1"></p>
-<p>2 GitHub Awesome Complete：属于 GitHub 的 「Alfred」</p>
-<p>　在 GitHub 搜索仓库或者项目的时候，你会怎么做？相信大部分人的步骤都是一样的：</p>
-<p>　　在搜索框输入关键字后按回车键</p>
-<p>　　在搜索结果中找到相应结果，点击进入相应页面</p>
-<p>　　有没有更简单快捷的操作方法？答案是 GitHub Awesome Complete 这款 Chrome 插件。这款插件能够让你在 GitHub 中输入关键字之后通过弹窗动态显示相应的搜索结果，你所需要做的，只是点击即可。</p>
-<p><img src="/image/imagegithub2.gif" alt="image2"></p>
-<p>3 　除了以上两款 GitHub 相关的插件，这里我还要介绍一下 Octo Mate 这款能够提升你的 GitHub 体验的小工具。对于这款插件，主要功能有以下四点：</p>
-<p>　　一键下载文件：GitHub 可以让你很方便的以 .zip 格式下载所有文件，但如果只需要下载一个文件，非常麻烦。使用 Octo Mate 后只需要点击文件图标即可下载。</p>
-<p>　　一键打开项目的 Github Pages</p>
-<p>　　显示仓库大小</p>
-<p>　　显示未读消息数</p>
-<p>　　相信这样一款插件一定能让你在使用 GitHub 的时候更加高效。</p>
-<p><img src="/image/imagegithub3.jpg" alt="image3"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/01/hexo/Hexo初步教程/" itemprop="url">
-                  hexo 初步教程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T15:50:08+08:00" content="2016-07-01">
-              2016-07-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/01/hexo/Hexo初步教程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/hexo/Hexo初步教程/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>我选用了Homebrew来安装mac下的软件，你可以先安装<br>Homebrew</p>
-<h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="成功之后安装git"><a href="#成功之后安装git" class="headerlink" title="成功之后安装git"></a>成功之后安装git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>去<a href="https://nodejs.org/en/" target="_blank" rel="external">nodes.js</a> 官网下载，安装即可。</p>
-<h3 id="配置SSH-keys"><a href="#配置SSH-keys" class="headerlink" title="配置SSH keys"></a>配置SSH keys</h3><p>打开GitHub，进入设置界面，点击左边的SSH keys，添加一个SSH keys。</p>
-<p>1.输入以下代码生成新的key文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;</span><br></pre></td></tr></table></figure>
-<p>这里的邮件地址填自己注册时的邮件地址，注意大小写，双引号不能省略，终端会返回代码让你确定文件名，回车就好。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/DoubleD/.ssh/id\_rsa): //回车就行</span><br></pre></td></tr></table></figure>
-<p>接着会让你输入加密串，可以空着：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):\&lt;输入加密串\&gt;</span><br><span class="line">Enter same passphrase again:\&lt;再次输入加密串\&gt;</span><br></pre></td></tr></table></figure>
-<p>成功的创建了一个SSH key。</p>
-<p>找到本机上的id_rsa.pub文件,打开它（建议使用Sublime Text）复制里面的代码.添加到SSH key 中</p>
-<p>然后点击Add key就配置好了SSH key</p>
-<p>测试是否配置成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>看到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-<p>表示配置成功了。</p>
-<p>完成之后，我们设置好个人信息，用于提交代码说明是谁提交的，怎么联系。可以用以下指令完成：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的名字&quot;</span><br><span class="line">git config --global user.email  &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>打开终端，输入以下指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<p>注意如果不能安装可能被墙了，换源在终端输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=&quot;http://registry.cnpmjs.org&quot;</span><br></pre></td></tr></table></figure>
-<p>如果还出问题  在前面加入sudo 在管理员权限下上面的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm config set registry=&quot;http://registry.cnpmjs.org&quot;</span><br></pre></td></tr></table></figure>
-<p>提示输入密码，输入管理员密码就可了。</p>
-<p>然后在终端输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<p>重新安装一下。</p>
-<p>安装后，进入你要存博客的目录，在该目录下执行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>Hexo就会在该文件夹建立博客所需要的所有文件。本地的Hexo博客已经初步搭建起来，输入以下指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate//可以简写为 hexo g</span><br><span class="line">hexo server//可以简写为 hexo s</span><br></pre></td></tr></table></figure>
-<p>就可以在浏览器中输入localhost:4000查看本地博客了。如果不能查看请输入<br>127.0.0.1:4000查看。在不行了。就是没有成功从hexo init重新来一次就可以了。要注意的是，所有的hexo指令都必须在你所建立的目录下执行。</p>
-<h3 id="部署Hexo到GitHub上"><a href="#部署Hexo到GitHub上" class="headerlink" title="部署Hexo到GitHub上"></a>部署Hexo到GitHub上</h3><p>安装一个插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后打开博客目录的_config.yml文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/joway/hexo-blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>注意”:”号后面有空格。必须空一格。<br>然后输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deploy//可简写为 hexo d</span><br></pre></td></tr></table></figure>
-<p>在浏览器中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://你的id.github.io/</span><br></pre></td></tr></table></figure>
-<p>就可以访问自己的博客了。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/01/hexo/Hexo更换主题Next/" itemprop="url">
-                  hexo更换主题Next
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T15:50:08+08:00" content="2016-07-01">
-              2016-07-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/01/hexo/Hexo更换主题Next/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/hexo/Hexo更换主题Next/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p> 1 下载主题</p>
-<p>  从终端进入你的hexo目录然后在终端输入如下命令下载主题</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p> 2 启用主题</p>
-<p> 修改当hexo目录下的_config.yml 的theme 选项</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-<p> 3 验证是否启用</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
-<p>访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000</span><br></pre></td></tr></table></figure>
-<p>确保站点正确运行。</p>
-<p>4 其他配置。</p>
-<p>   主题设定<br>   <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">next|主题设定</a></p>
-<p>   第三方服务<br>   <a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">next|第三方服务</a></p>
+            <p>1 SourceGraph</p>
+<p>Sourcegraph Chrome 扩展允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。</p>
+<p><img src="/image/imagegithub4.jpg" alt="image4"></p>
+<p>2 Zenhub</p>
+<p>ZenHub 是一个 Github 的本地项目管理工具，可以无缝的集成。</p>
+<p><img src="/image/imagegithub5.jpg" alt="image5"></p>
 
           
         
@@ -1770,7 +1730,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1778,7 +1738,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1787,7 +1747,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
