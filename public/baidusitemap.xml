@@ -4,12 +4,32 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/08/20/swift/Kingfisher/</loc>
+    <lastmod>2016-08-20T12:59:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift 图片下载</title>
+        <pubTime>2016-08-20T12:50:50.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/08/14/mysql/mysql%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81/</loc>
-    <lastmod>2016-08-14T13:58:26.000Z</lastmod>
+    <lastmod>2016-08-14T14:04:46.000Z</lastmod>
     <data>
         <display>
         <title>mysql 更改密码</title>
-        <pubTime>2016-08-14T13:57:14.000Z</pubTime>
+        <pubTime>2016-08-14T14:04:46.000Z</pubTime>
         
         <tag>mysql</tag>
          
@@ -108,21 +128,19 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B61/</loc>
+    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/</loc>
     <lastmod>2016-07-01T07:50:08.000Z</lastmod>
     <data>
         <display>
-        <title>github插件1</title>
+        <title>hexo更换主题Next</title>
         <pubTime>2016-07-01T07:50:08.000Z</pubTime>
         
-        <tag>github</tag>
-         
-        <tag>chrome</tag>
+        <tag>hexo</tag>
          
          
            
              
-              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
+              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
           
         </display>
     </data>
@@ -130,11 +148,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/</loc>
+    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E5%88%9D%E6%AD%A5%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2016-07-01T07:50:08.000Z</lastmod>
     <data>
         <display>
-        <title>hexo更换主题Next</title>
+        <title>hexo 初步教程</title>
         <pubTime>2016-07-01T07:50:08.000Z</pubTime>
         
         <tag>hexo</tag>
@@ -172,28 +190,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B62/</loc>
-    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>github插件2</title>
-        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>chrome</tag>
-         
-         
-           
-             
-              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/07/01/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/</loc>
     <lastmod>2016-07-01T07:50:08.000Z</lastmod>
     <data>
@@ -216,19 +212,21 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E5%88%9D%E6%AD%A5%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B61/</loc>
     <lastmod>2016-07-01T07:50:08.000Z</lastmod>
     <data>
         <display>
-        <title>hexo 初步教程</title>
+        <title>github插件1</title>
         <pubTime>2016-07-01T07:50:08.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>github</tag>
+         
+        <tag>chrome</tag>
          
          
            
              
-              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
+              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
           
         </display>
     </data>
@@ -236,65 +234,43 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/swift/Swift_ios_%E5%BC%80%E5%8F%91%E4%B9%8BUINavigationController%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/</loc>
+    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B62/</loc>
+    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>github插件2</title>
+        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A81/</loc>
     <lastmod>2016-07-01T07:50:07.000Z</lastmod>
     <data>
         <display>
-        <title>Swift_ios_开发之UINavigationController的常用属性</title>
+        <title>swift-SnapKit自动布局使用1</title>
         <pubTime>2016-07-01T07:50:07.000Z</pubTime>
         
         <tag>swift</tag>
          
-        <tag>ios</tag>
-         
-        <tag>UINavigationController</tag>
+        <tag>SnapKit</tag>
          
          
            
              
               <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/mac/mac%20server/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac localhost server</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>mac</tag>
-         
-         
-           
-             
-              <breadCrumb title="mac" url="http://yoursite.com/categories/mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E8%AF%84%E8%AE%BA%E4%B8%8E%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo评论系统与站点计数</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>next</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
           
         </display>
     </data>
@@ -334,6 +310,52 @@
         <tag>QRCode</tag>
          
         <tag>AVFoundation</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/swift/Swift%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift代理delegate</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+        <tag>delegate</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/swift/Swift_ios_%E5%BC%80%E5%8F%91%E4%B9%8BUINavigationController%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/</loc>
+    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift_ios_开发之UINavigationController的常用属性</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+        <tag>ios</tag>
+         
+        <tag>UINavigationController</tag>
          
          
            
@@ -392,21 +414,21 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A81/</loc>
+    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E8%AF%84%E8%AE%BA%E4%B8%8E%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2016-07-01T07:50:07.000Z</lastmod>
     <data>
         <display>
-        <title>swift-SnapKit自动布局使用1</title>
+        <title>hexo评论系统与站点计数</title>
         <pubTime>2016-07-01T07:50:07.000Z</pubTime>
         
-        <tag>swift</tag>
+        <tag>hexo</tag>
          
-        <tag>SnapKit</tag>
+        <tag>next</tag>
          
          
            
              
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
           
         </display>
     </data>
@@ -458,6 +480,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/07/01/mac/mac%20server/</loc>
+    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac localhost server</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://yoursite.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/07/01/swift/UISreen%E7%B1%BB%E7%9A%84%E5%B1%8F%E5%B9%95%E5%A4%A7%E5%B0%8F/</loc>
     <lastmod>2016-07-01T07:50:07.000Z</lastmod>
     <data>
@@ -466,28 +508,6 @@
         <pubTime>2016-07-01T07:50:07.000Z</pubTime>
         
         <tag>swift</tag>
-         
-         
-           
-             
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/swift/Swift%E4%BB%A3%E7%90%86/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Swift代理delegate</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>swift</tag>
-         
-        <tag>delegate</tag>
          
          
            
