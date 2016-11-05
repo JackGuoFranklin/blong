@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-20T12:59:23.000Z</updated>
+  <updated>2016-11-05T12:33:25.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>iterm2配色</title>
+    <link href="http://yoursite.com/2016/11/05/mac/iterm2%E9%85%8D%E8%89%B2/"/>
+    <id>http://yoursite.com/2016/11/05/mac/iterm2配色/</id>
+    <published>2016-11-05T12:31:47.000Z</published>
+    <updated>2016-11-05T12:33:25.000Z</updated>
+    
+    <content type="html">&lt;p&gt;iterm2配色方案&lt;/p&gt;
+&lt;p&gt;#配色来源&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iterm2官网所提供的配色方案iTerm2-Color-Schemes&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;在schemes目录下提供了很多种配色方案&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;altercation大神的solarized配色方案solarized&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;在这个repo中给出了多个编辑器的配色方案，显然我们需要的是目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iterm2-colors-solarized下的&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Solarized Dark.itermcolors 和 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Solarized Light.itermcolors&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;#步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载配色方案&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;首先打开home目录下的 .bash_profile 文件&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;    vim ~/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   ```   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;粘进去&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; export CLICOLOR=1&lt;br&gt; LSCOLORS=gxfxcxdxbxegedabagacad&lt;br&gt; export PS1=’[\033[01;32m]\u@\h[\033[00m]:[\033[01;36m]\w[\033[00m]\$ ‘&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;保存退出&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; source ~/.bash_profile&lt;br&gt; ```&lt;br&gt; 文件生效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;进入iterm2&lt;br&gt;Preferences-&amp;gt;Profiles-&amp;gt;Terminal 标签下的 Terminal Emulation 选择的是 xterm-new&lt;br&gt;之后在 Preferences-&amp;gt;Profiles-&amp;gt;Colors 标签，点击 Load Preset 列表中的 Import 进行导入配色方案，之后进入text标签，不勾选Draw bold text in bright colors选项。&lt;br&gt;重启iterm2&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iterm2配色方案&lt;/p&gt;
+&lt;p&gt;#配色来源&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class
+    
+    </summary>
+    
+      <category term="iterm" scheme="http://yoursite.com/categories/iterm/"/>
+    
+    
+      <category term="iterm" scheme="http://yoursite.com/tags/iterm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>隐藏dsstore</title>
+    <link href="http://yoursite.com/2016/11/02/mac/%E9%9A%90%E8%97%8Fdsstore/"/>
+    <id>http://yoursite.com/2016/11/02/mac/隐藏dsstore/</id>
+    <published>2016-11-02T11:06:01.000Z</published>
+    <updated>2016-11-02T11:06:01.000Z</updated>
+    
+    <content type="html">&lt;p&gt;隐藏dsstore&lt;/p&gt;
+&lt;p&gt;隐藏文件的方法解决了 mac系统如何显示和隐藏文件 苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)： 显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool true 隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool false 或者 显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles YES 隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles NO 输完单击Enter键，退出终端，重新启动Finder就可以了 重启Finder：鼠标单击窗口左上角的苹果标志–&amp;gt;强制退出–&amp;gt;Finder–&amp;gt;重新启动 别处转来的&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;隐藏dsstore&lt;/p&gt;
+&lt;p&gt;隐藏文件的方法解决了 mac系统如何显示和隐藏文件 苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)： 显示Mac隐藏文件的
+    
+    </summary>
+    
+      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
+    
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Swift 图片下载</title>
     <link href="http://yoursite.com/2016/08/20/swift/Kingfisher/"/>
     <id>http://yoursite.com/2016/08/20/swift/Kingfisher/</id>
-    <published>2016-08-20T12:50:50.000Z</published>
-    <updated>2016-08-20T12:59:23.000Z</updated>
+    <published>2016-08-20T15:40:28.000Z</published>
+    <updated>2016-08-20T15:40:28.000Z</updated>
     
     <content type="html">&lt;p&gt;Kingfisher&lt;/p&gt;
 &lt;p&gt;oc有个非常强大图片缓存处理的库SDWebImage，swift中现在也有个不错的图片处理的库—-Kingfisher&lt;/p&gt;
@@ -113,36 +177,6 @@
   </entry>
   
   <entry>
-    <title>cherome使用技巧</title>
-    <link href="http://yoursite.com/2016/07/19/chrome/Chrome%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://yoursite.com/2016/07/19/chrome/Chrome使用技巧/</id>
-    <published>2016-07-19T15:42:08.000Z</published>
-    <updated>2016-08-10T15:12:59.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;cherome-使用技巧&quot;&gt;&lt;a href=&quot;#cherome-使用技巧&quot; class=&quot;headerlink&quot; title=&quot;cherome 使用技巧&quot;&gt;&lt;/a&gt;cherome 使用技巧&lt;/h3&gt;&lt;p&gt;Infinity(必备)：善心悦目的背景，而且可以自定图标。（鼠标滚轮可以翻页）&lt;/p&gt;
-&lt;p&gt;AdBlock（必备）：到现在帮我屏蔽了上万条广告&lt;/p&gt;
-&lt;p&gt;视频广告终结者：在不办任何会员的情况下，基本上所有视频都没广告了，&lt;/p&gt;
-&lt;p&gt;Google翻译：一键翻译&lt;/p&gt;
-&lt;p&gt;Tab Sync&lt;/p&gt;
-&lt;p&gt;有时5点钟流逝的太早。也许你正沦陷于一个很重要的工作项目，或者你正娱乐到一半，但现在是时候出发了。一种解决方案是保存所有打开的标签为书签，打开书签同步，回家后一个一个的打开。或者你可以安装Tab Sync。顾名思义，这个工具同步你所有已打开的标签页。只要按一下按钮，你就可以安心出发。&lt;/p&gt;
-&lt;p&gt;Tab Menu&lt;/p&gt;
-&lt;p&gt;这对于经常同时打开超过10个标签的人来说极其方便，并且你打开的标签越多，你就更多的使用这个扩展。轻松的在一个下拉菜单中完成诸如选择、关闭、重新排列、查找等更多功能。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;cherome-使用技巧&quot;&gt;&lt;a href=&quot;#cherome-使用技巧&quot; class=&quot;headerlink&quot; title=&quot;cherome 使用技巧&quot;&gt;&lt;/a&gt;cherome 使用技巧&lt;/h3&gt;&lt;p&gt;Infinity(必备)：善心悦目的背景，而且可以自定图标。
-    
-    </summary>
-    
-      <category term="chrome" scheme="http://yoursite.com/categories/chrome/"/>
-    
-    
-      <category term="cherome" scheme="http://yoursite.com/tags/cherome/"/>
-    
-  </entry>
-  
-  <entry>
     <title>第三方库学习</title>
     <link href="http://yoursite.com/2016/07/19/swift/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/"/>
     <id>http://yoursite.com/2016/07/19/swift/第三方库/</id>
@@ -194,40 +228,143 @@
   </entry>
   
   <entry>
-    <title>创建Git仓库（git@oschina&amp;sourceTree）</title>
-    <link href="http://yoursite.com/2016/07/01/github/%E5%88%9B%E5%BB%BAGit%E4%BB%93%E5%BA%93osChina/"/>
-    <id>http://yoursite.com/2016/07/01/github/创建Git仓库osChina/</id>
-    <published>2016-07-01T07:50:08.000Z</published>
-    <updated>2016-07-01T07:50:08.000Z</updated>
+    <title>cherome使用技巧</title>
+    <link href="http://yoursite.com/2016/07/19/chrome/Chrome%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2016/07/19/chrome/Chrome使用技巧/</id>
+    <published>2016-07-19T15:42:08.000Z</published>
+    <updated>2016-08-10T15:12:59.000Z</updated>
     
-    <content type="html">&lt;p&gt;创建Git仓库（git@oschina&amp;amp;sourceTree）&lt;/p&gt;
-&lt;p&gt;1.创建远程仓库&lt;/p&gt;
-&lt;p&gt;进入&lt;a href=&quot;https://git.oschina.net/点击＋号，创建新项目&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git.oschina.net/点击＋号，创建新项目&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2.部署公钥（可以暂时不用公钥的）&lt;/p&gt;
-&lt;p&gt;在项目界面，管理－》部署公钥－》添加公钥，按照git@oschina上面的步骤，一步步生成公钥并添加到项目中。&lt;/p&gt;
-&lt;p&gt;3.将远程仓库与本地仓库关联起来（也是最关键的一步）&lt;/p&gt;
-&lt;p&gt;（1）复制远程仓库的git地址。&lt;/p&gt;
-&lt;p&gt;（2）打开sourceTree，依次点击：新仓库－》从URL克隆－》将远程仓库的地址粘贴到“源URL”，目标路径选择自己要存放的位置（路径A）（一定得是一个空的文件夹，否则会报错）－》克隆&lt;/p&gt;
-&lt;p&gt;4.在路径A下创建工程，或者将原来就存在的工程放在路径A下面。&lt;/p&gt;
-&lt;p&gt;5.打开sourceTree，查看是否检测到文件变动。&lt;/p&gt;
+    <content type="html">&lt;h3 id=&quot;cherome-使用技巧&quot;&gt;&lt;a href=&quot;#cherome-使用技巧&quot; class=&quot;headerlink&quot; title=&quot;cherome 使用技巧&quot;&gt;&lt;/a&gt;cherome 使用技巧&lt;/h3&gt;&lt;p&gt;Infinity(必备)：善心悦目的背景，而且可以自定图标。（鼠标滚轮可以翻页）&lt;/p&gt;
+&lt;p&gt;AdBlock（必备）：到现在帮我屏蔽了上万条广告&lt;/p&gt;
+&lt;p&gt;视频广告终结者：在不办任何会员的情况下，基本上所有视频都没广告了，&lt;/p&gt;
+&lt;p&gt;Google翻译：一键翻译&lt;/p&gt;
+&lt;p&gt;Tab Sync&lt;/p&gt;
+&lt;p&gt;有时5点钟流逝的太早。也许你正沦陷于一个很重要的工作项目，或者你正娱乐到一半，但现在是时候出发了。一种解决方案是保存所有打开的标签为书签，打开书签同步，回家后一个一个的打开。或者你可以安装Tab Sync。顾名思义，这个工具同步你所有已打开的标签页。只要按一下按钮，你就可以安心出发。&lt;/p&gt;
+&lt;p&gt;Tab Menu&lt;/p&gt;
+&lt;p&gt;这对于经常同时打开超过10个标签的人来说极其方便，并且你打开的标签越多，你就更多的使用这个扩展。轻松的在一个下拉菜单中完成诸如选择、关闭、重新排列、查找等更多功能。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;创建Git仓库（git@oschina&amp;amp;sourceTree）&lt;/p&gt;
-&lt;p&gt;1.创建远程仓库&lt;/p&gt;
-&lt;p&gt;进入&lt;a href=&quot;https://git.oschina.net/点击＋号，创建新项目&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;
+      &lt;h3 id=&quot;cherome-使用技巧&quot;&gt;&lt;a href=&quot;#cherome-使用技巧&quot; class=&quot;headerlink&quot; title=&quot;cherome 使用技巧&quot;&gt;&lt;/a&gt;cherome 使用技巧&lt;/h3&gt;&lt;p&gt;Infinity(必备)：善心悦目的背景，而且可以自定图标。
     
     </summary>
     
-      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+      <category term="chrome" scheme="http://yoursite.com/categories/chrome/"/>
     
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+      <category term="cherome" scheme="http://yoursite.com/tags/cherome/"/>
     
-      <category term="git@osChina" scheme="http://yoursite.com/tags/git-osChina/"/>
+  </entry>
+  
+  <entry>
+    <title>python django新建项目</title>
+    <link href="http://yoursite.com/2016/07/14/python/%E5%BD%93%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%85%B6%E5%AE%83%E7%AB%AF%E5%8F%A3%EF%BC%9A/"/>
+    <id>http://yoursite.com/2016/07/14/python/当提示端口被占用的时候，可以用其它端口：/</id>
+    <published>2016-07-14T08:03:43.000Z</published>
+    <updated>2016-11-02T11:25:27.000Z</updated>
     
-      <category term="sourceTree" scheme="http://yoursite.com/tags/sourceTree/"/>
+    <content type="html">&lt;p&gt;1 新建一个 django project&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;django-admin.py startproject project-name&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）&lt;/p&gt;
+&lt;p&gt;2 新建 app&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;python manage.py startapp app-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;或 django-admin.py startapp app-name&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。&lt;/p&gt;
+&lt;p&gt;3 同步数据库&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;python manage.py syncdb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;注意：Django 1.7.1及以上的版本需要用以下命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py makemigrations&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。&lt;/p&gt;
+&lt;p&gt;备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具 south,详见 Django 数据库迁移 一节。&lt;/p&gt;
+&lt;p&gt;4 使用开发服务器&lt;br&gt;开发服务器，即开发时使用，一般修改代码后会自动重启，方便调试和开发，但是由于性能问题，建议只用来测试，不要用在生产环境。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;python manage.py runserver&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 当提示端口被占用的时候，可以用其它端口：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py runserver 8001&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py runserver 9999&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;（当然也可以kill掉占用端口的进程）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 监听所有可用 ip （电脑可能有一个或多个内网ip，一个或多个外网ip，即有多个ip地址）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py runserver 0.0.0.0:8000&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 访问对应的 ip加端口，比如 http://172.16.20.2:8000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 5 清空数据库&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;python manage.py flush&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。&lt;/p&gt;
+&lt;p&gt;6  创建超级管理员&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;python manage.py createsuperuser&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 修改 用户密码可以用：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py changepassword username&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1 新建一个 django project&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;t
+    
+    </summary>
+    
+      <category term="python django" scheme="http://yoursite.com/categories/python-django/"/>
+    
+    
+      <category term="python django" scheme="http://yoursite.com/tags/python-django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python Django简介</title>
+    <link href="http://yoursite.com/2016/07/14/python/Django%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yoursite.com/2016/07/14/python/Django简介/</id>
+    <published>2016-07-14T00:00:06.000Z</published>
+    <updated>2016-11-02T11:26:30.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Django 简介&lt;br&gt;让我们一览 Django 全貌&lt;br&gt;urls.py&lt;br&gt;网址入口，关联到对应的views.py中的一个函数（或者generic类），访问网址就对应一个函数。&lt;/p&gt;
+&lt;p&gt;views.py&lt;br&gt;处理用户发出的请求，从urls.py中对应过来, 通过渲染templates中的网页可以将显示内容，比如登陆后的用户名，用户请求的数据，输出到网页。&lt;/p&gt;
+&lt;p&gt;models.py&lt;br&gt;与数据库操作相关，存入或读取数据时用到这个，当然用不到数据库的时候 你可以不使用。&lt;/p&gt;
+&lt;p&gt;forms.py&lt;br&gt;表单，用户在浏览器上输入数据提交，对数据的验证工作以及输入框的生成等工作，当然你也可以不使用。&lt;/p&gt;
+&lt;p&gt;templates 文件夹&lt;/p&gt;
+&lt;p&gt;views.py 中的函数渲染templates中的Html模板，得到动态内容的网页，当然可以用缓存来提高速度。&lt;/p&gt;
+&lt;p&gt;admin.py&lt;br&gt;后台，可以用很少量的代码就拥有一个强大的后台。&lt;/p&gt;
+&lt;p&gt;settings.py&lt;br&gt;Django 的设置，配置文件，比如 DEBUG 的开关，静态文件的位置等。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Django 简介&lt;br&gt;让我们一览 Django 全貌&lt;br&gt;urls.py&lt;br&gt;网址入口，关联到对应的views.py中的一个函数（或者generic类），访问网址就对应一个函数。&lt;/p&gt;
+&lt;p&gt;views.py&lt;br&gt;处理用户发出的请求，从urls.py中对应过来,
+    
+    </summary>
+    
+      <category term="python django" scheme="http://yoursite.com/categories/python-django/"/>
+    
+    
+      <category term="python django" scheme="http://yoursite.com/tags/python-django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机书籍</title>
+    <link href="http://yoursite.com/2016/07/06/book/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E5%B8%B8%E7%94%A8/"/>
+    <id>http://yoursite.com/2016/07/06/book/计算机书籍常用/</id>
+    <published>2016-07-06T09:24:11.000Z</published>
+    <updated>2016-11-02T11:20:29.000Z</updated>
+    
+    <content type="html">&lt;p&gt;1.代码大全&lt;/p&gt;
+&lt;p&gt;2.程序员修炼之道&lt;/p&gt;
+&lt;p&gt;3.设计模式&lt;/p&gt;
+&lt;p&gt;4.重构：改善既有代码的设计&lt;/p&gt;
+&lt;p&gt;5.哥德尔、艾舍尔、巴赫书：集异璧之大成&lt;/p&gt;
+&lt;p&gt;6.代码整洁之道&lt;/p&gt;
+&lt;p&gt;7.修改代码的艺术&lt;/p&gt;
+&lt;p&gt;8.Unix编程艺术&lt;br&gt;It is useful regardless operating system you use. – J.F. Sebastian&lt;br&gt;不管你使用什么操作系统，这本书都很有用。 – J.F. Sebastian&lt;/p&gt;
+&lt;p&gt;《代码大全》教你如何正确编程；《人月神话》教你如何正确管理；《设计模式》教你如何正确设计……&lt;/p&gt;
+&lt;p&gt;9.算法导论&lt;/p&gt;
+&lt;p&gt;10.人月神话&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.代码大全&lt;/p&gt;
+&lt;p&gt;2.程序员修炼之道&lt;/p&gt;
+&lt;p&gt;3.设计模式&lt;/p&gt;
+&lt;p&gt;4.重构：改善既有代码的设计&lt;/p&gt;
+&lt;p&gt;5.哥德尔、艾舍尔、巴赫书：集异璧之大成&lt;/p&gt;
+&lt;p&gt;6.代码整洁之道&lt;/p&gt;
+&lt;p&gt;7.修改代码的艺术&lt;/p&gt;
+&lt;p&gt;8.Unix编程艺
+    
+    </summary>
+    
+      <category term="计算机" scheme="http://yoursite.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+      <category term="计算机" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
   </entry>
   
@@ -289,146 +426,6 @@
     
       &lt;h3 id=&quot;安装git&quot;&gt;&lt;a href=&quot;#安装git&quot; class=&quot;headerlink&quot; title=&quot;安装git&quot;&gt;&lt;/a&gt;安装git&lt;/h3&gt;&lt;p&gt;我选用了Homebrew来安装mac下的软件，你可以先安装&lt;br&gt;Homebrew&lt;/p&gt;
 &lt;h3 id=&quot;安装Ho
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>github插件2</title>
-    <link href="http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B62/"/>
-    <id>http://yoursite.com/2016/07/01/github/github插件2/</id>
-    <published>2016-07-01T07:50:08.000Z</published>
-    <updated>2016-07-01T07:50:08.000Z</updated>
-    
-    <content type="html">&lt;p&gt;1 SourceGraph&lt;/p&gt;
-&lt;p&gt;Sourcegraph Chrome 扩展允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/image/imagegithub4.jpg&quot; alt=&quot;image4&quot;&gt;&lt;/p&gt;
-&lt;p&gt;2 Zenhub&lt;/p&gt;
-&lt;p&gt;ZenHub 是一个 Github 的本地项目管理工具，可以无缝的集成。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/image/imagegithub5.jpg&quot; alt=&quot;image5&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1 SourceGraph&lt;/p&gt;
-&lt;p&gt;Sourcegraph Chrome 扩展允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/imag
-    
-    </summary>
-    
-      <category term="github" scheme="http://yoursite.com/categories/github/"/>
-    
-    
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>github插件1</title>
-    <link href="http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B61/"/>
-    <id>http://yoursite.com/2016/07/01/github/github插件1/</id>
-    <published>2016-07-01T07:50:08.000Z</published>
-    <updated>2016-07-01T07:50:08.000Z</updated>
-    
-    <content type="html">&lt;p&gt;github 插件&lt;/p&gt;
-&lt;p&gt;1 Octotree：你的 GitHub 文档库&lt;/p&gt;
-&lt;p&gt;　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的 GitHub 仓库，简单直观的同时，也方便你进行文件之间的跳转操作。&lt;br&gt;　　&lt;br&gt;&lt;img src=&quot;/image/imagegithub1.jpg&quot; alt=&quot;image1&quot;&gt;&lt;/p&gt;
-&lt;p&gt;2 GitHub Awesome Complete：属于 GitHub 的 「Alfred」&lt;/p&gt;
-&lt;p&gt;　在 GitHub 搜索仓库或者项目的时候，你会怎么做？相信大部分人的步骤都是一样的：&lt;/p&gt;
-&lt;p&gt;　　在搜索框输入关键字后按回车键&lt;/p&gt;
-&lt;p&gt;　　在搜索结果中找到相应结果，点击进入相应页面&lt;/p&gt;
-&lt;p&gt;　　有没有更简单快捷的操作方法？答案是 GitHub Awesome Complete 这款 Chrome 插件。这款插件能够让你在 GitHub 中输入关键字之后通过弹窗动态显示相应的搜索结果，你所需要做的，只是点击即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/image/imagegithub2.gif&quot; alt=&quot;image2&quot;&gt;&lt;/p&gt;
-&lt;p&gt;3 　除了以上两款 GitHub 相关的插件，这里我还要介绍一下 Octo Mate 这款能够提升你的 GitHub 体验的小工具。对于这款插件，主要功能有以下四点：&lt;/p&gt;
-&lt;p&gt;　　一键下载文件：GitHub 可以让你很方便的以 .zip 格式下载所有文件，但如果只需要下载一个文件，非常麻烦。使用 Octo Mate 后只需要点击文件图标即可下载。&lt;/p&gt;
-&lt;p&gt;　　一键打开项目的 Github Pages&lt;/p&gt;
-&lt;p&gt;　　显示仓库大小&lt;/p&gt;
-&lt;p&gt;　　显示未读消息数&lt;/p&gt;
-&lt;p&gt;　　相信这样一款插件一定能让你在使用 GitHub 的时候更加高效。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/image/imagegithub3.jpg&quot; alt=&quot;image3&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;github 插件&lt;/p&gt;
-&lt;p&gt;1 Octotree：你的 GitHub 文档库&lt;/p&gt;
-&lt;p&gt;　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的
-    
-    </summary>
-    
-      <category term="github" scheme="http://yoursite.com/categories/github/"/>
-    
-    
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>android studio启动慢</title>
-    <link href="http://yoursite.com/2016/07/01/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/"/>
-    <id>http://yoursite.com/2016/07/01/android/androidstudio启动慢/</id>
-    <published>2016-07-01T07:50:08.000Z</published>
-    <updated>2016-07-01T07:50:08.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot; class=&quot;headerlink&quot; title=&quot;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&quot;&gt;&lt;/a&gt;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&lt;/h3&gt;&lt;p&gt;1）进入刚安装的Android Studio目录下的bin目录。找到idea.properties文件，用文本编辑器打开。&lt;/p&gt;
-&lt;p&gt;2）在idea.properties文件末尾添加一行： disable.android.first.run=true ，然后保存文件。&lt;/p&gt;
-&lt;p&gt;3）关闭Android Studio后重新启动，便可进入界面。&lt;/p&gt;
-&lt;p&gt;可以解决。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compom
-    
-    </summary>
-    
-      <category term="android" scheme="http://yoursite.com/categories/android/"/>
-    
-    
-      <category term="android" scheme="http://yoursite.com/tags/android/"/>
-    
-      <category term="android studio" scheme="http://yoursite.com/tags/android-studio/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo更换主题Next</title>
-    <link href="http://yoursite.com/2016/07/01/hexo/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/"/>
-    <id>http://yoursite.com/2016/07/01/hexo/Hexo更换主题Next/</id>
-    <published>2016-07-01T07:50:08.000Z</published>
-    <updated>2016-07-01T07:50:08.000Z</updated>
-    
-    <content type="html">&lt;p&gt; 1 下载主题&lt;/p&gt;
-&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 2 启用主题&lt;/p&gt;
-&lt;p&gt; 修改当hexo目录下的_config.yml 的theme 选项&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Plugins: https://hexo.io/plugins/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 3 验证是否启用&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s --debug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;访问&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://localhost:4000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;确保站点正确运行。&lt;/p&gt;
-&lt;p&gt;4 其他配置。&lt;/p&gt;
-&lt;p&gt;   主题设定&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/theme-settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|主题设定&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;   第三方服务&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|第三方服务&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt; 1 下载主题&lt;/p&gt;
-&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
     
     </summary>
     
@@ -530,91 +527,180 @@
   </entry>
   
   <entry>
-    <title>UIView的常用属性和常用方法总结</title>
-    <link href="http://yoursite.com/2016/07/01/swift/UIView%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2016/07/01/swift/UIView的常用属性和常用方法/</id>
-    <published>2016-07-01T07:50:07.000Z</published>
-    <updated>2016-07-01T07:50:07.000Z</updated>
+    <title>github插件1</title>
+    <link href="http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B61/"/>
+    <id>http://yoursite.com/2016/07/01/github/github插件1/</id>
+    <published>2016-07-01T07:50:08.000Z</published>
+    <updated>2016-07-01T07:50:08.000Z</updated>
     
-    <content type="html">&lt;p&gt;UIView的常用属性和常用方法总结&lt;/p&gt;
-&lt;p&gt;1，UIView常用的一些属性如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;frame：相对父视图的坐标和大小（x,y,w,h）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bounds：相对自身的坐标和大小，所以bounds的x和y永远为0（0,0,w,h）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;center：相对父视图的中点坐标&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;transform：控制视图的放大缩小和旋转&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;superview：获取父视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;subviews：获取所有子视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alpha：视图的透明度（0.0-1.0）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tag：视图的标志（Int类型，默认等于0），设置后，可以通过viewWithTag方法拿到这个视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2，UIView的常用方法如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;func removeFromSuperview()：将视图从父视图中移除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func insertSubview(view:UIView, atIndex index:Int)：指定一个位置插入一个视图，index越小，视图越往下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func exchangeSubviewAtIndex(index1:Int, withSubviewAtIndex index2:Int)：将index1和index2位置的两个视图互换位置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func addSubview(view:UIView)：添加视图到父视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func insertSubview(view:UIView,belowSubview siblingSubview:UIView)：在指定视图的下面插入视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func insertSubview(view:UIVIew,aboveSubview siblingSubview:UIView)：在指定视图上面插入视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func bringSubviewToFront(view:UIView)：把视图移到最顶层&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func sendSubviewToBack(view:UIView)：把视图移到最底层&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func viewWithTag(tag:Int)-&amp;gt;UIView?：根据tag值获取视图&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    <content type="html">&lt;p&gt;github 插件&lt;/p&gt;
+&lt;p&gt;1 Octotree：你的 GitHub 文档库&lt;/p&gt;
+&lt;p&gt;　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的 GitHub 仓库，简单直观的同时，也方便你进行文件之间的跳转操作。&lt;br&gt;　　&lt;br&gt;&lt;img src=&quot;/image/imagegithub1.jpg&quot; alt=&quot;image1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2 GitHub Awesome Complete：属于 GitHub 的 「Alfred」&lt;/p&gt;
+&lt;p&gt;　在 GitHub 搜索仓库或者项目的时候，你会怎么做？相信大部分人的步骤都是一样的：&lt;/p&gt;
+&lt;p&gt;　　在搜索框输入关键字后按回车键&lt;/p&gt;
+&lt;p&gt;　　在搜索结果中找到相应结果，点击进入相应页面&lt;/p&gt;
+&lt;p&gt;　　有没有更简单快捷的操作方法？答案是 GitHub Awesome Complete 这款 Chrome 插件。这款插件能够让你在 GitHub 中输入关键字之后通过弹窗动态显示相应的搜索结果，你所需要做的，只是点击即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/image/imagegithub2.gif&quot; alt=&quot;image2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;3 　除了以上两款 GitHub 相关的插件，这里我还要介绍一下 Octo Mate 这款能够提升你的 GitHub 体验的小工具。对于这款插件，主要功能有以下四点：&lt;/p&gt;
+&lt;p&gt;　　一键下载文件：GitHub 可以让你很方便的以 .zip 格式下载所有文件，但如果只需要下载一个文件，非常麻烦。使用 Octo Mate 后只需要点击文件图标即可下载。&lt;/p&gt;
+&lt;p&gt;　　一键打开项目的 Github Pages&lt;/p&gt;
+&lt;p&gt;　　显示仓库大小&lt;/p&gt;
+&lt;p&gt;　　显示未读消息数&lt;/p&gt;
+&lt;p&gt;　　相信这样一款插件一定能让你在使用 GitHub 的时候更加高效。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/image/imagegithub3.jpg&quot; alt=&quot;image3&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;UIView的常用属性和常用方法总结&lt;/p&gt;
-&lt;p&gt;1，UIView常用的一些属性如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
+      &lt;p&gt;github 插件&lt;/p&gt;
+&lt;p&gt;1 Octotree：你的 GitHub 文档库&lt;/p&gt;
+&lt;p&gt;　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的
     
     </summary>
     
-      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
+      <category term="github" scheme="http://yoursite.com/categories/github/"/>
     
     
-      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
     
   </entry>
   
   <entry>
-    <title>mac localhost server</title>
-    <link href="http://yoursite.com/2016/07/01/mac/mac%20server/"/>
-    <id>http://yoursite.com/2016/07/01/mac/mac server/</id>
-    <published>2016-07-01T07:50:07.000Z</published>
-    <updated>2016-07-01T07:50:07.000Z</updated>
+    <title>创建Git仓库（git@oschina&amp;sourceTree）</title>
+    <link href="http://yoursite.com/2016/07/01/github/%E5%88%9B%E5%BB%BAGit%E4%BB%93%E5%BA%93osChina/"/>
+    <id>http://yoursite.com/2016/07/01/github/创建Git仓库osChina/</id>
+    <published>2016-07-01T07:50:08.000Z</published>
+    <updated>2016-07-01T07:50:08.000Z</updated>
     
-    <content type="html">&lt;p&gt;1&lt;br&gt;建立方式很简单，直接在终端中运行：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo mkdir ~/Sites&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2建立“站点”文件夹之后，检查 /etc/ 文件夹下面是不是有“haibor.conf”这个文件：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/etc/apache2/users/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;如果没有，那么你需要创建一个，取名为“你的名字.conf”，可以使用 vi 或者 nano 这两种编辑器之一来创建。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo vi /etc/apache2/users/你的名字.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;创建之后将下面的这几行内容写到上面的 conf 文件中：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;Directory &amp;quot;/Users/你的名字/Sites/&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Options Indexes MultiViews&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AllowOverride All&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Order allow,deny&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Allow from all&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;3&lt;br&gt;文件保存之后，给它赋予相应的权限：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo chmod 755 /etc/apache2/users/你的名字.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;4接下来重启 Apache，以使该配置文件生效：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apachectl restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    <content type="html">&lt;p&gt;创建Git仓库（git@oschina&amp;amp;sourceTree）&lt;/p&gt;
+&lt;p&gt;1.创建远程仓库&lt;/p&gt;
+&lt;p&gt;进入&lt;a href=&quot;https://git.oschina.net/点击＋号，创建新项目&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git.oschina.net/点击＋号，创建新项目&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2.部署公钥（可以暂时不用公钥的）&lt;/p&gt;
+&lt;p&gt;在项目界面，管理－》部署公钥－》添加公钥，按照git@oschina上面的步骤，一步步生成公钥并添加到项目中。&lt;/p&gt;
+&lt;p&gt;3.将远程仓库与本地仓库关联起来（也是最关键的一步）&lt;/p&gt;
+&lt;p&gt;（1）复制远程仓库的git地址。&lt;/p&gt;
+&lt;p&gt;（2）打开sourceTree，依次点击：新仓库－》从URL克隆－》将远程仓库的地址粘贴到“源URL”，目标路径选择自己要存放的位置（路径A）（一定得是一个空的文件夹，否则会报错）－》克隆&lt;/p&gt;
+&lt;p&gt;4.在路径A下创建工程，或者将原来就存在的工程放在路径A下面。&lt;/p&gt;
+&lt;p&gt;5.打开sourceTree，查看是否检测到文件变动。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;1&lt;br&gt;建立方式很简单，直接在终端中运行：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;
+      &lt;p&gt;创建Git仓库（git@oschina&amp;amp;sourceTree）&lt;/p&gt;
+&lt;p&gt;1.创建远程仓库&lt;/p&gt;
+&lt;p&gt;进入&lt;a href=&quot;https://git.oschina.net/点击＋号，创建新项目&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;
     
     </summary>
     
-      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
     
     
-      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="git@osChina" scheme="http://yoursite.com/tags/git-osChina/"/>
+    
+      <category term="sourceTree" scheme="http://yoursite.com/tags/sourceTree/"/>
     
   </entry>
   
   <entry>
-    <title>swift-UISreen类的屏幕大小</title>
-    <link href="http://yoursite.com/2016/07/01/swift/UISreen%E7%B1%BB%E7%9A%84%E5%B1%8F%E5%B9%95%E5%A4%A7%E5%B0%8F/"/>
-    <id>http://yoursite.com/2016/07/01/swift/UISreen类的屏幕大小/</id>
-    <published>2016-07-01T07:50:07.000Z</published>
-    <updated>2016-07-01T07:50:07.000Z</updated>
+    <title>android studio启动慢</title>
+    <link href="http://yoursite.com/2016/07/01/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/"/>
+    <id>http://yoursite.com/2016/07/01/android/androidstudio启动慢/</id>
+    <published>2016-07-01T07:50:08.000Z</published>
+    <updated>2016-07-01T07:50:08.000Z</updated>
     
-    <content type="html">&lt;p&gt;获取 UISreen类的屏幕大小&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//获取屏幕大小&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var screenBounds:CGRect = UIScreen.mainScreen().bounds&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;println(screenBounds) //iPhone6输出：（0.0,0.0,375.0,667.0）&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    <content type="html">&lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot; class=&quot;headerlink&quot; title=&quot;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&quot;&gt;&lt;/a&gt;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&lt;/h3&gt;&lt;p&gt;1）进入刚安装的Android Studio目录下的bin目录。找到idea.properties文件，用文本编辑器打开。&lt;/p&gt;
+&lt;p&gt;2）在idea.properties文件末尾添加一行： disable.android.first.run=true ，然后保存文件。&lt;/p&gt;
+&lt;p&gt;3）关闭Android Studio后重新启动，便可进入界面。&lt;/p&gt;
+&lt;p&gt;可以解决。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;获取 UISreen类的屏幕大小&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;
+      &lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compom
     
     </summary>
     
-      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
+      <category term="android" scheme="http://yoursite.com/categories/android/"/>
     
     
-      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+      <category term="android" scheme="http://yoursite.com/tags/android/"/>
+    
+      <category term="android studio" scheme="http://yoursite.com/tags/android-studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github插件2</title>
+    <link href="http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B62/"/>
+    <id>http://yoursite.com/2016/07/01/github/github插件2/</id>
+    <published>2016-07-01T07:50:08.000Z</published>
+    <updated>2016-07-01T07:50:08.000Z</updated>
+    
+    <content type="html">&lt;p&gt;1 SourceGraph&lt;/p&gt;
+&lt;p&gt;Sourcegraph Chrome 扩展允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/image/imagegithub4.jpg&quot; alt=&quot;image4&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2 Zenhub&lt;/p&gt;
+&lt;p&gt;ZenHub 是一个 Github 的本地项目管理工具，可以无缝的集成。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/image/imagegithub5.jpg&quot; alt=&quot;image5&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1 SourceGraph&lt;/p&gt;
+&lt;p&gt;Sourcegraph Chrome 扩展允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/imag
+    
+    </summary>
+    
+      <category term="github" scheme="http://yoursite.com/categories/github/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo更换主题Next</title>
+    <link href="http://yoursite.com/2016/07/01/hexo/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/"/>
+    <id>http://yoursite.com/2016/07/01/hexo/Hexo更换主题Next/</id>
+    <published>2016-07-01T07:50:08.000Z</published>
+    <updated>2016-07-01T07:50:08.000Z</updated>
+    
+    <content type="html">&lt;p&gt; 1 下载主题&lt;/p&gt;
+&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 2 启用主题&lt;/p&gt;
+&lt;p&gt; 修改当hexo目录下的_config.yml 的theme 选项&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Plugins: https://hexo.io/plugins/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 3 验证是否启用&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s --debug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;访问&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://localhost:4000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;确保站点正确运行。&lt;/p&gt;
+&lt;p&gt;4 其他配置。&lt;/p&gt;
+&lt;p&gt;   主题设定&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/theme-settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|主题设定&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;   第三方服务&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|第三方服务&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 1 下载主题&lt;/p&gt;
+&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
@@ -660,154 +746,99 @@
   </entry>
   
   <entry>
-    <title>Swift代理delegate</title>
-    <link href="http://yoursite.com/2016/07/01/swift/Swift%E4%BB%A3%E7%90%86/"/>
-    <id>http://yoursite.com/2016/07/01/swift/Swift代理/</id>
+    <title>hexo评论系统与站点计数</title>
+    <link href="http://yoursite.com/2016/07/01/hexo/Hexo%E8%AF%84%E8%AE%BA%E4%B8%8E%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://yoursite.com/2016/07/01/hexo/Hexo评论与站点统计系统/</id>
     <published>2016-07-01T07:50:07.000Z</published>
     <updated>2016-07-01T07:50:07.000Z</updated>
     
-    <content type="html">&lt;p&gt;实现代理传值&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import UIKit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class ViewController: UIViewController,ChangeValueDelegate&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var btn = UIButton()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func viewDidLoad() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.viewDidLoad()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.view.backgroundColor = UIColor.whiteColor()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        btn.setTitle(&amp;quot;Change&amp;quot;, forState:.Normal)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        btn.backgroundColor = UIColor.blueColor()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        btn.addTarget(self, action: #selector(change), forControlEvents: .TouchUpInside)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.view.addSubview(btn)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func didReceiveMemoryWarning() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.didReceiveMemoryWarning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        // Dispose of any resources that can be recreated.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //    delegate 代理方法&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    func changeValue(value: String) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        btn.setTitle(value, forState: .Normal)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(&amp;quot;value:\(value)&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //  传值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    func change()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        let vc = ChangeValueViewController()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vc.delegate = self&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.navigationController?.pushViewController(vc, animated: true)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;协议&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;protocol ChangeValueDelegate &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    func changeValue(value:String)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;使用代理传值&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;class ChangeValueViewController: UIViewController &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var delegate:ChangeValueDelegate?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func viewDidLoad() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.viewDidLoad()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        // Do any additional setup after loading the view.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.view.backgroundColor = UIColor.whiteColor()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.delegate?.changeValue(&amp;quot;ok&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func didReceiveMemoryWarning() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.didReceiveMemoryWarning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        // Dispose of any resources that can be recreated.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;实现代理传值&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;b
-    
-    </summary>
-    
-      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
-    
-    
-      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
-    
-      <category term="delegate" scheme="http://yoursite.com/tags/delegate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swift_ios_开发之UINavigationController的常用属性</title>
-    <link href="http://yoursite.com/2016/07/01/swift/Swift_ios_%E5%BC%80%E5%8F%91%E4%B9%8BUINavigationController%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/"/>
-    <id>http://yoursite.com/2016/07/01/swift/Swift_ios_开发之UINavigationController的常用属性/</id>
-    <published>2016-07-01T07:50:07.000Z</published>
-    <updated>2016-07-01T07:50:07.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Swift开发之UINavigationController的常用属性&lt;/p&gt;
-&lt;p&gt;1.导航栏是否隐藏&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;self.navigationController?.navigationBar.hidden = false&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2.导航栏的最底部颜色设置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//backgroundColor 是最底下的color &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationController?.navigationBar.backgroundColor = UIColor.redColor()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;3.导航栏的表层颜色，即首先看到的颜色&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//barTintColor 是表层颜色&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationController?.navigationBar.barTintColor = UIColor.grayColor()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;4.导航栏中间标题title的颜色，大小，字体设置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blueColor(),NSFontAttributeName:UIFont(name: &amp;quot;Heiti SC&amp;quot;, size: 24.0)!]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;5.导航栏隐藏左边backitem，即leftbarbuttonitem&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//完全隐藏backItem//&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationItem.setHidesBackButton(true, animated: true)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;6.导航栏leftbarbuttonitem的颜色设置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;swiftself.navigationController?.navigationBar.tintColor = UIColor.whiteColor()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;7.导航栏leftbarbuttonitem的字体，颜色，大小设置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.blueColor(),NSFontAttributeName: UIFont(name: &amp;quot;Chalkduster&amp;quot;, size: 13)!], forState: UIControlState.Normal)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;8.导航栏重新定义leftbarbuttonitem&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//重新定义backItem，将覆盖原来的BackItem.与storyboard中拖入一个item，效果一样。都是覆盖原来的backitem。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//第一种代码定义方式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: &amp;quot;function&amp;quot;), animated: true)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//第二种代码定义方式 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: &amp;quot;function&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//第三种代码定义的方式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(title: &amp;quot;&amp;lt;Grandre&amp;quot;, style: UIBarButtonItemStyle.Plain, target: self, action: &amp;quot;function&amp;quot;), animated: true)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;9.导航栏设置成透明&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//将导航栏设置成透明&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationController!.navigationBar.shadowImage = UIImage()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self.navigationController?.navigationBar.translucent = true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Swift开发之UINavigationController的常用属性&lt;/p&gt;
-&lt;p&gt;1.导航栏是否隐藏&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;
-    
-    </summary>
-    
-      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
-    
-    
-      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
-    
-      <category term="ios" scheme="http://yoursite.com/tags/ios/"/>
-    
-      <category term="UINavigationController" scheme="http://yoursite.com/tags/UINavigationController/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swift使用AVFoundation实现条形码扫描</title>
-    <link href="http://yoursite.com/2016/07/01/swift/ios%E4%BD%BF%E7%94%A8AVFoundation%E5%AE%9E%E7%8E%B0%E6%9D%A1%E5%BD%A2%E7%A0%81%E6%89%AB%E6%8F%8F/"/>
-    <id>http://yoursite.com/2016/07/01/swift/ios使用AVFoundation实现条形码扫描/</id>
-    <published>2016-07-01T07:50:07.000Z</published>
-    <updated>2016-07-01T07:50:07.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Swift - 使用AVFoundation实现条形码扫描（附：拉近镜头改善读取）&lt;/p&gt;
-&lt;p&gt;1，条形码（一维码）的扫描读取&lt;/p&gt;
-&lt;p&gt;metadataObjectTypes 做如下修改&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2，拉近镜头，改善条形码读取效果&lt;/p&gt;
-&lt;p&gt;如果条码太小的时候,就会识别不出来。&lt;/p&gt;
-&lt;p&gt;解决办法是：通过代码拉近镜头焦距，放大内容区域让机器更好的识别。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;97&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;98&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;99&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;101&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;102&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;103&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;104&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;105&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;106&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;107&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;108&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;109&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;110&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;111&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;112&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;113&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;114&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;115&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;116&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;117&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;118&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;119&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;120&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;121&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;122&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;123&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;124&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;125&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;126&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;127&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;128&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import UIKit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import AVFoundation&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UIAlertViewDelegate&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var scanRectView:UIView!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var device:AVCaptureDevice!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var input:AVCaptureDeviceInput!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var output:AVCaptureMetadataOutput!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var session:AVCaptureSession!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var preview:AVCaptureVideoPreviewLayer!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func viewDidLoad() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.viewDidLoad()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        fromCamera()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //通过摄像头扫描&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    func fromCamera() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        do&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.input = try AVCaptureDeviceInput(device: device)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.output = AVCaptureMetadataOutput()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.session = AVCaptureSession()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            if UIScreen.mainScreen().bounds.size.height&amp;lt;500 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                self.session.sessionPreset = AVCaptureSessionPreset640x480&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;else&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                self.session.sessionPreset = AVCaptureSessionPresetHigh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.session.addInput(self.input)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.session.addOutput(self.output)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //计算中间可探测区域&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            let windowSize:CGSize = UIScreen.mainScreen().bounds.size;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            let scanSize:CGSize = CGSizeMake(windowSize.width*3/4,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                windowSize.width*3/4);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            var scanRect:CGRect = CGRectMake((windowSize.width-scanSize.width)/2,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //计算rectOfInterest 注意x,y交换位置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanRect = CGRectMake(scanRect.origin.y/windowSize.height,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                scanRect.origin.x/windowSize.width,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                scanRect.size.height/windowSize.height,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                scanRect.size.width/windowSize.width);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //设置可探测区域&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.output.rectOfInterest = scanRect&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.preview = AVCaptureVideoPreviewLayer(session:self.session)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.preview.frame = UIScreen.mainScreen().bounds&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.view.layer.insertSublayer(self.preview, atIndex:0)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //添加中间的探测区域绿框&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.scanRectView = UIView();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.view.addSubview(self.scanRectView)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.scanRectView.frame = CGRectMake(0, 0, scanSize.width, scanSize.height);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.scanRectView.center = CGPointMake(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                CGRectGetMidX(UIScreen.mainScreen().bounds),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                CGRectGetMidY(UIScreen.mainScreen().bounds));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.scanRectView.layer.borderColor = UIColor.greenColor().CGColor&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.scanRectView.layer.borderWidth = 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //开始捕获&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.session.startRunning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //放大&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            do &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                try self.device!.lockForConfiguration()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; catch _ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                NSLog(&amp;quot;Error: lockForConfiguration.&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.device!.videoZoomFactor = 1.5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.device!.unlockForConfiguration()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             //放大&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;catch _ as NSError&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //打印错误消息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            let errorAlert = UIAlertView(title: &amp;quot;提醒&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                message: &amp;quot;请在iPhone的\&amp;quot;设置-隐私-相机\&amp;quot;选项中,允许本程序访问您的相机&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                delegate: self,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                cancelButtonTitle: &amp;quot;确定&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            errorAlert.show()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //摄像头捕获&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    func captureOutput(captureOutput: AVCaptureOutput!,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        didOutputMetadataObjects metadataObjects: [AnyObject]!,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        fromConnection connection: AVCaptureConnection!) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            var stringValue:String?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            if metadataObjects.count &amp;gt; 0 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                let metadataObject = metadataObjects[0]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    as! AVMetadataMachineReadableCodeObject&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                stringValue = metadataObject.stringValue&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if stringValue != nil&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    self.session.stopRunning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.session.stopRunning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //输出结果&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            let alertView = UIAlertView(title: &amp;quot;一维码&amp;quot;, message: stringValue,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                delegate: self, cancelButtonTitle: &amp;quot;确定&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            alertView.show()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //消息框确认后消失&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        //继续扫描&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.session.startRunning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func didReceiveMemoryWarning() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.didReceiveMemoryWarning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Swift - 使用AVFoundation实现条形码扫描（附：拉近镜头改善读取）&lt;/p&gt;
-&lt;p&gt;1，条形码（一维码）的扫描读取&lt;/p&gt;
-&lt;p&gt;metadataObjectTypes 做如下修改&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;ta
-    
-    </summary>
-    
-      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
-    
-    
-      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
-    
-      <category term="QRCode" scheme="http://yoursite.com/tags/QRCode/"/>
-    
-      <category term="AVFoundation" scheme="http://yoursite.com/tags/AVFoundation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ios核心动画之CAShapeLayer</title>
-    <link href="http://yoursite.com/2016/07/01/swift/ios%E6%A0%B8%E5%BF%83%E5%8A%A8%E7%94%BB%E4%B9%8BCAShapeLayer/"/>
-    <id>http://yoursite.com/2016/07/01/swift/ios核心动画之CAShapeLayer/</id>
-    <published>2016-07-01T07:50:07.000Z</published>
-    <updated>2016-07-01T07:50:07.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;专用图层&quot;&gt;&lt;a href=&quot;#专用图层&quot; class=&quot;headerlink&quot; title=&quot;专用图层&quot;&gt;&lt;/a&gt;专用图层&lt;/h3&gt;&lt;h5 id=&quot;CAShapeLayer&quot;&gt;&lt;a href=&quot;#CAShapeLayer&quot; class=&quot;headerlink&quot; title=&quot;CAShapeLayer&quot;&gt;&lt;/a&gt;CAShapeLayer&lt;/h5&gt;&lt;p&gt;CAShapeLayer优点：&lt;/p&gt;
+    <content type="html">&lt;p&gt;评论系统与站点计数&lt;/p&gt;
+&lt;p&gt;添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。&lt;/p&gt;
+&lt;h3 id=&quot;使用多说&quot;&gt;&lt;a href=&quot;#使用多说&quot; class=&quot;headerlink&quot; title=&quot;使用多说&quot;&gt;&lt;/a&gt;使用多说&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;注册多说&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。&lt;/li&gt;
-&lt;li&gt;高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。&lt;/li&gt;
-&lt;li&gt;不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Core Graphics的普通CALayer一样被剪裁掉（如我们在第二章所见）。&lt;/li&gt;
-&lt;li&gt;不会出现像素化。当你给CAShapeLayer做3D变换时，它不像一个有寄宿图的普通图层一样变得像素化。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;登录后在首页选择 “我要安装”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建站点，填写站点相关信息。注意，多说域名 这一栏填写的即是你的 duoshuo_shortname。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;创建一个CGPath 一般使用 UIBezierPath 绘制路线。&lt;/p&gt;
-&lt;p&gt;CAShapeLayer 属性&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;lineWith（线宽，用点表示单位）&lt;/li&gt;
-&lt;li&gt;lineCap（线条结尾的样子）&lt;/li&gt;
-&lt;li&gt;lineJoin（线条之间的结合点的样子）&lt;/li&gt;
-&lt;li&gt;strokeColor(线条颜色)&lt;/li&gt;
-&lt;li&gt;fillColor（填充颜色）&lt;/li&gt;
-&lt;li&gt;path（路线）&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编辑站点的 _config.yml 注意，不是主题的_config.yml文件 ，添加 duoshuo_shortname 字段，设置如下&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_shortname: your-duoshuo-shortname&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;（注）duoshuo short name: 你的多说二级域名去掉 .duoshuo.com 部分&lt;/p&gt;
+&lt;h3 id=&quot;使用-Disqus&quot;&gt;&lt;a href=&quot;#使用-Disqus&quot; class=&quot;headerlink&quot; title=&quot;使用 Disqus&quot;&gt;&lt;/a&gt;使用 Disqus&lt;/h3&gt;&lt;p&gt;编辑站点的 _config.yml ，添加 disqus_shortname 字段，设置如下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;disqus_shortname: your-disqus-shortname&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;多说评论显示-UA&quot;&gt;&lt;a href=&quot;#多说评论显示-UA&quot; class=&quot;headerlink&quot; title=&quot;多说评论显示 UA&quot;&gt;&lt;/a&gt;多说评论显示 UA&lt;/h3&gt;&lt;p&gt;需要配置 duoshuo_info 这个字段&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_info:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ua_enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  admin_enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  user_id: 1234567&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  admin_nickname: 主编大人&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;配置 user_id 和 admin_nickname 字段。 请访问 多说，登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字。&lt;/p&gt;
+&lt;h3 id=&quot;显示站点总访问量&quot;&gt;&lt;a href=&quot;#显示站点总访问量&quot; class=&quot;headerlink&quot; title=&quot;显示站点总访问量&quot;&gt;&lt;/a&gt;显示站点总访问量&lt;/h3&gt;&lt;p&gt;找到站点的themes/next/layout/_partials目录下的footer.swig文件&lt;br&gt;将以下脚本和标签插入到文件中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;本站总访问量 &amp;lt;span id=&amp;quot;busuanzi_value_site_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt; &amp;amp;nbsp&amp;amp;nbsp&amp;amp;nbsp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;您是第&amp;lt;span id=&amp;quot;busuanzi_value_site_uv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;个来到的小伙伴&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;插入到这里&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;powered-by&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;#123;&amp;#123; __(&amp;apos;footer.powered&amp;apos;, &amp;apos;&amp;lt;a class=&amp;quot;theme-link&amp;quot; href=&amp;quot;http://hexo.io&amp;quot;&amp;gt;Hexo&amp;lt;/a&amp;gt;&amp;apos;) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;theme-info&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;#123;&amp;#123; __(&amp;apos;footer.theme&amp;apos;) &amp;#125;&amp;#125; -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 &amp;lt;a class=&amp;quot;theme-link&amp;quot; href=&amp;quot;https://github.com/iissnan/hexo-theme-next&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   NexT&amp;#123;% if theme.scheme %&amp;#125;.&amp;#123;&amp;#123; theme.scheme &amp;#125;&amp;#125;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 插入到这里&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block footer %&amp;#125;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;显示单页面访问量&quot;&gt;&lt;a href=&quot;#显示单页面访问量&quot; class=&quot;headerlink&quot; title=&quot;显示单页面访问量&quot;&gt;&lt;/a&gt;显示单页面访问量&lt;/h3&gt;&lt;p&gt;修改themes/next/layout/_macro目录下的post.swig文件&lt;/p&gt;
+&lt;p&gt;位于文件开头,在第三个参数的位置，增加is_pv字段&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% macro render(post, is_index, is_pv, post_extra_class) %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;插入以下代码，用于区分文章页面跟首页&lt;/p&gt;
+&lt;p&gt;这里不用像”显示站点总访问量”中那样安装脚本，否则会出现重复计数的问题。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if is_pv %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span&amp;gt;&amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span id=&amp;quot;busuanzi_value_page_pv&amp;quot; &amp;gt;&amp;lt;/span&amp;gt;次阅读&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/span&amp;gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;插入这个位置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if post.comments %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;post-comments-count&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;a href=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;#comments&amp;quot; itemprop=&amp;quot;discussionUrl&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;lt;span class=&amp;quot;post-comments-count ds-thread-count&amp;quot; data-thread-key=&amp;quot;&amp;#123;&amp;#123; post.path &amp;#125;&amp;#125;&amp;quot; itemprop=&amp;quot;commentsCount&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% elseif theme.disqus_shortname %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;span class=&amp;quot;post-comments-count&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;amp;nbsp; | &amp;amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;a href=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;#comments&amp;quot; itemprop=&amp;quot;discussionUrl&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              &amp;lt;span class=&amp;quot;post-comments-count disqus-comment-count&amp;quot; data-disqus-identifier=&amp;quot;&amp;#123;&amp;#123; post.path &amp;#125;&amp;#125;&amp;quot; itemprop=&amp;quot;commentsCount&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#123;% endif %&amp;#125;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% endif %&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	#插入到这里&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/header&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改themes/next/layout目录下的post.swig文件&lt;/p&gt;
+&lt;p&gt;这个文件是文章的模板&lt;/p&gt;
+&lt;p&gt;找到以下代码，给render方法传入刚才第一步中设置的参数。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block content %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div id=&amp;quot;posts&amp;quot; class=&amp;quot;posts-expand&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	#render方法第二个参数is_index为是否为首页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	#第三个参数is_pv为我们刚才设置的是否显示计数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&amp;#123; post_template.render(page, false, true) &amp;#125;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;div class=&amp;quot;post-spread&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% if theme.jiathis %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% include &amp;apos;_partials/share/jiathis.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% include &amp;apos;_partials/share/duoshuo_share.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改themes/next/layout目录下的index.swig文件&lt;/p&gt;
+&lt;p&gt;这个文件是首页的模板&lt;/p&gt;
+&lt;p&gt;找到以下代码，给render方法传入刚才第一步中设置的参数。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% block content %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;section id=&amp;quot;posts&amp;quot; class=&amp;quot;posts-expand&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;% for post in page.posts %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       #render方法第二个参数is_index为是否为首页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       #第三个参数is_pv为我们刚才设置的是否显示计数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;&amp;#123; post_template.render(post, true, false) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;% endfor %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/section&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;% include &amp;apos;_partials/pagination.swig&amp;apos; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;至此，我们的站点计数功能就做好了&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;专用图层&quot;&gt;&lt;a href=&quot;#专用图层&quot; class=&quot;headerlink&quot; title=&quot;专用图层&quot;&gt;&lt;/a&gt;专用图层&lt;/h3&gt;&lt;h5 id=&quot;CAShapeLayer&quot;&gt;&lt;a href=&quot;#CAShapeLayer&quot; class=&quot;headerlink&quot; 
+      &lt;p&gt;评论系统与站点计数&lt;/p&gt;
+&lt;p&gt;添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。&lt;/p&gt;
+&lt;h3 id=&quot;使用多说&quot;&gt;&lt;a href=&quot;#使用多说&quot; class=&quot;headerlink&quot; title=&quot;使用多说&quot;&gt;&lt;
     
     </summary>
     
-      <category term="ios" scheme="http://yoursite.com/categories/ios/"/>
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
     
     
-      <category term="ios" scheme="http://yoursite.com/tags/ios/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
-      <category term="animation" scheme="http://yoursite.com/tags/animation/"/>
+      <category term="next" scheme="http://yoursite.com/tags/next/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UIView的常用属性和常用方法总结</title>
+    <link href="http://yoursite.com/2016/07/01/swift/UIView%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2016/07/01/swift/UIView的常用属性和常用方法/</id>
+    <published>2016-07-01T07:50:07.000Z</published>
+    <updated>2016-07-01T07:50:07.000Z</updated>
+    
+    <content type="html">&lt;p&gt;UIView的常用属性和常用方法总结&lt;/p&gt;
+&lt;p&gt;1，UIView常用的一些属性如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;frame：相对父视图的坐标和大小（x,y,w,h）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bounds：相对自身的坐标和大小，所以bounds的x和y永远为0（0,0,w,h）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;center：相对父视图的中点坐标&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;transform：控制视图的放大缩小和旋转&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;superview：获取父视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;subviews：获取所有子视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alpha：视图的透明度（0.0-1.0）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tag：视图的标志（Int类型，默认等于0），设置后，可以通过viewWithTag方法拿到这个视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2，UIView的常用方法如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;func removeFromSuperview()：将视图从父视图中移除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func insertSubview(view:UIView, atIndex index:Int)：指定一个位置插入一个视图，index越小，视图越往下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func exchangeSubviewAtIndex(index1:Int, withSubviewAtIndex index2:Int)：将index1和index2位置的两个视图互换位置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func addSubview(view:UIView)：添加视图到父视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func insertSubview(view:UIView,belowSubview siblingSubview:UIView)：在指定视图的下面插入视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func insertSubview(view:UIVIew,aboveSubview siblingSubview:UIView)：在指定视图上面插入视图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func bringSubviewToFront(view:UIView)：把视图移到最顶层&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func sendSubviewToBack(view:UIView)：把视图移到最底层&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;func viewWithTag(tag:Int)-&amp;gt;UIView?：根据tag值获取视图&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;UIView的常用属性和常用方法总结&lt;/p&gt;
+&lt;p&gt;1，UIView常用的一些属性如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
+    
+    </summary>
+    
+      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
+    
+    
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
     
   </entry>
   

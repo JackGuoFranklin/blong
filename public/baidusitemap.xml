@@ -4,12 +4,172 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/11/05/mac/iterm2%E9%85%8D%E8%89%B2/</loc>
+    <lastmod>2016-11-05T12:33:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>iterm2配色</title>
+        <pubTime>2016-11-05T12:31:47.000Z</pubTime>
+        
+        <tag>iterm</tag>
+         
+         
+           
+             
+              <breadCrumb title="iterm" url="http://yoursite.com/categories/iterm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/mac/mac%20server/</loc>
+    <lastmod>2016-11-02T11:27:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac localhost server</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://yoursite.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/14/python/Django%E7%AE%80%E4%BB%8B/</loc>
+    <lastmod>2016-11-02T11:26:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>python Django简介</title>
+        <pubTime>2016-07-14T00:00:06.000Z</pubTime>
+        
+        <tag>python django</tag>
+         
+         
+           
+             
+              <breadCrumb title="python django" url="http://yoursite.com/categories/python-django/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/14/python/%E5%BD%93%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%85%B6%E5%AE%83%E7%AB%AF%E5%8F%A3%EF%BC%9A/</loc>
+    <lastmod>2016-11-02T11:25:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>python django新建项目</title>
+        <pubTime>2016-07-14T08:03:43.000Z</pubTime>
+        
+        <tag>python django</tag>
+         
+         
+           
+             
+              <breadCrumb title="python django" url="http://yoursite.com/categories/python-django/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/05/31/VR/webgl%E5%92%8Cthree/</loc>
+    <lastmod>2016-11-02T11:23:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>VR 书籍</title>
+        <pubTime>2016-05-31T04:57:15.000Z</pubTime>
+        
+        <tag>VR</tag>
+         
+         
+           
+             
+              <breadCrumb title="VR" url="http://yoursite.com/categories/VR/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/06/book/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E5%B8%B8%E7%94%A8/</loc>
+    <lastmod>2016-11-02T11:20:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>计算机书籍</title>
+        <pubTime>2016-07-06T09:24:11.000Z</pubTime>
+        
+        <tag>计算机</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算机" url="http://yoursite.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/05/26/ios/%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2016-11-02T11:18:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios cocoapods 安装第三方库错误</title>
+        <pubTime>2016-05-26T01:07:18.000Z</pubTime>
+        
+        <tag>cocoapods</tag>
+         
+         
+           
+             
+              <breadCrumb title="ios cocoapods" url="http://yoursite.com/categories/ios-cocoapods/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/11/02/mac/%E9%9A%90%E8%97%8Fdsstore/</loc>
+    <lastmod>2016-11-02T11:06:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>隐藏dsstore</title>
+        <pubTime>2016-11-02T11:06:01.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://yoursite.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/08/20/swift/Kingfisher/</loc>
-    <lastmod>2016-08-20T12:59:23.000Z</lastmod>
+    <lastmod>2016-08-20T15:40:28.000Z</lastmod>
     <data>
         <display>
         <title>Swift 图片下载</title>
-        <pubTime>2016-08-20T12:50:50.000Z</pubTime>
+        <pubTime>2016-08-20T15:40:28.000Z</pubTime>
         
         <tag>swift</tag>
          
@@ -104,6 +264,50 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/07/01/hexo/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/</loc>
+    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo Next 配置主观</title>
+        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>next</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B62/</loc>
+    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>github插件2</title>
+        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/07/01/github/%E5%88%9B%E5%BB%BAGit%E4%BB%93%E5%BA%93osChina/</loc>
     <lastmod>2016-07-01T07:50:08.000Z</lastmod>
     <data>
@@ -121,6 +325,50 @@
            
              
               <breadCrumb title="git" url="http://yoursite.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B61/</loc>
+    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>github插件1</title>
+        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/</loc>
+    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>android studio启动慢</title>
+        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>android studio</tag>
+         
+         
+           
+             
+              <breadCrumb title="android" url="http://yoursite.com/categories/android/"/>
           
         </display>
     </data>
@@ -168,136 +416,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/hexo/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo Next 配置主观</title>
-        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>next</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/</loc>
-    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>android studio启动慢</title>
-        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>android studio</tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://yoursite.com/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B61/</loc>
-    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>github插件1</title>
-        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>chrome</tag>
-         
-         
-           
-             
-              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B62/</loc>
-    <lastmod>2016-07-01T07:50:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>github插件2</title>
-        <pubTime>2016-07-01T07:50:08.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>chrome</tag>
-         
-         
-           
-             
-              <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A81/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>swift-SnapKit自动布局使用1</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>swift</tag>
-         
-        <tag>SnapKit</tag>
-         
-         
-           
-             
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/swift/UIView%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>UIView的常用属性和常用方法总结</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>swift</tag>
-         
-         
-           
-             
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/07/01/swift/iosQR%E4%BA%8C%E7%BB%B4%E7%A0%81/</loc>
     <lastmod>2016-07-01T07:50:07.000Z</lastmod>
     <data>
@@ -310,52 +428,6 @@
         <tag>QRCode</tag>
          
         <tag>AVFoundation</tag>
-         
-         
-           
-             
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/swift/Swift%E4%BB%A3%E7%90%86/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Swift代理delegate</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>swift</tag>
-         
-        <tag>delegate</tag>
-         
-         
-           
-             
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/swift/Swift_ios_%E5%BC%80%E5%8F%91%E4%B9%8BUINavigationController%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Swift_ios_开发之UINavigationController的常用属性</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>swift</tag>
-         
-        <tag>ios</tag>
-         
-        <tag>UINavigationController</tag>
          
          
            
@@ -414,33 +486,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E8%AF%84%E8%AE%BA%E4%B8%8E%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://yoursite.com/2016/07/01/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A81/</loc>
     <lastmod>2016-07-01T07:50:07.000Z</lastmod>
     <data>
         <display>
-        <title>hexo评论系统与站点计数</title>
-        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>next</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/01/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A82/</loc>
-    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>swift-SnapKit自动布局使用2</title>
+        <title>swift-SnapKit自动布局使用1</title>
         <pubTime>2016-07-01T07:50:07.000Z</pubTime>
         
         <tag>swift</tag>
@@ -480,19 +530,85 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/mac/mac%20server/</loc>
+    <loc>http://yoursite.com/2016/07/01/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A82/</loc>
     <lastmod>2016-07-01T07:50:07.000Z</lastmod>
     <data>
         <display>
-        <title>mac localhost server</title>
+        <title>swift-SnapKit自动布局使用2</title>
         <pubTime>2016-07-01T07:50:07.000Z</pubTime>
         
-        <tag>mac</tag>
+        <tag>swift</tag>
+         
+        <tag>SnapKit</tag>
          
          
            
              
-              <breadCrumb title="mac" url="http://yoursite.com/categories/mac/"/>
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/swift/Swift%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift代理delegate</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+        <tag>delegate</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/hexo/Hexo%E8%AF%84%E8%AE%BA%E4%B8%8E%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo评论系统与站点计数</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>next</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/swift/UIView%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>UIView的常用属性和常用方法总结</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
           
         </display>
     </data>
@@ -508,6 +624,30 @@
         <pubTime>2016-07-01T07:50:07.000Z</pubTime>
         
         <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/swift/Swift_ios_%E5%BC%80%E5%8F%91%E4%B9%8BUINavigationController%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/</loc>
+    <lastmod>2016-07-01T07:50:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift_ios_开发之UINavigationController的常用属性</title>
+        <pubTime>2016-07-01T07:50:07.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+        <tag>ios</tag>
+         
+        <tag>UINavigationController</tag>
          
          
            
