@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-10T13:35:18.000Z</updated>
+  <updated>2017-04-25T04:39:06.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,44 +16,76 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Swift - 状态栏</title>
-    <link href="http://yoursite.com/2017/03/10/swift/Swift%E7%8A%B6%E6%80%81%E6%A0%8F/"/>
-    <id>http://yoursite.com/2017/03/10/swift/Swift状态栏/</id>
-    <published>2017-03-10T13:30:59.000Z</published>
-    <updated>2017-03-10T13:35:18.000Z</updated>
+    <title>node.js 版本升级</title>
+    <link href="http://yoursite.com/2017/04/25/nodejs/node.js%20%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/"/>
+    <id>http://yoursite.com/2017/04/25/nodejs/node.js 版本升级/</id>
+    <published>2017-04-25T04:39:06.000Z</published>
+    <updated>2017-04-25T04:39:06.000Z</updated>
     
-    <content type="html">&lt;p&gt;状态栏&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; 	//状态栏高度&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	let statusHeight = UIApplication.shared.statusBarFrame.height&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//导航栏高度&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	let navigationHeight = self.navigationController?.navigationBar.frame.size.height&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Swift - 隐藏状态栏（statusBar）的两种方法&lt;/p&gt;
-&lt;p&gt;1，全局设置&lt;/p&gt;
-&lt;p&gt;这种方法修改后，整个应用的所有视图都不显示状态栏。&lt;/p&gt;
-&lt;p&gt;（1）在 Info.plist 中添加如下配置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;key&amp;gt;UIViewControllerBasedStatusBarAppearance&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;false/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;（2）在 General -&amp;gt; Deployment Info 中，将 Hide status bar 勾选。&lt;/p&gt;
-&lt;p&gt;2，在视图控制器中单独设置&lt;/p&gt;
-&lt;p&gt;这用方法适合于只隐藏部分页面的状态栏。我们在需要隐藏 statusbar 的 ViewController 中添加如下代码即可。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import UIKit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class ViewController: UIViewController &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //隐藏状态栏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override var prefersStatusBarHidden: Bool &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func didReceiveMemoryWarning() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.didReceiveMemoryWarning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html">&lt;p&gt;一行命令搞定node.js 版本升级&lt;/p&gt;
+&lt;p&gt;首先安装n模块：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install -g n&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;第二步：&lt;br&gt;升级node.js到最新稳定版&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;n stable&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;n后面也可以跟随版本号比如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;n v0.10.26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;或&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n 0.10.26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;另外分享几个npm的常用命令&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm -v          #显示版本，检查npm 是否正确安装。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install express   #安装express模块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g express  #全局安装express模块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm list         #列出已安装模块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm show express     #显示模块详情&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm update        #升级当前目录下的项目的所有模块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm update express    #升级当前目录下的项目的指定模块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm update -g express  #升级全局安装的express模块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm uninstall express  #删除指定的模块&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
     
     <summary type="html">
     
-      &lt;p&gt;状态栏&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br
+      &lt;p&gt;一行命令搞定node.js 版本升级&lt;/p&gt;
+&lt;p&gt;首先安装n模块：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;
     
     </summary>
     
-      <category term="Swift" scheme="http://yoursite.com/categories/Swift/"/>
+      <category term="node.js" scheme="http://yoursite.com/categories/node-js/"/>
     
     
-      <category term="Swift" scheme="http://yoursite.com/tags/Swift/"/>
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github插件3</title>
+    <link href="http://yoursite.com/2017/03/15/github/github%E6%8F%92%E4%BB%B63/"/>
+    <id>http://yoursite.com/2017/03/15/github/github插件3/</id>
+    <published>2017-03-15T14:50:33.000Z</published>
+    <updated>2017-03-15T14:50:33.000Z</updated>
+    
+    <content type="html">&lt;ol&gt;
+&lt;li&gt;GitHub Cue&lt;br&gt;&lt;img src=&quot;/image/imagegithub6.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;GitHub-Cue 会根据用户正在查看的库给出一些建议或者推荐一些你可能感兴趣的库。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2.Github Highlight Selected&lt;br&gt;&lt;img src=&quot;/image/imagegithub7.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;当你在 Github 源代码中选中一个词的时候，这个插件会为你高亮显示这个文件中其他相同的词。&lt;/p&gt;
+&lt;p&gt;3.GH Diff Highlight&lt;br&gt;&lt;img src=&quot;/image/imagegithub8.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。除此之外，它还会高亮显示源代码之间的差异。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;GitHub Cue&lt;br&gt;&lt;img src=&quot;/image/imagegithub6.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;GitHub-Cue 会根据用户正在查看的库给出一些建议或者推荐一些你可能感兴趣的库。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2.Githu
+    
+    </summary>
+    
+      <category term="github" scheme="http://yoursite.com/categories/github/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
     
   </entry>
   
   <entry>
     <title>标签栏按钮UITabBarItem样式修改</title>
-    <link href="http://yoursite.com/2017/03/10/swift/%E6%A0%87%E7%AD%BE%E6%A0%8F%E6%8C%89%E9%92%AEUITabBarItem%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/"/>
-    <id>http://yoursite.com/2017/03/10/swift/标签栏按钮UITabBarItem样式修改/</id>
-    <published>2017-03-10T10:09:35.000Z</published>
-    <updated>2017-03-10T10:12:41.000Z</updated>
+    <link href="http://yoursite.com/2017/03/15/swift/%E6%A0%87%E7%AD%BE%E6%A0%8F%E6%8C%89%E9%92%AEUITabBarItem%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/"/>
+    <id>http://yoursite.com/2017/03/15/swift/标签栏按钮UITabBarItem样式修改/</id>
+    <published>2017-03-15T14:50:33.000Z</published>
+    <updated>2017-03-15T14:50:33.000Z</updated>
     
     <content type="html">&lt;p&gt;Swift - 标签栏按钮UITabBarItem样式修改&lt;/p&gt;
 &lt;p&gt;1，tabBarItem图片的推荐尺寸和最大支持尺寸&lt;br&gt;下面是标签栏（UITabBar）中tab按钮图标分别在1x、2x、3x下不会压缩变形的尺寸：&lt;/p&gt;
@@ -89,10 +121,10 @@
   
   <entry>
     <title>ios存储方式做之一UserDefaults</title>
-    <link href="http://yoursite.com/2017/03/07/swift/ios%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%E4%B9%8BUserDefaults/"/>
-    <id>http://yoursite.com/2017/03/07/swift/ios存储方式之UserDefaults/</id>
-    <published>2017-03-07T13:59:35.000Z</published>
-    <updated>2017-03-08T11:40:53.000Z</updated>
+    <link href="http://yoursite.com/2017/03/15/swift/ios%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%E4%B9%8BUserDefaults/"/>
+    <id>http://yoursite.com/2017/03/15/swift/ios存储方式之UserDefaults/</id>
+    <published>2017-03-15T14:50:33.000Z</published>
+    <updated>2017-03-15T14:50:33.000Z</updated>
     
     <content type="html">&lt;p&gt;ios存储方式做之一UserDefaults&lt;/p&gt;
 &lt;p&gt;1、UserDefaults支持的数据格式有：Number、Data、Date、String、Array、Dictionary、BOOL&lt;/p&gt;
@@ -125,34 +157,35 @@
   </entry>
   
   <entry>
-    <title>github插件3</title>
-    <link href="http://yoursite.com/2017/01/13/github/github%E6%8F%92%E4%BB%B63/"/>
-    <id>http://yoursite.com/2017/01/13/github/github插件3/</id>
-    <published>2017-01-13T12:46:52.000Z</published>
-    <updated>2017-01-13T13:05:42.000Z</updated>
+    <title>swift - 状态栏</title>
+    <link href="http://yoursite.com/2017/03/15/swift/swift%E7%8A%B6%E6%80%81%E6%A0%8F/"/>
+    <id>http://yoursite.com/2017/03/15/swift/swift状态栏/</id>
+    <published>2017-03-15T14:50:33.000Z</published>
+    <updated>2017-04-25T04:57:18.000Z</updated>
     
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;GitHub Cue&lt;br&gt;&lt;img src=&quot;/image/imagegithub6.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;GitHub-Cue 会根据用户正在查看的库给出一些建议或者推荐一些你可能感兴趣的库。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;2.Github Highlight Selected&lt;br&gt;&lt;img src=&quot;/image/imagegithub7.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;当你在 Github 源代码中选中一个词的时候，这个插件会为你高亮显示这个文件中其他相同的词。&lt;/p&gt;
-&lt;p&gt;3.GH Diff Highlight&lt;br&gt;&lt;img src=&quot;/image/imagegithub8.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;允许你像使用一个很好的 IDE 那样浏览源代码。它为 Github 上的代码添加了即时文档和类型提示，并为每一个标识符添加了跳转到定义处的链接。除此之外，它还会高亮显示源代码之间的差异。&lt;/p&gt;
-</content>
+    <content type="html">&lt;p&gt;状态栏&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; 	//状态栏高度&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 	let statusHeight = UIApplication.shared.statusBarFrame.height&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//导航栏高度&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	let navigationHeight = self.navigationController?.navigationBar.frame.size.height&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Swift - 隐藏状态栏（statusBar）的两种方法&lt;/p&gt;
+&lt;p&gt;1，全局设置&lt;/p&gt;
+&lt;p&gt;这种方法修改后，整个应用的所有视图都不显示状态栏。&lt;/p&gt;
+&lt;p&gt;（1）在 Info.plist 中添加如下配置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;key&amp;gt;UIViewControllerBasedStatusBarAppearance&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;false/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;（2）在 General -&amp;gt; Deployment Info 中，将 Hide status bar 勾选。&lt;/p&gt;
+&lt;p&gt;2，在视图控制器中单独设置&lt;/p&gt;
+&lt;p&gt;这用方法适合于只隐藏部分页面的状态栏。我们在需要隐藏 statusbar 的 ViewController 中添加如下代码即可。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import UIKit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class ViewController: UIViewController &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //隐藏状态栏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override var prefersStatusBarHidden: Bool &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    override func didReceiveMemoryWarning() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        super.didReceiveMemoryWarning()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
     <summary type="html">
     
-      &lt;ol&gt;
-&lt;li&gt;GitHub Cue&lt;br&gt;&lt;img src=&quot;/image/imagegithub6.jpg&quot; alt=&quot;image1&quot;&gt;&lt;br&gt;GitHub-Cue 会根据用户正在查看的库给出一些建议或者推荐一些你可能感兴趣的库。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;2.Githu
+      &lt;p&gt;状态栏&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br
     
     </summary>
     
-      <category term="github" scheme="http://yoursite.com/categories/github/"/>
+      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
     
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
     
   </entry>
   
@@ -510,40 +543,72 @@
   </entry>
   
   <entry>
-    <title>hexo更换主题Next</title>
-    <link href="http://yoursite.com/2016/07/01/hexo/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/"/>
-    <id>http://yoursite.com/2016/07/01/hexo/Hexo更换主题Next/</id>
+    <title>android studio启动慢</title>
+    <link href="http://yoursite.com/2016/07/01/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/"/>
+    <id>http://yoursite.com/2016/07/01/android/androidstudio启动慢/</id>
     <published>2016-07-01T07:50:08.000Z</published>
     <updated>2016-07-01T07:50:08.000Z</updated>
     
-    <content type="html">&lt;p&gt; 1 下载主题&lt;/p&gt;
-&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 2 启用主题&lt;/p&gt;
-&lt;p&gt; 修改当hexo目录下的_config.yml 的theme 选项&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Plugins: https://hexo.io/plugins/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 3 验证是否启用&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s --debug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;访问&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://localhost:4000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;确保站点正确运行。&lt;/p&gt;
-&lt;p&gt;4 其他配置。&lt;/p&gt;
-&lt;p&gt;   主题设定&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/theme-settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|主题设定&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;   第三方服务&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|第三方服务&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot; class=&quot;headerlink&quot; title=&quot;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&quot;&gt;&lt;/a&gt;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&lt;/h3&gt;&lt;p&gt;1）进入刚安装的Android Studio目录下的bin目录。找到idea.properties文件，用文本编辑器打开。&lt;/p&gt;
+&lt;p&gt;2）在idea.properties文件末尾添加一行： disable.android.first.run=true ，然后保存文件。&lt;/p&gt;
+&lt;p&gt;3）关闭Android Studio后重新启动，便可进入界面。&lt;/p&gt;
+&lt;p&gt;可以解决。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt; 1 下载主题&lt;/p&gt;
-&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
+      &lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compom
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="android" scheme="http://yoursite.com/categories/android/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="android" scheme="http://yoursite.com/tags/android/"/>
+    
+      <category term="android studio" scheme="http://yoursite.com/tags/android-studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github插件1</title>
+    <link href="http://yoursite.com/2016/07/01/github/github%E6%8F%92%E4%BB%B61/"/>
+    <id>http://yoursite.com/2016/07/01/github/github插件1/</id>
+    <published>2016-07-01T07:50:08.000Z</published>
+    <updated>2016-07-01T07:50:08.000Z</updated>
+    
+    <content type="html">&lt;p&gt;github 插件&lt;/p&gt;
+&lt;p&gt;1 Octotree：你的 GitHub 文档库&lt;/p&gt;
+&lt;p&gt;　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的 GitHub 仓库，简单直观的同时，也方便你进行文件之间的跳转操作。&lt;br&gt;　　&lt;br&gt;&lt;img src=&quot;/image/imagegithub1.jpg&quot; alt=&quot;image1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2 GitHub Awesome Complete：属于 GitHub 的 「Alfred」&lt;/p&gt;
+&lt;p&gt;　在 GitHub 搜索仓库或者项目的时候，你会怎么做？相信大部分人的步骤都是一样的：&lt;/p&gt;
+&lt;p&gt;　　在搜索框输入关键字后按回车键&lt;/p&gt;
+&lt;p&gt;　　在搜索结果中找到相应结果，点击进入相应页面&lt;/p&gt;
+&lt;p&gt;　　有没有更简单快捷的操作方法？答案是 GitHub Awesome Complete 这款 Chrome 插件。这款插件能够让你在 GitHub 中输入关键字之后通过弹窗动态显示相应的搜索结果，你所需要做的，只是点击即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/image/imagegithub2.gif&quot; alt=&quot;image2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;3 　除了以上两款 GitHub 相关的插件，这里我还要介绍一下 Octo Mate 这款能够提升你的 GitHub 体验的小工具。对于这款插件，主要功能有以下四点：&lt;/p&gt;
+&lt;p&gt;　　一键下载文件：GitHub 可以让你很方便的以 .zip 格式下载所有文件，但如果只需要下载一个文件，非常麻烦。使用 Octo Mate 后只需要点击文件图标即可下载。&lt;/p&gt;
+&lt;p&gt;　　一键打开项目的 Github Pages&lt;/p&gt;
+&lt;p&gt;　　显示仓库大小&lt;/p&gt;
+&lt;p&gt;　　显示未读消息数&lt;/p&gt;
+&lt;p&gt;　　相信这样一款插件一定能让你在使用 GitHub 的时候更加高效。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/image/imagegithub3.jpg&quot; alt=&quot;image3&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;github 插件&lt;/p&gt;
+&lt;p&gt;1 Octotree：你的 GitHub 文档库&lt;/p&gt;
+&lt;p&gt;　　GitHub 现有的目录层级形式，在查看来自不同层级文件夹的文件的时候，显得似乎不是很方便，Octotree 这款 Chrome 插件能够让你通过文档库的方式管理、查看你的
+    
+    </summary>
+    
+      <category term="github" scheme="http://yoursite.com/categories/github/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
     
   </entry>
   
@@ -648,121 +713,33 @@
   </entry>
   
   <entry>
-    <title>创建Git仓库（git@oschina&amp;sourceTree）</title>
-    <link href="http://yoursite.com/2016/07/01/github/%E5%88%9B%E5%BB%BAGit%E4%BB%93%E5%BA%93osChina/"/>
-    <id>http://yoursite.com/2016/07/01/github/创建Git仓库osChina/</id>
+    <title>hexo更换主题Next</title>
+    <link href="http://yoursite.com/2016/07/01/hexo/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Next/"/>
+    <id>http://yoursite.com/2016/07/01/hexo/Hexo更换主题Next/</id>
     <published>2016-07-01T07:50:08.000Z</published>
     <updated>2016-07-01T07:50:08.000Z</updated>
     
-    <content type="html">&lt;p&gt;创建Git仓库（git@oschina&amp;amp;sourceTree）&lt;/p&gt;
-&lt;p&gt;1.创建远程仓库&lt;/p&gt;
-&lt;p&gt;进入&lt;a href=&quot;https://git.oschina.net/点击＋号，创建新项目&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://git.oschina.net/点击＋号，创建新项目&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2.部署公钥（可以暂时不用公钥的）&lt;/p&gt;
-&lt;p&gt;在项目界面，管理－》部署公钥－》添加公钥，按照git@oschina上面的步骤，一步步生成公钥并添加到项目中。&lt;/p&gt;
-&lt;p&gt;3.将远程仓库与本地仓库关联起来（也是最关键的一步）&lt;/p&gt;
-&lt;p&gt;（1）复制远程仓库的git地址。&lt;/p&gt;
-&lt;p&gt;（2）打开sourceTree，依次点击：新仓库－》从URL克隆－》将远程仓库的地址粘贴到“源URL”，目标路径选择自己要存放的位置（路径A）（一定得是一个空的文件夹，否则会报错）－》克隆&lt;/p&gt;
-&lt;p&gt;4.在路径A下创建工程，或者将原来就存在的工程放在路径A下面。&lt;/p&gt;
-&lt;p&gt;5.打开sourceTree，查看是否检测到文件变动。&lt;/p&gt;
+    <content type="html">&lt;p&gt; 1 下载主题&lt;/p&gt;
+&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 2 启用主题&lt;/p&gt;
+&lt;p&gt; 修改当hexo目录下的_config.yml 的theme 选项&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Plugins: https://hexo.io/plugins/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 3 验证是否启用&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s --debug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;访问&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://localhost:4000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;确保站点正确运行。&lt;/p&gt;
+&lt;p&gt;4 其他配置。&lt;/p&gt;
+&lt;p&gt;   主题设定&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/theme-settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|主题设定&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;   第三方服务&lt;br&gt;   &lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next|第三方服务&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;创建Git仓库（git@oschina&amp;amp;sourceTree）&lt;/p&gt;
-&lt;p&gt;1.创建远程仓库&lt;/p&gt;
-&lt;p&gt;进入&lt;a href=&quot;https://git.oschina.net/点击＋号，创建新项目&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="http://yoursite.com/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-      <category term="git@osChina" scheme="http://yoursite.com/tags/git-osChina/"/>
-    
-      <category term="sourceTree" scheme="http://yoursite.com/tags/sourceTree/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Next 配置主观</title>
-    <link href="http://yoursite.com/2016/07/01/hexo/HexoNext%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/"/>
-    <id>http://yoursite.com/2016/07/01/hexo/HexoNext配置主题/</id>
-    <published>2016-07-01T07:50:08.000Z</published>
-    <updated>2016-07-01T07:50:08.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;语言设置&quot;&gt;&lt;a href=&quot;#语言设置&quot; class=&quot;headerlink&quot; title=&quot;语言设置&quot;&gt;&lt;/a&gt;语言设置&lt;/h3&gt;&lt;p&gt;在主目录下_config.yml 中配置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;language: zh-Hans&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;语言&lt;/th&gt;
-&lt;th&gt;代码&lt;/th&gt;
-&lt;th&gt;设定值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;English&lt;/td&gt;
-&lt;td&gt;en&lt;/td&gt;
-&lt;td&gt;language: en&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;简体中文&lt;/td&gt;
-&lt;td&gt;zh-Hans&lt;/td&gt;
-&lt;td&gt;language: zh-Hans&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&quot;菜单设置&quot;&gt;&lt;a href=&quot;#菜单设置&quot; class=&quot;headerlink&quot; title=&quot;菜单设置&quot;&gt;&lt;/a&gt;菜单设置&lt;/h3&gt;&lt;p&gt;菜单配置在 主题配置文件的 menu&lt;/p&gt;
-&lt;p&gt;菜单示例配置：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #about: /about&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #categories: /categories&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  tags: /tags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #commonweal: /404.html&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;侧栏设置&quot;&gt;&lt;a href=&quot;#侧栏设置&quot; class=&quot;headerlink&quot; title=&quot;侧栏设置&quot;&gt;&lt;/a&gt;侧栏设置&lt;/h3&gt;&lt;p&gt;配置选项&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;post - 默认行为，在文章页面（拥有目录列表）时显示&lt;/li&gt;
-&lt;li&gt;always - 在所有页面中都显示&lt;/li&gt;
-&lt;li&gt;hide - 在所有页面中都隐藏（可以手动展开）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;侧栏示例配置：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sidebar: post&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;头像设置&quot;&gt;&lt;a href=&quot;#头像设置&quot; class=&quot;headerlink&quot; title=&quot;头像设置&quot;&gt;&lt;/a&gt;头像设置&lt;/h3&gt;&lt;p&gt;新增字段 avatar&lt;/p&gt;
-&lt;p&gt;1 完整的互联网 URL    &lt;a href=&quot;https://avatars1.githubusercontent.com/u/32269?v=3&amp;amp;s=460&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://avatars1.githubusercontent.com/u/32269?v=3&amp;amp;s=460&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2 站点内的地址    /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/ （可能需要新建uploads目录）&lt;/p&gt;
-&lt;p&gt;3 /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下&lt;/p&gt;
-&lt;h3 id=&quot;作者名称&quot;&gt;&lt;a href=&quot;#作者名称&quot; class=&quot;headerlink&quot; title=&quot;作者名称&quot;&gt;&lt;/a&gt;作者名称&lt;/h3&gt;&lt;p&gt;设置 author 为你的昵称&lt;/p&gt;
-&lt;h3 id=&quot;站点描述设置&quot;&gt;&lt;a href=&quot;#站点描述设置&quot; class=&quot;headerlink&quot; title=&quot;站点描述设置&quot;&gt;&lt;/a&gt;站点描述设置&lt;/h3&gt;&lt;p&gt;设置 description 字段为你的站点描述。&lt;/p&gt;
-&lt;h3 id=&quot;添加「标签」页面&quot;&gt;&lt;a href=&quot;#添加「标签」页面&quot; class=&quot;headerlink&quot; title=&quot;添加「标签」页面&quot;&gt;&lt;/a&gt;添加「标签」页面&lt;/h3&gt;&lt;p&gt;1 定位到 Hexo 站点目录下&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new page tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2编辑刚新建的页面，将页面的类型设置为 tags &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 标签&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type: &amp;quot;tags&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;3  添加 tags 到 menu 中&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  tags: /tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;添加「分类」页面&quot;&gt;&lt;a href=&quot;#添加「分类」页面&quot; class=&quot;headerlink&quot; title=&quot;添加「分类」页面&quot;&gt;&lt;/a&gt;添加「分类」页面&lt;/h3&gt;&lt;p&gt;1 定位到 Hexo 站点目录下&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new page categories&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2编辑刚新建的页面，将页面的类型设置为 categories &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 标签&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type: &amp;quot;categories&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;3  添加 categories 到 menu 中&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  categories: /categories&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;设置代码高亮主题&quot;&gt;&lt;a href=&quot;#设置代码高亮主题&quot; class=&quot;headerlink&quot; title=&quot;设置代码高亮主题&quot;&gt;&lt;/a&gt;设置代码高亮主题&lt;/h3&gt;&lt;p&gt;NexT 默认使用的是 白色的 normal 主题,可选的值有 normal，night， night blue， night bright， night eighties.&lt;/p&gt;
-&lt;p&gt;更改 highlight_theme 字段，将其值设定成你所喜爱的高亮主题，例如：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Code Highlight theme&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Available value: normal | night | night eighties | night blue | night bright&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# https://github.com/chriskempson/tomorrow-theme&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;highlight_theme: normal&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;侧边栏社交链接&quot;&gt;&lt;a href=&quot;#侧边栏社交链接&quot; class=&quot;headerlink&quot; title=&quot;侧边栏社交链接&quot;&gt;&lt;/a&gt;侧边栏社交链接&lt;/h3&gt;&lt;p&gt;1&lt;br&gt;接放置在 social 字段下，一行一个链接。其键值格式是 显示文本: 链接地址。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Social links&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: https://github.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Twitter: https://twitter.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  微博: http://weibo.com/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  豆瓣: http://douban.com/people/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  知乎: http://www.zhihu.com/people/your-user-name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # 等等&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2 设定链接的图标，对应的字段是 social_icons。其键值格式是 匹配键: Font Awesome 图标名称， 匹配键 与上一步所配置的链接的 显示文本 相同（大小写严格匹配），图标名称 是 Font Awesome 图标的名字（不必带 fa- 前缀）。 enable 选项用于控制是否显示图标，你可以设置成 false 来去掉图标。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Social Icons&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social_icons:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # Icon Mappings&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: github&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Twitter: twitter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  微博: weibo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;设置-RSS&quot;&gt;&lt;a href=&quot;#设置-RSS&quot; class=&quot;headerlink&quot; title=&quot;设置 RSS&quot;&gt;&lt;/a&gt;设置 RSS&lt;/h3&gt;&lt;p&gt;NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;false：禁用 RSS，不在页面上显示 RSS 连接。&lt;/li&gt;
-&lt;li&gt;留空：使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。&lt;/li&gt;
-&lt;li&gt;具体的链接地址：适用于已经烧制过 Feed 的情形。&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;语言设置&quot;&gt;&lt;a href=&quot;#语言设置&quot; class=&quot;headerlink&quot; title=&quot;语言设置&quot;&gt;&lt;/a&gt;语言设置&lt;/h3&gt;&lt;p&gt;在主目录下_config.yml 中配置&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
+      &lt;p&gt; 1 下载主题&lt;/p&gt;
+&lt;p&gt;  从终端进入你的hexo目录然后在终端输入如下命令下载主题&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
     
     </summary>
     
@@ -770,36 +747,6 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="next" scheme="http://yoursite.com/tags/next/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>android studio启动慢</title>
-    <link href="http://yoursite.com/2016/07/01/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/"/>
-    <id>http://yoursite.com/2016/07/01/android/androidstudio启动慢/</id>
-    <published>2016-07-01T07:50:08.000Z</published>
-    <updated>2016-07-01T07:50:08.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot; class=&quot;headerlink&quot; title=&quot;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&quot;&gt;&lt;/a&gt;android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？&lt;/h3&gt;&lt;p&gt;1）进入刚安装的Android Studio目录下的bin目录。找到idea.properties文件，用文本编辑器打开。&lt;/p&gt;
-&lt;p&gt;2）在idea.properties文件末尾添加一行： disable.android.first.run=true ，然后保存文件。&lt;/p&gt;
-&lt;p&gt;3）关闭Android Studio后重新启动，便可进入界面。&lt;/p&gt;
-&lt;p&gt;可以解决。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compom
-    
-    </summary>
-    
-      <category term="android" scheme="http://yoursite.com/categories/android/"/>
-    
-    
-      <category term="android" scheme="http://yoursite.com/tags/android/"/>
-    
-      <category term="android studio" scheme="http://yoursite.com/tags/android-studio/"/>
     
   </entry>
   

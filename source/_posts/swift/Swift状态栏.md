@@ -1,8 +1,8 @@
 
 ---
-title: Swift - 状态栏
-tags: Swift
-categories: Swift
+title: swift - 状态栏
+tags: swift
+categories: swift
 ---
 
 状态栏

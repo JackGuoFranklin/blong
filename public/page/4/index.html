@@ -68,90 +68,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hexo/Hexo评论与站点统计系统" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/01/hexo/Hexo评论与站点统计系统/" class="article-date">
-  <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/hexo/Hexo评论与站点统计系统/">hexo评论系统与站点计数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>评论系统与站点计数</p>
-<p>添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。</p>
-<h3 id="使用多说"><a href="#使用多说" class="headerlink" title="使用多说"></a>使用多说</h3><ol>
-<li><p>注册多说</p>
-<ol>
-<li><p>登录后在首页选择 “我要安装”。</p>
-</li>
-<li><p>创建站点，填写站点相关信息。注意，多说域名 这一栏填写的即是你的 duoshuo_shortname。</p>
-</li>
-</ol>
-</li>
-<li><p>编辑站点的 _config.yml 注意，不是主题的_config.yml文件 ，添加 duoshuo_shortname 字段，设置如下</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_shortname: your-duoshuo-shortname</span><br></pre></td></tr></table></figure>
-<p>（注）duoshuo short name: 你的多说二级域名去掉 .duoshuo.com 部分</p>
-<h3 id="使用-Disqus"><a href="#使用-Disqus" class="headerlink" title="使用 Disqus"></a>使用 Disqus</h3><p>编辑站点的 _config.yml ，添加 disqus_shortname 字段，设置如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">disqus_shortname: your-disqus-shortname</span><br></pre></td></tr></table></figure>
-<h3 id="多说评论显示-UA"><a href="#多说评论显示-UA" class="headerlink" title="多说评论显示 UA"></a>多说评论显示 UA</h3><p>需要配置 duoshuo_info 这个字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_info:</span><br><span class="line">  ua_enable: true</span><br><span class="line">  admin_enable: true</span><br><span class="line">  user_id: 1234567</span><br><span class="line">  admin_nickname: 主编大人</span><br></pre></td></tr></table></figure>
-<p>配置 user_id 和 admin_nickname 字段。 请访问 多说，登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字。</p>
-<h3 id="显示站点总访问量"><a href="#显示站点总访问量" class="headerlink" title="显示站点总访问量"></a>显示站点总访问量</h3><p>找到站点的themes/next/layout/_partials目录下的footer.swig文件<br>将以下脚本和标签插入到文件中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">本站总访问量 &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; &amp;nbsp&amp;nbsp&amp;nbsp</span><br><span class="line">您是第&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;个来到的小伙伴</span><br></pre></td></tr></table></figure>
-<p>插入到这里</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;powered-by&quot;&gt;</span><br><span class="line"> 	&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;http://hexo.io&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;theme-info&quot;&gt;</span><br><span class="line"> 	&#123;&#123; __(&apos;footer.theme&apos;) &#125;&#125; -</span><br><span class="line">	 &lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;</span><br><span class="line">   NexT&#123;% if theme.scheme %&#125;.&#123;&#123; theme.scheme &#125;&#125;&#123;% endif %&#125;</span><br><span class="line"> 	&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"># 插入到这里</span><br><span class="line">&#123;% block footer %&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="显示单页面访问量"><a href="#显示单页面访问量" class="headerlink" title="显示单页面访问量"></a>显示单页面访问量</h3><p>修改themes/next/layout/_macro目录下的post.swig文件</p>
-<p>位于文件开头,在第三个参数的位置，增加is_pv字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro render(post, is_index, is_pv, post_extra_class) %&#125;</span><br></pre></td></tr></table></figure>
-<p>插入以下代码，用于区分文章页面跟首页</p>
-<p>这里不用像”显示站点总访问量”中那样安装脚本，否则会出现重复计数的问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if is_pv %&#125;</span><br><span class="line">&lt;span&gt;&amp;nbsp; | &amp;nbsp;</span><br><span class="line">&lt;span id=&quot;busuanzi_value_page_pv&quot; &gt;&lt;/span&gt;次阅读</span><br><span class="line">&lt;/span&gt;    </span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>插入这个位置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.comments %&#125;</span><br><span class="line">          &#123;% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %&#125;</span><br><span class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</span><br><span class="line">              &amp;nbsp; | &amp;nbsp;</span><br><span class="line">              &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;post-comments-count ds-thread-count&quot; data-thread-key=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</span><br><span class="line">              &lt;/a&gt;</span><br><span class="line">            &lt;/span&gt;</span><br><span class="line">          &#123;% elseif theme.disqus_shortname %&#125;</span><br><span class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</span><br><span class="line">            &amp;nbsp; | &amp;nbsp;</span><br><span class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</span><br><span class="line">              &lt;span class=&quot;post-comments-count disqus-comment-count&quot; data-disqus-identifier=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">          &lt;/span&gt;</span><br><span class="line">          &#123;% endif %&#125;      </span><br><span class="line">        &#123;% endif %&#125; </span><br><span class="line">	#插入到这里</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/header&gt;</span><br></pre></td></tr></table></figure>
-<p>修改themes/next/layout目录下的post.swig文件</p>
-<p>这个文件是文章的模板</p>
-<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block content %&#125;</span><br><span class="line">  &lt;div id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</span><br><span class="line">  	#render方法第二个参数is_index为是否为首页</span><br><span class="line">  	#第三个参数is_pv为我们刚才设置的是否显示计数</span><br><span class="line">    &#123;&#123; post_template.render(page, false, true) &#125;&#125; </span><br><span class="line">    &lt;div class=&quot;post-spread&quot;&gt;</span><br><span class="line">      &#123;% if theme.jiathis %&#125;</span><br><span class="line">        &#123;% include &apos;_partials/share/jiathis.swig&apos; %&#125;</span><br><span class="line">      &#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&#125;</span><br><span class="line">        &#123;% include &apos;_partials/share/duoshuo_share.swig&apos; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>修改themes/next/layout目录下的index.swig文件</p>
-<p>这个文件是首页的模板</p>
-<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block content %&#125;</span><br><span class="line">  &lt;section id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</span><br><span class="line">    &#123;% for post in page.posts %&#125;</span><br><span class="line">       #render方法第二个参数is_index为是否为首页</span><br><span class="line">       #第三个参数is_pv为我们刚才设置的是否显示计数</span><br><span class="line">      &#123;&#123; post_template.render(post, true, false) &#125;&#125;</span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line">  &#123;% include &apos;_partials/pagination.swig&apos; %&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>至此，我们的站点计数功能就做好了</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/hexo/Hexo评论与站点统计系统/" data-id="cj03v9lni000qlvjdx4vsi6yf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">next</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-swift/swift-SnapKit自动布局使用3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/07/01/swift/swift-SnapKit自动布局使用3/" class="article-date">
@@ -193,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/swift-SnapKit自动布局使用3/" data-id="cj03v9lra002elvjde636luuj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/01/swift/swift-SnapKit自动布局使用3/" data-id="cj1x311wd001y67jljv75018j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -205,14 +121,14 @@
 
 
   
-    <article id="post-mac/mac server" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-swift/UISreen类的屏幕大小" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/01/mac/mac server/" class="article-date">
+    <a href="/2016/07/01/swift/UISreen类的屏幕大小/" class="article-date">
   <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/mac/">mac</a>
+    <a class="article-category-link" href="/categories/swift/">swift</a>
   </div>
 
   </div>
@@ -223,7 +139,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/mac/mac server/">mac localhost server</a>
+      <a class="article-title" href="/2016/07/01/swift/UISreen类的屏幕大小/">swift-UISreen类的屏幕大小</a>
     </h1>
   
 
@@ -231,26 +147,72 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1<br>建立方式很简单，直接在终端中运行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir ~/Sites</span><br></pre></td></tr></table></figure>
-<p>2建立“站点”文件夹之后，检查 /etc/ 文件夹下面是不是有“haibor.conf”这个文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/users/</span><br></pre></td></tr></table></figure>
-<p>如果没有，那么你需要创建一个，取名为“你的名字.conf”，可以使用 vi 或者 nano 这两种编辑器之一来创建。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
-<p>创建之后将下面的这几行内容写到上面的 conf 文件中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory &quot;/Users/你的名字/Sites/&quot;&gt;</span><br><span class="line">    Options Indexes MultiViews</span><br><span class="line">    AllowOverride All</span><br><span class="line">    Order allow,deny</span><br><span class="line">    Allow from all</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-<p>3<br>文件保存之后，给它赋予相应的权限：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 755 /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
-<p>4接下来重启 Apache，以使该配置文件生效：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure>
+        <p>获取 UISreen类的屏幕大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//获取屏幕大小</span><br><span class="line">var screenBounds:CGRect = UIScreen.mainScreen().bounds</span><br><span class="line">println(screenBounds) //iPhone6输出：（0.0,0.0,375.0,667.0）</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/mac/mac server/" data-id="cj03v9lnz0013lvjdbl9i5xoy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/01/swift/UISreen类的屏幕大小/" data-id="cj1x311tk001867jliy8y071q" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/iosQR二维码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/01/swift/iosQR二维码/" class="article-date">
+  <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/01/swift/iosQR二维码/">Swift 二维码QRCode</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Swift 二维码QRCode<br>1，直接读取图片中的二维码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let qrcodeImg =  UIImage(named: &quot;codeBg.png&quot;)</span><br><span class="line">      let ciImage:CIImage=CIImage(image:qrcodeImg!)!</span><br><span class="line">      let context = CIContext(options: nil)</span><br><span class="line">      let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode,</span><br><span class="line">          context: context, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])</span><br><span class="line">      let features=detector.featuresInImage(ciImage)</span><br><span class="line">      print(&quot;扫描到二维码个数：\(features.count)&quot;)</span><br><span class="line">      //遍历所有的二维码，并框出</span><br><span class="line">      for feature in features as! [CIQRCodeFeature] &#123;</span><br><span class="line">          print(feature.messageString)</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>2，从相册中选择图片读取二维码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//选取相册</span><br><span class="line">//判断设置是否支持图片库</span><br><span class="line">       if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary)&#123;</span><br><span class="line">           //初始化图片控制器</span><br><span class="line">           let picker = UIImagePickerController()</span><br><span class="line">           //设置代理</span><br><span class="line">           picker.delegate = self</span><br><span class="line">           //指定图片控制器类型</span><br><span class="line">           picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary</span><br><span class="line">           //弹出控制器，显示界面</span><br><span class="line">           self.presentViewController(picker, animated: true, completion: &#123;</span><br><span class="line">               () -&gt; Void in</span><br><span class="line">           &#125;)</span><br><span class="line">       &#125;else&#123;</span><br><span class="line">           print(&quot;读取相册错误&quot;)</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>//选择图片成功后代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//选择图片成功后代理</span><br><span class="line">  func imagePickerController(picker: UIImagePickerController,</span><br><span class="line">      didFinishPickingMediaWithInfo info: [String : AnyObject]) &#123;</span><br><span class="line">      //获取选择的原图</span><br><span class="line">      let image = info[UIImagePickerControllerOriginalImage] as! UIImage</span><br><span class="line">      //二维码读取</span><br><span class="line">      let ciImage:CIImage=CIImage(image:image)!</span><br><span class="line">      let context = CIContext(options: nil)</span><br><span class="line">      let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode,</span><br><span class="line">          context: context, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])</span><br><span class="line">      let features=detector.featuresInImage(ciImage)</span><br><span class="line">      print(&quot;扫描到二维码个数：\(features.count)&quot;)</span><br><span class="line">      //遍历所有的二维码，并框出</span><br><span class="line">      for feature in features as! [CIQRCodeFeature] &#123;</span><br><span class="line">          print(feature.messageString)</span><br><span class="line">      &#125;</span><br><span class="line">      //图片控制器退出</span><br><span class="line">      picker.dismissViewControllerAnimated(true, completion: &#123;</span><br><span class="line">          () -&gt; Void in</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>3，使用摄像头扫描读取二维码</p>
+<p>（1）扫描主要使用的是AVFoundation，用起来方便简单</p>
+<p>（2）通过 AVCaptureMetadataOutput 的 rectOfInterest 属性，可以设置探测探测区域。同时给这个探测区域添加个方框，只有在框中的二维码才会被扫描到。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var scanRectView:UIView!</span><br><span class="line">  var device:AVCaptureDevice!</span><br><span class="line">  var input:AVCaptureDeviceInput!</span><br><span class="line">  var output:AVCaptureMetadataOutput!</span><br><span class="line">  var session:AVCaptureSession!</span><br><span class="line">  var preview:AVCaptureVideoPreviewLayer!</span><br></pre></td></tr></table></figure>
+<p>//通过摄像头扫描</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">do&#123;</span><br><span class="line">        self.device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</span><br><span class="line">        self.input = try AVCaptureDeviceInput(device: device)</span><br><span class="line">        self.output = AVCaptureMetadataOutput()</span><br><span class="line">        output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</span><br><span class="line">        self.session = AVCaptureSession()</span><br><span class="line">        if UIScreen.mainScreen().bounds.size.height&lt;500 &#123;</span><br><span class="line">            self.session.sessionPreset = AVCaptureSessionPreset640x480</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            self.session.sessionPreset = AVCaptureSessionPresetHigh</span><br><span class="line">        &#125;</span><br><span class="line">        self.session.addInput(self.input)</span><br><span class="line">        self.session.addOutput(self.output)</span><br><span class="line">        self.output.metadataObjectTypes = [AVMetadataObjectTypeQRCode]</span><br><span class="line">        //计算中间可探测区域</span><br><span class="line">        let windowSize:CGSize = UIScreen.mainScreen().bounds.size;</span><br><span class="line">        let scanSize:CGSize = CGSizeMake(windowSize.width*3/4,</span><br><span class="line">            windowSize.width*3/4);</span><br><span class="line">        var scanRect:CGRect = CGRectMake((windowSize.width-scanSize.width)/2,</span><br><span class="line">            (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);</span><br><span class="line">        //计算rectOfInterest 注意x,y交换位置</span><br><span class="line">        scanRect = CGRectMake(scanRect.origin.y/windowSize.height,</span><br><span class="line">            scanRect.origin.x/windowSize.width,</span><br><span class="line">            scanRect.size.height/windowSize.height,</span><br><span class="line">            scanRect.size.width/windowSize.width);</span><br><span class="line">        //设置可探测区域</span><br><span class="line">        self.output.rectOfInterest = scanRect</span><br><span class="line">        self.preview = AVCaptureVideoPreviewLayer(session:self.session)</span><br><span class="line">        self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill</span><br><span class="line">        self.preview.frame = UIScreen.mainScreen().bounds</span><br><span class="line">        self.view.layer.insertSublayer(self.preview, atIndex:0)</span><br><span class="line">        //添加中间的探测区域绿框</span><br><span class="line">        self.scanRectView = UIView();</span><br><span class="line">        self.view.addSubview(self.scanRectView)</span><br><span class="line">        self.scanRectView.frame = CGRectMake(0, 0, scanSize.width, scanSize.height);</span><br><span class="line">        self.scanRectView.center = CGPointMake(</span><br><span class="line">            CGRectGetMidX(UIScreen.mainScreen().bounds),</span><br><span class="line">            CGRectGetMidY(UIScreen.mainScreen().bounds));</span><br><span class="line">        self.scanRectView.layer.borderColor = UIColor.greenColor().CGColor</span><br><span class="line">        self.scanRectView.layer.borderWidth = 1;</span><br><span class="line">        //开始捕获</span><br><span class="line">        self.session.startRunning()</span><br><span class="line">    &#125;catch _ as NSError&#123;</span><br><span class="line">        //打印错误消息</span><br><span class="line">        let errorAlert = UIAlertView(title: &quot;提醒&quot;,</span><br><span class="line">            message: &quot;请在iPhone的\&quot;设置-隐私-相机\&quot;选项中,允许本程序访问您的相机&quot;,</span><br><span class="line">            delegate: self,</span><br><span class="line">            cancelButtonTitle: &quot;确定&quot;)</span><br><span class="line">        errorAlert.show()</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//摄像头捕获</span><br><span class="line">   func captureOutput(captureOutput: AVCaptureOutput!,</span><br><span class="line">       didOutputMetadataObjects metadataObjects: [AnyObject]!,</span><br><span class="line">       fromConnection connection: AVCaptureConnection!) &#123;</span><br><span class="line">       var stringValue:String?</span><br><span class="line">       if metadataObjects.count &gt; 0 &#123;</span><br><span class="line">           let metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject</span><br><span class="line">           stringValue = metadataObject.stringValue</span><br><span class="line">           if stringValue != nil&#123;</span><br><span class="line">               self.session.stopRunning()</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       self.session.stopRunning()</span><br><span class="line">       //输出结果</span><br><span class="line">       let alertView = UIAlertView(title: &quot;二维码&quot;, message: stringValue,</span><br><span class="line">           delegate: self, cancelButtonTitle: &quot;确定&quot;)</span><br><span class="line">       alertView.show()</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>//消息框确认后消失</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    //消息框确认后消失</span><br><span class="line">    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) &#123;</span><br><span class="line">         //继续扫描</span><br><span class="line">         self.session.startRunning()</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/01/swift/iosQR二维码/" data-id="cj1x311up001m67jlgguwasae" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
 
     </footer>
   </div>
@@ -291,7 +253,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/使用CIFilter生成二维码/" data-id="cj03v9lr20029lvjd4tn2rskl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/01/swift/使用CIFilter生成二维码/" data-id="cj1x311yd002h67jly09fnpcy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -355,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/按钮（UIButton）的用法/" data-id="cj03v9lqo001zlvjdzy4s0l5b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/01/swift/按钮（UIButton）的用法/" data-id="cj1x311ya002f67jl2id34niu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -402,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/21/hello-world/" data-id="cj03v9lac0000lvjd5ox2rpbb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/21/hello-world/" data-id="cj1x311j9000167jloi88lt2e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -461,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/31/vr/webgl和three/" data-id="cj03v9lub0064lvjdvv7o9jgd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/31/vr/webgl和three/" data-id="cj1x31217005q67jlh7jtkx8t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VR/">VR</a></li></ul>
@@ -508,7 +470,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/26/ios/错误日志/" data-id="cj03v9lrl002jlvjduogfbcyg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/26/ios/错误日志/" data-id="cj1x311o4000i67jlxuuk69wh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocoapods/">cocoapods</a></li></ul>
@@ -533,7 +495,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Swift/">Swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
     </div>
   </div>
 
@@ -543,7 +505,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
     </div>
   </div>
 
@@ -553,7 +515,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AVFoundation/" style="font-size: 15px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 15px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 15px;">SnapKit</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 17.5px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 12.5px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12.5px;">next</a> <a href="/tags/python-django/" style="font-size: 12.5px;">python django</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
+      <a href="/tags/AVFoundation/" style="font-size: 15px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 15px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 15px;">SnapKit</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 15px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 12.5px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12.5px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12.5px;">python django</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
   </div>
 
@@ -562,7 +524,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
     </div>
   </div>
 
@@ -575,23 +537,23 @@
       <ul>
         
           <li>
-            <a href="/2017/03/10/swift/Swift状态栏/">Swift - 状态栏</a>
+            <a href="/2017/04/25/nodejs/node.js 版本升级/">node.js 版本升级</a>
           </li>
         
           <li>
-            <a href="/2017/03/10/swift/标签栏按钮UITabBarItem样式修改/">标签栏按钮UITabBarItem样式修改</a>
+            <a href="/2017/03/15/github/github插件3/">github插件3</a>
           </li>
         
           <li>
-            <a href="/2017/03/07/swift/ios存储方式之UserDefaults/">ios存储方式做之一UserDefaults</a>
+            <a href="/2017/03/15/swift/标签栏按钮UITabBarItem样式修改/">标签栏按钮UITabBarItem样式修改</a>
           </li>
         
           <li>
-            <a href="/2017/01/13/github/github插件3/">github插件3</a>
+            <a href="/2017/03/15/swift/ios存储方式之UserDefaults/">ios存储方式做之一UserDefaults</a>
           </li>
         
           <li>
-            <a href="/2016/11/06/python/当提示端口被占用/">python django新建项目</a>
+            <a href="/2017/03/15/swift/swift状态栏/">swift - 状态栏</a>
           </li>
         
       </ul>

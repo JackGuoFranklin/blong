@@ -1,7 +1,6 @@
 ---
 title: swift-UISreen类的屏幕大小
-tags: 
-- swift 
+tags: swift 
 categories: swift
 ---
 

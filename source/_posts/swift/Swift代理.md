@@ -1,5 +1,5 @@
 ---
-title: Swift代理delegate
+title: swift代理delegate
 tags: 
 - swift
 - delegate
