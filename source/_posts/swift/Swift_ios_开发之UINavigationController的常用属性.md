@@ -1,9 +1,9 @@
 ---
 title: swift_ios_开发之UINavigationController的常用属性
 tags: 
--swift
--ios
--UINavigationController
+- swift
+- ios
+- UINavigationController
 categories: swift
 ---
 

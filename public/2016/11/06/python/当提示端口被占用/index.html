@@ -5,28 +5,17 @@
   
   <title>python django新建项目 | JackGuoFranklin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1 新建一个 django project
-1django-admin.py startproject project-name
-一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）
-2 新建 app
-12python manage.py startapp app-name或 django-admin.py s">
+  <meta name="description" content="1 新建一个 django project 1django-admin.py startproject project-name 一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头） 2 新建 app 12python manage.py startapp app-name或 django-admin.py s">
+<meta name="keywords" content="python django">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python django新建项目">
 <meta property="og:url" content="http://yoursite.com/2016/11/06/python/当提示端口被占用/index.html">
 <meta property="og:site_name" content="JackGuoFranklin">
-<meta property="og:description" content="1 新建一个 django project
-1django-admin.py startproject project-name
-一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）
-2 新建 app
-12python manage.py startapp app-name或 django-admin.py s">
+<meta property="og:description" content="1 新建一个 django project 1django-admin.py startproject project-name 一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头） 2 新建 app 12python manage.py startapp app-name或 django-admin.py s">
 <meta property="og:updated_time" content="2016-11-05T23:16:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python django新建项目">
-<meta name="twitter:description" content="1 新建一个 django project
-1django-admin.py startproject project-name
-一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）
-2 新建 app
-12python manage.py startapp app-name或 django-admin.py s">
+<meta name="twitter:description" content="1 新建一个 django project 1django-admin.py startproject project-name 一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头） 2 新建 app 12python manage.py startapp app-name或 django-admin.py s">
   
     <link rel="alternate" href="/atom.xml" title="JackGuoFranklin" type="application/atom+xml">
   
@@ -73,7 +62,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
       </div>
     </div>
   </div>
@@ -106,27 +95,27 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>1 新建一个 django project</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin.py startproject project-name</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">django-admin.py startproject project-name</div></pre></td></tr></table></figure>
 <p>一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）</p>
 <p>2 新建 app</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp app-name</span><br><span class="line">或 django-admin.py startapp app-name</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp app-name</div><div class="line">或 django-admin.py startapp app-name</div></pre></td></tr></table></figure>
 <p>一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。</p>
 <p>3 同步数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python manage.py syncdb</span><br><span class="line"> </span><br><span class="line">注意：Django 1.7.1及以上的版本需要用以下命令</span><br><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">python manage.py syncdb</div><div class="line"> </div><div class="line">注意：Django 1.7.1及以上的版本需要用以下命令</div><div class="line">python manage.py makemigrations</div><div class="line">python manage.py migrate</div></pre></td></tr></table></figure>
 <p>这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。</p>
 <p>备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具 south,详见 Django 数据库迁移 一节。</p>
 <p>4 使用开发服务器<br>开发服务器，即开发时使用，一般修改代码后会自动重启，方便调试和开发，但是由于性能问题，建议只用来测试，不要用在生产环境。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br><span class="line"> </span><br><span class="line"># 当提示端口被占用的时候，可以用其它端口：</span><br><span class="line">python manage.py runserver 8001</span><br><span class="line">python manage.py runserver 9999</span><br><span class="line">（当然也可以kill掉占用端口的进程）</span><br><span class="line"> </span><br><span class="line"># 监听所有可用 ip （电脑可能有一个或多个内网ip，一个或多个外网ip，即有多个ip地址）</span><br><span class="line">python manage.py runserver 0.0.0.0:8000</span><br><span class="line"># 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器</span><br><span class="line"># 访问对应的 ip加端口，比如 http://172.16.20.2:8000</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">python manage.py runserver</div><div class="line"> </div><div class="line"># 当提示端口被占用的时候，可以用其它端口：</div><div class="line">python manage.py runserver 8001</div><div class="line">python manage.py runserver 9999</div><div class="line">（当然也可以kill掉占用端口的进程）</div><div class="line"> </div><div class="line"># 监听所有可用 ip （电脑可能有一个或多个内网ip，一个或多个外网ip，即有多个ip地址）</div><div class="line">python manage.py runserver 0.0.0.0:8000</div><div class="line"># 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器</div><div class="line"># 访问对应的 ip加端口，比如 http://172.16.20.2:8000</div></pre></td></tr></table></figure>
 <p> 5 清空数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py flush</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python manage.py flush</div></pre></td></tr></table></figure>
 <p>此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。</p>
 <p>6  创建超级管理员</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br><span class="line"> </span><br><span class="line"># 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填</span><br><span class="line"> </span><br><span class="line"># 修改 用户密码可以用：</span><br><span class="line">python manage.py changepassword username</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">python manage.py createsuperuser</div><div class="line"> </div><div class="line"># 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填</div><div class="line"> </div><div class="line"># 修改 用户密码可以用：</div><div class="line">python manage.py changepassword username</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/06/python/当提示端口被占用/" data-id="cj1x311uv001o67jlca42k6zn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/06/python/当提示端口被占用/" data-id="cj2084es3002udljlfgyy312a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-django/">python django</a></li></ul>
@@ -137,19 +126,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/03/15/swift/swift状态栏/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/11/05/mac/iterm2配色/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          swift - 状态栏
+          iterm2配色
         
       </div>
     </a>
   
   
-    <a href="/2016/11/05/mac/iterm2配色/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/03/15/github/github插件3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">iterm2配色</div>
+      <div class="article-nav-title">github插件3</div>
     </a>
   
 </nav>
@@ -175,7 +164,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
     </div>
   </div>
 
@@ -185,7 +174,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AVFoundation/" style="font-size: 15px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 15px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 15px;">SnapKit</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 15px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 12.5px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12.5px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12.5px;">python django</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
+      <a href="/tags/AVFoundation/" style="font-size: 15px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 15px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 15px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 17.5px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12.5px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12.5px;">python django</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
   </div>
 
@@ -207,23 +196,23 @@
       <ul>
         
           <li>
-            <a href="/2017/04/25/nodejs/node.js 版本升级/">node.js 版本升级</a>
+            <a href="/2017/04/27/mac/mac任何来源/">mac恢复允许“任何来源”的选项</a>
           </li>
         
           <li>
-            <a href="/2017/03/15/github/github插件3/">github插件3</a>
+            <a href="/2017/04/26/nodejs/node.js 版本升级/">node.js 版本升级</a>
           </li>
         
           <li>
-            <a href="/2017/03/15/swift/标签栏按钮UITabBarItem样式修改/">标签栏按钮UITabBarItem样式修改</a>
+            <a href="/2017/04/26/swift/swift状态栏/">swift - 状态栏</a>
           </li>
         
           <li>
-            <a href="/2017/03/15/swift/ios存储方式之UserDefaults/">ios存储方式做之一UserDefaults</a>
+            <a href="/2017/04/26/swift/swift代理/">swift代理delegate</a>
           </li>
         
           <li>
-            <a href="/2017/03/15/swift/swift状态栏/">swift - 状态栏</a>
+            <a href="/2017/04/26/swift/UISreen类的屏幕大小/">swift-UISreen类的屏幕大小</a>
           </li>
         
       </ul>
