@@ -5,13 +5,14 @@
   
   <title>swift代理delegate | JackGuoFranklin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="实现代理传值1234567891011121314151617181920212223242526272829303132333435363738394041import UIKitclass ViewController: UIViewController,ChangeValueDelegate&amp;#123;        var btn = UIButton()    override func">
+  <meta name="description" content="实现代理传值1234567891011121314151617181920212223242526272829303132333435363738394041import UIKitclass ViewController: UIViewController,ChangeValueDelegate&amp;#123; ">
 <meta name="keywords" content="swift,delegate">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swift代理delegate">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/swift/Swift代理/index.html">
 <meta property="og:site_name" content="JackGuoFranklin">
 <meta property="og:description" content="实现代理传值1234567891011121314151617181920212223242526272829303132333435363738394041import UIKitclass ViewController: UIViewController,ChangeValueDelegate&amp;#123;        var btn = UIButton()    override func">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-11-21T04:12:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift代理delegate">
@@ -57,9 +58,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -94,15 +95,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>实现代理传值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">import UIKit</div><div class="line"></div><div class="line">class ViewController: UIViewController,ChangeValueDelegate&#123;</div><div class="line">    </div><div class="line">    var btn = UIButton()</div><div class="line"></div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        super.viewDidLoad()</div><div class="line"></div><div class="line">        self.view.backgroundColor = UIColor.whiteColor()</div><div class="line">        </div><div class="line">        btn.setTitle(&quot;Change&quot;, forState:.Normal)</div><div class="line">        btn.backgroundColor = UIColor.blueColor()</div><div class="line">        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)</div><div class="line">        btn.addTarget(self, action: #selector(change), forControlEvents: .TouchUpInside)</div><div class="line">        self.view.addSubview(btn)</div><div class="line">        </div><div class="line">    &#125;</div><div class="line"></div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        super.didReceiveMemoryWarning()</div><div class="line">        // Dispose of any resources that can be recreated.</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    //    delegate 代理方法</div><div class="line">    func changeValue(value: String) &#123;</div><div class="line">        </div><div class="line">        btn.setTitle(value, forState: .Normal)</div><div class="line">        print(&quot;value:\(value)&quot;)</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    //  传值</div><div class="line">    func change()&#123;</div><div class="line">        </div><div class="line">        let vc = ChangeValueViewController()</div><div class="line">        vc.delegate = self</div><div class="line">        self.navigationController?.pushViewController(vc, animated: true)</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p>实现代理传值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"></span><br><span class="line">class ViewController: UIViewController,ChangeValueDelegate&#123;</span><br><span class="line">    </span><br><span class="line">    var btn = UIButton()</span><br><span class="line"></span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(&quot;Change&quot;, forState:.Normal)</span><br><span class="line">        btn.backgroundColor = UIColor.blueColor()</span><br><span class="line">        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)</span><br><span class="line">        btn.addTarget(self, action: #selector(change), forControlEvents: .TouchUpInside)</span><br><span class="line">        self.view.addSubview(btn)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //    delegate 代理方法</span><br><span class="line">    func changeValue(value: String) &#123;</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(value, forState: .Normal)</span><br><span class="line">        print(&quot;value:\(value)&quot;)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    //  传值</span><br><span class="line">    func change()&#123;</span><br><span class="line">        </span><br><span class="line">        let vc = ChangeValueViewController()</span><br><span class="line">        vc.delegate = self</span><br><span class="line">        self.navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>协议</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">protocol ChangeValueDelegate &#123;</div><div class="line">    </div><div class="line">    func changeValue(value:String)</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">protocol ChangeValueDelegate &#123;</span><br><span class="line">    </span><br><span class="line">    func changeValue(value:String)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用代理传值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">class ChangeValueViewController: UIViewController &#123;</div><div class="line">    </div><div class="line">    var delegate:ChangeValueDelegate?</div><div class="line">    </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        super.viewDidLoad()</div><div class="line"></div><div class="line">        // Do any additional setup after loading the view.</div><div class="line">        self.view.backgroundColor = UIColor.whiteColor()</div><div class="line">        </div><div class="line">        self.delegate?.changeValue(&quot;ok&quot;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        super.didReceiveMemoryWarning()</div><div class="line">        // Dispose of any resources that can be recreated.</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class ChangeValueViewController: UIViewController &#123;</span><br><span class="line">    </span><br><span class="line">    var delegate:ChangeValueDelegate?</span><br><span class="line">    </span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        // Do any additional setup after loading the view.</span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        self.delegate?.changeValue(&quot;ok&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/Swift代理/" data-id="cja93xopn001o8h4ie4vgtqk1" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/Swift代理/" data-id="cja94cv5s002vut4iyi8zkh08" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/delegate/">delegate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -114,7 +115,7 @@
 <nav id="article-nav">
   
     <a href="/2017/11/21/swift/Swift_ios_开发之UINavigationController的常用属性/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           swift_ios_开发之UINavigationController的常用属性
@@ -123,9 +124,9 @@
     </a>
   
   
-    <a href="/2017/11/21/swift/Swift状态栏/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">swift - 状态栏</div>
+    <a href="/2017/11/21/swift/UISreen类的屏幕大小/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">swift-UISreen类的屏幕大小</div>
     </a>
   
 </nav>
@@ -139,7 +140,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
     </div>
@@ -149,7 +150,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
     </div>
@@ -159,7 +160,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/AVFoundation/" style="font-size: 15px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 15px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 15px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 17.5px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12.5px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12.5px;">python django</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
@@ -178,7 +179,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -191,7 +192,7 @@
           </li>
         
           <li>
-            <a href="/2017/11/21/android/androidstudio启动慢/">android studio启动慢</a>
+            <a href="/2017/11/21/VR/webgl和three/">VR 书籍</a>
           </li>
         
           <li>
@@ -199,7 +200,7 @@
           </li>
         
           <li>
-            <a href="/2017/11/21/chrome/Chrome使用技巧/">cherome使用技巧</a>
+            <a href="/2017/11/21/github/github插件1/">github插件1</a>
           </li>
         
       </ul>
@@ -215,7 +216,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 JackGuoFranklin<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

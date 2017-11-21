@@ -5,13 +5,14 @@
   
   <title>hexo 初步教程 | JackGuoFranklin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装git我选用了Homebrew来安装mac下的软件，你可以先安装Homebrew 安装Homebrew1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; 成功之后安装git1brew install git 安装node.js去nodes.js">
+  <meta name="description" content="安装git我选用了Homebrew来安装mac下的软件，你可以先安装Homebrew 安装Homebrew1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo 初步教程">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/hexo/Hexo初步教程/index.html">
 <meta property="og:site_name" content="JackGuoFranklin">
 <meta property="og:description" content="安装git我选用了Homebrew来安装mac下的软件，你可以先安装Homebrew 安装Homebrew1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; 成功之后安装git1brew install git 安装node.js去nodes.js">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-11-21T04:12:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 初步教程">
@@ -57,9 +58,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -95,55 +96,55 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>我选用了Homebrew来安装mac下的软件，你可以先安装<br>Homebrew</p>
-<h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
-<h3 id="成功之后安装git"><a href="#成功之后安装git" class="headerlink" title="成功之后安装git"></a>成功之后安装git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
-<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>去<a href="https://nodejs.org/en/" target="_blank" rel="external">nodes.js</a> 官网下载，安装即可。</p>
+<h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="成功之后安装git"><a href="#成功之后安装git" class="headerlink" title="成功之后安装git"></a>成功之后安装git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodes.js</a> 官网下载，安装即可。</p>
 <h3 id="配置SSH-keys"><a href="#配置SSH-keys" class="headerlink" title="配置SSH keys"></a>配置SSH keys</h3><p>打开GitHub，进入设置界面，点击左边的SSH keys，添加一个SSH keys。</p>
 <p>1.输入以下代码生成新的key文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;</span><br></pre></td></tr></table></figure>
 <p>这里的邮件地址填自己注册时的邮件地址，注意大小写，双引号不能省略，终端会返回代码让你确定文件名，回车就好。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/Users/DoubleD/.ssh/id\_rsa): //回车就行</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/DoubleD/.ssh/id\_rsa): //回车就行</span><br></pre></td></tr></table></figure>
 <p>接着会让你输入加密串，可以空着：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Enter passphrase (empty for no passphrase):\&lt;输入加密串\&gt;</div><div class="line">Enter same passphrase again:\&lt;再次输入加密串\&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):\&lt;输入加密串\&gt;</span><br><span class="line">Enter same passphrase again:\&lt;再次输入加密串\&gt;</span><br></pre></td></tr></table></figure>
 <p>成功的创建了一个SSH key。</p>
 <p>找到本机上的id_rsa.pub文件,打开它（建议使用Sublime Text）复制里面的代码.添加到SSH key 中</p>
 <p>然后点击Add key就配置好了SSH key</p>
 <p>测试是否配置成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>看到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
 <p>表示配置成功了。</p>
 <p>完成之后，我们设置好个人信息，用于提交代码说明是谁提交的，怎么联系。可以用以下指令完成：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;你的名字&quot;</div><div class="line">git config --global user.email  &quot;你的邮箱&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的名字&quot;</span><br><span class="line">git config --global user.email  &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>打开终端，输入以下指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 <p>注意如果不能安装可能被墙了，换源在终端输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry=&quot;http://registry.cnpmjs.org&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=&quot;http://registry.cnpmjs.org&quot;</span><br></pre></td></tr></table></figure>
 <p>如果还出问题  在前面加入sudo 在管理员权限下上面的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm config set registry=&quot;http://registry.cnpmjs.org&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm config set registry=&quot;http://registry.cnpmjs.org&quot;</span><br></pre></td></tr></table></figure>
 <p>提示输入密码，输入管理员密码就可了。</p>
 <p>然后在终端输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 <p>重新安装一下。</p>
 <p>安装后，进入你要存博客的目录，在该目录下执行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <p>Hexo就会在该文件夹建立博客所需要的所有文件。本地的Hexo博客已经初步搭建起来，输入以下指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate//可以简写为 hexo g</div><div class="line">hexo server//可以简写为 hexo s</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate//可以简写为 hexo g</span><br><span class="line">hexo server//可以简写为 hexo s</span><br></pre></td></tr></table></figure>
 <p>就可以在浏览器中输入localhost:4000查看本地博客了。如果不能查看请输入<br>127.0.0.1:4000查看。在不行了。就是没有成功从hexo init重新来一次就可以了。要注意的是，所有的hexo指令都必须在你所建立的目录下执行。</p>
 <h3 id="部署Hexo到GitHub上"><a href="#部署Hexo到GitHub上" class="headerlink" title="部署Hexo到GitHub上"></a>部署Hexo到GitHub上</h3><p>安装一个插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>然后打开博客目录的_config.yml文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/joway/hexo-blog.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/joway/hexo-blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>注意”:”号后面有空格。必须空一格。<br>然后输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo deploy//可简写为 hexo d</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deploy//可简写为 hexo d</span><br></pre></td></tr></table></figure>
 <p>在浏览器中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://你的id.github.io/</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://你的id.github.io/</span><br></pre></td></tr></table></figure>
 <p>就可以访问自己的博客了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo初步教程/" data-id="cja93xooz000n8h4im6qe35mm" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo初步教程/" data-id="cja94cv2e000out4is2dktoln" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -154,18 +155,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/21/hexo/HexoNext配置主题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+    <a href="/2017/11/21/github/创建Git仓库osChina/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Hexo Next 配置主观
+          创建Git仓库（git@oschina&amp;sourceTree）
         
       </div>
     </a>
   
   
     <a href="/2017/11/21/hexo/Hexo更换主题Next/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">hexo更换主题Next</div>
     </a>
   
@@ -180,7 +181,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
     </div>
@@ -190,7 +191,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
     </div>
@@ -200,7 +201,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/AVFoundation/" style="font-size: 15px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 15px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 15px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 17.5px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12.5px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12.5px;">python django</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
@@ -219,7 +220,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -232,7 +233,7 @@
           </li>
         
           <li>
-            <a href="/2017/11/21/android/androidstudio启动慢/">android studio启动慢</a>
+            <a href="/2017/11/21/VR/webgl和three/">VR 书籍</a>
           </li>
         
           <li>
@@ -240,7 +241,7 @@
           </li>
         
           <li>
-            <a href="/2017/11/21/chrome/Chrome使用技巧/">cherome使用技巧</a>
+            <a href="/2017/11/21/github/github插件1/">github插件1</a>
           </li>
         
       </ul>
@@ -256,7 +257,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 JackGuoFranklin<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
