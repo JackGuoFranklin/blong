@@ -68,10 +68,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-swift/swift-SnapKit自动布局使用2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-swift/ios使用AVFoundation实现条形码扫描" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/01/swift/swift-SnapKit自动布局使用2/" class="article-date">
-  <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
+    <a href="/2017/11/21/swift/ios使用AVFoundation实现条形码扫描/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
@@ -86,7 +86,254 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/swift/swift-SnapKit自动布局使用2/">swift-SnapKit自动布局使用2</a>
+      <a class="article-title" href="/2017/11/21/swift/ios使用AVFoundation实现条形码扫描/">Swift使用AVFoundation实现条形码扫描</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Swift - 使用AVFoundation实现条形码扫描（附：拉近镜头改善读取）</p>
+<p>1，条形码（一维码）的扫描读取</p>
+<p>metadataObjectTypes 做如下修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,</div><div class="line">        AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,</div><div class="line">        AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]</div></pre></td></tr></table></figure>
+<p>2，拉近镜头，改善条形码读取效果</p>
+<p>如果条码太小的时候,就会识别不出来。</p>
+<p>解决办法是：通过代码拉近镜头焦距，放大内容区域让机器更好的识别。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div></pre></td><td class="code"><pre><div class="line">import UIKit</div><div class="line">import AVFoundation</div><div class="line"> </div><div class="line">class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate,</div><div class="line">UIAlertViewDelegate&#123;</div><div class="line">     </div><div class="line">    var scanRectView:UIView!</div><div class="line">    var device:AVCaptureDevice!</div><div class="line">    var input:AVCaptureDeviceInput!</div><div class="line">    var output:AVCaptureMetadataOutput!</div><div class="line">    var session:AVCaptureSession!</div><div class="line">    var preview:AVCaptureVideoPreviewLayer!</div><div class="line">     </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        super.viewDidLoad()</div><div class="line">         </div><div class="line">        fromCamera()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //通过摄像头扫描</div><div class="line">    func fromCamera() &#123;</div><div class="line">        do&#123;</div><div class="line">            self.device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</div><div class="line">             </div><div class="line">            self.input = try AVCaptureDeviceInput(device: device)</div><div class="line">             </div><div class="line">            self.output = AVCaptureMetadataOutput()</div><div class="line">            output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">             </div><div class="line">            self.session = AVCaptureSession()</div><div class="line">            if UIScreen.mainScreen().bounds.size.height&lt;500 &#123;</div><div class="line">                self.session.sessionPreset = AVCaptureSessionPreset640x480</div><div class="line">            &#125;else&#123;</div><div class="line">                self.session.sessionPreset = AVCaptureSessionPresetHigh</div><div class="line">            &#125;</div><div class="line">             </div><div class="line">            self.session.addInput(self.input)</div><div class="line">            self.session.addOutput(self.output)</div><div class="line">             </div><div class="line">            self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,</div><div class="line">                AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,</div><div class="line">                AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]</div><div class="line">             </div><div class="line">            //计算中间可探测区域</div><div class="line">            let windowSize:CGSize = UIScreen.mainScreen().bounds.size;</div><div class="line">            let scanSize:CGSize = CGSizeMake(windowSize.width*3/4,</div><div class="line">                windowSize.width*3/4);</div><div class="line">            var scanRect:CGRect = CGRectMake((windowSize.width-scanSize.width)/2,</div><div class="line">                (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);</div><div class="line">            //计算rectOfInterest 注意x,y交换位置</div><div class="line">            scanRect = CGRectMake(scanRect.origin.y/windowSize.height,</div><div class="line">                scanRect.origin.x/windowSize.width,</div><div class="line">                scanRect.size.height/windowSize.height,</div><div class="line">                scanRect.size.width/windowSize.width);</div><div class="line">            //设置可探测区域</div><div class="line">            self.output.rectOfInterest = scanRect</div><div class="line">             </div><div class="line">            self.preview = AVCaptureVideoPreviewLayer(session:self.session)</div><div class="line">            self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill</div><div class="line">            self.preview.frame = UIScreen.mainScreen().bounds</div><div class="line">            self.view.layer.insertSublayer(self.preview, atIndex:0)</div><div class="line">             </div><div class="line">            //添加中间的探测区域绿框</div><div class="line">            self.scanRectView = UIView();</div><div class="line">            self.view.addSubview(self.scanRectView)</div><div class="line">            self.scanRectView.frame = CGRectMake(0, 0, scanSize.width, scanSize.height);</div><div class="line">            self.scanRectView.center = CGPointMake(</div><div class="line">                CGRectGetMidX(UIScreen.mainScreen().bounds),</div><div class="line">                CGRectGetMidY(UIScreen.mainScreen().bounds));</div><div class="line">            self.scanRectView.layer.borderColor = UIColor.greenColor().CGColor</div><div class="line">            self.scanRectView.layer.borderWidth = 1;</div><div class="line">             </div><div class="line">            //开始捕获</div><div class="line">            self.session.startRunning()</div><div class="line">             </div><div class="line">            //放大</div><div class="line">            do &#123;</div><div class="line">                try self.device!.lockForConfiguration()</div><div class="line">            &#125; catch _ &#123;</div><div class="line">                NSLog(&quot;Error: lockForConfiguration.&quot;);</div><div class="line">            &#125;</div><div class="line">            self.device!.videoZoomFactor = 1.5</div><div class="line">            self.device!.unlockForConfiguration()</div><div class="line">             //放大</div><div class="line">             </div><div class="line">             </div><div class="line">        &#125;catch _ as NSError&#123;</div><div class="line">            //打印错误消息</div><div class="line">            let errorAlert = UIAlertView(title: &quot;提醒&quot;,</div><div class="line">                message: &quot;请在iPhone的\&quot;设置-隐私-相机\&quot;选项中,允许本程序访问您的相机&quot;,</div><div class="line">                delegate: self,</div><div class="line">                cancelButtonTitle: &quot;确定&quot;)</div><div class="line">            errorAlert.show()</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //摄像头捕获</div><div class="line">    func captureOutput(captureOutput: AVCaptureOutput!,</div><div class="line">        didOutputMetadataObjects metadataObjects: [AnyObject]!,</div><div class="line">        fromConnection connection: AVCaptureConnection!) &#123;</div><div class="line">             </div><div class="line">            var stringValue:String?</div><div class="line">            if metadataObjects.count &gt; 0 &#123;</div><div class="line">                let metadataObject = metadataObjects[0]</div><div class="line">                    as! AVMetadataMachineReadableCodeObject</div><div class="line">                stringValue = metadataObject.stringValue</div><div class="line">                 </div><div class="line">                if stringValue != nil&#123;</div><div class="line">                    self.session.stopRunning()</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            self.session.stopRunning()</div><div class="line">            //输出结果</div><div class="line">            let alertView = UIAlertView(title: &quot;一维码&quot;, message: stringValue,</div><div class="line">                delegate: self, cancelButtonTitle: &quot;确定&quot;)</div><div class="line">            alertView.show()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //消息框确认后消失</div><div class="line">    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) &#123;</div><div class="line">        //继续扫描</div><div class="line">        self.session.startRunning()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        super.didReceiveMemoryWarning()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/ios使用AVFoundation实现条形码扫描/" data-id="cja93tdui0028504i22hdh2r4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/ios存储方式之UserDefaults" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/ios存储方式之UserDefaults/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/ios存储方式之UserDefaults/">ios存储方式做之一UserDefaults</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ios存储方式做之一UserDefaults</p>
+<p>1、UserDefaults支持的数据格式有：Number、Data、Date、String、Array、Dictionary、BOOL</p>
+<p>2、以键值对的形式进行存储</p>
+<p>3、存储时间为整体应用程序的存储时间，如果想需要删除，需要删除整体应用程序</p>
+<p>使用方法<br>1，初始化一个userDefaults</p>
+<p>let userDefaults = UserDefaults.standard</p>
+<p>UserDefaults.standard.set(true, forKey: “isFrist”)</p>
+<p>2，把数据存到磁盘上<br> userDefaults.synchronize()</p>
+<p>3，删除<br>userDefaults.removeObject(forKey: &lt;#T##String#&gt;)</p>
+<p>4，打印app资源目录路径<br> let path = Bundle.main.bundlePath</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/ios存储方式之UserDefaults/" data-id="cja93tdul002b504i5pz8eowh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/ios核心动画之CAShapeLayer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/ios核心动画之CAShapeLayer/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ios/">ios</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/ios核心动画之CAShapeLayer/">ios核心动画之CAShapeLayer</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="专用图层"><a href="#专用图层" class="headerlink" title="专用图层"></a>专用图层</h3><h5 id="CAShapeLayer"><a href="#CAShapeLayer" class="headerlink" title="CAShapeLayer"></a>CAShapeLayer</h5><p>CAShapeLayer优点：</p>
+<ol>
+<li>渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。</li>
+<li>高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。</li>
+<li>不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Core Graphics的普通CALayer一样被剪裁掉（如我们在第二章所见）。</li>
+<li>不会出现像素化。当你给CAShapeLayer做3D变换时，它不像一个有寄宿图的普通图层一样变得像素化。</li>
+</ol>
+<p>创建一个CGPath 一般使用 UIBezierPath 绘制路线。</p>
+<p>CAShapeLayer 属性</p>
+<ul>
+<li>lineWith（线宽，用点表示单位）</li>
+<li>lineCap（线条结尾的样子）</li>
+<li>lineJoin（线条之间的结合点的样子）</li>
+<li>strokeColor(线条颜色)</li>
+<li>fillColor（填充颜色）</li>
+<li>path（路线）</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/ios核心动画之CAShapeLayer/" data-id="cja93tduo002d504i6ld66qqr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/swift-SnapKit自动布局使用1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/swift-SnapKit自动布局使用1/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/swift-SnapKit自动布局使用1/">swift-SnapKit自动布局使用1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>swift自动布局库SnapKit使用详解1<br>SnapKit 前身是Masonry（一个oc版本的布局库）</p>
+<p>1 安装</p>
+<p>SnapKit github地址 <a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="external">https://github.com/SnapKit/SnapKit</a></p>
+<p>可以通过Cocoapods 安装<br>在Podfile中加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">source &apos;https://github.com/CocoaPods/Specs.git&apos;</div><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">use_frameworks!</div><div class="line">pod &apos;SnapKit&apos;</div></pre></td></tr></table></figure>
+<p>然后在终端项目目录下输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod install</div></pre></td></tr></table></figure>
+<p>2 SnapKit的使用方法<br>snp_makeConstraints 来添加view的约束</p>
+<ul>
+<li>边距，宽，高，左上右下，基准线。</li>
+<li>修正位移（inset，offset）</li>
+<li>倍率修正（multipliedBy）</li>
+</ul>
+<p>注意： 使用 snp_makeConstraints 方法的元素必须事先添加到父元素的中，例如：self.view.addSubview(view)</p>
+<ul>
+<li>.equalTo: 等于</li>
+<li>.lessThanOrEqualTo: 小于等于</li>
+<li>.greaterThanOrEqualTo: 大于等于</li>
+</ul>
+<p>3 约束条件参数支持如下三种类型：</p>
+<p>（1）视图属性（ViewAttribute）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//使当前视图对象的中心x坐标小于等于视图view2的左边的x坐标</div><div class="line">make.centerX.lessThanOrEqualTo(view2.snp_left)</div></pre></td></tr></table></figure>
+<p>（2）视图关系（UIView/NSView） </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">比如想让view.left 大于等于 label.left：</div><div class="line"></div><div class="line">make.left.greaterThanOrEqualTo(label)</div><div class="line">这个其实等价于：</div><div class="line"></div><div class="line">make.left.greaterThanOrEqualTo(label.snp_left)</div></pre></td></tr></table></figure>
+<p>（3）严格检测（Strick Checks）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">比如将宽度和高度属性设置为常量值：</div><div class="line">make.height.equalTo(20)</div><div class="line">make.width.equalTo(20)</div><div class="line">make.top.equalTo(42)</div></pre></td></tr></table></figure>
+<p>4 给视图的各种属性设置约束</p>
+<p>（1）width、height属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">自动布局允许宽度、高度设置为常量值。</div><div class="line"></div><div class="line">make.height.equalTo(20)</div><div class="line">make.width.equalTo(self.buttonSize.width)</div><div class="line">//当前视图与label的顶部齐平</div><div class="line">make.top.equalTo(label.snp_top)</div></pre></td></tr></table></figure>
+<p>（2） left、right、top、centerX、centerY等其他属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">这些属性直接设置常量值，表示他们相对于父容器的相对约束条件。</div><div class="line"></div><div class="line">当然也可以使用与其他视图的关系来添加约束。</div></pre></td></tr></table></figure>
+<p>（3）edges(边缘）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//让当前视图 的 上下左右(top,left,bottom,right) 等于 view2</div><div class="line">make.edges.equalTo(view2)</div></pre></td></tr></table></figure>
+<p>（4）size(尺寸）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//当前视图宽高 &gt;= titleLabel</div><div class="line">make.size.greaterThanOrEqualTo(titleLabel)</div></pre></td></tr></table></figure>
+<p>（5）center(中心）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//当前视图与 button1中心相同 （centerX 和 centerY）</div><div class="line">make.center.equalTo(button1)</div></pre></td></tr></table></figure>
+<p>5 位移修正与倍率修正</p>
+<p>（1）内位移修正：inset</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">视图view，它距离父视图上、左、下、右边距分别是10、15、20、25</div><div class="line"></div><div class="line">make.edges.equalTo(boxOutter).inset(UIEdgeInsetsMake(10, 15, 20, 25))</div><div class="line">上面边距的偏移设置实际上相当于如下形式：</div><div class="line"></div><div class="line">make.top.equalTo(boxOutter).offset(10)</div><div class="line">make.left.equalTo(boxOutter).offset(15)</div><div class="line">make.bottom.equalTo(boxOutter).offset(-20)</div><div class="line">make.right.equalTo(boxOutter).offset(-25)</div></pre></td></tr></table></figure>
+<p>（2）外位移修正：offset </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">视图比视图宽度加50，高度减50。</div><div class="line">make.size.equalTo(boxOutter).offset(CGSizeMake(50, -50))</div></pre></td></tr></table></figure>
+<p>（3）倍率修正：multipliedBy </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">视图的尺寸设置成视图一半大小。</div><div class="line">make.size.equalTo(boxOutter).multipliedBy(0.5)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/swift-SnapKit自动布局使用1/" data-id="cja93tduq002f504i6uvjc7ri" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/swift-SnapKit自动布局使用2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/swift-SnapKit自动布局使用2/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/swift-SnapKit自动布局使用2/">swift-SnapKit自动布局使用2</a>
     </h1>
   
 
@@ -109,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/swift-SnapKit自动布局使用2/" data-id="cj2084et3003sdljlo2m2t8tj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/swift-SnapKit自动布局使用2/" data-id="cja93tduu002i504ie1tz2x1r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -123,8 +370,8 @@
   
     <article id="post-swift/swift-SnapKit自动布局使用3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/01/swift/swift-SnapKit自动布局使用3/" class="article-date">
-  <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
+    <a href="/2017/11/21/swift/swift-SnapKit自动布局使用3/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
@@ -139,7 +386,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/swift/swift-SnapKit自动布局使用3/">swift-SnapKit自动布局使用3</a>
+      <a class="article-title" href="/2017/11/21/swift/swift-SnapKit自动布局使用3/">swift-SnapKit自动布局使用3</a>
     </h1>
   
 
@@ -162,7 +409,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/swift-SnapKit自动布局使用3/" data-id="cj2084et5003vdljl5hugjlm0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/swift-SnapKit自动布局使用3/" data-id="cja93tdux002l504iwn6cpzey" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -174,10 +421,10 @@
 
 
   
-    <article id="post-swift/iosQR二维码" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-swift/使用CIFilter生成二维码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/01/swift/iosQR二维码/" class="article-date">
-  <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
+    <a href="/2017/11/21/swift/使用CIFilter生成二维码/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
@@ -192,7 +439,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/swift/iosQR二维码/">Swift 二维码QRCode</a>
+      <a class="article-title" href="/2017/11/21/swift/使用CIFilter生成二维码/">Swift使用CIFilter生成二维码图片（QRCode）</a>
     </h1>
   
 
@@ -200,162 +447,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Swift 二维码QRCode<br>1，直接读取图片中的二维码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">let qrcodeImg =  UIImage(named: &quot;codeBg.png&quot;)</div><div class="line">      let ciImage:CIImage=CIImage(image:qrcodeImg!)!</div><div class="line">      let context = CIContext(options: nil)</div><div class="line">      let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode,</div><div class="line">          context: context, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])</div><div class="line">      let features=detector.featuresInImage(ciImage)</div><div class="line">      print(&quot;扫描到二维码个数：\(features.count)&quot;)</div><div class="line">      //遍历所有的二维码，并框出</div><div class="line">      for feature in features as! [CIQRCodeFeature] &#123;</div><div class="line">          print(feature.messageString)</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
-<p>2，从相册中选择图片读取二维码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//选取相册</div><div class="line">//判断设置是否支持图片库</div><div class="line">       if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary)&#123;</div><div class="line">           //初始化图片控制器</div><div class="line">           let picker = UIImagePickerController()</div><div class="line">           //设置代理</div><div class="line">           picker.delegate = self</div><div class="line">           //指定图片控制器类型</div><div class="line">           picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary</div><div class="line">           //弹出控制器，显示界面</div><div class="line">           self.presentViewController(picker, animated: true, completion: &#123;</div><div class="line">               () -&gt; Void in</div><div class="line">           &#125;)</div><div class="line">       &#125;else&#123;</div><div class="line">           print(&quot;读取相册错误&quot;)</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
-<p>//选择图片成功后代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//选择图片成功后代理</div><div class="line">  func imagePickerController(picker: UIImagePickerController,</div><div class="line">      didFinishPickingMediaWithInfo info: [String : AnyObject]) &#123;</div><div class="line">      //获取选择的原图</div><div class="line">      let image = info[UIImagePickerControllerOriginalImage] as! UIImage</div><div class="line">      //二维码读取</div><div class="line">      let ciImage:CIImage=CIImage(image:image)!</div><div class="line">      let context = CIContext(options: nil)</div><div class="line">      let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode,</div><div class="line">          context: context, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])</div><div class="line">      let features=detector.featuresInImage(ciImage)</div><div class="line">      print(&quot;扫描到二维码个数：\(features.count)&quot;)</div><div class="line">      //遍历所有的二维码，并框出</div><div class="line">      for feature in features as! [CIQRCodeFeature] &#123;</div><div class="line">          print(feature.messageString)</div><div class="line">      &#125;</div><div class="line">      //图片控制器退出</div><div class="line">      picker.dismissViewControllerAnimated(true, completion: &#123;</div><div class="line">          () -&gt; Void in</div><div class="line">      &#125;)</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<p>3，使用摄像头扫描读取二维码</p>
-<p>（1）扫描主要使用的是AVFoundation，用起来方便简单</p>
-<p>（2）通过 AVCaptureMetadataOutput 的 rectOfInterest 属性，可以设置探测探测区域。同时给这个探测区域添加个方框，只有在框中的二维码才会被扫描到。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var scanRectView:UIView!</div><div class="line">  var device:AVCaptureDevice!</div><div class="line">  var input:AVCaptureDeviceInput!</div><div class="line">  var output:AVCaptureMetadataOutput!</div><div class="line">  var session:AVCaptureSession!</div><div class="line">  var preview:AVCaptureVideoPreviewLayer!</div></pre></td></tr></table></figure>
-<p>//通过摄像头扫描</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">do&#123;</div><div class="line">        self.device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</div><div class="line">        self.input = try AVCaptureDeviceInput(device: device)</div><div class="line">        self.output = AVCaptureMetadataOutput()</div><div class="line">        output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">        self.session = AVCaptureSession()</div><div class="line">        if UIScreen.mainScreen().bounds.size.height&lt;500 &#123;</div><div class="line">            self.session.sessionPreset = AVCaptureSessionPreset640x480</div><div class="line">        &#125;else&#123;</div><div class="line">            self.session.sessionPreset = AVCaptureSessionPresetHigh</div><div class="line">        &#125;</div><div class="line">        self.session.addInput(self.input)</div><div class="line">        self.session.addOutput(self.output)</div><div class="line">        self.output.metadataObjectTypes = [AVMetadataObjectTypeQRCode]</div><div class="line">        //计算中间可探测区域</div><div class="line">        let windowSize:CGSize = UIScreen.mainScreen().bounds.size;</div><div class="line">        let scanSize:CGSize = CGSizeMake(windowSize.width*3/4,</div><div class="line">            windowSize.width*3/4);</div><div class="line">        var scanRect:CGRect = CGRectMake((windowSize.width-scanSize.width)/2,</div><div class="line">            (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);</div><div class="line">        //计算rectOfInterest 注意x,y交换位置</div><div class="line">        scanRect = CGRectMake(scanRect.origin.y/windowSize.height,</div><div class="line">            scanRect.origin.x/windowSize.width,</div><div class="line">            scanRect.size.height/windowSize.height,</div><div class="line">            scanRect.size.width/windowSize.width);</div><div class="line">        //设置可探测区域</div><div class="line">        self.output.rectOfInterest = scanRect</div><div class="line">        self.preview = AVCaptureVideoPreviewLayer(session:self.session)</div><div class="line">        self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill</div><div class="line">        self.preview.frame = UIScreen.mainScreen().bounds</div><div class="line">        self.view.layer.insertSublayer(self.preview, atIndex:0)</div><div class="line">        //添加中间的探测区域绿框</div><div class="line">        self.scanRectView = UIView();</div><div class="line">        self.view.addSubview(self.scanRectView)</div><div class="line">        self.scanRectView.frame = CGRectMake(0, 0, scanSize.width, scanSize.height);</div><div class="line">        self.scanRectView.center = CGPointMake(</div><div class="line">            CGRectGetMidX(UIScreen.mainScreen().bounds),</div><div class="line">            CGRectGetMidY(UIScreen.mainScreen().bounds));</div><div class="line">        self.scanRectView.layer.borderColor = UIColor.greenColor().CGColor</div><div class="line">        self.scanRectView.layer.borderWidth = 1;</div><div class="line">        //开始捕获</div><div class="line">        self.session.startRunning()</div><div class="line">    &#125;catch _ as NSError&#123;</div><div class="line">        //打印错误消息</div><div class="line">        let errorAlert = UIAlertView(title: &quot;提醒&quot;,</div><div class="line">            message: &quot;请在iPhone的\&quot;设置-隐私-相机\&quot;选项中,允许本程序访问您的相机&quot;,</div><div class="line">            delegate: self,</div><div class="line">            cancelButtonTitle: &quot;确定&quot;)</div><div class="line">        errorAlert.show()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//摄像头捕获</div><div class="line">   func captureOutput(captureOutput: AVCaptureOutput!,</div><div class="line">       didOutputMetadataObjects metadataObjects: [AnyObject]!,</div><div class="line">       fromConnection connection: AVCaptureConnection!) &#123;</div><div class="line">       var stringValue:String?</div><div class="line">       if metadataObjects.count &gt; 0 &#123;</div><div class="line">           let metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject</div><div class="line">           stringValue = metadataObject.stringValue</div><div class="line">           if stringValue != nil&#123;</div><div class="line">               self.session.stopRunning()</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       self.session.stopRunning()</div><div class="line">       //输出结果</div><div class="line">       let alertView = UIAlertView(title: &quot;二维码&quot;, message: stringValue,</div><div class="line">           delegate: self, cancelButtonTitle: &quot;确定&quot;)</div><div class="line">       alertView.show()</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-<p>//消息框确认后消失</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    //消息框确认后消失</div><div class="line">    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) &#123;</div><div class="line">         //继续扫描</div><div class="line">         self.session.startRunning()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+        <p>Swift - 使用CIFilter生成二维码图片（QRCode）</p>
+<p>CIFilter提供了各种各样的滤镜，其中CIQRCodeGenerator可以用来生成二维码。下面通过一个样例演示如何将字符串（链接也是字符串）生成二维码图片，同时支持在二维码中间放置个性化图标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">import UIKit</div><div class="line"> </div><div class="line">class ViewController: UIViewController &#123;</div><div class="line"> </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        super.viewDidLoad()</div><div class="line">         </div><div class="line">        //不带图片的二维码图片</div><div class="line">        let imageViewIcon1 = UIImageView(frame: CGRectMake(20, 20, 150, 150))</div><div class="line">        imageViewIcon1.image = createQRForString(&quot;http://www.hangge.com&quot;,</div><div class="line">            qrImageName: &quot;&quot;)</div><div class="line">        self.view.addSubview(imageViewIcon1)</div><div class="line">         </div><div class="line">        //带图片的二维码图片</div><div class="line">        let imageViewIcon2 = UIImageView(frame: CGRectMake(200, 20, 150, 150))</div><div class="line">        imageViewIcon2.image = createQRForString(&quot;http://www.hangge.com&quot;,</div><div class="line">            qrImageName: &quot;logo&quot;)</div><div class="line">        self.view.addSubview(imageViewIcon2)</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //创建二维码图片</div><div class="line">    func createQRForString(qrString: String?, qrImageName: String?) -&gt; UIImage?&#123;</div><div class="line">        if let sureQRString = qrString &#123;</div><div class="line">            let stringData = sureQRString.dataUsingEncoding(NSUTF8StringEncoding,</div><div class="line">                allowLossyConversion: false)</div><div class="line">            // 创建一个二维码的滤镜</div><div class="line">            let qrFilter = CIFilter(name: &quot;CIQRCodeGenerator&quot;)!</div><div class="line">            qrFilter.setValue(stringData, forKey: &quot;inputMessage&quot;)</div><div class="line">            qrFilter.setValue(&quot;H&quot;, forKey: &quot;inputCorrectionLevel&quot;)</div><div class="line">            let qrCIImage = qrFilter.outputImage</div><div class="line">            // 创建一个颜色滤镜,黑白色</div><div class="line">            let colorFilter = CIFilter(name: &quot;CIFalseColor&quot;)!</div><div class="line">            colorFilter.setDefaults()</div><div class="line">            colorFilter.setValue(qrCIImage, forKey: &quot;inputImage&quot;)</div><div class="line">            colorFilter.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: &quot;inputColor0&quot;)</div><div class="line">            colorFilter.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: &quot;inputColor1&quot;)</div><div class="line">            // 返回二维码image</div><div class="line">            let codeImage = UIImage(CIImage: colorFilter.outputImage!</div><div class="line">                .imageByApplyingTransform(CGAffineTransformMakeScale(5, 5)))</div><div class="line">            // 通常,二维码都是定制的,中间都会放想要表达意思的图片</div><div class="line">            if let iconImage = UIImage(named: qrImageName!) &#123;</div><div class="line">                let rect = CGRectMake(0, 0, codeImage.size.width, codeImage.size.height)</div><div class="line">                UIGraphicsBeginImageContext(rect.size)</div><div class="line">                 </div><div class="line">                codeImage.drawInRect(rect)</div><div class="line">                let avatarSize = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25)</div><div class="line">                let x = (rect.width - avatarSize.width) * 0.5</div><div class="line">                let y = (rect.height - avatarSize.height) * 0.5</div><div class="line">                iconImage.drawInRect(CGRectMake(x, y, avatarSize.width, avatarSize.height))</div><div class="line">                let resultImage = UIGraphicsGetImageFromCurrentImageContext()</div><div class="line">                 </div><div class="line">                UIGraphicsEndImageContext()</div><div class="line">                return resultImage</div><div class="line">            &#125;</div><div class="line">            return codeImage</div><div class="line">        &#125;</div><div class="line">        return nil</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        super.didReceiveMemoryWarning()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/iosQR二维码/" data-id="cj2084esg0034dljlhefnr73y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/使用CIFilter生成二维码/" data-id="cja93tdv3002p504i8xxfl3t1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-swift/ios使用AVFoundation实现条形码扫描" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/01/swift/ios使用AVFoundation实现条形码扫描/" class="article-date">
-  <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/swift/">swift</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/swift/ios使用AVFoundation实现条形码扫描/">Swift使用AVFoundation实现条形码扫描</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Swift - 使用AVFoundation实现条形码扫描（附：拉近镜头改善读取）</p>
-<p>1，条形码（一维码）的扫描读取</p>
-<p>metadataObjectTypes 做如下修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,</div><div class="line">        AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,</div><div class="line">        AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]</div></pre></td></tr></table></figure>
-<p>2，拉近镜头，改善条形码读取效果</p>
-<p>如果条码太小的时候,就会识别不出来。</p>
-<p>解决办法是：通过代码拉近镜头焦距，放大内容区域让机器更好的识别。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div></pre></td><td class="code"><pre><div class="line">import UIKit</div><div class="line">import AVFoundation</div><div class="line"> </div><div class="line">class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate,</div><div class="line">UIAlertViewDelegate&#123;</div><div class="line">     </div><div class="line">    var scanRectView:UIView!</div><div class="line">    var device:AVCaptureDevice!</div><div class="line">    var input:AVCaptureDeviceInput!</div><div class="line">    var output:AVCaptureMetadataOutput!</div><div class="line">    var session:AVCaptureSession!</div><div class="line">    var preview:AVCaptureVideoPreviewLayer!</div><div class="line">     </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        super.viewDidLoad()</div><div class="line">         </div><div class="line">        fromCamera()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //通过摄像头扫描</div><div class="line">    func fromCamera() &#123;</div><div class="line">        do&#123;</div><div class="line">            self.device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</div><div class="line">             </div><div class="line">            self.input = try AVCaptureDeviceInput(device: device)</div><div class="line">             </div><div class="line">            self.output = AVCaptureMetadataOutput()</div><div class="line">            output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">             </div><div class="line">            self.session = AVCaptureSession()</div><div class="line">            if UIScreen.mainScreen().bounds.size.height&lt;500 &#123;</div><div class="line">                self.session.sessionPreset = AVCaptureSessionPreset640x480</div><div class="line">            &#125;else&#123;</div><div class="line">                self.session.sessionPreset = AVCaptureSessionPresetHigh</div><div class="line">            &#125;</div><div class="line">             </div><div class="line">            self.session.addInput(self.input)</div><div class="line">            self.session.addOutput(self.output)</div><div class="line">             </div><div class="line">            self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,</div><div class="line">                AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,</div><div class="line">                AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]</div><div class="line">             </div><div class="line">            //计算中间可探测区域</div><div class="line">            let windowSize:CGSize = UIScreen.mainScreen().bounds.size;</div><div class="line">            let scanSize:CGSize = CGSizeMake(windowSize.width*3/4,</div><div class="line">                windowSize.width*3/4);</div><div class="line">            var scanRect:CGRect = CGRectMake((windowSize.width-scanSize.width)/2,</div><div class="line">                (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);</div><div class="line">            //计算rectOfInterest 注意x,y交换位置</div><div class="line">            scanRect = CGRectMake(scanRect.origin.y/windowSize.height,</div><div class="line">                scanRect.origin.x/windowSize.width,</div><div class="line">                scanRect.size.height/windowSize.height,</div><div class="line">                scanRect.size.width/windowSize.width);</div><div class="line">            //设置可探测区域</div><div class="line">            self.output.rectOfInterest = scanRect</div><div class="line">             </div><div class="line">            self.preview = AVCaptureVideoPreviewLayer(session:self.session)</div><div class="line">            self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill</div><div class="line">            self.preview.frame = UIScreen.mainScreen().bounds</div><div class="line">            self.view.layer.insertSublayer(self.preview, atIndex:0)</div><div class="line">             </div><div class="line">            //添加中间的探测区域绿框</div><div class="line">            self.scanRectView = UIView();</div><div class="line">            self.view.addSubview(self.scanRectView)</div><div class="line">            self.scanRectView.frame = CGRectMake(0, 0, scanSize.width, scanSize.height);</div><div class="line">            self.scanRectView.center = CGPointMake(</div><div class="line">                CGRectGetMidX(UIScreen.mainScreen().bounds),</div><div class="line">                CGRectGetMidY(UIScreen.mainScreen().bounds));</div><div class="line">            self.scanRectView.layer.borderColor = UIColor.greenColor().CGColor</div><div class="line">            self.scanRectView.layer.borderWidth = 1;</div><div class="line">             </div><div class="line">            //开始捕获</div><div class="line">            self.session.startRunning()</div><div class="line">             </div><div class="line">            //放大</div><div class="line">            do &#123;</div><div class="line">                try self.device!.lockForConfiguration()</div><div class="line">            &#125; catch _ &#123;</div><div class="line">                NSLog(&quot;Error: lockForConfiguration.&quot;);</div><div class="line">            &#125;</div><div class="line">            self.device!.videoZoomFactor = 1.5</div><div class="line">            self.device!.unlockForConfiguration()</div><div class="line">             //放大</div><div class="line">             </div><div class="line">             </div><div class="line">        &#125;catch _ as NSError&#123;</div><div class="line">            //打印错误消息</div><div class="line">            let errorAlert = UIAlertView(title: &quot;提醒&quot;,</div><div class="line">                message: &quot;请在iPhone的\&quot;设置-隐私-相机\&quot;选项中,允许本程序访问您的相机&quot;,</div><div class="line">                delegate: self,</div><div class="line">                cancelButtonTitle: &quot;确定&quot;)</div><div class="line">            errorAlert.show()</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //摄像头捕获</div><div class="line">    func captureOutput(captureOutput: AVCaptureOutput!,</div><div class="line">        didOutputMetadataObjects metadataObjects: [AnyObject]!,</div><div class="line">        fromConnection connection: AVCaptureConnection!) &#123;</div><div class="line">             </div><div class="line">            var stringValue:String?</div><div class="line">            if metadataObjects.count &gt; 0 &#123;</div><div class="line">                let metadataObject = metadataObjects[0]</div><div class="line">                    as! AVMetadataMachineReadableCodeObject</div><div class="line">                stringValue = metadataObject.stringValue</div><div class="line">                 </div><div class="line">                if stringValue != nil&#123;</div><div class="line">                    self.session.stopRunning()</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            self.session.stopRunning()</div><div class="line">            //输出结果</div><div class="line">            let alertView = UIAlertView(title: &quot;一维码&quot;, message: stringValue,</div><div class="line">                delegate: self, cancelButtonTitle: &quot;确定&quot;)</div><div class="line">            alertView.show()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //消息框确认后消失</div><div class="line">    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) &#123;</div><div class="line">        //继续扫描</div><div class="line">        self.session.startRunning()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        super.didReceiveMemoryWarning()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/ios使用AVFoundation实现条形码扫描/" data-id="cj2084esi0037dljlvdn9myga" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hexo/Hexo评论与站点统计系统" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/01/hexo/Hexo评论与站点统计系统/" class="article-date">
-  <time datetime="2016-07-01T07:50:07.000Z" itemprop="datePublished">2016-07-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/hexo/Hexo评论与站点统计系统/">hexo评论系统与站点计数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>评论系统与站点计数</p>
-<p>添加 多说 或者 Disqus 第三方评论系统。当同时设置了 多说 和 Disqus 时，优先选择多说。</p>
-<h3 id="使用多说"><a href="#使用多说" class="headerlink" title="使用多说"></a>使用多说</h3><ol>
-<li><p>注册多说</p>
-<ol>
-<li><p>登录后在首页选择 “我要安装”。</p>
-</li>
-<li><p>创建站点，填写站点相关信息。注意，多说域名 这一栏填写的即是你的 duoshuo_shortname。</p>
-</li>
-</ol>
-</li>
-<li><p>编辑站点的 _config.yml 注意，不是主题的_config.yml文件 ，添加 duoshuo_shortname 字段，设置如下</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">duoshuo_shortname: your-duoshuo-shortname</div></pre></td></tr></table></figure>
-<p>（注）duoshuo short name: 你的多说二级域名去掉 .duoshuo.com 部分</p>
-<h3 id="使用-Disqus"><a href="#使用-Disqus" class="headerlink" title="使用 Disqus"></a>使用 Disqus</h3><p>编辑站点的 _config.yml ，添加 disqus_shortname 字段，设置如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">disqus_shortname: your-disqus-shortname</div></pre></td></tr></table></figure>
-<h3 id="多说评论显示-UA"><a href="#多说评论显示-UA" class="headerlink" title="多说评论显示 UA"></a>多说评论显示 UA</h3><p>需要配置 duoshuo_info 这个字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">duoshuo_info:</div><div class="line">  ua_enable: true</div><div class="line">  admin_enable: true</div><div class="line">  user_id: 1234567</div><div class="line">  admin_nickname: 主编大人</div></pre></td></tr></table></figure>
-<p>配置 user_id 和 admin_nickname 字段。 请访问 多说，登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字。</p>
-<h3 id="显示站点总访问量"><a href="#显示站点总访问量" class="headerlink" title="显示站点总访问量"></a>显示站点总访问量</h3><p>找到站点的themes/next/layout/_partials目录下的footer.swig文件<br>将以下脚本和标签插入到文件中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</div><div class="line">本站总访问量 &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; &amp;nbsp&amp;nbsp&amp;nbsp</div><div class="line">您是第&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;个来到的小伙伴</div></pre></td></tr></table></figure>
-<p>插入到这里</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;powered-by&quot;&gt;</div><div class="line"> 	&#123;&#123; __(&apos;footer.powered&apos;, &apos;&lt;a class=&quot;theme-link&quot; href=&quot;http://hexo.io&quot;&gt;Hexo&lt;/a&gt;&apos;) &#125;&#125;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;theme-info&quot;&gt;</div><div class="line"> 	&#123;&#123; __(&apos;footer.theme&apos;) &#125;&#125; -</div><div class="line">	 &lt;a class=&quot;theme-link&quot; href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;</div><div class="line">   NexT&#123;% if theme.scheme %&#125;.&#123;&#123; theme.scheme &#125;&#125;&#123;% endif %&#125;</div><div class="line"> 	&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"># 插入到这里</div><div class="line">&#123;% block footer %&#125;&#123;% endblock %&#125;</div></pre></td></tr></table></figure>
-<h3 id="显示单页面访问量"><a href="#显示单页面访问量" class="headerlink" title="显示单页面访问量"></a>显示单页面访问量</h3><p>修改themes/next/layout/_macro目录下的post.swig文件</p>
-<p>位于文件开头,在第三个参数的位置，增加is_pv字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% macro render(post, is_index, is_pv, post_extra_class) %&#125;</div></pre></td></tr></table></figure>
-<p>插入以下代码，用于区分文章页面跟首页</p>
-<p>这里不用像”显示站点总访问量”中那样安装脚本，否则会出现重复计数的问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% if is_pv %&#125;</div><div class="line">&lt;span&gt;&amp;nbsp; | &amp;nbsp;</div><div class="line">&lt;span id=&quot;busuanzi_value_page_pv&quot; &gt;&lt;/span&gt;次阅读</div><div class="line">&lt;/span&gt;    </div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
-<p>插入这个位置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;% if post.comments %&#125;</div><div class="line">          &#123;% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %&#125;</div><div class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</div><div class="line">              &amp;nbsp; | &amp;nbsp;</div><div class="line">              &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</div><div class="line">                &lt;span class=&quot;post-comments-count ds-thread-count&quot; data-thread-key=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</div><div class="line">              &lt;/a&gt;</div><div class="line">            &lt;/span&gt;</div><div class="line">          &#123;% elseif theme.disqus_shortname %&#125;</div><div class="line">            &lt;span class=&quot;post-comments-count&quot;&gt;</div><div class="line">            &amp;nbsp; | &amp;nbsp;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;#comments&quot; itemprop=&quot;discussionUrl&quot;&gt;</div><div class="line">              &lt;span class=&quot;post-comments-count disqus-comment-count&quot; data-disqus-identifier=&quot;&#123;&#123; post.path &#125;&#125;&quot; itemprop=&quot;commentsCount&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;/a&gt;</div><div class="line">          &lt;/span&gt;</div><div class="line">          &#123;% endif %&#125;      </div><div class="line">        &#123;% endif %&#125; </div><div class="line">	#插入到这里</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/header&gt;</div></pre></td></tr></table></figure>
-<p>修改themes/next/layout目录下的post.swig文件</p>
-<p>这个文件是文章的模板</p>
-<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;% block content %&#125;</div><div class="line">  &lt;div id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</div><div class="line">  	#render方法第二个参数is_index为是否为首页</div><div class="line">  	#第三个参数is_pv为我们刚才设置的是否显示计数</div><div class="line">    &#123;&#123; post_template.render(page, false, true) &#125;&#125; </div><div class="line">    &lt;div class=&quot;post-spread&quot;&gt;</div><div class="line">      &#123;% if theme.jiathis %&#125;</div><div class="line">        &#123;% include &apos;_partials/share/jiathis.swig&apos; %&#125;</div><div class="line">      &#123;% elseif theme.duoshuo_shortname and theme.duoshuo_share %&#125;</div><div class="line">        &#123;% include &apos;_partials/share/duoshuo_share.swig&apos; %&#125;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure>
-<p>修改themes/next/layout目录下的index.swig文件</p>
-<p>这个文件是首页的模板</p>
-<p>找到以下代码，给render方法传入刚才第一步中设置的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;% block content %&#125;</div><div class="line">  &lt;section id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</div><div class="line">    &#123;% for post in page.posts %&#125;</div><div class="line">       #render方法第二个参数is_index为是否为首页</div><div class="line">       #第三个参数is_pv为我们刚才设置的是否显示计数</div><div class="line">      &#123;&#123; post_template.render(post, true, false) &#125;&#125;</div><div class="line">    &#123;% endfor %&#125;</div><div class="line">  &lt;/section&gt;</div><div class="line">  &#123;% include &apos;_partials/pagination.swig&apos; %&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure>
-<p>至此，我们的站点计数功能就做好了</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/hexo/Hexo评论与站点统计系统/" data-id="cj2084epw000qdljl5r9vilv8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">next</a></li></ul>
 
     </footer>
   </div>
@@ -366,8 +467,8 @@
   
     <article id="post-swift/按钮（UIButton）的用法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/01/swift/按钮（UIButton）的用法/" class="article-date">
-  <time datetime="2016-07-01T07:50:06.000Z" itemprop="datePublished">2016-07-01</time>
+    <a href="/2017/11/21/swift/按钮（UIButton）的用法/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
@@ -382,7 +483,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/swift/按钮（UIButton）的用法/">按钮（UIButton）的用法</a>
+      <a class="article-title" href="/2017/11/21/swift/按钮（UIButton）的用法/">按钮（UIButton）的用法</a>
     </h1>
   
 
@@ -416,7 +517,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/按钮（UIButton）的用法/" data-id="cj2084eti0047dljl7bhqe4r5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/按钮（UIButton）的用法/" data-id="cja93tdv6002r504ihzuxr582" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -428,10 +529,10 @@
 
 
   
-    <article id="post-swift/使用CIFilter生成二维码" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-swift/标签栏按钮UITabBarItem样式修改" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/01/swift/使用CIFilter生成二维码/" class="article-date">
-  <time datetime="2016-07-01T07:50:06.000Z" itemprop="datePublished">2016-07-01</time>
+    <a href="/2017/11/21/swift/标签栏按钮UITabBarItem样式修改/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
@@ -446,7 +547,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/01/swift/使用CIFilter生成二维码/">Swift使用CIFilter生成二维码图片（QRCode）</a>
+      <a class="article-title" href="/2017/11/21/swift/标签栏按钮UITabBarItem样式修改/">标签栏按钮UITabBarItem样式修改</a>
     </h1>
   
 
@@ -454,16 +555,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Swift - 使用CIFilter生成二维码图片（QRCode）</p>
-<p>CIFilter提供了各种各样的滤镜，其中CIQRCodeGenerator可以用来生成二维码。下面通过一个样例演示如何将字符串（链接也是字符串）生成二维码图片，同时支持在二维码中间放置个性化图标。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">import UIKit</div><div class="line"> </div><div class="line">class ViewController: UIViewController &#123;</div><div class="line"> </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        super.viewDidLoad()</div><div class="line">         </div><div class="line">        //不带图片的二维码图片</div><div class="line">        let imageViewIcon1 = UIImageView(frame: CGRectMake(20, 20, 150, 150))</div><div class="line">        imageViewIcon1.image = createQRForString(&quot;http://www.hangge.com&quot;,</div><div class="line">            qrImageName: &quot;&quot;)</div><div class="line">        self.view.addSubview(imageViewIcon1)</div><div class="line">         </div><div class="line">        //带图片的二维码图片</div><div class="line">        let imageViewIcon2 = UIImageView(frame: CGRectMake(200, 20, 150, 150))</div><div class="line">        imageViewIcon2.image = createQRForString(&quot;http://www.hangge.com&quot;,</div><div class="line">            qrImageName: &quot;logo&quot;)</div><div class="line">        self.view.addSubview(imageViewIcon2)</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //创建二维码图片</div><div class="line">    func createQRForString(qrString: String?, qrImageName: String?) -&gt; UIImage?&#123;</div><div class="line">        if let sureQRString = qrString &#123;</div><div class="line">            let stringData = sureQRString.dataUsingEncoding(NSUTF8StringEncoding,</div><div class="line">                allowLossyConversion: false)</div><div class="line">            // 创建一个二维码的滤镜</div><div class="line">            let qrFilter = CIFilter(name: &quot;CIQRCodeGenerator&quot;)!</div><div class="line">            qrFilter.setValue(stringData, forKey: &quot;inputMessage&quot;)</div><div class="line">            qrFilter.setValue(&quot;H&quot;, forKey: &quot;inputCorrectionLevel&quot;)</div><div class="line">            let qrCIImage = qrFilter.outputImage</div><div class="line">            // 创建一个颜色滤镜,黑白色</div><div class="line">            let colorFilter = CIFilter(name: &quot;CIFalseColor&quot;)!</div><div class="line">            colorFilter.setDefaults()</div><div class="line">            colorFilter.setValue(qrCIImage, forKey: &quot;inputImage&quot;)</div><div class="line">            colorFilter.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: &quot;inputColor0&quot;)</div><div class="line">            colorFilter.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: &quot;inputColor1&quot;)</div><div class="line">            // 返回二维码image</div><div class="line">            let codeImage = UIImage(CIImage: colorFilter.outputImage!</div><div class="line">                .imageByApplyingTransform(CGAffineTransformMakeScale(5, 5)))</div><div class="line">            // 通常,二维码都是定制的,中间都会放想要表达意思的图片</div><div class="line">            if let iconImage = UIImage(named: qrImageName!) &#123;</div><div class="line">                let rect = CGRectMake(0, 0, codeImage.size.width, codeImage.size.height)</div><div class="line">                UIGraphicsBeginImageContext(rect.size)</div><div class="line">                 </div><div class="line">                codeImage.drawInRect(rect)</div><div class="line">                let avatarSize = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25)</div><div class="line">                let x = (rect.width - avatarSize.width) * 0.5</div><div class="line">                let y = (rect.height - avatarSize.height) * 0.5</div><div class="line">                iconImage.drawInRect(CGRectMake(x, y, avatarSize.width, avatarSize.height))</div><div class="line">                let resultImage = UIGraphicsGetImageFromCurrentImageContext()</div><div class="line">                 </div><div class="line">                UIGraphicsEndImageContext()</div><div class="line">                return resultImage</div><div class="line">            &#125;</div><div class="line">            return codeImage</div><div class="line">        &#125;</div><div class="line">        return nil</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        super.didReceiveMemoryWarning()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>Swift - 标签栏按钮UITabBarItem样式修改</p>
+<p>1，tabBarItem图片的推荐尺寸和最大支持尺寸<br>下面是标签栏（UITabBar）中tab按钮图标分别在1x、2x、3x下不会压缩变形的尺寸：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@1x : 推荐 25 x 25   (最大: 48 x 32)</div><div class="line">@2x : 推荐 50 x 50   (最大: 96 x 64)</div><div class="line">@3x : 推荐 75 x 75   (最大: 144 x 96)</div></pre></td></tr></table></figure>
+<p>2，修改图片和文字的颜色<br>（1）图片和文字同时改变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//图片文字一起变色</div><div class="line">self.tabBar.tintColor = UIColor.orange()</div></pre></td></tr></table></figure>
+<p>（2）只改变文字颜色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//改变文字颜色</div><div class="line">UITabBarItem.appearance().setTitleTextAttributes(</div><div class="line">    [NSForegroundColorAttributeName: UIColor.gray], forState:.normal)</div><div class="line">UITabBarItem.appearance().setTitleTextAttributes(</div><div class="line">    [NSForegroundColorAttributeName: UIColor.orange], forState:.selected)</div></pre></td></tr></table></figure>
+<p>（3）只改变图片颜色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">self.tabBar.tintColor = UIColor.orange()</div><div class="line">//文字颜色还原</div><div class="line">UITabBarItem.appearance().setTitleTextAttributes(</div><div class="line">    [NSForegroundColorAttributeName: self.view.tintColor], forState:.selected)</div></pre></td></tr></table></figure>
+<p>3，选中时、不选中时使用不同图片<br>默认标签选中、不选中都使用的是同一个图片，只是颜色不同。我们也可使用两张不同图片表示两种状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">qq.tabBarItem = UITabBarItem(title: &quot;QQ&quot;, image: UIImage(named: &quot;qq&quot;),</div><div class="line">    selectedImage: UIImage(named: &quot;qq_active&quot;))</div><div class="line"> </div><div class="line">android.tabBarItem = UITabBarItem(title: &quot;Android&quot;, image: UIImage(named: &quot;android&quot;),</div><div class="line">    selectedImage: UIImage(named: &quot;android_active&quot;))</div></pre></td></tr></table></figure>
+<p>4，使用图片的原始颜色<br>默认不管原图是什么颜色，渲染器都会将渲染成单一颜色，虽说符合现在扁平化的趋势，但有时我们还是想要使用图片原来的样子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">qq.tabBarItem =  UITabBarItem(title: &quot;QQ&quot;, image: UIImage(named: &quot;qq_color&quot;),</div><div class="line">    selectedImage: UIImage(named: &quot;qq_color&quot;)?.imageWithRenderingMode(.AlwaysOriginal))</div><div class="line"> </div><div class="line">android.tabBarItem =  UITabBarItem(title: &quot;Android&quot;, image: UIImage(named: &quot;android_color&quot;),</div><div class="line">    selectedImage: UIImage(named: &quot;android_color&quot;)?.imageWithRenderingMode(.AlwaysOriginal))</div></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/01/swift/使用CIFilter生成二维码/" data-id="cj2084etd0043dljlxr4g8945" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/标签栏按钮UITabBarItem样式修改/" data-id="cja93tdva002v504iaezfxyht" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
 
     </footer>
   </div>
@@ -472,59 +584,14 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-swift/第三方库" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/06/21/hello-world/" class="article-date">
-  <time datetime="2016-06-21T01:11:04.000Z" itemprop="datePublished">2016-06-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/21/hello-world/" data-id="cj2084ell0000dljlw9xe3m3q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vr/webgl和three" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/31/vr/webgl和three/" class="article-date">
-  <time datetime="2016-05-31T04:57:15.000Z" itemprop="datePublished">2016-05-31</time>
+    <a href="/2017/11/21/swift/第三方库/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/VR/">VR</a>
+    <a class="article-category-link" href="/categories/ios/">ios</a>
   </div>
 
   </div>
@@ -535,7 +602,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/31/vr/webgl和three/">VR 书籍</a>
+      <a class="article-title" href="/2017/11/21/swift/第三方库/">第三方库学习</a>
     </h1>
   
 
@@ -543,80 +610,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#WebGL和Three.js</p>
-<p>1</p>
-<p>github<a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">Three.js</a></p>
-<p><a href="http://threejs.org/" target="_blank" rel="external">threejs.org</a></p>
-<p>2</p>
-<p><a href="http://learningthreejs.com" target="_blank" rel="external">Learning Three.js</a></p>
-<p>3</p>
-<p>WebGL编程指南<br>百度网盘</p>
-<p>4</p>
-<p>Three.js Inspector</p>
-<p>Chrome 插件</p>
-<p>5</p>
-<p><a href="http://www.ituring.com.cn/article/58552?utm_source=qdan.me#/" target="_blank" rel="external">Three.js入门指南</a></p>
-<p>6</p>
-<p><a href="http://blog.csdn.net/wangyi_lin/article/details/7384191?utm_source=qdan.me#/" target="_blank" rel="external">关于怎样使用three.js的小教程</a></p>
-<p>7</p>
-<p><a href="http://void.hi-res.net/" target="_blank" rel="external">各种案例</a></p>
-<p>8</p>
-<p><a href="http://www.smashinglabs.pl/three-js-tetris-tutorial" target="_blank" rel="external">three-js-tetris-tutorial</a></p>
+        <h1 id="第三方库"><a href="#第三方库" class="headerlink" title="第三方库"></a>第三方库</h1><p>使用cocoapods</p>
+<p>必须用以下格式写Podfile文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">source &apos;https://github.com/CocoaPods/Specs.git&apos;</div><div class="line">platform :ios, &apos;9.0&apos;</div><div class="line">use_frameworks!</div><div class="line"></div><div class="line">target &apos;ProjectName&apos; do</div><div class="line">    pod &apos;ThreeLibName&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
+<p>使用swfit必须加上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">use_frameworks!</div></pre></td></tr></table></figure>
+<h2 id="刷新控件"><a href="#刷新控件" class="headerlink" title="刷新控件"></a>刷新控件</h2><h3 id="MJrefresh"><a href="#MJrefresh" class="headerlink" title="MJrefresh"></a>MJrefresh</h3><h2 id="图表控件"><a href="#图表控件" class="headerlink" title="图表控件"></a>图表控件</h2><h3 id="ios-Echarts"><a href="#ios-Echarts" class="headerlink" title="ios-Echarts"></a>ios-Echarts</h3><p>是用oc写的一个基于百度推出的js版本的echarts而写的一个ios版本</p>
+<p><a href="https://github.com/Pluto-Y/iOS-Echarts" target="_blank" rel="external">ios-echarts</a></p>
+<h5 id="支持以下图表"><a href="#支持以下图表" class="headerlink" title="支持以下图表"></a>支持以下图表</h5><ul>
+<li>柱状图</li>
+<li>散点图</li>
+<li>饼状图</li>
+<li>K线图</li>
+<li>折线图</li>
+</ul>
+<p>js版本的<a href="https://github.com/ecomfe/echarts" target="_blank" rel="external">echats</a></p>
+<p>还可访问一个百度的js程序员张雯莉。</p>
+<p>github地址<a href="http://github.com/Ovilia" target="_blank" rel="external">Ovilia</a></p>
+<h3 id="PNchart"><a href="#PNchart" class="headerlink" title="PNchart"></a>PNchart</h3><p>一个oc的图表，比较简单实用，不如<a href="https://github.com/Pluto-Y/iOS-Echarts" target="_blank" rel="external">ios-echarts</a>丰富。</p>
+<h3 id="ios-charts"><a href="#ios-charts" class="headerlink" title="ios-charts"></a>ios-charts</h3><p>一个用swift写的图标库。<br><a href="https://github.com/danielgindi/Charts" target="_blank" rel="external">ios-carhts</a><br>还有一个android版本的<br><a href="https://github.com/PhilJay/MPAndroidChart" target="_blank" rel="external">MPAndroidChart</a></p>
+<h3 id="特效-special-effects-文本"><a href="#特效-special-effects-文本" class="headerlink" title="特效,special effects,文本"></a>特效,special effects,文本</h3><p>一个UILable的第三方特效控件。<br><a href="https://github.com/lexrus/LTMorphingLabel" target="_blank" rel="external">LTMorphingLabel</a></p>
+<h3 id="ios热更新代码-JSPatch-非常好用"><a href="#ios热更新代码-JSPatch-非常好用" class="headerlink" title="ios热更新代码 JSPatch 非常好用"></a>ios热更新代码 JSPatch 非常好用</h3><p><a href="http://www.jspatch.com/" target="_blank" rel="external">JSPatch</a> </p>
+<p>gihub地址<a href="https://github.com/bang590/JSPatch" target="_blank" rel="external">JSPatch</a></p>
+<h3 id="android-热更新"><a href="#android-热更新" class="headerlink" title="android 热更新"></a>android 热更新</h3><p>百度的热更新<a href="https://github.com/dodola/HotFix" target="_blank" rel="external">HotFix</a></p>
+<p>阿里巴巴的热更新<a href="https://github.com/alibaba/AndFix" target="_blank" rel="external">AndFix</a></p>
+<p>点评的热更新<a href="https://github.com/jasonross/Nuwa" target="_blank" rel="external">Nuwa</a></p>
+<h3 id="引导页"><a href="#引导页" class="headerlink" title="引导页"></a>引导页</h3><p>引导页<a href="https://github.com/StrongX/XSpotLight" target="_blank" rel="external">XSpotLight</a></p>
+<p><img src="https://github.com/StrongX/XSportLight/blob/master/10.gif" alt="github"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/31/vr/webgl和three/" data-id="cj2084esj0039dljllofj9ctr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/第三方库/" data-id="cja93tdvd002x504iq4a7qgne" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VR/">VR</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ios/错误日志" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/26/ios/错误日志/" class="article-date">
-  <time datetime="2016-05-26T01:07:18.000Z" itemprop="datePublished">2016-05-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/ios-cocoapods/">ios cocoapods</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/26/ios/错误日志/">ios cocoapods 安装第三方库错误</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#错误日志</p>
-<p>###The dependency <code>***</code> is not used in any concrete target.<br>在Podfile文件中必须指明</p>
-<p>target “**” do </p>
-<p>pod “<em>**</em>“</p>
-<p>end</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/26/ios/错误日志/" data-id="cj2084eq20011dljll4idazux" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocoapods/">cocoapods</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
 
     </footer>
   </div>
@@ -667,7 +695,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
     </div>
   </div>
 
@@ -680,23 +708,23 @@
       <ul>
         
           <li>
-            <a href="/2017/04/27/mac/mac任何来源/">mac恢复允许“任何来源”的选项</a>
+            <a href="/2017/11/21/python/Django简介/">python Django简介</a>
           </li>
         
           <li>
-            <a href="/2017/04/26/nodejs/node.js 版本升级/">node.js 版本升级</a>
+            <a href="/2017/11/21/hello-world/">Hello World</a>
           </li>
         
           <li>
-            <a href="/2017/04/26/swift/swift状态栏/">swift - 状态栏</a>
+            <a href="/2017/11/21/android/androidstudio启动慢/">android studio启动慢</a>
           </li>
         
           <li>
-            <a href="/2017/04/26/swift/swift代理/">swift代理delegate</a>
+            <a href="/2017/11/21/book/计算机书籍常用/">计算机书籍</a>
           </li>
         
           <li>
-            <a href="/2017/04/26/swift/UISreen类的屏幕大小/">swift-UISreen类的屏幕大小</a>
+            <a href="/2017/11/21/chrome/Chrome使用技巧/">cherome使用技巧</a>
           </li>
         
       </ul>
