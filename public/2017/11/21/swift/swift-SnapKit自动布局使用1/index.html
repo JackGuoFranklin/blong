@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift-SnapKit自动布局使用1 | JackGuoFranklin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="swift自动布局库SnapKit使用详解1SnapKit 前身是Masonry（一个oc版本的布局库） 1 安装 SnapKit github地址 https://github.com/SnapKit/SnapKit 可以通过Cocoapods 安装在Podfile中加入 1234source &amp;apos;h">
+<meta name="keywords" content="swift,SnapKit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift-SnapKit自动布局使用1">
+<meta property="og:url" content="http://yoursite.com/2017/11/21/swift/swift-SnapKit自动布局使用1/index.html">
+<meta property="og:site_name" content="JackGuoFranklin">
+<meta property="og:description" content="swift自动布局库SnapKit使用详解1SnapKit 前身是Masonry（一个oc版本的布局库） 1 安装 SnapKit github地址 https://github.com/SnapKit/SnapKit 可以通过Cocoapods 安装在Podfile中加入 1234source &amp;apos;https://github.com/CocoaPods/Specs.git&amp;apos;p">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-21T04:12:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift-SnapKit自动布局使用1">
+<meta name="twitter:description" content="swift自动布局库SnapKit使用详解1SnapKit 前身是Masonry（一个oc版本的布局库） 1 安装 SnapKit github地址 https://github.com/SnapKit/SnapKit 可以通过Cocoapods 安装在Podfile中加入 1234source &amp;apos;https://github.com/CocoaPods/Specs.git&amp;apos;p">
+  
+    <link rel="alternate" href="/atom.xml" title="JackGuoFranklin" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">JackGuoFranklin</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">开心</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-swift/swift-SnapKit自动布局使用1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/swift-SnapKit自动布局使用1/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      swift-SnapKit自动布局使用1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>swift自动布局库SnapKit使用详解1<br>SnapKit 前身是Masonry（一个oc版本的布局库）</p>
+<p>1 安装</p>
+<p>SnapKit github地址 <a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="noopener">https://github.com/SnapKit/SnapKit</a></p>
+<p>可以通过Cocoapods 安装<br>在Podfile中加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://github.com/CocoaPods/Specs.git&apos;</span><br><span class="line">platform :ios, &apos;8.0&apos;</span><br><span class="line">use_frameworks!</span><br><span class="line">pod &apos;SnapKit&apos;</span><br></pre></td></tr></table></figure>
+<p>然后在终端项目目录下输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+<p>2 SnapKit的使用方法<br>snp_makeConstraints 来添加view的约束</p>
+<ul>
+<li>边距，宽，高，左上右下，基准线。</li>
+<li>修正位移（inset，offset）</li>
+<li>倍率修正（multipliedBy）</li>
+</ul>
+<p>注意： 使用 snp_makeConstraints 方法的元素必须事先添加到父元素的中，例如：self.view.addSubview(view)</p>
+<ul>
+<li>.equalTo: 等于</li>
+<li>.lessThanOrEqualTo: 小于等于</li>
+<li>.greaterThanOrEqualTo: 大于等于</li>
+</ul>
+<p>3 约束条件参数支持如下三种类型：</p>
+<p>（1）视图属性（ViewAttribute）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//使当前视图对象的中心x坐标小于等于视图view2的左边的x坐标</span><br><span class="line">make.centerX.lessThanOrEqualTo(view2.snp_left)</span><br></pre></td></tr></table></figure>
+<p>（2）视图关系（UIView/NSView） </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">比如想让view.left 大于等于 label.left：</span><br><span class="line"></span><br><span class="line">make.left.greaterThanOrEqualTo(label)</span><br><span class="line">这个其实等价于：</span><br><span class="line"></span><br><span class="line">make.left.greaterThanOrEqualTo(label.snp_left)</span><br></pre></td></tr></table></figure>
+<p>（3）严格检测（Strick Checks）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">比如将宽度和高度属性设置为常量值：</span><br><span class="line">make.height.equalTo(20)</span><br><span class="line">make.width.equalTo(20)</span><br><span class="line">make.top.equalTo(42)</span><br></pre></td></tr></table></figure>
+<p>4 给视图的各种属性设置约束</p>
+<p>（1）width、height属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">自动布局允许宽度、高度设置为常量值。</span><br><span class="line"></span><br><span class="line">make.height.equalTo(20)</span><br><span class="line">make.width.equalTo(self.buttonSize.width)</span><br><span class="line">//当前视图与label的顶部齐平</span><br><span class="line">make.top.equalTo(label.snp_top)</span><br></pre></td></tr></table></figure>
+<p>（2） left、right、top、centerX、centerY等其他属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这些属性直接设置常量值，表示他们相对于父容器的相对约束条件。</span><br><span class="line"></span><br><span class="line">当然也可以使用与其他视图的关系来添加约束。</span><br></pre></td></tr></table></figure>
+<p>（3）edges(边缘）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//让当前视图 的 上下左右(top,left,bottom,right) 等于 view2</span><br><span class="line">make.edges.equalTo(view2)</span><br></pre></td></tr></table></figure>
+<p>（4）size(尺寸）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//当前视图宽高 &gt;= titleLabel</span><br><span class="line">make.size.greaterThanOrEqualTo(titleLabel)</span><br></pre></td></tr></table></figure>
+<p>（5）center(中心）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//当前视图与 button1中心相同 （centerX 和 centerY）</span><br><span class="line">make.center.equalTo(button1)</span><br></pre></td></tr></table></figure>
+<p>5 位移修正与倍率修正</p>
+<p>（1）内位移修正：inset</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">视图view，它距离父视图上、左、下、右边距分别是10、15、20、25</span><br><span class="line"></span><br><span class="line">make.edges.equalTo(boxOutter).inset(UIEdgeInsetsMake(10, 15, 20, 25))</span><br><span class="line">上面边距的偏移设置实际上相当于如下形式：</span><br><span class="line"></span><br><span class="line">make.top.equalTo(boxOutter).offset(10)</span><br><span class="line">make.left.equalTo(boxOutter).offset(15)</span><br><span class="line">make.bottom.equalTo(boxOutter).offset(-20)</span><br><span class="line">make.right.equalTo(boxOutter).offset(-25)</span><br></pre></td></tr></table></figure>
+<p>（2）外位移修正：offset </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">视图比视图宽度加50，高度减50。</span><br><span class="line">make.size.equalTo(boxOutter).offset(CGSizeMake(50, -50))</span><br></pre></td></tr></table></figure>
+<p>（3）倍率修正：multipliedBy </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">视图的尺寸设置成视图一半大小。</span><br><span class="line">make.size.equalTo(boxOutter).multipliedBy(0.5)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/swift-SnapKit自动布局使用1/" data-id="cja95imk1002llf4ig3wrmp0y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/21/swift/ios核心动画之CAShapeLayer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ios核心动画之CAShapeLayer
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/21/swift/swift-SnapKit自动布局使用2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">swift-SnapKit自动布局使用2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reactNative/">reactNative</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reactNative/">reactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AVFoundation/" style="font-size: 14px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 14px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 14px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 14px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 18px;">hexo</a> <a href="/tags/ios/" style="font-size: 16px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 14px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12px;">python django</a> <a href="/tags/reactNative/" style="font-size: 10px;">reactNative</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/21/python/Django简介/">python Django简介</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/VR/webgl和three/">VR 书籍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/book/计算机书籍常用/">计算机书籍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/chrome/Chrome使用技巧/">cherome使用技巧</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 JackGuoFranklin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

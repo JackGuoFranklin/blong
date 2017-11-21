@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JackGuoFranklin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="开心度过每一天。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JackGuoFranklin">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="JackGuoFranklin">
+<meta property="og:description" content="开心度过每一天。">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JackGuoFranklin">
+<meta name="twitter:description" content="开心度过每一天。">
+  
+    <link rel="alternate" href="/atom.xml" title="JackGuoFranklin" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">JackGuoFranklin</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">开心</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-nodejs/node.js 版本升级" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/nodejs/node.js 版本升级/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/node-js/">node.js</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/nodejs/node.js 版本升级/">node.js 版本升级</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一行命令搞定node.js 版本升级</p>
+<p>首先安装n模块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br></pre></td></tr></table></figure>
+<p>第二步：<br>升级node.js到最新稳定版</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n stable</span><br></pre></td></tr></table></figure>
+<p>n后面也可以跟随版本号比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n v0.10.26</span><br><span class="line">或</span><br><span class="line">n 0.10.26</span><br></pre></td></tr></table></figure>
+<p>另外分享几个npm的常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">npm -v          #显示版本，检查npm 是否正确安装。</span><br><span class="line"></span><br><span class="line">npm install express   #安装express模块</span><br><span class="line"></span><br><span class="line">npm install -g express  #全局安装express模块</span><br><span class="line"></span><br><span class="line">npm list         #列出已安装模块</span><br><span class="line"></span><br><span class="line">npm show express     #显示模块详情</span><br><span class="line"></span><br><span class="line">npm update        #升级当前目录下的项目的所有模块</span><br><span class="line"></span><br><span class="line">npm update express    #升级当前目录下的项目的指定模块</span><br><span class="line"></span><br><span class="line">npm update -g express  #升级全局安装的express模块</span><br><span class="line"></span><br><span class="line">npm uninstall express  #删除指定的模块</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/nodejs/node.js 版本升级/" data-id="cja95imj0001elf4i5aql9vbf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-android/androidstudio启动慢" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/android/androidstudio启动慢/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/android/">android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/android/androidstudio启动慢/">android studio启动慢</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？"><a href="#android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？" class="headerlink" title="android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？"></a>android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？</h3><p>1）进入刚安装的Android Studio目录下的bin目录。找到idea.properties文件，用文本编辑器打开。</p>
+<p>2）在idea.properties文件末尾添加一行： disable.android.first.run=true ，然后保存文件。</p>
+<p>3）关闭Android Studio后重新启动，便可进入界面。</p>
+<p>可以解决。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/android/androidstudio启动慢/" data-id="cja95imhw0003lf4i9yjn8qs4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android-studio/">android studio</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/当提示端口被占用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/python/当提示端口被占用/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python-django/">python django</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/python/当提示端口被占用/">python django新建项目</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 新建一个 django project</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin.py startproject project-name</span><br></pre></td></tr></table></figure>
+<p>一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）</p>
+<p>2 新建 app</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp app-name</span><br><span class="line">或 django-admin.py startapp app-name</span><br></pre></td></tr></table></figure>
+<p>一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。</p>
+<p>3 同步数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python manage.py syncdb</span><br><span class="line"> </span><br><span class="line">注意：Django 1.7.1及以上的版本需要用以下命令</span><br><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。</p>
+<p>备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具 south,详见 Django 数据库迁移 一节。</p>
+<p>4 使用开发服务器<br>开发服务器，即开发时使用，一般修改代码后会自动重启，方便调试和开发，但是由于性能问题，建议只用来测试，不要用在生产环境。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br><span class="line"> </span><br><span class="line"># 当提示端口被占用的时候，可以用其它端口：</span><br><span class="line">python manage.py runserver 8001</span><br><span class="line">python manage.py runserver 9999</span><br><span class="line">（当然也可以kill掉占用端口的进程）</span><br><span class="line"> </span><br><span class="line"># 监听所有可用 ip （电脑可能有一个或多个内网ip，一个或多个外网ip，即有多个ip地址）</span><br><span class="line">python manage.py runserver 0.0.0.0:8000</span><br><span class="line"># 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器</span><br><span class="line"># 访问对应的 ip加端口，比如 http://172.16.20.2:8000</span><br></pre></td></tr></table></figure>
+<p> 5 清空数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py flush</span><br></pre></td></tr></table></figure>
+<p>此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。</p>
+<p>6  创建超级管理员</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br><span class="line"> </span><br><span class="line"># 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填</span><br><span class="line"> </span><br><span class="line"># 修改 用户密码可以用：</span><br><span class="line">python manage.py changepassword username</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/python/当提示端口被占用/" data-id="cja95imj4001klf4indpwcc3r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-django/">python django</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/按钮（UIButton）的用法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/按钮（UIButton）的用法/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/按钮（UIButton）的用法/">按钮（UIButton）的用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>按钮（UIButton）的用法</p>
+<p>1，按钮的创建</p>
+<p>（1）按钮有下面四种类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">UIButtonType.ContactAdd：前面带“+”图标按钮，默认文字颜色为蓝色，有触摸时的高亮效果</span><br><span class="line">UIButtonType.DetailDisclosure：前面带“!”图标按钮，默认文字颜色为蓝色，有触摸时的高亮效果</span><br><span class="line">UIButtonType.System：前面不带图标，默认文字颜色为蓝色，有触摸时的高亮效果</span><br><span class="line">UIButtonType.Custom：定制按钮，前面不带图标，默认文字颜色为白色，无触摸时的高亮效果</span><br><span class="line">UIButtonType.InfoDark：为感叹号“!”圆形按钮</span><br><span class="line">UIButtonType.InfoLight：为感叹号“!”圆形按钮</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//创建一个ContactAdd类型的按钮</span><br><span class="line">let button:UIButton = UIButton(type:.ContactAdd)</span><br><span class="line">//设置按钮位置和大小</span><br><span class="line">button.frame=CGRectMake(10, 150, 100, 30)</span><br><span class="line">//设置按钮文字</span><br><span class="line">button.setTitle(&quot;按钮&quot;, forState:UIControlState.Normal)</span><br><span class="line">self.view.addSubview(button);</span><br></pre></td></tr></table></figure>
+<p>（2）对于Custom定制类型按钮，代码可简化为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let button = UIButton(frame:CGRectMake(10, 150, 100, 30))</span><br></pre></td></tr></table></figure>
+<p>2，按钮的文字设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">button.setTitle(&quot;普通状态&quot;, forState:UIControlState.Normal) //普通状态下的文字</span><br><span class="line">button.setTitle(&quot;触摸状态&quot;, forState:UIControlState.Highlighted) //触摸状态下的文字</span><br><span class="line">button.setTitle(&quot;禁用状态&quot;, forState:UIControlState.Disabled) //禁用状态下的文字</span><br></pre></td></tr></table></figure>
+<p>3，按钮文字颜色的设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">button.setTitleColor(UIColor.blackColor(),forState: .Normal) //普通状态下文字的颜色</span><br><span class="line">button.setTitleColor(UIColor.greenColor(),forState: .Highlighted) //触摸状态下文字的颜色</span><br><span class="line">button.setTitleColor(UIColor.grayColor(),forState: .Disabled) //禁用状态下文字的颜色</span><br></pre></td></tr></table></figure>
+<p>4，按钮文字阴影颜色的设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">button.setTitleShadowColor(UIColor.greenColor(),forState:.Normal) //普通状态下文字阴影的颜色</span><br><span class="line">button.setTitleShadowColor(UIColor.yellowColor(),forState:.Highlighted) //普通状态下文字阴影的颜色</span><br><span class="line">button.setTitleShadowColor(UIColor.grayColor(),forState:.Disabled) //普通状态下文字阴影的颜色</span><br></pre></td></tr></table></figure>
+<p>5，按钮背景颜色设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button.backgroundColor=UIColor.blackColor()</span><br></pre></td></tr></table></figure>
+<p>6，按钮文字图标的设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">button.setImage(UIImage(named:&quot;icon1&quot;),forState:.Normal)  //设置图标</span><br><span class="line">button.adjustsImageWhenHighlighted=false //使触摸模式下按钮也不会变暗</span><br><span class="line">button.adjustsImageWhenDisabled=false //使禁用模式下按钮也不会变暗</span><br></pre></td></tr></table></figure>
+<p>7，设置按钮背景图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button.setBackgroundImage(UIImage(named:&quot;background1&quot;),forState:.Normal)</span><br></pre></td></tr></table></figure>
+<p>8，按钮触摸点击事件响应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//不传递触摸对象（即点击的按钮）</span><br><span class="line">button.addTarget(self,action:#selector(tapped),forControlEvents:.TouchUpInside)</span><br><span class="line">func tapped()&#123;</span><br><span class="line">    print(&quot;tapped&quot;)</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">//传递触摸对象（即点击的按钮），需要在定义action参数时，方法名称后面带上冒号</span><br><span class="line">button.addTarget(self,action:#selector(tapped(_:)),forControlEvents:.TouchUpInside)</span><br><span class="line">func tapped(button:UIButton)&#123;</span><br><span class="line">    print(button.titleForState(.Normal))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>常用的触摸事件类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">TouchDown：单点触摸按下事件，点触屏幕</span><br><span class="line">TouchDownRepeat：多点触摸按下事件，点触计数大于1，按下第2、3或第4根手指的时候</span><br><span class="line">TouchDragInside：触摸在控件内拖动时</span><br><span class="line">TouchDragOutside：触摸在控件外拖动时</span><br><span class="line">TouchDragEnter：触摸从控件之外拖动到内部时</span><br><span class="line">TouchDragExit：触摸从控件内部拖动到外部时</span><br><span class="line">TouchUpInside：在控件之内触摸并抬起事件</span><br><span class="line">TouchUpOutside：在控件之外触摸抬起事件</span><br><span class="line">TouchCancel：触摸取消事件，即一次触摸因为放上太多手指而被取消，或者电话打断</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/按钮（UIButton）的用法/" data-id="cja95imk8002xlf4ia32vrxrl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/Kingfisher" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/Kingfisher/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/Kingfisher/">Swift 图片下载</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Kingfisher</p>
+<p>oc有个非常强大图片缓存处理的库SDWebImage，swift中现在也有个不错的图片处理的库—-Kingfisher</p>
+<p>Kingfisher库下载图片默认是带缓存的</p>
+<p>最简单的使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import Kingfisher</span><br><span class="line">imageView.kf_setImageWithURL(NSURL(string: &quot;http//www.baidu.com.png&quot;)!)</span><br></pre></td></tr></table></figure>
+<p>配置 https</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在info.plist里加上下面这段</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;</span><br><span class="line">    &lt;true/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br><span class="line">去配置一个Dictionary类型的NSAppTransportSecurity 子item是Boolean类型NSAllowsArbitraryLoads value是YES</span><br></pre></td></tr></table></figure>
+<p>添加默认图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">testImag.kf_setImageWithURL(NSURL(string: &quot;http://your.png&quot;)!, placeholderImage: UIImage(named: &quot;mrt&quot;))</span><br></pre></td></tr></table></figure>
+<p>默认情况下Kingfisher使用url当做cache(缓存)的key。 不过你也可以自定义这个key 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let URL = NSURL(string: &quot;http://your.png&quot;)!</span><br><span class="line">let resource = Resource(downloadURL: URL, cacheKey: &quot;your_customized_key&quot;)</span><br><span class="line">imageView.kf_setImageWithResource(resource)</span><br></pre></td></tr></table></figure>
+<p>Kingfisher 默认先从内存和硬盘搜 ，如果没找到才去URL down，当然你也可以强制它每次从URL down，忽略缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imageView.kf_setImageWithURL(NSURL(string: &quot;your_image_url&quot;)!, placeholderImage: nil, optionsInfo: [.Options: KingfisherOptions.ForceRefresh])</span><br></pre></td></tr></table></figure>
+<p>下载和缓存系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">let downloader = KingfisherManager.sharedManager.downloader</span><br><span class="line"></span><br><span class="line">// 修改超时时间</span><br><span class="line">downloader.downloadTimeout = 5</span><br><span class="line"></span><br><span class="line">let cache = KingfisherManager.sharedManager.cache</span><br><span class="line"></span><br><span class="line">// 设置硬盘最大缓存50M ，默认无限</span><br><span class="line">cache.maxDiskCacheSize = 50 * 1024 * 1024</span><br><span class="line">// 设置硬盘最大保存3天 ， 默认1周</span><br><span class="line">cache.maxCachePeriodInSecond = 60 * 60 * 24 * 3</span><br><span class="line"></span><br><span class="line">// 获取硬盘缓存的大小</span><br><span class="line">cache.cache.calculateDiskCacheSizeWithCompletionHandler &#123; (size) -&gt; () in      </span><br><span class="line">    println(&quot;disk size in bytes: \(size)&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//清理内存缓存</span><br><span class="line">cache.clearMemoryCache()</span><br><span class="line"></span><br><span class="line">// 清理硬盘缓存，这是一个异步的操作</span><br><span class="line">cache.clearDiskCache()</span><br><span class="line"></span><br><span class="line">// 清理过期或大小超过磁盘限制缓存。这是一个异步的操作</span><br><span class="line">cache.cleanExpiredDiskCache()</span><br></pre></td></tr></table></figure>
+<p>回调</p>
+<p>下载完成后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">imageView.kf_setImageWithURL(NSURL(string: &quot;your_image_url&quot;)!, </span><br><span class="line">  placeholderImage: nil, </span><br><span class="line">  optionsInfo: nil, </span><br><span class="line">  progressBlock: &#123; (receivedSize, totalSize) -&gt; () in </span><br><span class="line">  println(&quot;Download Progress: \(receivedSize)/\(totalSize)&quot;) &#125;, </span><br><span class="line">  completionHandler: &#123; (image, error, imageURL) -&gt; () in </span><br><span class="line">  println(&quot;Downloaded and set!&quot;) </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/Kingfisher/" data-id="cja95imj9001qlf4ii2bocp5r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/Swift_ios_开发之UINavigationController的常用属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/Swift_ios_开发之UINavigationController的常用属性/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/Swift_ios_开发之UINavigationController的常用属性/">swift_ios_开发之UINavigationController的常用属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Swift开发之UINavigationController的常用属性</p>
+<p>1.导航栏是否隐藏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.navigationController?.navigationBar.hidden = false</span><br></pre></td></tr></table></figure>
+<p>2.导航栏的最底部颜色设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//backgroundColor 是最底下的color </span><br><span class="line">self.navigationController?.navigationBar.backgroundColor = UIColor.redColor()</span><br></pre></td></tr></table></figure>
+<p>3.导航栏的表层颜色，即首先看到的颜色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//barTintColor 是表层颜色</span><br><span class="line">self.navigationController?.navigationBar.barTintColor = UIColor.grayColor()</span><br></pre></td></tr></table></figure>
+<p>4.导航栏中间标题title的颜色，大小，字体设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blueColor(),NSFontAttributeName:UIFont(name: &quot;Heiti SC&quot;, size: 24.0)!]</span><br></pre></td></tr></table></figure>
+<p>5.导航栏隐藏左边backitem，即leftbarbuttonitem</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//完全隐藏backItem//</span><br><span class="line">self.navigationItem.setHidesBackButton(true, animated: true)</span><br></pre></td></tr></table></figure>
+<p>6.导航栏leftbarbuttonitem的颜色设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swiftself.navigationController?.navigationBar.tintColor = UIColor.whiteColor()</span><br></pre></td></tr></table></figure>
+<p>7.导航栏leftbarbuttonitem的字体，颜色，大小设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.blueColor(),NSFontAttributeName: UIFont(name: &quot;Chalkduster&quot;, size: 13)!], forState: UIControlState.Normal)</span><br></pre></td></tr></table></figure>
+<p>8.导航栏重新定义leftbarbuttonitem</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//重新定义backItem，将覆盖原来的BackItem.与storyboard中拖入一个item，效果一样。都是覆盖原来的backitem。</span><br><span class="line"></span><br><span class="line">//第一种代码定义方式</span><br><span class="line">self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: &quot;function&quot;), animated: true)</span><br><span class="line"></span><br><span class="line">//第二种代码定义方式 </span><br><span class="line">self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: &quot;function&quot;)</span><br><span class="line"></span><br><span class="line">//第三种代码定义的方式</span><br><span class="line">self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(title: &quot;&lt;Grandre&quot;, style: UIBarButtonItemStyle.Plain, target: self, action: &quot;function&quot;), animated: true)</span><br></pre></td></tr></table></figure>
+<p>9.导航栏设置成透明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//将导航栏设置成透明</span><br><span class="line">self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)</span><br><span class="line">self.navigationController!.navigationBar.shadowImage = UIImage()</span><br><span class="line">self.navigationController?.navigationBar.translucent = true</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/Swift_ios_开发之UINavigationController的常用属性/" data-id="cja95imjb001vlf4iej1d7t05" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/Swift代理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/Swift代理/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/Swift代理/">swift代理delegate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>实现代理传值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"></span><br><span class="line">class ViewController: UIViewController,ChangeValueDelegate&#123;</span><br><span class="line">    </span><br><span class="line">    var btn = UIButton()</span><br><span class="line"></span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(&quot;Change&quot;, forState:.Normal)</span><br><span class="line">        btn.backgroundColor = UIColor.blueColor()</span><br><span class="line">        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)</span><br><span class="line">        btn.addTarget(self, action: #selector(change), forControlEvents: .TouchUpInside)</span><br><span class="line">        self.view.addSubview(btn)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //    delegate 代理方法</span><br><span class="line">    func changeValue(value: String) &#123;</span><br><span class="line">        </span><br><span class="line">        btn.setTitle(value, forState: .Normal)</span><br><span class="line">        print(&quot;value:\(value)&quot;)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    //  传值</span><br><span class="line">    func change()&#123;</span><br><span class="line">        </span><br><span class="line">        let vc = ChangeValueViewController()</span><br><span class="line">        vc.delegate = self</span><br><span class="line">        self.navigationController?.pushViewController(vc, animated: true)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>协议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">protocol ChangeValueDelegate &#123;</span><br><span class="line">    </span><br><span class="line">    func changeValue(value:String)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用代理传值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class ChangeValueViewController: UIViewController &#123;</span><br><span class="line">    </span><br><span class="line">    var delegate:ChangeValueDelegate?</span><br><span class="line">    </span><br><span class="line">    override func viewDidLoad() &#123;</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        // Do any additional setup after loading the view.</span><br><span class="line">        self.view.backgroundColor = UIColor.whiteColor()</span><br><span class="line">        </span><br><span class="line">        self.delegate?.changeValue(&quot;ok&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">        // Dispose of any resources that can be recreated.</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/Swift代理/" data-id="cja95imjf001wlf4idklkyu2r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/delegate/">delegate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/Swift状态栏" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/Swift状态栏/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/Swift状态栏/">swift - 状态栏</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>状态栏</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 	//状态栏高度</span><br><span class="line"> 	let statusHeight = UIApplication.shared.statusBarFrame.height</span><br><span class="line">//导航栏高度</span><br><span class="line">  	let navigationHeight = self.navigationController?.navigationBar.frame.size.height</span><br></pre></td></tr></table></figure>
+<p>Swift - 隐藏状态栏（statusBar）的两种方法</p>
+<p>1，全局设置</p>
+<p>这种方法修改后，整个应用的所有视图都不显示状态栏。</p>
+<p>（1）在 Info.plist 中添加如下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;UIViewControllerBasedStatusBarAppearance&lt;/key&gt;</span><br><span class="line">&lt;false/&gt;</span><br></pre></td></tr></table></figure>
+<p>（2）在 General -&gt; Deployment Info 中，将 Hide status bar 勾选。</p>
+<p>2，在视图控制器中单独设置</p>
+<p>这用方法适合于只隐藏部分页面的状态栏。我们在需要隐藏 statusbar 的 ViewController 中添加如下代码即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"> </span><br><span class="line">class ViewController: UIViewController &#123;</span><br><span class="line">     </span><br><span class="line">    //隐藏状态栏</span><br><span class="line">    override var prefersStatusBarHidden: Bool &#123;</span><br><span class="line">        return true</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    override func didReceiveMemoryWarning() &#123;</span><br><span class="line">        super.didReceiveMemoryWarning()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/Swift状态栏/" data-id="cja95imji0020lf4i93ui2n5s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/UISreen类的屏幕大小" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/UISreen类的屏幕大小/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/UISreen类的屏幕大小/">swift-UISreen类的屏幕大小</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>获取 UISreen类的屏幕大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//获取屏幕大小</span><br><span class="line">var screenBounds:CGRect = UIScreen.mainScreen().bounds</span><br><span class="line">println(screenBounds) //iPhone6输出：（0.0,0.0,375.0,667.0）</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/UISreen类的屏幕大小/" data-id="cja95imjk0022lf4itjrkln27" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/UIView的常用属性和常用方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/UIView的常用属性和常用方法/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/UIView的常用属性和常用方法/">UIView的常用属性和常用方法总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>UIView的常用属性和常用方法总结</p>
+<p>1，UIView常用的一些属性如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">frame：相对父视图的坐标和大小（x,y,w,h）</span><br><span class="line">bounds：相对自身的坐标和大小，所以bounds的x和y永远为0（0,0,w,h）</span><br><span class="line">center：相对父视图的中点坐标</span><br><span class="line">transform：控制视图的放大缩小和旋转</span><br><span class="line">superview：获取父视图</span><br><span class="line">subviews：获取所有子视图</span><br><span class="line">alpha：视图的透明度（0.0-1.0）</span><br><span class="line">tag：视图的标志（Int类型，默认等于0），设置后，可以通过viewWithTag方法拿到这个视图</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<p>2，UIView的常用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">func removeFromSuperview()：将视图从父视图中移除</span><br><span class="line">func insertSubview(view:UIView, atIndex index:Int)：指定一个位置插入一个视图，index越小，视图越往下</span><br><span class="line">func exchangeSubviewAtIndex(index1:Int, withSubviewAtIndex index2:Int)：将index1和index2位置的两个视图互换位置</span><br><span class="line">func addSubview(view:UIView)：添加视图到父视图</span><br><span class="line">func insertSubview(view:UIView,belowSubview siblingSubview:UIView)：在指定视图的下面插入视图</span><br><span class="line">func insertSubview(view:UIVIew,aboveSubview siblingSubview:UIView)：在指定视图上面插入视图</span><br><span class="line">func bringSubviewToFront(view:UIView)：把视图移到最顶层</span><br><span class="line">func sendSubviewToBack(view:UIView)：把视图移到最底层</span><br><span class="line">func viewWithTag(tag:Int)-&gt;UIView?：根据tag值获取视图</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/UIView的常用属性和常用方法/" data-id="cja95imjn0027lf4izi92a2p8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reactNative/">reactNative</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reactNative/">reactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AVFoundation/" style="font-size: 14px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 14px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 14px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 14px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 18px;">hexo</a> <a href="/tags/ios/" style="font-size: 16px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 14px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12px;">python django</a> <a href="/tags/reactNative/" style="font-size: 10px;">reactNative</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/21/python/Django简介/">python Django简介</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/VR/webgl和three/">VR 书籍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/book/计算机书籍常用/">计算机书籍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/21/chrome/Chrome使用技巧/">cherome使用技巧</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 JackGuoFranklin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
