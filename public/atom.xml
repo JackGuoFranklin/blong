@@ -17,20 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python Django简介</title>
-    <link href="http://yoursite.com/2017/11/21/python/Django%E7%AE%80%E4%BB%8B/"/>
-    <id>http://yoursite.com/2017/11/21/python/Django简介/</id>
+    <title>python django新建项目</title>
+    <link href="http://yoursite.com/2017/11/21/python/%E5%BD%93%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/11/21/python/当提示端口被占用/</id>
     <published>2017-11-21T04:12:07.000Z</published>
     <updated>2017-11-21T04:12:07.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Django 简介<br>让我们一览 Django 全貌<br>urls.py<br>网址入口，关联到对应的views.py中的一个函数（或者generic类），访问网址就对应一个函数。</p><p>views.py<br>处理用户发出的请求，从urls.py中对应过来, 通过渲染templates中的网页可以将显示内容，比如登陆后的用户名，用户请求的数据，输出到网页。</p><p>models.py<br>与数据库操作相关，存入或读取数据时用到这个，当然用不到数据库的时候 你可以不使用。</p><p>forms.py<br>表单，用户在浏览器上输入数据提交，对数据的验证工作以及输入框的生成等工作，当然你也可以不使用。</p><p>templates 文件夹</p><p>views.py 中的函数渲染templates中的Html模板，得到动态内容的网页，当然可以用缓存来提高速度。</p><p>admin.py<br>后台，可以用很少量的代码就拥有一个强大的后台。</p><p>settings.py<br>Django 的设置，配置文件，比如 DEBUG 的开关，静态文件的位置等。</p>]]></content>
+    <content type="html"><![CDATA[<p>1 新建一个 django project</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin.py startproject project-name</span><br></pre></td></tr></table></figure><p>一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）</p><p>2 新建 app</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp app-name</span><br><span class="line">或 django-admin.py startapp app-name</span><br></pre></td></tr></table></figure><p>一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。</p><p>3 同步数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python manage.py syncdb</span><br><span class="line"> </span><br><span class="line">注意：Django 1.7.1及以上的版本需要用以下命令</span><br><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure><p>这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。</p><p>备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具 south,详见 Django 数据库迁移 一节。</p><p>4 使用开发服务器<br>开发服务器，即开发时使用，一般修改代码后会自动重启，方便调试和开发，但是由于性能问题，建议只用来测试，不要用在生产环境。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br><span class="line"> </span><br><span class="line"># 当提示端口被占用的时候，可以用其它端口：</span><br><span class="line">python manage.py runserver 8001</span><br><span class="line">python manage.py runserver 9999</span><br><span class="line">（当然也可以kill掉占用端口的进程）</span><br><span class="line"> </span><br><span class="line"># 监听所有可用 ip （电脑可能有一个或多个内网ip，一个或多个外网ip，即有多个ip地址）</span><br><span class="line">python manage.py runserver 0.0.0.0:8000</span><br><span class="line"># 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器</span><br><span class="line"># 访问对应的 ip加端口，比如 http://172.16.20.2:8000</span><br></pre></td></tr></table></figure><p> 5 清空数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py flush</span><br></pre></td></tr></table></figure><p>此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。</p><p>6  创建超级管理员</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br><span class="line"> </span><br><span class="line"># 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填</span><br><span class="line"> </span><br><span class="line"># 修改 用户密码可以用：</span><br><span class="line">python manage.py changepassword username</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Django 简介&lt;br&gt;让我们一览 Django 全貌&lt;br&gt;urls.py&lt;br&gt;网址入口，关联到对应的views.py中的一个函数（或者generic类），访问网址就对应一个函数。&lt;/p&gt;
-&lt;p&gt;views.py&lt;br&gt;处理用户发出的请求，从urls.py中对应过来,
+        &lt;p&gt;1 新建一个 django project&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;t
       
     
     </summary>
@@ -64,30 +64,29 @@
   </entry>
   
   <entry>
-    <title>VR 书籍</title>
-    <link href="http://yoursite.com/2017/11/21/VR/webgl%E5%92%8Cthree/"/>
-    <id>http://yoursite.com/2017/11/21/VR/webgl和three/</id>
+    <title>android studio启动慢</title>
+    <link href="http://yoursite.com/2017/11/21/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/"/>
+    <id>http://yoursite.com/2017/11/21/android/androidstudio启动慢/</id>
     <published>2017-11-21T04:12:07.000Z</published>
     <updated>2017-11-21T04:12:07.000Z</updated>
     
-    <content type="html"><![CDATA[<p>#WebGL和Three.js</p><p>1</p><p>github<a href="https://github.com/mrdoob/three.js/" target="_blank" rel="noopener">Three.js</a></p><p><a href="http://threejs.org/" target="_blank" rel="noopener">threejs.org</a></p><p>2</p><p><a href="http://learningthreejs.com" target="_blank" rel="noopener">Learning Three.js</a></p><p>3</p><p>WebGL编程指南<br>百度网盘</p><p>4</p><p>Three.js Inspector</p><p>Chrome 插件</p><p>5</p><p><a href="http://www.ituring.com.cn/article/58552?utm_source=qdan.me#/" target="_blank" rel="noopener">Three.js入门指南</a></p><p>6</p><p><a href="http://blog.csdn.net/wangyi_lin/article/details/7384191?utm_source=qdan.me#/" target="_blank" rel="noopener">关于怎样使用three.js的小教程</a></p><p>7</p><p><a href="http://void.hi-res.net/" target="_blank" rel="noopener">各种案例</a></p><p>8</p><p><a href="http://www.smashinglabs.pl/three-js-tetris-tutorial" target="_blank" rel="noopener">three-js-tetris-tutorial</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？"><a href="#android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？" class="headerlink" title="android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？"></a>android studio每次启动都要在fetching Android sdk compoment information停好久 怎么解决？</h3><p>1）进入刚安装的Android Studio目录下的bin目录。找到idea.properties文件，用文本编辑器打开。</p><p>2）在idea.properties文件末尾添加一行： disable.android.first.run=true ，然后保存文件。</p><p>3）关闭Android Studio后重新启动，便可进入界面。</p><p>可以解决。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#WebGL和Three.js&lt;/p&gt;
-&lt;p&gt;1&lt;/p&gt;
-&lt;p&gt;github&lt;a href=&quot;https://github.com/mrdoob/three.js/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Three.js&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a
+        &lt;h3 id=&quot;android-studio每次启动都要在fetching-Android-sdk-compoment-information停好久-怎么解决？&quot;&gt;&lt;a href=&quot;#android-studio每次启动都要在fetching-Android-sdk-compom
       
     
     </summary>
     
-      <category term="VR" scheme="http://yoursite.com/categories/VR/"/>
+      <category term="android" scheme="http://yoursite.com/categories/android/"/>
     
     
-      <category term="VR" scheme="http://yoursite.com/tags/VR/"/>
+      <category term="android" scheme="http://yoursite.com/tags/android/"/>
+    
+      <category term="android studio" scheme="http://yoursite.com/tags/android-studio/"/>
     
   </entry>
   
@@ -124,31 +123,6 @@
   </entry>
   
   <entry>
-    <title>cherome使用技巧</title>
-    <link href="http://yoursite.com/2017/11/21/chrome/Chrome%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://yoursite.com/2017/11/21/chrome/Chrome使用技巧/</id>
-    <published>2017-11-21T04:12:07.000Z</published>
-    <updated>2017-11-21T04:12:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="cherome-使用技巧"><a href="#cherome-使用技巧" class="headerlink" title="cherome 使用技巧"></a>cherome 使用技巧</h3><p>Infinity(必备)：善心悦目的背景，而且可以自定图标。（鼠标滚轮可以翻页）</p><p>AdBlock（必备）：到现在帮我屏蔽了上万条广告</p><p>视频广告终结者：在不办任何会员的情况下，基本上所有视频都没广告了，</p><p>Google翻译：一键翻译</p><p>Tab Sync</p><p>有时5点钟流逝的太早。也许你正沦陷于一个很重要的工作项目，或者你正娱乐到一半，但现在是时候出发了。一种解决方案是保存所有打开的标签为书签，打开书签同步，回家后一个一个的打开。或者你可以安装Tab Sync。顾名思义，这个工具同步你所有已打开的标签页。只要按一下按钮，你就可以安心出发。</p><p>Tab Menu</p><p>这对于经常同时打开超过10个标签的人来说极其方便，并且你打开的标签越多，你就更多的使用这个扩展。轻松的在一个下拉菜单中完成诸如选择、关闭、重新排列、查找等更多功能。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;cherome-使用技巧&quot;&gt;&lt;a href=&quot;#cherome-使用技巧&quot; class=&quot;headerlink&quot; title=&quot;cherome 使用技巧&quot;&gt;&lt;/a&gt;cherome 使用技巧&lt;/h3&gt;&lt;p&gt;Infinity(必备)：善心悦目的背景，而且可以自定图标。
-      
-    
-    </summary>
-    
-      <category term="chrome" scheme="http://yoursite.com/categories/chrome/"/>
-    
-    
-      <category term="cherome" scheme="http://yoursite.com/tags/cherome/"/>
-    
-  </entry>
-  
-  <entry>
     <title>github插件1</title>
     <link href="http://yoursite.com/2017/11/21/github/github%E6%8F%92%E4%BB%B61/"/>
     <id>http://yoursite.com/2017/11/21/github/github插件1/</id>
@@ -174,6 +148,31 @@
       <category term="github" scheme="http://yoursite.com/tags/github/"/>
     
       <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cherome使用技巧</title>
+    <link href="http://yoursite.com/2017/11/21/chrome/Chrome%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2017/11/21/chrome/Chrome使用技巧/</id>
+    <published>2017-11-21T04:12:07.000Z</published>
+    <updated>2017-11-21T04:12:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="cherome-使用技巧"><a href="#cherome-使用技巧" class="headerlink" title="cherome 使用技巧"></a>cherome 使用技巧</h3><p>Infinity(必备)：善心悦目的背景，而且可以自定图标。（鼠标滚轮可以翻页）</p><p>AdBlock（必备）：到现在帮我屏蔽了上万条广告</p><p>视频广告终结者：在不办任何会员的情况下，基本上所有视频都没广告了，</p><p>Google翻译：一键翻译</p><p>Tab Sync</p><p>有时5点钟流逝的太早。也许你正沦陷于一个很重要的工作项目，或者你正娱乐到一半，但现在是时候出发了。一种解决方案是保存所有打开的标签为书签，打开书签同步，回家后一个一个的打开。或者你可以安装Tab Sync。顾名思义，这个工具同步你所有已打开的标签页。只要按一下按钮，你就可以安心出发。</p><p>Tab Menu</p><p>这对于经常同时打开超过10个标签的人来说极其方便，并且你打开的标签越多，你就更多的使用这个扩展。轻松的在一个下拉菜单中完成诸如选择、关闭、重新排列、查找等更多功能。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;cherome-使用技巧&quot;&gt;&lt;a href=&quot;#cherome-使用技巧&quot; class=&quot;headerlink&quot; title=&quot;cherome 使用技巧&quot;&gt;&lt;/a&gt;cherome 使用技巧&lt;/h3&gt;&lt;p&gt;Infinity(必备)：善心悦目的背景，而且可以自定图标。
+      
+    
+    </summary>
+    
+      <category term="chrome" scheme="http://yoursite.com/categories/chrome/"/>
+    
+    
+      <category term="cherome" scheme="http://yoursite.com/tags/cherome/"/>
     
   </entry>
   
@@ -264,6 +263,60 @@
       <category term="git@osChina" scheme="http://yoursite.com/tags/git-osChina/"/>
     
       <category term="sourceTree" scheme="http://yoursite.com/tags/sourceTree/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ios cocoapods 安装第三方库错误</title>
+    <link href="http://yoursite.com/2017/11/21/ios/%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/"/>
+    <id>http://yoursite.com/2017/11/21/ios/错误日志/</id>
+    <published>2017-11-21T04:12:07.000Z</published>
+    <updated>2017-11-21T04:12:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#错误日志</p><p>###The dependency <code>***</code> is not used in any concrete target.<br>在Podfile文件中必须指明</p><p>target “**” do </p><p>pod “<em>**</em>“</p><p>end</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#错误日志&lt;/p&gt;
+&lt;p&gt;###The dependency &lt;code&gt;***&lt;/code&gt; is not used in any concrete target.&lt;br&gt;在Podfile文件中必须指明&lt;/p&gt;
+&lt;p&gt;target “**” do &lt;/p&gt;
+&lt;p&gt;pod 
+      
+    
+    </summary>
+    
+      <category term="ios cocoapods" scheme="http://yoursite.com/categories/ios-cocoapods/"/>
+    
+    
+      <category term="cocoapods" scheme="http://yoursite.com/tags/cocoapods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql 更改密码</title>
+    <link href="http://yoursite.com/2017/11/21/mysql/mysql%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81/"/>
+    <id>http://yoursite.com/2017/11/21/mysql/mysql更改密码/</id>
+    <published>2017-11-21T04:12:07.000Z</published>
+    <updated>2017-11-21T04:12:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>mysql 更改密码<br>此时我们在命令行输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><p>命令会提示没有commod not found，我们还需要将mysql加入系统环境变量。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(1).进入/usr/local/mysql/bin,查看此目录下是否有mysql，见pic6。</span><br><span class="line">(2).执行vim ~/.bash_profile</span><br><span class="line">    在该文件中添加mysql/bin的目录，见pic7：</span><br><span class="line">    PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">添加完成后，按esc，然后输入wq保存。</span><br><span class="line">最后在命令行输入source ~/.bash_profile</span><br></pre></td></tr></table></figure><p>现在你就可以通过mysql -u root -p登录mysql了，会让你输入密码，就是提示的默认密码<br>登录成功后，你可以通过下面的命令修改密码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newpass&apos;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;mysql 更改密码&lt;br&gt;此时我们在命令行输入&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td
+      
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
     
   </entry>
   
@@ -378,63 +431,6 @@
   </entry>
   
   <entry>
-    <title>标签栏按钮UITabBarItem样式修改</title>
-    <link href="http://yoursite.com/2017/11/21/swift/%E6%A0%87%E7%AD%BE%E6%A0%8F%E6%8C%89%E9%92%AEUITabBarItem%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/"/>
-    <id>http://yoursite.com/2017/11/21/swift/标签栏按钮UITabBarItem样式修改/</id>
-    <published>2017-11-21T04:12:07.000Z</published>
-    <updated>2017-11-21T04:12:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Swift - 标签栏按钮UITabBarItem样式修改</p><p>1，tabBarItem图片的推荐尺寸和最大支持尺寸<br>下面是标签栏（UITabBar）中tab按钮图标分别在1x、2x、3x下不会压缩变形的尺寸：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@1x : 推荐 25 x 25   (最大: 48 x 32)</span><br><span class="line">@2x : 推荐 50 x 50   (最大: 96 x 64)</span><br><span class="line">@3x : 推荐 75 x 75   (最大: 144 x 96)</span><br></pre></td></tr></table></figure><p>2，修改图片和文字的颜色<br>（1）图片和文字同时改变</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//图片文字一起变色</span><br><span class="line">self.tabBar.tintColor = UIColor.orange()</span><br></pre></td></tr></table></figure><p>（2）只改变文字颜色</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//改变文字颜色</span><br><span class="line">UITabBarItem.appearance().setTitleTextAttributes(</span><br><span class="line">    [NSForegroundColorAttributeName: UIColor.gray], forState:.normal)</span><br><span class="line">UITabBarItem.appearance().setTitleTextAttributes(</span><br><span class="line">    [NSForegroundColorAttributeName: UIColor.orange], forState:.selected)</span><br></pre></td></tr></table></figure><p>（3）只改变图片颜色</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">self.tabBar.tintColor = UIColor.orange()</span><br><span class="line">//文字颜色还原</span><br><span class="line">UITabBarItem.appearance().setTitleTextAttributes(</span><br><span class="line">    [NSForegroundColorAttributeName: self.view.tintColor], forState:.selected)</span><br></pre></td></tr></table></figure><p>3，选中时、不选中时使用不同图片<br>默认标签选中、不选中都使用的是同一个图片，只是颜色不同。我们也可使用两张不同图片表示两种状态。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">qq.tabBarItem = UITabBarItem(title: &quot;QQ&quot;, image: UIImage(named: &quot;qq&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;qq_active&quot;))</span><br><span class="line"> </span><br><span class="line">android.tabBarItem = UITabBarItem(title: &quot;Android&quot;, image: UIImage(named: &quot;android&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;android_active&quot;))</span><br></pre></td></tr></table></figure><p>4，使用图片的原始颜色<br>默认不管原图是什么颜色，渲染器都会将渲染成单一颜色，虽说符合现在扁平化的趋势，但有时我们还是想要使用图片原来的样子。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">qq.tabBarItem =  UITabBarItem(title: &quot;QQ&quot;, image: UIImage(named: &quot;qq_color&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;qq_color&quot;)?.imageWithRenderingMode(.AlwaysOriginal))</span><br><span class="line"> </span><br><span class="line">android.tabBarItem =  UITabBarItem(title: &quot;Android&quot;, image: UIImage(named: &quot;android_color&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;android_color&quot;)?.imageWithRenderingMode(.AlwaysOriginal))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Swift - 标签栏按钮UITabBarItem样式修改&lt;/p&gt;
-&lt;p&gt;1，tabBarItem图片的推荐尺寸和最大支持尺寸&lt;br&gt;下面是标签栏（UITabBar）中tab按钮图标分别在1x、2x、3x下不会压缩变形的尺寸：&lt;/p&gt;
-&lt;figure class=&quot;high
-      
-    
-    </summary>
-    
-      <category term="swift" scheme="http://yoursite.com/categories/swift/"/>
-    
-    
-      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
-    
-      <category term="UITabBarItem" scheme="http://yoursite.com/tags/UITabBarItem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ios cocoapods 安装第三方库错误</title>
-    <link href="http://yoursite.com/2017/11/21/ios/%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/"/>
-    <id>http://yoursite.com/2017/11/21/ios/错误日志/</id>
-    <published>2017-11-21T04:12:07.000Z</published>
-    <updated>2017-11-21T04:12:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>#错误日志</p><p>###The dependency <code>***</code> is not used in any concrete target.<br>在Podfile文件中必须指明</p><p>target “**” do </p><p>pod “<em>**</em>“</p><p>end</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#错误日志&lt;/p&gt;
-&lt;p&gt;###The dependency &lt;code&gt;***&lt;/code&gt; is not used in any concrete target.&lt;br&gt;在Podfile文件中必须指明&lt;/p&gt;
-&lt;p&gt;target “**” do &lt;/p&gt;
-&lt;p&gt;pod 
-      
-    
-    </summary>
-    
-      <category term="ios cocoapods" scheme="http://yoursite.com/categories/ios-cocoapods/"/>
-    
-    
-      <category term="cocoapods" scheme="http://yoursite.com/tags/cocoapods/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iterm2配色</title>
     <link href="http://yoursite.com/2017/11/21/mac/iterm2%E9%85%8D%E8%89%B2/"/>
     <id>http://yoursite.com/2017/11/21/mac/iterm2配色/</id>
@@ -540,28 +536,29 @@
   </entry>
   
   <entry>
-    <title>mysql 更改密码</title>
-    <link href="http://yoursite.com/2017/11/21/mysql/mysql%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81/"/>
-    <id>http://yoursite.com/2017/11/21/mysql/mysql更改密码/</id>
+    <title>node.js 版本升级</title>
+    <link href="http://yoursite.com/2017/11/21/nodejs/node.js%20%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/"/>
+    <id>http://yoursite.com/2017/11/21/nodejs/node.js 版本升级/</id>
     <published>2017-11-21T04:12:07.000Z</published>
     <updated>2017-11-21T04:12:07.000Z</updated>
     
-    <content type="html"><![CDATA[<p>mysql 更改密码<br>此时我们在命令行输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><p>命令会提示没有commod not found，我们还需要将mysql加入系统环境变量。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(1).进入/usr/local/mysql/bin,查看此目录下是否有mysql，见pic6。</span><br><span class="line">(2).执行vim ~/.bash_profile</span><br><span class="line">    在该文件中添加mysql/bin的目录，见pic7：</span><br><span class="line">    PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">添加完成后，按esc，然后输入wq保存。</span><br><span class="line">最后在命令行输入source ~/.bash_profile</span><br></pre></td></tr></table></figure><p>现在你就可以通过mysql -u root -p登录mysql了，会让你输入密码，就是提示的默认密码<br>登录成功后，你可以通过下面的命令修改密码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newpass&apos;)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>一行命令搞定node.js 版本升级</p><p>首先安装n模块：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br></pre></td></tr></table></figure><p>第二步：<br>升级node.js到最新稳定版</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n stable</span><br></pre></td></tr></table></figure><p>n后面也可以跟随版本号比如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n v0.10.26</span><br><span class="line">或</span><br><span class="line">n 0.10.26</span><br></pre></td></tr></table></figure><p>另外分享几个npm的常用命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">npm -v          #显示版本，检查npm 是否正确安装。</span><br><span class="line"></span><br><span class="line">npm install express   #安装express模块</span><br><span class="line"></span><br><span class="line">npm install -g express  #全局安装express模块</span><br><span class="line"></span><br><span class="line">npm list         #列出已安装模块</span><br><span class="line"></span><br><span class="line">npm show express     #显示模块详情</span><br><span class="line"></span><br><span class="line">npm update        #升级当前目录下的项目的所有模块</span><br><span class="line"></span><br><span class="line">npm update express    #升级当前目录下的项目的指定模块</span><br><span class="line"></span><br><span class="line">npm update -g express  #升级全局安装的express模块</span><br><span class="line"></span><br><span class="line">npm uninstall express  #删除指定的模块</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;mysql 更改密码&lt;br&gt;此时我们在命令行输入&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td
+        &lt;p&gt;一行命令搞定node.js 版本升级&lt;/p&gt;
+&lt;p&gt;首先安装n模块：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;
       
     
     </summary>
     
-      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+      <category term="node.js" scheme="http://yoursite.com/categories/node-js/"/>
     
     
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
     
   </entry>
   

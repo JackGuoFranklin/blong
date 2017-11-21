@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2017/11/21/reactNative/reactNative%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2017-11-21T04:59:56.000Z</lastmod>
+    <lastmod>2017-11-21T07:22:17.000Z</lastmod>
     <data>
         <display>
         <title>reactNative开发环境搭建</title>
@@ -24,19 +24,19 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/python/%E5%BD%93%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/</loc>
+    <loc>http://yoursite.com/2017/11/21/swift/Kingfisher/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
         <display>
-        <title>python django新建项目</title>
+        <title>Swift 图片下载</title>
         <pubTime>2017-11-21T04:12:07.000Z</pubTime>
         
-        <tag>python django</tag>
+        <tag>swift</tag>
          
          
            
              
-              <breadCrumb title="python django" url="http://yoursite.com/categories/python-django/"/>
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
           
         </display>
     </data>
@@ -44,19 +44,21 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/VR/webgl%E5%92%8Cthree/</loc>
+    <loc>http://yoursite.com/2017/11/21/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
         <display>
-        <title>VR 书籍</title>
+        <title>android studio启动慢</title>
         <pubTime>2017-11-21T04:12:07.000Z</pubTime>
         
-        <tag>VR</tag>
+        <tag>android</tag>
+         
+        <tag>android studio</tag>
          
          
            
              
-              <breadCrumb title="VR" url="http://yoursite.com/categories/VR/"/>
+              <breadCrumb title="android" url="http://yoursite.com/categories/android/"/>
           
         </display>
     </data>
@@ -84,26 +86,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/chrome/Chrome%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>cherome使用技巧</title>
-        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
-        
-        <tag>cherome</tag>
-         
-         
-           
-             
-              <breadCrumb title="chrome" url="http://yoursite.com/categories/chrome/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/11/21/github/github%E6%8F%92%E4%BB%B61/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
@@ -119,6 +101,26 @@
            
              
               <breadCrumb title="github" url="http://yoursite.com/categories/github/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/11/21/chrome/Chrome%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>cherome使用技巧</title>
+        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
+        
+        <tag>cherome</tag>
+         
+         
+           
+             
+              <breadCrumb title="chrome" url="http://yoursite.com/categories/chrome/"/>
           
         </display>
     </data>
@@ -187,6 +189,46 @@
            
              
               <breadCrumb title="git" url="http://yoursite.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/11/21/ios/%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>ios cocoapods 安装第三方库错误</title>
+        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
+        
+        <tag>cocoapods</tag>
+         
+         
+           
+             
+              <breadCrumb title="ios cocoapods" url="http://yoursite.com/categories/ios-cocoapods/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/11/21/mysql/mysql%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81/</loc>
+    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>mysql 更改密码</title>
+        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="mysql" url="http://yoursite.com/categories/mysql/"/>
           
         </display>
     </data>
@@ -277,27 +319,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://yoursite.com/2017/11/21/ios/%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>ios cocoapods 安装第三方库错误</title>
-        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
-        
-        <tag>cocoapods</tag>
-         
-         
-           
-             
-              <breadCrumb title="ios cocoapods" url="http://yoursite.com/categories/ios-cocoapods/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>http://yoursite.com/2017/11/21/mac/iterm2%E9%85%8D%E8%89%B2/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
@@ -379,26 +400,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/mysql/mysql%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81/</loc>
-    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>mysql 更改密码</title>
-        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="mysql" url="http://yoursite.com/categories/mysql/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/11/21/nodejs/node.js%20%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
@@ -439,21 +440,19 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/android/androidstudio%E5%90%AF%E5%8A%A8%E6%85%A2/</loc>
+    <loc>http://yoursite.com/2017/11/21/python/%E5%BD%93%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
         <display>
-        <title>android studio启动慢</title>
+        <title>python django新建项目</title>
         <pubTime>2017-11-21T04:12:07.000Z</pubTime>
         
-        <tag>android</tag>
-         
-        <tag>android studio</tag>
+        <tag>python django</tag>
          
          
            
              
-              <breadCrumb title="android" url="http://yoursite.com/categories/android/"/>
+              <breadCrumb title="python django" url="http://yoursite.com/categories/python-django/"/>
           
         </display>
     </data>
@@ -461,34 +460,19 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/hello-world/</loc>
+    <loc>http://yoursite.com/2017/11/21/VR/webgl%E5%92%8Cthree/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
+        <title>VR 书籍</title>
         <pubTime>2017-11-21T04:12:07.000Z</pubTime>
         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/11/21/swift/Kingfisher/</loc>
-    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Swift 图片下载</title>
-        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
-        
-        <tag>swift</tag>
+        <tag>VR</tag>
          
          
            
              
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
+              <breadCrumb title="VR" url="http://yoursite.com/categories/VR/"/>
           
         </display>
     </data>
@@ -562,6 +546,21 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/11/21/hello-world/</loc>
+    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/11/21/swift/UISreen%E7%B1%BB%E7%9A%84%E5%B1%8F%E5%B9%95%E5%A4%A7%E5%B0%8F/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
@@ -580,6 +579,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://yoursite.com/2017/11/21/swift/UIView%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
@@ -714,11 +714,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A81/</loc>
+    <loc>http://yoursite.com/2017/11/21/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A82/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
         <display>
-        <title>swift-SnapKit自动布局使用1</title>
+        <title>swift-SnapKit自动布局使用2</title>
         <pubTime>2017-11-21T04:12:07.000Z</pubTime>
         
         <tag>swift</tag>
@@ -736,11 +736,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A82/</loc>
+    <loc>http://yoursite.com/2017/11/21/swift/swift-SnapKit%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E4%BD%BF%E7%94%A81/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
         <display>
-        <title>swift-SnapKit自动布局使用2</title>
+        <title>swift-SnapKit自动布局使用1</title>
         <pubTime>2017-11-21T04:12:07.000Z</pubTime>
         
         <tag>swift</tag>
@@ -804,26 +804,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/21/swift/%E6%8C%89%E9%92%AE%EF%BC%88UIButton%EF%BC%89%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
-    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>按钮（UIButton）的用法</title>
-        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
-        
-        <tag>swift</tag>
-         
-         
-           
-             
-              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/11/21/swift/%E6%A0%87%E7%AD%BE%E6%A0%8F%E6%8C%89%E9%92%AEUITabBarItem%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/</loc>
     <lastmod>2017-11-21T04:12:07.000Z</lastmod>
     <data>
@@ -859,6 +839,26 @@
            
              
               <breadCrumb title="ios" url="http://yoursite.com/categories/ios/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/11/21/swift/%E6%8C%89%E9%92%AE%EF%BC%88UIButton%EF%BC%89%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
+    <lastmod>2017-11-21T04:12:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>按钮（UIButton）的用法</title>
+        <pubTime>2017-11-21T04:12:07.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://yoursite.com/categories/swift/"/>
           
         </display>
     </data>

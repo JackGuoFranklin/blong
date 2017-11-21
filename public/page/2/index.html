@@ -56,9 +56,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -68,6 +68,160 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-mysql/mysql更改密码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/mysql/mysql更改密码/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mysql/">mysql</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/mysql/mysql更改密码/">mysql 更改密码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>mysql 更改密码<br>此时我们在命令行输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>命令会提示没有commod not found，我们还需要将mysql加入系统环境变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(1).进入/usr/local/mysql/bin,查看此目录下是否有mysql，见pic6。</span><br><span class="line">(2).执行vim ~/.bash_profile</span><br><span class="line">    在该文件中添加mysql/bin的目录，见pic7：</span><br><span class="line">    PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">添加完成后，按esc，然后输入wq保存。</span><br><span class="line">最后在命令行输入source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>现在你就可以通过mysql -u root -p登录mysql了，会让你输入密码，就是提示的默认密码<br>登录成功后，你可以通过下面的命令修改密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newpass&apos;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/mysql/mysql更改密码/" data-id="cja9an380000nhz4iajkcni50" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo/HexoNext配置主题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/hexo/HexoNext配置主题/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/hexo/HexoNext配置主题/">Hexo Next 配置主观</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>在主目录下_config.yml 中配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>代码</th>
+<th>设定值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>en</td>
+<td>language: en</td>
+</tr>
+<tr>
+<td>简体中文</td>
+<td>zh-Hans</td>
+<td>language: zh-Hans</td>
+</tr>
+</tbody>
+</table>
+<h3 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h3><p>菜单配置在 主题配置文件的 menu</p>
+<p>菜单示例配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  #about: /about</span><br><span class="line">  #categories: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /404.html</span><br></pre></td></tr></table></figure>
+<h3 id="侧栏设置"><a href="#侧栏设置" class="headerlink" title="侧栏设置"></a>侧栏设置</h3><p>配置选项</p>
+<ul>
+<li>post - 默认行为，在文章页面（拥有目录列表）时显示</li>
+<li>always - 在所有页面中都显示</li>
+<li>hide - 在所有页面中都隐藏（可以手动展开）</li>
+</ul>
+<p>侧栏示例配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sidebar: post</span><br></pre></td></tr></table></figure>
+<h3 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h3><p>新增字段 avatar</p>
+<p>1 完整的互联网 URL    <a href="https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460" target="_blank" rel="noopener">https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</a></p>
+<p>2 站点内的地址    /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/ （可能需要新建uploads目录）</p>
+<p>3 /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下</p>
+<h3 id="作者名称"><a href="#作者名称" class="headerlink" title="作者名称"></a>作者名称</h3><p>设置 author 为你的昵称</p>
+<h3 id="站点描述设置"><a href="#站点描述设置" class="headerlink" title="站点描述设置"></a>站点描述设置</h3><p>设置 description 字段为你的站点描述。</p>
+<h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><p>1 定位到 Hexo 站点目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>2编辑刚新建的页面，将页面的类型设置为 tags </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+<p>3  添加 tags 到 menu 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br></pre></td></tr></table></figure>
+<h3 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h3><p>1 定位到 Hexo 站点目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>2编辑刚新建的页面，将页面的类型设置为 categories </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+<p>3  添加 categories 到 menu 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  categories: /categories</span><br></pre></td></tr></table></figure>
+<h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><p>NexT 默认使用的是 白色的 normal 主题,可选的值有 normal，night， night blue， night bright， night eighties.</p>
+<p>更改 highlight_theme 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Code Highlight theme</span><br><span class="line"># Available value: normal | night | night eighties | night blue | night bright</span><br><span class="line"># https://github.com/chriskempson/tomorrow-theme</span><br><span class="line">highlight_theme: normal</span><br></pre></td></tr></table></figure>
+<h3 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h3><p>1<br>接放置在 social 字段下，一行一个链接。其键值格式是 显示文本: 链接地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/your-user-name</span><br><span class="line">  Twitter: https://twitter.com/your-user-name</span><br><span class="line">  微博: http://weibo.com/your-user-name</span><br><span class="line">  豆瓣: http://douban.com/people/your-user-name</span><br><span class="line">  知乎: http://www.zhihu.com/people/your-user-name</span><br><span class="line">  # 等等</span><br></pre></td></tr></table></figure>
+<p>2 设定链接的图标，对应的字段是 social_icons。其键值格式是 匹配键: Font Awesome 图标名称， 匹配键 与上一步所配置的链接的 显示文本 相同（大小写严格匹配），图标名称 是 Font Awesome 图标的名字（不必带 fa- 前缀）。 enable 选项用于控制是否显示图标，你可以设置成 false 来去掉图标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Social Icons</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
+<h3 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h3><p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
+<ul>
+<li>false：禁用 RSS，不在页面上显示 RSS 连接。</li>
+<li>留空：使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。</li>
+<li>具体的链接地址：适用于已经烧制过 Feed 的情形。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/hexo/HexoNext配置主题/" data-id="cja9an381000phz4ilgf0c764" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">next</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-hexo/Hexo初步教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -144,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo初步教程/" data-id="cja95imie000olf4ii844ah2e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo初步教程/" data-id="cja9an384000uhz4i6oj6w09b" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -200,7 +354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo更换主题Next/" data-id="cja95imig000qlf4i6q1ap1q4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo更换主题Next/" data-id="cja9an386000whz4is473wlvc" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -284,112 +438,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo评论与站点统计系统/" data-id="cja95imii000ulf4in3uu09lu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo评论与站点统计系统/" data-id="cja9an388000yhz4iousir508" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">next</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-swift/标签栏按钮UITabBarItem样式修改" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/21/swift/标签栏按钮UITabBarItem样式修改/" class="article-date">
-  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/swift/">swift</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/swift/标签栏按钮UITabBarItem样式修改/">标签栏按钮UITabBarItem样式修改</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Swift - 标签栏按钮UITabBarItem样式修改</p>
-<p>1，tabBarItem图片的推荐尺寸和最大支持尺寸<br>下面是标签栏（UITabBar）中tab按钮图标分别在1x、2x、3x下不会压缩变形的尺寸：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@1x : 推荐 25 x 25   (最大: 48 x 32)</span><br><span class="line">@2x : 推荐 50 x 50   (最大: 96 x 64)</span><br><span class="line">@3x : 推荐 75 x 75   (最大: 144 x 96)</span><br></pre></td></tr></table></figure>
-<p>2，修改图片和文字的颜色<br>（1）图片和文字同时改变</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//图片文字一起变色</span><br><span class="line">self.tabBar.tintColor = UIColor.orange()</span><br></pre></td></tr></table></figure>
-<p>（2）只改变文字颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//改变文字颜色</span><br><span class="line">UITabBarItem.appearance().setTitleTextAttributes(</span><br><span class="line">    [NSForegroundColorAttributeName: UIColor.gray], forState:.normal)</span><br><span class="line">UITabBarItem.appearance().setTitleTextAttributes(</span><br><span class="line">    [NSForegroundColorAttributeName: UIColor.orange], forState:.selected)</span><br></pre></td></tr></table></figure>
-<p>（3）只改变图片颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">self.tabBar.tintColor = UIColor.orange()</span><br><span class="line">//文字颜色还原</span><br><span class="line">UITabBarItem.appearance().setTitleTextAttributes(</span><br><span class="line">    [NSForegroundColorAttributeName: self.view.tintColor], forState:.selected)</span><br></pre></td></tr></table></figure>
-<p>3，选中时、不选中时使用不同图片<br>默认标签选中、不选中都使用的是同一个图片，只是颜色不同。我们也可使用两张不同图片表示两种状态。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">qq.tabBarItem = UITabBarItem(title: &quot;QQ&quot;, image: UIImage(named: &quot;qq&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;qq_active&quot;))</span><br><span class="line"> </span><br><span class="line">android.tabBarItem = UITabBarItem(title: &quot;Android&quot;, image: UIImage(named: &quot;android&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;android_active&quot;))</span><br></pre></td></tr></table></figure>
-<p>4，使用图片的原始颜色<br>默认不管原图是什么颜色，渲染器都会将渲染成单一颜色，虽说符合现在扁平化的趋势，但有时我们还是想要使用图片原来的样子。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">qq.tabBarItem =  UITabBarItem(title: &quot;QQ&quot;, image: UIImage(named: &quot;qq_color&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;qq_color&quot;)?.imageWithRenderingMode(.AlwaysOriginal))</span><br><span class="line"> </span><br><span class="line">android.tabBarItem =  UITabBarItem(title: &quot;Android&quot;, image: UIImage(named: &quot;android_color&quot;),</span><br><span class="line">    selectedImage: UIImage(named: &quot;android_color&quot;)?.imageWithRenderingMode(.AlwaysOriginal))</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/标签栏按钮UITabBarItem样式修改/" data-id="cja95imka0032lf4ia1ka48xk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ios/错误日志" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/21/ios/错误日志/" class="article-date">
-  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/ios-cocoapods/">ios cocoapods</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/ios/错误日志/">ios cocoapods 安装第三方库错误</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#错误日志</p>
-<p>###The dependency <code>***</code> is not used in any concrete target.<br>在Podfile文件中必须指明</p>
-<p>target “**” do </p>
-<p>pod “<em>**</em>“</p>
-<p>end</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/ios/错误日志/" data-id="cja95imim000ylf4i3jbnqia7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocoapods/">cocoapods</a></li></ul>
 
     </footer>
   </div>
@@ -443,7 +495,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/iterm2配色/" data-id="cja95imiq0012lf4ikja3yj5h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/mac/iterm2配色/" data-id="cja9an38b0011hz4i8w4sy56t" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iterm/">iterm</a></li></ul>
@@ -497,7 +549,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/mac server/" data-id="cja95imir0013lf4ikbs267hw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/mac/mac server/" data-id="cja9an38d0012hz4ihjq9ht5u" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -543,7 +595,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/mac任何来源/" data-id="cja95imiu0017lf4i1kwnde8m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/mac/mac任何来源/" data-id="cja9an38g0016hz4i3by02v4q" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -587,7 +639,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/隐藏dsstore/" data-id="cja95imiv0018lf4i3fgpuvhf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/mac/隐藏dsstore/" data-id="cja9an38i0018hz4iylta4yeg" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -599,14 +651,14 @@
 
 
   
-    <article id="post-mysql/mysql更改密码" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-nodejs/node.js 版本升级" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/21/mysql/mysql更改密码/" class="article-date">
+    <a href="/2017/11/21/nodejs/node.js 版本升级/" class="article-date">
   <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/mysql/">mysql</a>
+    <a class="article-category-link" href="/categories/node-js/">node.js</a>
   </div>
 
   </div>
@@ -617,7 +669,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/mysql/mysql更改密码/">mysql 更改密码</a>
+      <a class="article-title" href="/2017/11/21/nodejs/node.js 版本升级/">node.js 版本升级</a>
     </h1>
   
 
@@ -625,19 +677,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>mysql 更改密码<br>此时我们在命令行输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<p>命令会提示没有commod not found，我们还需要将mysql加入系统环境变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(1).进入/usr/local/mysql/bin,查看此目录下是否有mysql，见pic6。</span><br><span class="line">(2).执行vim ~/.bash_profile</span><br><span class="line">    在该文件中添加mysql/bin的目录，见pic7：</span><br><span class="line">    PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">添加完成后，按esc，然后输入wq保存。</span><br><span class="line">最后在命令行输入source ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>现在你就可以通过mysql -u root -p登录mysql了，会让你输入密码，就是提示的默认密码<br>登录成功后，你可以通过下面的命令修改密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newpass&apos;)</span><br></pre></td></tr></table></figure>
+        <p>一行命令搞定node.js 版本升级</p>
+<p>首先安装n模块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br></pre></td></tr></table></figure>
+<p>第二步：<br>升级node.js到最新稳定版</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n stable</span><br></pre></td></tr></table></figure>
+<p>n后面也可以跟随版本号比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n v0.10.26</span><br><span class="line">或</span><br><span class="line">n 0.10.26</span><br></pre></td></tr></table></figure>
+<p>另外分享几个npm的常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">npm -v          #显示版本，检查npm 是否正确安装。</span><br><span class="line"></span><br><span class="line">npm install express   #安装express模块</span><br><span class="line"></span><br><span class="line">npm install -g express  #全局安装express模块</span><br><span class="line"></span><br><span class="line">npm list         #列出已安装模块</span><br><span class="line"></span><br><span class="line">npm show express     #显示模块详情</span><br><span class="line"></span><br><span class="line">npm update        #升级当前目录下的项目的所有模块</span><br><span class="line"></span><br><span class="line">npm update express    #升级当前目录下的项目的指定模块</span><br><span class="line"></span><br><span class="line">npm update -g express  #升级全局安装的express模块</span><br><span class="line"></span><br><span class="line">npm uninstall express  #删除指定的模块</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mysql/mysql更改密码/" data-id="cja95imiy001clf4iw5kziqjm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/nodejs/node.js 版本升级/" data-id="cja9an38l001dhz4iembzsem7" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
 
     </footer>
   </div>
@@ -657,7 +713,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reactNative/">reactNative</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
     </div>
@@ -667,7 +723,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reactNative/">reactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
     </div>
@@ -677,7 +733,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/AVFoundation/" style="font-size: 14px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 14px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 14px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 14px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 18px;">hexo</a> <a href="/tags/ios/" style="font-size: 16px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 14px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12px;">python django</a> <a href="/tags/reactNative/" style="font-size: 10px;">reactNative</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
@@ -696,12 +752,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/11/21/python/Django简介/">python Django简介</a>
+            <a href="/2017/11/21/python/当提示端口被占用/">python django新建项目</a>
           </li>
         
           <li>
@@ -709,7 +765,7 @@
           </li>
         
           <li>
-            <a href="/2017/11/21/VR/webgl和three/">VR 书籍</a>
+            <a href="/2017/11/21/android/androidstudio启动慢/">android studio启动慢</a>
           </li>
         
           <li>
@@ -717,7 +773,7 @@
           </li>
         
           <li>
-            <a href="/2017/11/21/chrome/Chrome使用技巧/">cherome使用技巧</a>
+            <a href="/2017/11/21/github/github插件1/">github插件1</a>
           </li>
         
       </ul>
@@ -733,7 +789,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 JackGuoFranklin<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

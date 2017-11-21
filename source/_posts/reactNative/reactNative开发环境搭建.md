@@ -7,9 +7,10 @@ date: 2017-11-21
 ---
 
 reactNative开发环境搭建
-#(一) 搭建基本环境（必要）
 
-##1.安装Homebrew
+# (一) 搭建基本环境（必要）
+
+## 1.安装Homebrew
 
 打开终端，运行以下语句（中间需要输入密码）进行安装：
 
@@ -27,7 +28,9 @@ brew -v
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-##2. 使用Homebrew来安装Node.js
+
+## 2. 使用Homebrew来安装Node.js
+
 使用brew安装node.js
 
 终端运行语句如下：
@@ -40,7 +43,9 @@ brew install node
 ```
 node -v
 ```
-##3. 安装React Native的命令行工具（react-native-cli）
+
+## 3. 安装React Native的命令行工具（react-native-cli）
+
 
 React Native的命令行工具用于执行创建、初始化、更新项目、运行打包服务（packager）等任务。
 
@@ -63,7 +68,8 @@ npm config set disturl https://npm.taobao.org/dist --global
 
 #(二) 推荐安装的工具
 
-##1. Watchman
+## 1. Watchman
+
 Watchman是由Facebook提供的监视文件系统变更的工具。安装此工具可以提高开发时的性能（packager可以快速捕捉文件的变化从而实现实时刷新）。
 
 终端运行语句安装：
@@ -76,7 +82,9 @@ brew install watchman
 ```
 watchman -v
 ```
-##2. Flow
+
+## 2. Flow
+
 Flow是一个静态的JS类型检查工具，可方便找出代码中可能存在的类型错误。
 译注：你在很多示例中看到的奇奇怪怪的冒号问号，以及方法参数中像类型一样的写法，都是属于这个flow工具的语法。这一语法并不属于ES标准，只是Facebook自家的代码规范。
 
