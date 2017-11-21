@@ -55,9 +55,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -117,69 +117,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/VR/webgl和three/" data-id="cja93tdrr0003504i9i6wnmlr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/VR/webgl和three/" data-id="cja93xook00038h4i555162xd" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VR/">VR</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-python/当提示端口被占用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/21/python/当提示端口被占用/" class="article-date">
-  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python-django/">python django</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/python/当提示端口被占用/">python django新建项目</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1 新建一个 django project</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">django-admin.py startproject project-name</div></pre></td></tr></table></figure>
-<p>一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）</p>
-<p>2 新建 app</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp app-name</div><div class="line">或 django-admin.py startapp app-name</div></pre></td></tr></table></figure>
-<p>一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。</p>
-<p>3 同步数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">python manage.py syncdb</div><div class="line"> </div><div class="line">注意：Django 1.7.1及以上的版本需要用以下命令</div><div class="line">python manage.py makemigrations</div><div class="line">python manage.py migrate</div></pre></td></tr></table></figure>
-<p>这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。</p>
-<p>备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具 south,详见 Django 数据库迁移 一节。</p>
-<p>4 使用开发服务器<br>开发服务器，即开发时使用，一般修改代码后会自动重启，方便调试和开发，但是由于性能问题，建议只用来测试，不要用在生产环境。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">python manage.py runserver</div><div class="line"> </div><div class="line"># 当提示端口被占用的时候，可以用其它端口：</div><div class="line">python manage.py runserver 8001</div><div class="line">python manage.py runserver 9999</div><div class="line">（当然也可以kill掉占用端口的进程）</div><div class="line"> </div><div class="line"># 监听所有可用 ip （电脑可能有一个或多个内网ip，一个或多个外网ip，即有多个ip地址）</div><div class="line">python manage.py runserver 0.0.0.0:8000</div><div class="line"># 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器</div><div class="line"># 访问对应的 ip加端口，比如 http://172.16.20.2:8000</div></pre></td></tr></table></figure>
-<p> 5 清空数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python manage.py flush</div></pre></td></tr></table></figure>
-<p>此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。</p>
-<p>6  创建超级管理员</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">python manage.py createsuperuser</div><div class="line"> </div><div class="line"># 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填</div><div class="line"> </div><div class="line"># 修改 用户密码可以用：</div><div class="line">python manage.py changepassword username</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/python/当提示端口被占用/" data-id="cja93tdtk001j504i3y7avxm9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-django/">python django</a></li></ul>
 
     </footer>
   </div>
@@ -236,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/Kingfisher/" data-id="cja93tdtm001k504it6j7vqb0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/Kingfisher/" data-id="cja93xopk001j8h4imv1gujt1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -296,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/Swift_ios_开发之UINavigationController的常用属性/" data-id="cja93tdtr001o504i1jkbluqi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/Swift_ios_开发之UINavigationController的常用属性/" data-id="cja93xopl001k8h4iq9wv61ul" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -342,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/Swift代理/" data-id="cja93tdtu001q504ix0z4ddxx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/Swift代理/" data-id="cja93xopn001o8h4ie4vgtqk1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/delegate/">delegate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -394,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/Swift状态栏/" data-id="cja93tdtz001v504i1if7s6wm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/Swift状态栏/" data-id="cja93xopo001q8h4ih2w7g2h3" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -438,7 +379,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/UISreen类的屏幕大小/" data-id="cja93tdu4001w504in6sdcknk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/UISreen类的屏幕大小/" data-id="cja93xopq001v8h4iyati6o9s" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -485,7 +426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/UIView的常用属性和常用方法/" data-id="cja93tdu80020504i1cvsbve9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/UIView的常用属性和常用方法/" data-id="cja93xopt001w8h4i1w8smd71" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -530,7 +471,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/ios-icon/" data-id="cja93tdub0022504iwa01apnd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/ios-icon/" data-id="cja93xopv00208h4inens0hvg" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
@@ -586,7 +527,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/swift/iosQR二维码/" data-id="cja93tduf0027504iucnaeoqv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/swift/iosQR二维码/" data-id="cja93xopx00228h4irwdgy43w" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swift/ios使用AVFoundation实现条形码扫描" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/swift/ios使用AVFoundation实现条形码扫描/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/swift/">swift</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/swift/ios使用AVFoundation实现条形码扫描/">Swift使用AVFoundation实现条形码扫描</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Swift - 使用AVFoundation实现条形码扫描（附：拉近镜头改善读取）</p>
+<p>1，条形码（一维码）的扫描读取</p>
+<p>metadataObjectTypes 做如下修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,</div><div class="line">        AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,</div><div class="line">        AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]</div></pre></td></tr></table></figure>
+<p>2，拉近镜头，改善条形码读取效果</p>
+<p>如果条码太小的时候,就会识别不出来。</p>
+<p>解决办法是：通过代码拉近镜头焦距，放大内容区域让机器更好的识别。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div></pre></td><td class="code"><pre><div class="line">import UIKit</div><div class="line">import AVFoundation</div><div class="line"> </div><div class="line">class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate,</div><div class="line">UIAlertViewDelegate&#123;</div><div class="line">     </div><div class="line">    var scanRectView:UIView!</div><div class="line">    var device:AVCaptureDevice!</div><div class="line">    var input:AVCaptureDeviceInput!</div><div class="line">    var output:AVCaptureMetadataOutput!</div><div class="line">    var session:AVCaptureSession!</div><div class="line">    var preview:AVCaptureVideoPreviewLayer!</div><div class="line">     </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        super.viewDidLoad()</div><div class="line">         </div><div class="line">        fromCamera()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //通过摄像头扫描</div><div class="line">    func fromCamera() &#123;</div><div class="line">        do&#123;</div><div class="line">            self.device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</div><div class="line">             </div><div class="line">            self.input = try AVCaptureDeviceInput(device: device)</div><div class="line">             </div><div class="line">            self.output = AVCaptureMetadataOutput()</div><div class="line">            output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">             </div><div class="line">            self.session = AVCaptureSession()</div><div class="line">            if UIScreen.mainScreen().bounds.size.height&lt;500 &#123;</div><div class="line">                self.session.sessionPreset = AVCaptureSessionPreset640x480</div><div class="line">            &#125;else&#123;</div><div class="line">                self.session.sessionPreset = AVCaptureSessionPresetHigh</div><div class="line">            &#125;</div><div class="line">             </div><div class="line">            self.session.addInput(self.input)</div><div class="line">            self.session.addOutput(self.output)</div><div class="line">             </div><div class="line">            self.output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,</div><div class="line">                AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,</div><div class="line">                AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code]</div><div class="line">             </div><div class="line">            //计算中间可探测区域</div><div class="line">            let windowSize:CGSize = UIScreen.mainScreen().bounds.size;</div><div class="line">            let scanSize:CGSize = CGSizeMake(windowSize.width*3/4,</div><div class="line">                windowSize.width*3/4);</div><div class="line">            var scanRect:CGRect = CGRectMake((windowSize.width-scanSize.width)/2,</div><div class="line">                (windowSize.height-scanSize.height)/2, scanSize.width, scanSize.height);</div><div class="line">            //计算rectOfInterest 注意x,y交换位置</div><div class="line">            scanRect = CGRectMake(scanRect.origin.y/windowSize.height,</div><div class="line">                scanRect.origin.x/windowSize.width,</div><div class="line">                scanRect.size.height/windowSize.height,</div><div class="line">                scanRect.size.width/windowSize.width);</div><div class="line">            //设置可探测区域</div><div class="line">            self.output.rectOfInterest = scanRect</div><div class="line">             </div><div class="line">            self.preview = AVCaptureVideoPreviewLayer(session:self.session)</div><div class="line">            self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill</div><div class="line">            self.preview.frame = UIScreen.mainScreen().bounds</div><div class="line">            self.view.layer.insertSublayer(self.preview, atIndex:0)</div><div class="line">             </div><div class="line">            //添加中间的探测区域绿框</div><div class="line">            self.scanRectView = UIView();</div><div class="line">            self.view.addSubview(self.scanRectView)</div><div class="line">            self.scanRectView.frame = CGRectMake(0, 0, scanSize.width, scanSize.height);</div><div class="line">            self.scanRectView.center = CGPointMake(</div><div class="line">                CGRectGetMidX(UIScreen.mainScreen().bounds),</div><div class="line">                CGRectGetMidY(UIScreen.mainScreen().bounds));</div><div class="line">            self.scanRectView.layer.borderColor = UIColor.greenColor().CGColor</div><div class="line">            self.scanRectView.layer.borderWidth = 1;</div><div class="line">             </div><div class="line">            //开始捕获</div><div class="line">            self.session.startRunning()</div><div class="line">             </div><div class="line">            //放大</div><div class="line">            do &#123;</div><div class="line">                try self.device!.lockForConfiguration()</div><div class="line">            &#125; catch _ &#123;</div><div class="line">                NSLog(&quot;Error: lockForConfiguration.&quot;);</div><div class="line">            &#125;</div><div class="line">            self.device!.videoZoomFactor = 1.5</div><div class="line">            self.device!.unlockForConfiguration()</div><div class="line">             //放大</div><div class="line">             </div><div class="line">             </div><div class="line">        &#125;catch _ as NSError&#123;</div><div class="line">            //打印错误消息</div><div class="line">            let errorAlert = UIAlertView(title: &quot;提醒&quot;,</div><div class="line">                message: &quot;请在iPhone的\&quot;设置-隐私-相机\&quot;选项中,允许本程序访问您的相机&quot;,</div><div class="line">                delegate: self,</div><div class="line">                cancelButtonTitle: &quot;确定&quot;)</div><div class="line">            errorAlert.show()</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //摄像头捕获</div><div class="line">    func captureOutput(captureOutput: AVCaptureOutput!,</div><div class="line">        didOutputMetadataObjects metadataObjects: [AnyObject]!,</div><div class="line">        fromConnection connection: AVCaptureConnection!) &#123;</div><div class="line">             </div><div class="line">            var stringValue:String?</div><div class="line">            if metadataObjects.count &gt; 0 &#123;</div><div class="line">                let metadataObject = metadataObjects[0]</div><div class="line">                    as! AVMetadataMachineReadableCodeObject</div><div class="line">                stringValue = metadataObject.stringValue</div><div class="line">                 </div><div class="line">                if stringValue != nil&#123;</div><div class="line">                    self.session.stopRunning()</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            self.session.stopRunning()</div><div class="line">            //输出结果</div><div class="line">            let alertView = UIAlertView(title: &quot;一维码&quot;, message: stringValue,</div><div class="line">                delegate: self, cancelButtonTitle: &quot;确定&quot;)</div><div class="line">            alertView.show()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    //消息框确认后消失</div><div class="line">    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) &#123;</div><div class="line">        //继续扫描</div><div class="line">        self.session.startRunning()</div><div class="line">    &#125;</div><div class="line">     </div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        super.didReceiveMemoryWarning()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/swift/ios使用AVFoundation实现条形码扫描/" data-id="cja93xopz00278h4imytnv05q" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
@@ -609,7 +600,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
     </div>
@@ -619,7 +610,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
     </div>
@@ -629,7 +620,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/AVFoundation/" style="font-size: 15px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 15px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 15px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 17.5px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12.5px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12.5px;">python django</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
@@ -648,7 +639,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -685,7 +676,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 JackGuoFranklin<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
