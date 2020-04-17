@@ -56,9 +56,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -69,14 +69,14 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-mysql/mysql更改密码" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ios/错误日志" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/21/mysql/mysql更改密码/" class="article-date">
+    <a href="/2017/11/21/ios/错误日志/" class="article-date">
   <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/mysql/">mysql</a>
+    <a class="article-category-link" href="/categories/ios-cocoapods/">ios cocoapods</a>
   </div>
 
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/mysql/mysql更改密码/">mysql 更改密码</a>
+      <a class="article-title" href="/2017/11/21/ios/错误日志/">ios cocoapods 安装第三方库错误</a>
     </h1>
   
 
@@ -95,19 +95,163 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>mysql 更改密码<br>此时我们在命令行输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<p>命令会提示没有commod not found，我们还需要将mysql加入系统环境变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(1).进入/usr/local/mysql/bin,查看此目录下是否有mysql，见pic6。</span><br><span class="line">(2).执行vim ~/.bash_profile</span><br><span class="line">    在该文件中添加mysql/bin的目录，见pic7：</span><br><span class="line">    PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">添加完成后，按esc，然后输入wq保存。</span><br><span class="line">最后在命令行输入source ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>现在你就可以通过mysql -u root -p登录mysql了，会让你输入密码，就是提示的默认密码<br>登录成功后，你可以通过下面的命令修改密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newpass&apos;)</span><br></pre></td></tr></table></figure>
+        <p>#错误日志</p>
+<p>###The dependency <code>***</code> is not used in any concrete target.<br>在Podfile文件中必须指明</p>
+<p>target “**” do </p>
+<p>pod “<em>**</em>“</p>
+<p>end</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mysql/mysql更改密码/" data-id="cja9an380000nhz4iajkcni50" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/ios/错误日志/" data-id="ck943rh07000npwcdl5bxliir" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocoapods/">cocoapods</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mac/mac server" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/mac/mac server/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/mac/mac server/">mac localhost server</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1<br>建立方式很简单，直接在终端中运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir ~/Sites</span><br></pre></td></tr></table></figure>
+<p>2建立“站点”文件夹之后，检查 /etc/ 文件夹下面是不是有“haibor.conf”这个文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/users/</span><br></pre></td></tr></table></figure>
+<p>如果没有，那么你需要创建一个，取名为“你的名字.conf”，可以使用 vi 或者 nano 这两种编辑器之一来创建。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
+<p>创建之后将下面的这几行内容写到上面的 conf 文件中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory &quot;/Users/你的名字/Sites/&quot;&gt;</span><br><span class="line">    Options Indexes MultiViews</span><br><span class="line">    AllowOverride All</span><br><span class="line">    Order allow,deny</span><br><span class="line">    Allow from all</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+<p>3<br>文件保存之后，给它赋予相应的权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 755 /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
+<p>4接下来重启 Apache，以使该配置文件生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/mac/mac server/" data-id="ck943rh08000ppwcd5sfgjtf5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mac/mac任何来源" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/mac/mac任何来源/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/mac/mac任何来源/">mac恢复允许“任何来源”的选项</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>恢复允许“任何来源”的选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我们可以在终端中使用 spctl 命令来实现：</span><br><span class="line"></span><br><span class="line">　　sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
+<p>输入上述命令之后，我们可以发现，久违的“任何来源”回来了：</p>
+<p>如果在系统偏好设置的“安全与隐私”中重新选中允许 App Store 和被认可的开发者 App，即重新打开 Gatekeeper 后，允许“任何来源”App 的选项会再次消失，可运行上述命令再次关闭 Gatekeeper。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/mac/mac任何来源/" data-id="ck943rh0a000upwcdsqxvhd83" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mac/隐藏dsstore" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/mac/隐藏dsstore/" class="article-date">
+  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/mac/隐藏dsstore/">隐藏dsstore</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>隐藏dsstore</p>
+<p>隐藏文件的方法解决了 mac系统如何显示和隐藏文件 苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)： 显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool true 隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool false 或者 显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles YES 隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles NO 输完单击Enter键，退出终端，重新启动Finder就可以了 重启Finder：鼠标单击窗口左上角的苹果标志–&gt;强制退出–&gt;Finder–&gt;重新启动 别处转来的</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/mac/隐藏dsstore/" data-id="ck943rh0o000wpwcdyoq8f3dj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
 
     </footer>
   </div>
@@ -211,7 +355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/HexoNext配置主题/" data-id="cja9an381000phz4ilgf0c764" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/HexoNext配置主题/" data-id="ck943rh0q000ypwcd3n2vrccw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">next</a></li></ul>
@@ -298,7 +442,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo初步教程/" data-id="cja9an384000uhz4i6oj6w09b" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo初步教程/" data-id="ck943rh0u0012pwcd588v29wl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -354,7 +498,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo更换主题Next/" data-id="cja9an386000whz4is473wlvc" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo更换主题Next/" data-id="ck943rh0w0013pwcdoi25nqbv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -438,7 +582,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo评论与站点统计系统/" data-id="cja9an388000yhz4iousir508" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/hexo/Hexo评论与站点统计系统/" data-id="ck943rh0z0017pwcdr2wqddce" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">next</a></li></ul>
@@ -450,14 +594,14 @@
 
 
   
-    <article id="post-mac/iterm2配色" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-mysql/mysql更改密码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/21/mac/iterm2配色/" class="article-date">
+    <a href="/2017/11/21/mysql/mysql更改密码/" class="article-date">
   <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/iterm/">iterm</a>
+    <a class="article-category-link" href="/categories/mysql/">mysql</a>
   </div>
 
   </div>
@@ -468,7 +612,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/mac/iterm2配色/">iterm2配色</a>
+      <a class="article-title" href="/2017/11/21/mysql/mysql更改密码/">mysql 更改密码</a>
     </h1>
   
 
@@ -476,29 +620,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>iterm2配色方案</p>
-<p>#配色来源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">iterm2官网所提供的配色方案iTerm2-Color-Schemes</span><br><span class="line">在schemes目录下提供了很多种配色方案</span><br><span class="line">altercation大神的solarized配色方案solarized</span><br><span class="line">在这个repo中给出了多个编辑器的配色方案，显然我们需要的是目录</span><br><span class="line">iterm2-colors-solarized下的</span><br><span class="line"></span><br><span class="line">Solarized Dark.itermcolors 和 </span><br><span class="line">Solarized Light.itermcolors</span><br></pre></td></tr></table></figure>
-<p>#步骤</p>
-<ol>
-<li>下载配色方案</li>
-<li><p>首先打开home目录下的 .bash_profile 文件</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    vim ~/.bash_profile</span><br><span class="line">   ```   </span><br><span class="line">粘进去</span><br></pre></td></tr></table></figure>
-<p> export CLICOLOR=1<br> LSCOLORS=gxfxcxdxbxegedabagacad<br> export PS1=’[\033[01;32m]\u@\h[\033[00m]:[\033[01;36m]\w[\033[00m]\$ ‘</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">保存退出</span><br></pre></td></tr></table></figure>
-<p> source ~/.bash_profile<br> ```<br> 文件生效</p>
-</li>
-<li><p>进入iterm2<br>Preferences-&gt;Profiles-&gt;Terminal 标签下的 Terminal Emulation 选择的是 xterm-new<br>之后在 Preferences-&gt;Profiles-&gt;Colors 标签，点击 Load Preset 列表中的 Import 进行导入配色方案，之后进入text标签，不勾选Draw bold text in bright colors选项。<br>重启iterm2</p>
-</li>
-</ol>
-
+        <p>mysql 更改密码<br>此时我们在命令行输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>命令会提示没有commod not found，我们还需要将mysql加入系统环境变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(1).进入/usr/local/mysql/bin,查看此目录下是否有mysql，见pic6。</span><br><span class="line">(2).执行vim ~/.bash_profile</span><br><span class="line">    在该文件中添加mysql/bin的目录，见pic7：</span><br><span class="line">    PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">添加完成后，按esc，然后输入wq保存。</span><br><span class="line">最后在命令行输入source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>现在你就可以通过mysql -u root -p登录mysql了，会让你输入密码，就是提示的默认密码<br>登录成功后，你可以通过下面的命令修改密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newpass&apos;)</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/iterm2配色/" data-id="cja9an38b0011hz4i8w4sy56t" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/mysql/mysql更改密码/" data-id="ck943rh100018pwcdqdo8r6hm" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iterm/">iterm</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
 
     </footer>
   </div>
@@ -507,14 +641,14 @@
 
 
   
-    <article id="post-mac/mac server" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python/Django简介" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/21/mac/mac server/" class="article-date">
+    <a href="/2017/11/21/python/Django简介/" class="article-date">
   <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/mac/">mac</a>
+    <a class="article-category-link" href="/categories/python-django/">python django</a>
   </div>
 
   </div>
@@ -525,7 +659,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/mac/mac server/">mac localhost server</a>
+      <a class="article-title" href="/2017/11/21/python/Django简介/">python Django简介</a>
     </h1>
   
 
@@ -533,167 +667,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1<br>建立方式很简单，直接在终端中运行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir ~/Sites</span><br></pre></td></tr></table></figure>
-<p>2建立“站点”文件夹之后，检查 /etc/ 文件夹下面是不是有“haibor.conf”这个文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/users/</span><br></pre></td></tr></table></figure>
-<p>如果没有，那么你需要创建一个，取名为“你的名字.conf”，可以使用 vi 或者 nano 这两种编辑器之一来创建。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
-<p>创建之后将下面的这几行内容写到上面的 conf 文件中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory &quot;/Users/你的名字/Sites/&quot;&gt;</span><br><span class="line">    Options Indexes MultiViews</span><br><span class="line">    AllowOverride All</span><br><span class="line">    Order allow,deny</span><br><span class="line">    Allow from all</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-<p>3<br>文件保存之后，给它赋予相应的权限：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 755 /etc/apache2/users/你的名字.conf</span><br></pre></td></tr></table></figure>
-<p>4接下来重启 Apache，以使该配置文件生效：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure>
+        <p>Django 简介<br>让我们一览 Django 全貌<br>urls.py<br>网址入口，关联到对应的views.py中的一个函数（或者generic类），访问网址就对应一个函数。</p>
+<p>views.py<br>处理用户发出的请求，从urls.py中对应过来, 通过渲染templates中的网页可以将显示内容，比如登陆后的用户名，用户请求的数据，输出到网页。</p>
+<p>models.py<br>与数据库操作相关，存入或读取数据时用到这个，当然用不到数据库的时候 你可以不使用。</p>
+<p>forms.py<br>表单，用户在浏览器上输入数据提交，对数据的验证工作以及输入框的生成等工作，当然你也可以不使用。</p>
+<p>templates 文件夹</p>
+<p>views.py 中的函数渲染templates中的Html模板，得到动态内容的网页，当然可以用缓存来提高速度。</p>
+<p>admin.py<br>后台，可以用很少量的代码就拥有一个强大的后台。</p>
+<p>settings.py<br>Django 的设置，配置文件，比如 DEBUG 的开关，静态文件的位置等。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/mac server/" data-id="cja9an38d0012hz4ihjq9ht5u" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/11/21/python/Django简介/" data-id="ck943rh12001cpwcdjl5c2j73" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mac/mac任何来源" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/21/mac/mac任何来源/" class="article-date">
-  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/mac/">mac</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/mac/mac任何来源/">mac恢复允许“任何来源”的选项</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>恢复允许“任何来源”的选项</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我们可以在终端中使用 spctl 命令来实现：</span><br><span class="line"></span><br><span class="line">　　sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
-<p>输入上述命令之后，我们可以发现，久违的“任何来源”回来了：</p>
-<p>如果在系统偏好设置的“安全与隐私”中重新选中允许 App Store 和被认可的开发者 App，即重新打开 Gatekeeper 后，允许“任何来源”App 的选项会再次消失，可运行上述命令再次关闭 Gatekeeper。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/mac任何来源/" data-id="cja9an38g0016hz4i3by02v4q" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mac/隐藏dsstore" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/21/mac/隐藏dsstore/" class="article-date">
-  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/mac/">mac</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/mac/隐藏dsstore/">隐藏dsstore</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>隐藏dsstore</p>
-<p>隐藏文件的方法解决了 mac系统如何显示和隐藏文件 苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)： 显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool true 隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool false 或者 显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles YES 隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles NO 输完单击Enter键，退出终端，重新启动Finder就可以了 重启Finder：鼠标单击窗口左上角的苹果标志–&gt;强制退出–&gt;Finder–&gt;重新启动 别处转来的</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/mac/隐藏dsstore/" data-id="cja9an38i0018hz4iylta4yeg" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-nodejs/node.js 版本升级" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/21/nodejs/node.js 版本升级/" class="article-date">
-  <time datetime="2017-11-21T04:12:07.000Z" itemprop="datePublished">2017-11-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/node-js/">node.js</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/nodejs/node.js 版本升级/">node.js 版本升级</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一行命令搞定node.js 版本升级</p>
-<p>首先安装n模块：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br></pre></td></tr></table></figure>
-<p>第二步：<br>升级node.js到最新稳定版</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n stable</span><br></pre></td></tr></table></figure>
-<p>n后面也可以跟随版本号比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n v0.10.26</span><br><span class="line">或</span><br><span class="line">n 0.10.26</span><br></pre></td></tr></table></figure>
-<p>另外分享几个npm的常用命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">npm -v          #显示版本，检查npm 是否正确安装。</span><br><span class="line"></span><br><span class="line">npm install express   #安装express模块</span><br><span class="line"></span><br><span class="line">npm install -g express  #全局安装express模块</span><br><span class="line"></span><br><span class="line">npm list         #列出已安装模块</span><br><span class="line"></span><br><span class="line">npm show express     #显示模块详情</span><br><span class="line"></span><br><span class="line">npm update        #升级当前目录下的项目的所有模块</span><br><span class="line"></span><br><span class="line">npm update express    #升级当前目录下的项目的指定模块</span><br><span class="line"></span><br><span class="line">npm update -g express  #升级全局安装的express模块</span><br><span class="line"></span><br><span class="line">npm uninstall express  #删除指定的模块</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/nodejs/node.js 版本升级/" data-id="cja9an38l001dhz4iembzsem7" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-django/">python django</a></li></ul>
 
     </footer>
   </div>
@@ -713,7 +702,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VR/">VR</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chrome/">chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios-cocoapods/">ios cocoapods</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iterm/">iterm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-django/">python django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reactNative/">reactNative</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li></ul>
     </div>
@@ -723,7 +712,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AVFoundation/">AVFoundation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QRCode/">QRCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SnapKit/">SnapKit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UINavigationController/">UINavigationController</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITabBarItem/">UITabBarItem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UserDefaultstags/">UserDefaultstags</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cherome/">cherome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocoapods/">cocoapods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delegate/">delegate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-osChina/">git@osChina</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-django/">python django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reactNative/">reactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sourceTree/">sourceTree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机/">计算机</a></li></ul>
     </div>
@@ -733,7 +722,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/AVFoundation/" style="font-size: 14px;">AVFoundation</a> <a href="/tags/QRCode/" style="font-size: 14px;">QRCode</a> <a href="/tags/SnapKit/" style="font-size: 14px;">SnapKit</a> <a href="/tags/UINavigationController/" style="font-size: 10px;">UINavigationController</a> <a href="/tags/UITabBarItem/" style="font-size: 10px;">UITabBarItem</a> <a href="/tags/UserDefaultstags/" style="font-size: 10px;">UserDefaultstags</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/cherome/" style="font-size: 10px;">cherome</a> <a href="/tags/chrome/" style="font-size: 14px;">chrome</a> <a href="/tags/cocoapods/" style="font-size: 10px;">cocoapods</a> <a href="/tags/delegate/" style="font-size: 10px;">delegate</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-osChina/" style="font-size: 10px;">git@osChina</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 18px;">hexo</a> <a href="/tags/ios/" style="font-size: 16px;">ios</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/mac/" style="font-size: 14px;">mac</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/next/" style="font-size: 12px;">next</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/python-django/" style="font-size: 12px;">python django</a> <a href="/tags/reactNative/" style="font-size: 10px;">reactNative</a> <a href="/tags/sourceTree/" style="font-size: 10px;">sourceTree</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a>
     </div>
@@ -752,12 +741,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/11/21/python/当提示端口被占用/">python django新建项目</a>
+            <a href="/2017/11/21/nodejs/node.js 版本升级/">node.js 版本升级</a>
           </li>
         
           <li>
@@ -773,7 +762,7 @@
           </li>
         
           <li>
-            <a href="/2017/11/21/github/github插件1/">github插件1</a>
+            <a href="/2017/11/21/chrome/Chrome使用技巧/">cherome使用技巧</a>
           </li>
         
       </ul>
@@ -788,8 +777,8 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 JackGuoFranklin<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2020 JackGuoFranklin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
